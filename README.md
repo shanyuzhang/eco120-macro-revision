@@ -5,7 +5,7 @@ A **zero-dependency, zero-build, fully offline** study site for an undergraduate
 an interactive quiz engine, and a reverse index that lets you look things up by
 *variable* rather than by lecture.
 
-**→ [Live site](https://YOUR-USERNAME.github.io/eco120-macro-revision/)**
+**→ [Live site](https://shanyuzhang.com/eco120-macro-revision/)**
 
 No CDN, no external fonts, no framework, no bundler. 27 HTML files and one
 stylesheet. Double-click any page and it works — on a plane, on a locked-down
@@ -69,7 +69,7 @@ economics marking schemes reward:
 ## Running it locally
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/eco120-macro-revision.git
+git clone https://github.com/shanyuzhang/eco120-macro-revision.git
 ```
 
 Then open `index.html` in any browser. That's the whole setup — there is nothing
@@ -118,7 +118,7 @@ are a rights holder and would like something removed, please open an issue.
 一套**零依赖、零构建、完全离线**的本科《宏观经济学原理》学习站点：12 讲逐节讲解、
 11 次习题课、交互式刷题引擎，以及一份**按变量反查**（而非按讲次查）的索引。
 
-**→ [在线访问](https://YOUR-USERNAME.github.io/eco120-macro-revision/)**
+**→ [在线访问](https://shanyuzhang.com/eco120-macro-revision/)**
 
 没有 CDN、没有外部字体、没有框架、没有打包器。27 个 HTML 文件加一份样式表，
 **双击任何一页就能打开**——断网可用，放上 GitHub Pages 也可用。
