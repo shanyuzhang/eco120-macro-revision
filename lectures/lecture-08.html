@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 8 · Inflation and the Phillips Curve — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 通胀的定义</a>
+  <a class="nav" href="#s2">2 · 货币数量论 MV = PY ⭐⭐</a>
+  <a class="nav" href="#s3">3 · 相关 ≠ 因果</a>
+  <a class="nav" href="#s4">4 · Fisher 假说 ⭐</a>
+  <a class="nav" href="#s5">5 · 恶性通胀</a>
+  <a class="nav" href="#s6">6 · 铸币税与通胀税 ⭐⭐</a>
+  <a class="nav" href="#s7">7 · 菲利普斯曲线 SRPC / LRPC ⭐⭐</a>
+  <a class="nav" href="#s8">8 · AS-AD 与 PC 的对应 ⭐</a>
+  <a class="nav" href="#s9">9 · 供给冲击下的 PC</a>
+  <a class="nav" href="#s10">10 · 预期与可信度</a>
+  <a class="nav" href="#s11">11 · 通胀的成本 ⭐⭐</a>
+  <a class="nav" href="#s12">12 · 击败通胀与 MPC</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-08.html">→ Tutorial 8</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 8 · Inflation and the Phillips Curve</h1>
+  <div class="sub">货币数量论 · Fisher 假说 · 铸币税与通胀税 · 短期与长期菲利普斯曲线 · 通胀的成本</div>
+  <div>
+    <span class="tag">56 slides</span>
+    <span class="tag">Begg Ch.24</span>
+    <span class="tag">对应 Tutorial 8</span>
+    <span class="tag b-hot">⭐⭐ 全课信息量最大的一讲</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">Lecture 7 得到了"长期产出固定在 Y*、通胀可以是任何水平"这一结论。
+    本讲追问：<b>那通胀究竟由什么决定？它有什么代价？降低它要付出什么？</b></p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+通胀是什么（一般价格水平的增长率）
+   ↓ 长期由什么决定？<b>MV = PY ⇒ Δπ = ΔM/M</b>（货币数量论）
+   ↓ 但相关 ≠ 因果；短期因 V 可变、价格黏性而失效
+   ↓ 通胀与利率的关系：<b>Fisher 假说 r = i − π</b>，实际利率大致不变
+   ↓ 极端案例：恶性通胀 ← <b>不可持续的财政赤字被迫印钞</b>
+   ↓ 印钞如何变成政府收入：<b>铸币税 / 通胀税 = π × (M/P)</b>，且存在<b>拉弗曲线式的峰值</b>
+   ↓ 通胀与失业的关系：<b>SRPC 有权衡，LRPC 垂直于 U*，长期无权衡</b>
+   ↓ SRPC/LRPC 与 SAS/LAS <b>是同一件事的两套坐标</b>
+   ↓ 通胀到底有什么坏处？<b>完全预期且已适应 / 完全预期未适应 / 未预期</b> 三分法
+   ↓ 怎么降通胀？<b>降低货币增长率</b>；痛苦程度取决于<b>预期调整速度</b> ⇒ <b>可信度与央行独立性</b>
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：Slide 38 明确画出 <b>AS-AD 与 PC 的对应图</b>——SAS ↔ SRPC，LAS ↔ LRPC。
+      "长期货币中性"来自 Lecture 7 的古典模型。<br>
+      <b>启下</b>：<b>Lecture 9</b> 详细讲 U*（自然失业率）本身由什么决定、以及 <b>hysteresis</b>
+      为何可能使 LRPC 也移动。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slide 3</span><h2>1 · 通胀的定义</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">定义（必背）</span>
+<b>Inflation is a process in which the price level is rising</b>
+  —— 是<b>一般价格水平</b>的上升，<b>而非某一特定商品价格</b>的上升
+  —— 定义为<b>价格水平的增长率 ΔP/P</b>
+
+<b>Pure inflation</b>：当<b>商品价格与投入品价格以同一速率上升</b>时
+    </div>
+    <ul>
+      <li>当今央行普遍<b>以实现低通胀为目标</b>。</li>
+      <li>历史事实（Slide 4）：英国价格水平在<b>两次大战之间的某些年份大幅下跌</b>（通胀为负）；
+        <b>1950 年以来价格水平上涨了 20 倍，超过此前三个世纪的涨幅之和</b>——多数发达经济体同理。</li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 pure inflation 的意义</span>
+      如果<b>所有</b>名义变量同比例上升，<b>实际变量完全不变</b>，通胀就没有真实成本。
+      现实中通胀之所以有成本，恰恰因为它<b>不是纯粹的</b>（相对价格被扭曲、不同群体受影响不同）。
+      这条是第 11 节"通胀成本"的理论起点。
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 7–11</span><h2>2 · 货币数量论 MV = PY ⭐⭐（必考）</h2></div>
+  <div class="card">
+    <h3>先回顾实际货币余额（Lecture 4）</h3>
+    <div class="fml">
+<b>Real money balances = 经济中的货币量 / 价格水平 = M/P</b>
+
+苹果经济的例子：货币量 = $10，一个苹果 $0.50 ⇒ 实际货币余额 = <b>20 个苹果</b>
+即：<b>一定量的货币能买到的商品与服务的数量</b>
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 8</span>数量方程式与流通速度</h3>
+    <div class="fml" style="font-size:17px">
+<b>MV = PY</b>
+  M = nominal money supply（名义货币供给）
+  V = <b>velocity of circulation</b>（流通速度）
+  P = the price level
+  Y = potential level of real GDP
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 V 的定义（必背）</span>
+      <b>The velocity of circulation is the average number of times in a year a pound is used to purchase
+      goods and services in GDP.</b><br>
+      （课件的直观例子：市场上只有 4 件商品，由 4 人拥有，每件 1 英镑；M = 1, V = 4, P = 1, Y = 4 ⇒ 1×4 = 1×4。）
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 9</span>货币数量论的命题</h3>
+    <div class="fml"><span class="lab">定义（一字不改地背）</span>
+The quantity theory of money <b>is a long-run proposition</b> that:
+<b>Changes in the nominal money supply lead to EQUIVALENT changes in the price level
+(and money wages), but do NOT have effects on output and employment.</b>
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 10</span>从 MV = PY 推出 π = ΔM/M（考试写这个推导）</h3>
+    <div class="fml">
+给定<b>流通速度 V 与潜在 GDP Y 不受货币量影响</b>，可写成：
+        <b>P = (V/Y) · M</b>                  …(1)   其中 (V/Y) 是常数
+两边取变动：
+        <b>ΔP = (V/Y) · ΔM</b>                …(2)
+(2) ÷ (1) 得：
+        <b>ΔP/P = ΔM/M</b>
+        └通胀率┘   └货币量增长率┘
+
+即：<b>通胀率等于货币量的增长率。</b>
+    </div>
+    <div class="fml"><span class="lab">Slide 11 的数值验证</span>
+初始：M = 1, V = 4, P = 1, Y = 4  ⇒ 1×4 = 1×4
+之后：M = 10, V = 4, P = 10, Y = 4 ⇒ 10×4 = 10×4
+ΔP/P = (10 − 1)/1 = <b>900%</b>
+ΔM/M = (10 − 1)/1 = <b>900%</b>   ✓ 两者相等
+（所有商品的价格都涨到 10 英镑，<b>实际产出 Y 完全不变</b>）
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 12–16</span><h2>3 · 相关不等于因果 ⭐（essay 加分点）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 课件反复强调的一点</span>
+      <b>"Correlation is not causation"</b>：货币增长与通胀之所以相关，可能是因为
+      <b>①货币增长引起通胀</b>，<b>②通胀引起货币增长</b>，或<b>③某个第三因素同时引起两者</b>。
+    </div>
+
+    <h3>代数上看（Slide 12）</h3>
+    <div class="fml">
+<b>MV = PY  ⟺  M/P = Y/V</b>
+  左边是<b>实际货币供给</b>；右边<b>必然是实际货币需求</b>。
+  如果<b>实际货币需求是常数</b>，则 <b>M/P 是常数</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 13–14</span>因果方向取决于央行的政策框架 ⭐</h3>
+    <div class="tw"><table>
+      <tr><th style="width:34%">政策框架</th><th>因果方向</th></tr>
+      <tr><td>货币政策<b>控制 M</b>（以名义货币量为中介目标）</td>
+        <td><b>因果由货币流向价格</b>：ΔM &gt; 0 ⇒ ΔP &gt; 0</td></tr>
+      <tr><td>货币政策<b>盯住 P 或通胀</b>（通胀目标制）</td>
+        <td><b>因果由价格流向货币</b>：ΔP ⇒ ΔM（央行被动供给货币，呼应 Lecture 6 的 MP 曲线）</td></tr>
+    </table></div>
+    <p>课件的评语：数量方程<b>说的是价格与货币相关，但对"谁引起谁"保持不可知（agnostic）</b>。</p>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 13</span>短期的传导过程（为什么数量论是<b>长期</b>命题）</h3>
+    <div class="fml">
+若名义工资与价格在短期<b>调整缓慢</b>：
+  更高的名义货币供给 M ⇒ 由于 P 尚未调整，<b>实际货币存量 M/P 先上升</b>
+  ⇒ 实际货币的<b>超额供给压低利率</b>（Lecture 5）
+  ⇒ 若经济状况尚可、消费者与投资者信心足够稳健，这<b>提振商品需求</b>
+  ⇒ <b>逐渐推高商品价格</b>
+⇒ <b>The quantity theory of money is a LONG-RUN proposition.</b>
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 15</span>短期链条断裂的两个原因（必背）</h3>
+    <ul>
+      <li><b>流通速度 V 是可变的</b>——V 高时价格调整得更快；</li>
+      <li><b>价格是迟缓的（sluggish）</b>——价格调整缓慢。</li>
+    </ul>
+    <p>课件结论：<b>因此我们必须谨慎地解释货币数量论。</b></p>
+    <div class="callout c-tip"><span class="t">💡 Slide 16 的经验证据（可直接引用）</span>
+      货币增长率与通胀率相关，<b>但相关性较弱</b>，因为<b>实际 GDP 也与货币增长率相关</b>；
+      当<b>货币增长率超过通胀率时，实际 GDP 在增长</b>。<br>
+      （由 MV = PY 取增长率：<b>ΔM/M + ΔV/V = ΔP/P + ΔY/Y</b>，V 稳定时
+      <b>货币增长 = 通胀 + 实际增长</b>——这是解释这条经验事实的最快方式。）
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 18–19</span><h2>4 · Fisher 假说 ⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">Fisher 关系（必背）</span>
+<b>Real interest rate = nominal interest rate − inflation rate</b>
+<b>r = i − π</b>
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 Fisher 假说的内容（Slide 18，必背）</span>
+      <b>The Fisher hypothesis says that REAL interest rates do not change much.</b><br>
+      因此，<b>更高的通胀在很大程度上被更高的名义利率所抵消，以阻止实际利率发生大的变化</b>。<br>
+      经验证据：<b>额外一个百分点的通胀，平均伴随着名义利率高出接近一个百分点</b>（↑1% 通胀 ≈ ↑1% 名义利率）。
+    </div>
+    <ul>
+      <li><b>名义利率 i 是持有货币的机会成本</b>（呼应 Lecture 4）；</li>
+      <li>因此<b>名义利率 i 的变化会影响实际货币需求</b>。</li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 与 Taylor rule 的关系（很容易混）</span>
+      • <b>Fisher 假说</b>：长期中 <b>i 随 π 一比一上升，r 不变</b>（货币中性的利率版本）。<br>
+      • <b>Taylor rule</b>：<b>i − i* = (1+a)(π − π*) + b(Y − Y*)</b>，
+        系数 <b>(1+a) &gt; 1</b>，即央行会让 i 涨得<b>比 π 更多</b>，从而<b>主动提高实际利率</b>。<br>
+      Fisher 讲的是<b>长期均衡关系</b>；Taylor 讲的是<b>央行的短期政策反应</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 20–25</span><h2>5 · 恶性通胀（Hyperinflation）</h2></div>
+  <div class="card">
+    <h3>课件的两个案例</h3>
+    <div class="tw"><table>
+      <tr><th style="width:22%">国家</th><th>数据</th></tr>
+      <tr><td><b>Zimbabwe（2008）</b></td><td>面额达到 <b>100 万亿津巴布韦元</b>（= 10 亿旧津元）</td></tr>
+      <tr><td><b>Venezuela</b></td>
+        <td>2016 年进入恶性通胀：通胀率 <b>2016 年 274%、2017 年 863%、2018 年 130,060%、2019 年 9,586%</b>；
+        <b>2022 年初</b>才结束长达四年的恶性通胀；<b>当前利率 59.30%</b>。<br>
+        （2018 年 8 月，一只鸡的售价为 1,400 万玻利瓦尔。）</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 22</span>恶性通胀的根源（必背因果链）</h3>
+    <div class="fml">
+<b>巨额政府预算赤字有助于解释这类时期。</b>
+  • <b>持续的通胀必然伴随着持续的货币供给增长</b>
+    (Persistent inflation must be accompanied by continuing money supply growth)
+  • <b>巨额赤字不可持续（无法再借到新债），因此必须印钞来维持支出</b>
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slides">Slides 23–25</span>案例研究：1920 年代四次典型恶性通胀</h3>
+    <ul>
+      <li>国家：<b>Austria、Hungary、Germany、Poland</b>。</li>
+      <li>数据显示<b>货币量与价格水平之间存在清晰的联系</b>。</li>
+      <li><b>货币线的斜率</b> = 货币量的增长率；<b>价格线的斜率</b> = 通胀率；<b>线越陡，增长率/通胀率越高</b>。</li>
+      <li>图形用<b>对数刻度（logarithmic scales）</b>——<b>图上相等的垂直距离代表相等的百分比变化</b>。</li>
+      <li>结论：每个案例中<b>货币量与价格水平都密切同步变动</b>，
+        这与货币数量论一致：<b>货币供给的增长是通胀的首要原因</b>。</li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 为什么恶性通胀是数量论最好的证据</span>
+      恶性通胀中货币增长率极大，<b>V 和 Y 的变化相对而言可以忽略</b>，
+      所以 <b>π ≈ ΔM/M</b> 几乎精确成立。低通胀国家里 V 与 Y 的波动占比大，关系就模糊——
+      这解释了 Slide 16 说的"相关性较弱"。
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slides 28–31</span><h2>6 · 铸币税与通胀税 ⭐⭐（真题常考）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 通胀为什么是一种税（必背推理）</span>
+      <b>Inflation can be considered as a tax</b>，因为：<br>
+      • <b>政府花掉新创造的货币</b>（用以为 G 融资），<b>这引起了通胀</b>；<br>
+      • <b>⇒ 持有货币的人缴纳了这项"税"</b>（持币的机会成本），
+        <b>因为货币的价值下降了</b>。
+    </div>
+    <div class="fml"><span class="lab">公式推导（考试直接写）</span>
+若政府创造额外货币 ΔM 来为支出融资，其<b>实际收入价值为 ΔM/P</b>，可改写为：
+
+        <b>ΔM/P = (ΔM/M) × (M/P)</b>
+                 └ 货币增长率 ┘  └ 实际余额 ┘
+
+由于长期中 <b>ΔM/M = π</b>：
+
+        <b>Real revenue from inflation = π × (M/P)</b>
+          └ 税率（通胀率）┘ └ 税基（实际货币余额）┘
+    </div>
+    <div class="callout c-tip"><span class="t">💡 课件的苹果比喻（很好用）</span>
+      "一个苹果的价格在一天内翻倍 ⇒ <b>来自通胀的实际收入 = 半个苹果</b>。"<br>
+      问：另外半个苹果的价值被谁拿走了？<b>答：政府——它通过印钞拿走了，用以为政府支出融资。这就是通胀税。</b>
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 30–31</span>通胀税的"拉弗曲线"⭐</h3>
+    <div class="fml"><span class="lab">课件的核心推理链（必背）</span>
+<b>货币价值下跌得越快</b>
+  ⇒ <b>人们愿意持有的实际货币越少</b>（税基 M/P 萎缩）
+  ⇒ <b>一旦通胀率超过某个临界水平</b>
+  ⇒ <b>通胀税收入会随着通胀率上升而下降</b>
+
+<b>因此：如果实际赤字过高，印钞只会导致恶性通胀（而筹不到更多真实资源）。</b>
+    </div>
+    <p>课件补充：<b>在发达经济体中，通胀并不被用作主要的税收来源</b>。
+    （欧盟要求：<b>债务/GDP 比率应低于 60%</b>。）</p>
+
+    <figure>
+      <svg viewBox="0 0 520 280" role="img" aria-label="Inflation tax Laffer curve">
+        <line class="ax" x1="75" y1="235" x2="480" y2="235"/>
+        <line class="ax" x1="75" y1="235" x2="75" y2="28"/>
+        <text class="lbl" x="330" y="258">Inflation rate π</text>
+        <text class="lbl-s" x="14" y="46">Inflation tax revenue</text>
+        <text class="lbl-s" x="14" y="60">π × (M/P)</text>
+        <path d="M75,235 C160,58 230,52 290,110 C350,168 420,208 462,222" class="cv c-ad"/>
+        <circle class="pt" cx="245" cy="66" r="5.5"/>
+        <line x1="245" y1="66" x2="245" y2="235" class="dsh"/>
+        <text class="lbl-s" x="228" y="252">π<tspan baseline-shift="sub" font-size="9">max</tspan></text>
+        <text class="lbl-s" x="256" y="60">峰值</text>
+        <text class="lbl-s" x="110" y="150" fill="#33d6a6">税率↑ 效应占优</text>
+        <text class="lbl-s" x="330" y="120" fill="#ff5c7a">税基萎缩效应占优</text>
+      </svg>
+      <figcaption>Figure 8.1 — 通胀税收入与通胀率。超过 π<sub>max</sub> 后，实际余额萎缩得比通胀率上升更快，
+      <b>收入反而下降</b>。这是恶性通胀螺旋的机制。</figcaption>
+    </figure>
+
+    <div class="callout c-exam"><span class="t">🎯 Venezuela 案例的完整链条（Slide 29，直接可用作 essay 素材）</span>
+      信心下降 ⇒ 委内瑞拉<b>难以吸引足够投资者购买其债券</b> ⇒ <b>央行印钞买入债券</b>
+      ⇒ 通胀上升 ⇒ <b>储蓄的价值下降</b> ⇒ 这部分价值<b>被政府拿走用于政府支出</b> ⇒ <b>这就是通胀税</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slides 33–37</span><h2>7 · 菲利普斯曲线：短期与长期 ⭐⭐⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">Slide 33 的四句话（必背）</span>
+• <b>The Phillips curve relates higher inflation to lower unemployment.</b>
+• 它意味着我们<b>可以用更高的通胀换取更低的失业</b>，反之亦然（<b>短期权衡</b>）。
+• <b>垂直的长期菲利普斯曲线</b>意味着，<b>无论通胀率是多少，经济迟早会回到 U*</b>。
+• 因此，<b>长期中失业与通胀之间没有权衡</b>。
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 SRPC 位置的决定因素（Slide 34，最高频考点）</span>
+      <b>The position of the short-run Phillips curve depends on EXPECTED INFLATION.</b><br>
+      <b>长期曲线与短期曲线相交于实际通胀与预期通胀相等之处。</b><br>
+      ——这两句话是所有菲利普斯曲线题目的钥匙。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 35–37</span>总需求上升的三阶段（必须能完整叙述）</h3>
+    <div class="fml"><span class="lab">阶段 ①（Slide 35）短期</span>
+经济起始于 <b>E 点</b>：失业为 <b>U*</b>，通胀为 <b>π₁</b>。
+<b>由货币供给扩张（M↑）融资的政府支出增加（G↑）</b>
+  ⇒ 经济移到 <b>A 点</b>：<b>失业更低（U₁ &lt; U*）</b>，<b>但通胀升到 π₂</b>。
+   … 但接下来会发生什么？
+    </div>
+    <div class="fml"><span class="lab">阶段 ②（Slide 36）预期调整</span>
+如果名义货币供给<b>此后继续以同样速率扩张</b>，那么：
+  • <b>通胀预期与实际通胀 π₂ 一致（停留在 π₂）</b>
+  • <b>名义工资已被重新谈判</b>
+结果：
+  • <b>实际工资与就业回到货币扩张之前的水平</b>
+  • <b>经济最终移动到 PC₂ 上的 B 点</b>（失业回到 U*，通胀维持在 π₂）
+
+<b>结论：长期中失业与通胀之间没有权衡。</b>
+    </div>
+    <div class="fml"><span class="lab">阶段 ③（Slide 37）总结</span>
+• <b>长期菲利普斯曲线实际上是垂直的</b>，因为<b>经济总是调整回 U*</b>。
+• <b>短期菲利普斯曲线只显示一个短期的权衡</b>。
+• <b>短期菲利普斯曲线的位置取决于通胀预期。</b>
+    </div>
+    <p><b>U* 被称为 the natural rate of unemployment（自然失业率）。</b></p>
+
+    <figure>
+      <svg viewBox="0 0 520 320" role="img" aria-label="Short run and long run Phillips curves">
+        <line class="ax" x1="80" y1="275" x2="490" y2="275"/>
+        <line class="ax" x1="80" y1="275" x2="80" y2="28"/>
+        <text class="lbl" x="360" y="298">Unemployment</text>
+        <text class="lbl" x="34" y="44">Inflation</text>
+        <line x1="300" y1="275" x2="300" y2="35" class="cv c-alt2"/>
+        <text class="lbl" x="276" y="28" fill="#ffb454">LRPC</text>
+        <path d="M170,60 C215,120 250,182 420,246" class="cv c-ad"/>
+        <text class="lbl-s" x="376" y="262" fill="#6c8bff">PC₁</text>
+        <path d="M170,20 C220,80 258,140 420,205" class="cv c-alt"/>
+        <text class="lbl-s" x="376" y="220" fill="#33d6a6">PC₂</text>
+        <circle class="pt" cx="300" cy="196" r="5.5"/><text class="lbl" x="308" y="192">E</text>
+        <circle class="pt" cx="222" cy="126" r="5.5"/><text class="lbl" x="196" y="120">A</text>
+        <circle class="pt" cx="300" cy="126" r="5.5"/><text class="lbl" x="308" y="120">B</text>
+        <line x1="80" y1="196" x2="300" y2="196" class="dsh"/><text class="lbl-s" x="56" y="200">π₁</text>
+        <line x1="80" y1="126" x2="300" y2="126" class="dsh"/><text class="lbl-s" x="56" y="130">π₂</text>
+        <line x1="222" y1="126" x2="222" y2="275" class="dsh"/><text class="lbl-s" x="214" y="291">U₁</text>
+        <line x1="300" y1="275" x2="300" y2="285" class="dsh"/><text class="lbl-s" x="292" y="303">U*</text>
+        <path d="M292,190 L232,132" class="dsh" stroke="#33d6a6" marker-end="url(#a8)"/>
+        <path d="M230,120 L292,120" class="dsh" stroke="#ffb454" marker-end="url(#a8)"/>
+        <defs><marker id="a8" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+          <path d="M0,0 L7,3.2 L0,6.4 z" fill="#aeb6e6"/></marker></defs>
+        <text class="lbl-s" x="110" y="240">① 短期：E→A（沿 PC₁）</text>
+        <text class="lbl-s" x="110" y="258">② 长期：A→B（预期调整，PC 上移）</text>
+      </svg>
+      <figcaption>Figure 8.2 — 短期与长期菲利普斯曲线。短期沿 PC₁ 从 E 到 A；预期调整后 PC 上移到 PC₂，
+      失业回到 U*（B 点），<b>通胀却永久性地更高了</b>。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slide 38</span><h2>8 · AS-AD 与 PC 的对应关系 ⭐（真题最喜欢的"双图题"）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 这一页是 Lecture 7 与 Lecture 8 的接缝，考试常要求"同时画两张图"</span>
+      <b>SAS ↔ SRPC（PC）</b>；<b>LAS ↔ LRPC</b>；<b>Y* ↔ U*</b>。
+      两张图讲的是<b>同一件事</b>，只是横轴由"产出"换成"失业率"（方向相反）。
+    </div>
+    <div class="fml"><span class="lab">课件原文的三阶段叙述（正向需求冲击）</span>
+在最初的均衡 <b>E₀</b>：<b>产出处于潜在水平，失业处于自然率</b>。
+一个<b>正向需求冲击</b>使 AD 从 AD₀ 移到 AD₁：
+
+• <b>短期</b>：均衡移到 <b>A 点</b>——<b>在继承的工资增长率下，企业供给更多产出，失业下降</b>。
+
+• <b>长期</b>：如果<b>通胀被锚定在 π₀</b>，<b>两个图中经济最终都回到 E₀</b>。
+
+• <b>长期</b>：如果<b>通胀预期永久性地上升到 π₁</b>，<b>名义工资增长率上升</b>，
+  这会<b>使 SAS 与 PC 同时上移</b>，均衡移到 <b>E₁</b>。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 900 300" role="img" aria-label="Correspondence of AS-AD and Phillips curve">
+        <text class="lbl" x="130" y="16">AS-AD</text>
+        <line class="ax" x1="70" y1="255" x2="410" y2="255"/>
+        <line class="ax" x1="70" y1="255" x2="70" y2="30"/>
+        <text class="lbl-s" x="320" y="278">output</text><text class="lbl-s" x="40" y="44">π</text>
+        <line x1="250" y1="255" x2="250" y2="36" class="cv c-alt2"/>
+        <text class="lbl-s" x="228" y="30" fill="#ffb454">LAS</text>
+        <line x1="120" y1="230" x2="390" y2="70" class="cv c-as"/>
+        <text class="lbl-s" x="352" y="66" fill="#ff5c7a">SAS₀</text>
+        <line x1="90" y1="196" x2="360" y2="36" class="cv" stroke="#ff8aa0" stroke-width="2.2"/>
+        <text class="lbl-s" x="316" y="32" fill="#ff8aa0">SAS₁</text>
+        <path d="M100,58 C170,120 220,160 380,222" class="cv c-ad"/>
+        <text class="lbl-s" x="336" y="238" fill="#6c8bff">AD₀</text>
+        <path d="M150,44 C222,104 272,146 400,200" class="cv" stroke="#a9bcff" stroke-width="2.2" fill="none"/>
+        <text class="lbl-s" x="352" y="196" fill="#a9bcff">AD₁</text>
+        <circle class="pt" cx="250" cy="153" r="5"/><text class="lbl-s" x="256" y="170">E₀</text>
+        <circle class="pt" cx="290" cy="128" r="5"/><text class="lbl-s" x="296" y="144">A</text>
+        <circle class="pt" cx="250" cy="106" r="5"/><text class="lbl-s" x="222" y="100">E₁</text>
+        <line x1="70" y1="153" x2="250" y2="153" class="dsh"/><text class="lbl-s" x="48" y="157">π₀</text>
+        <line x1="70" y1="106" x2="250" y2="106" class="dsh"/><text class="lbl-s" x="48" y="110">π₁</text>
+        <text class="lbl-s" x="242" y="271">Y*</text>
+
+        <text class="lbl" x="600" y="16">Phillips Curve</text>
+        <line class="ax" x1="510" y1="255" x2="860" y2="255"/>
+        <line class="ax" x1="510" y1="255" x2="510" y2="30"/>
+        <text class="lbl-s" x="740" y="278">unemployment</text><text class="lbl-s" x="480" y="44">π</text>
+        <line x1="700" y1="255" x2="700" y2="36" class="cv c-alt2"/>
+        <text class="lbl-s" x="678" y="30" fill="#ffb454">LRPC</text>
+        <path d="M600,80 C640,130 672,178 830,238" class="cv c-ad"/>
+        <text class="lbl-s" x="788" y="252" fill="#6c8bff">PC₀</text>
+        <path d="M600,34 C642,86 676,132 830,192" class="cv" stroke="#a9bcff" stroke-width="2.2" fill="none"/>
+        <text class="lbl-s" x="788" y="206" fill="#a9bcff">PC₁</text>
+        <circle class="pt" cx="700" cy="153" r="5"/><text class="lbl-s" x="706" y="170">E₀</text>
+        <circle class="pt" cx="654" cy="128" r="5"/><text class="lbl-s" x="628" y="122">A</text>
+        <circle class="pt" cx="700" cy="106" r="5"/><text class="lbl-s" x="706" y="102">E₁</text>
+        <line x1="510" y1="153" x2="700" y2="153" class="dsh"/><text class="lbl-s" x="488" y="157">π₀</text>
+        <line x1="510" y1="106" x2="700" y2="106" class="dsh"/><text class="lbl-s" x="488" y="110">π₁</text>
+        <text class="lbl-s" x="692" y="271">U*</text>
+      </svg>
+      <figcaption>Figure 8.3 — AS-AD 与 PC 的一一对应。同一个需求冲击，在左图表现为 Y &gt; Y*，在右图表现为 U &lt; U*。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slide 39</span><h2>9 · 不利的暂时性供给冲击（双图版）⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">课件原文</span>
+由于<b>更高的生产成本</b>，<b>SAS 与 PC 同时上移</b>。均衡从 <b>E 移到 G</b>：
+<b>Stagflation 滞胀：更高的通胀、更高的失业、更低的产出。</b>
+
+<b>政策选项：</b>
+<b>Option 1</b>：央行<b>提高利率以抑制通胀</b>。结合<b>向下的工资调整</b>，
+  经济<b>逐渐回到 E（长期均衡）</b>。
+<b>Option 2</b>：央行<b>降低利率，把 AD 移到 AD′</b>。均衡移到 <b>F</b>：
+  <b>产出恢复，但通胀进一步上升</b>。
+
+<b>长期</b>：一旦<b>暂时性冲击消退</b>，<b>SAS 与 PC 都会向下移回</b>，
+  <b>无论选择哪种政策，经济都回到 E</b>。
+    </div>
+    <div class="callout c-tip"><span class="t">💡 这一页与 Lecture 7 Slide 41 的关系</span>
+      Lecture 7 讲的是同一个冲击的 AS-AD 版本，本页加上了 <b>PC 版本</b>与<b>明确的两个政策选项</b>。
+      真题问"石油冲击 + 央行该怎么做"时，<b>把两张图并排画出来</b>是最稳的高分答法。<br>
+      注意最后一句的深意：<b>因为是暂时冲击，长期结果与政策选择无关</b>——
+      这正是"央行不应对暂时性通胀过度反应"的理由。
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slides 40–41</span><h2>10 · 预期与可信度（反通胀的成本）⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">Slide 40 原文</span>
+经济起始于 <b>E 点</b>，一个<b>新当选的政府承诺降低通胀</b>。
+<b>货币增长被削减到 π₂。</b>
+
+• <b>短期</b>：经济<b>沿着短期菲利普斯曲线移动到 A 点</b>。
+  <b>失业上升到 U₁</b>。
+• <b>随着预期调整</b>，<b>短期菲利普斯曲线移到 PC₂</b>，
+  <b>U* 在 F 点得以恢复</b>。
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 这就是"反通胀的牺牲率（sacrifice ratio）"的图形来源</span>
+      <b>E → A</b> 这一段就是反通胀的<b>代价</b>：失业高于自然率的那段时期。<br>
+      <b>预期调整得越快（可信度越高），A 点停留得越短、失业上升得越少。</b><br>
+      如果预期能<b>瞬间</b>调整（完全可信），经济可以<b>直接从 E 跳到 F，零成本反通胀</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 41</span>一个现实的困惑（可作 essay 的评价段）</h3>
+    <p>课件的表格显示：<b>尽管存在正的产出缺口、失业率按历史标准也很低，通胀却低得出人意料。</b>
+    课件给出的三个可能解释：</p>
+    <ul>
+      <li><b>更低的通胀预期</b>（lower inflation expectations）；</li>
+      <li><b>菲利普斯曲线变平坦</b>（flattened PC curve）；</li>
+      <li><b>有利的供给冲击，使 Y* 与 U* 发生了移动</b>。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="sec-h"><span class="kicker">Slides 43–46</span><h2>11 · 通胀的成本 ⭐⭐（essay 必考，三分法）</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 43</span>先明确前提：Inflation illusion</h3>
+    <div class="fml">
+• <b>人们有通胀幻觉，当他们混淆名义变化与实际变化时。</b>
+• <b>福利取决于实际变量，而非名义变量。</b>
+• <b>如果所有名义变量（价格与收入）以同一速率上升，实际收入不变。</b>
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 答题起手式</span>
+      任何"通胀有什么坏处"的题，<b>都要先说这一句</b>：
+      <i>"If inflation were pure and fully anticipated, and if all institutions were fully indexed, it would have
+      almost no real cost, because welfare depends on real variables. The costs of inflation therefore arise
+      precisely where this fails."</i> 然后再按下面三类展开。
+    </div>
+
+    <h3 style="margin-top:20px">通胀成本的三分法（表格必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">情形</th><th>成本</th></tr>
+      <tr><td><b>① 完全预期且制度已适应</b><br>
+        <span class="muted">(fully anticipated &amp; adapted)</span></td>
+        <td><b>成本有限</b>，如果各项制度已适应已知的通胀：<b>名义利率、税率、转移支付</b>都已指数化，
+        <b>不存在通胀幻觉</b>。<br>
+        <b>但仍有一些成本残留</b>：<br>
+        • <b>Shoe-leather costs（鞋底成本）</b>：<b>高的名义利率 i 使人们节省实际货币持有量</b>
+          （更频繁地跑银行）<br>
+        • <b>Menu costs（菜单成本）</b>：<b>企业需要更改价目表等</b></td></tr>
+      <tr><td><b>② 完全预期但制度未适应</b><br>
+        <span class="muted">(fully anticipated, not adapted)</span></td>
+        <td>即使通胀被完全预期，<b>经济也可能没有完全适应</b>：<br>
+        • <b>利率可能没有充分反映通胀</b><br>
+        • <b>税收可能被扭曲</b>：<br>
+          &nbsp;&nbsp;– <b>Fiscal drag（财政拖累）</b>可能对纳税义务产生<b>非预期影响</b>
+          （名义收入随通胀上升，把纳税人推入更高税率档）<br>
+          &nbsp;&nbsp;– <b>资本利得税与利润税可能被扭曲</b><br>
+          &nbsp;&nbsp;– <b>课件的具体算例</b>：若名义与实际利率<b>都是 4%</b>，在 <b>40% 税率</b>下，
+          <b>税后实际回报为 2.4%</b></td></tr>
+      <tr><td><b>③ 未预期的通胀</b><br>
+        <span class="muted">(unanticipated inflation)</span></td>
+        <td><b>非意愿的收入再分配</b>（unintended redistribution of income）：<br>
+        • <b>从贷款人到借款人</b>（from lenders to borrowers）<br>
+        • <b>从私人部门到公共部门</b>（from private to public sector）<br>
+        • <b>从老年人到年轻人</b>（from old to young）<br><br>
+        <b>不确定性（Uncertainty）</b>：<b>企业在通胀下发现规划更困难，这可能抑制投资</b>。<br>
+        <b>课件明确：这被视为通胀最重要的成本。</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 Tutorial 8 Q1 的三个"错误陈述"，答案就在这里</span>
+      (a) "降低通胀是治愈高失业的唯一途径" → <b>错</b>：长期 LRPC 垂直，通胀与失业无权衡；
+      降通胀短期反而<b>提高</b>失业。<br>
+      (b) "通胀阻止人们储蓄" → <b>错</b>：若通胀被预期，<b>名义利率会随之上升（Fisher）</b>，
+      实际回报不变；真正受损的是<b>持有现金</b>的人，不是储蓄者。<br>
+      (c) "通胀阻止人们投资" → <b>部分对但理由要准</b>：受损的不是通胀<b>水平</b>本身，
+      而是<b>未预期通胀带来的不确定性</b>使规划困难，从而抑制投资。
+    </div>
+  </div>
+</section>
+
+<section id="s12">
+  <div class="sec-h"><span class="kicker">Slides 47–50</span><h2>12 · 击败通胀与英格兰银行 MPC</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">Slide 47：Defeating inflation</span>
+• <b>长期中，如果货币增长率低，通胀就会低。</b>
+  – <b>Incomes policy（收入政策）</b>：<b>暂时性地</b>冻结工资上涨，只能起临时作用
+• <b>如果预期调整缓慢，从高通胀向低通胀的过渡可能是痛苦的。</b>
+• <b>政策可信度可以加快调整过程</b>：
+  – <b>Maastricht treaty for Eurozone</b>（欧元区马斯特里赫特条约）
+  – <b>Independence of the central bank</b>（央行独立性）
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 48–49</span>英格兰银行的 MPC</h3>
+    <ul>
+      <li><b>央行独立性可以改善反通胀政策的可信度。</b></li>
+      <li><b>自 1997 年起</b>，英国货币政策由英格兰银行的
+        <b>Monetary Policy Committee (MPC)</b> 制定：<br>
+        • 负有实现<b>（潜在）通胀目标</b>的责任；<br>
+        • <b>通过利率</b>实现；<br>
+        • 利率<b>根据通胀预测来设定</b>。</li>
+    </ul>
+    <div class="tw"><table>
+      <tr><th style="width:50%">MPC 的成绩</th><th>但也带来的问题</th></tr>
+      <tr><td>• <b>MPC 成功地把英国通胀维持在比以往窄得多的区间内</b><br>
+        • <b>即使不受欢迎，英格兰银行也准备改变利率</b></td>
+        <td>• <b>低通胀导致低名义利率，这鼓励了更鲁莽的私人部门行为</b><br>
+        • <b>监管失灵可能才是危机更主要的责任</b><br>
+        • <b>好的货币政策不能为不充分的金融监管负责</b></td></tr>
+    </table></div>
+    <p class="muted">Slide 50 的 fan chart：颜色越深的预测线代表该通胀结果的<b>概率越高</b>；
+    2018 年 4 月英格兰银行预期英国 2019 年通胀平均<b>略高于 2%</b>。</p>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">货币数量论</span>
+<b>MV = PY</b>  ⟺  <b>M/P = Y/V</b>
+P = (V/Y)M ⇒ <b>ΔP/P = ΔM/M</b>（长期：通胀 = 货币增长率）
+增长率形式：<b>ΔM/M + ΔV/V = ΔP/P + ΔY/Y</b>
+短期失效原因：<b>V 可变</b>、<b>价格黏性</b>
+    </div>
+    <div class="fml"><span class="lab">Fisher</span>
+<b>r = i − π</b>
+Fisher 假说：<b>实际利率变化不大</b> ⇒ π↑1% ⇒ i↑约 1%
+    </div>
+    <div class="fml"><span class="lab">通胀税 / 铸币税</span>
+<b>ΔM/P = (ΔM/M) × (M/P) = π × (M/P)</b>
+  税率 = 通胀率 π；税基 = 实际余额 M/P
+π 过高 ⇒ M/P 萎缩更快 ⇒ <b>通胀税收入反而下降</b>（拉弗曲线）
+    </div>
+    <div class="fml"><span class="lab">菲利普斯曲线</span>
+<b>SRPC</b>：向下倾斜，<b>位置取决于预期通胀 πᵉ</b>
+<b>LRPC</b>：<b>垂直于 U*</b>（自然失业率）⇒ <b>长期无权衡</b>
+SRPC 与 LRPC 相交处：<b>实际通胀 = 预期通胀</b>
+对应关系：<b>SAS ↔ SRPC，LAS ↔ LRPC，Y* ↔ U*</b>
+    </div>
+    <div class="fml"><span class="lab">通胀成本三分法</span>
+① 完全预期 + 已适应：<b>shoe-leather + menu costs</b>
+② 完全预期 + 未适应：<b>利率未充分反映、fiscal drag、资本利得税扭曲</b>
+③ <b>未预期</b>：<b>再分配</b>（贷方→借方、私人→公共、老→少）+ <b>不确定性抑制投资</b>
+   ← <b>课件称这是最重要的成本</b>
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>数量论在短期也成立</td><td>它是<b>长期命题</b>；短期因 <b>V 可变、价格黏性</b>而失效</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>货币增长必然引起通胀</td><td><b>相关 ≠ 因果</b>；因果方向取决于央行盯的是<b>货币量</b>还是<b>通胀</b></td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>通胀上升使实际利率上升</td><td><b>Fisher 假说：实际利率变化不大</b>，名义利率随通胀一比一上升</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>通胀越高，通胀税收入越多</td><td>超过临界值后<b>实际余额萎缩更快，收入反而下降</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>SRPC 位置由失业率决定</td><td>由 <b>预期通胀</b> 决定</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>长期可以用通胀换低失业</td><td><b>LRPC 垂直，长期无权衡</b>，只留下更高的通胀</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>通胀让所有人都变穷</td><td>通胀是<b>再分配</b>：借款人、公共部门、年轻人<b>获益</b></td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>通胀阻止储蓄</td><td>预期到的通胀会被<b>名义利率补偿</b>；受损的是<b>持有现金</b>者</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>把 menu cost 当成最重要的成本</td><td>课件明确：<b>未预期通胀带来的不确定性</b>被视为最重要的成本</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>忘了画 LRPC</td><td>PC 图<b>必须画上垂直的 LRPC</b>，否则无法论证长期</td><td><span class="badge b-essay">图</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span></h3>
+    <p class="lead"><i>"'A government can always reduce unemployment by accepting a little more inflation.' Discuss,
+    using the Phillips curve. What determines how costly it would be to reduce inflation instead?"</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng">The <b>Phillips curve</b> relates higher inflation to lower unemployment, implying a trade-off
+        between them. The <b>short-run Phillips curve (SRPC)</b> is drawn for a <b>given rate of expected inflation</b>;
+        its <b>position depends on expected inflation</b>. The <b>long-run Phillips curve (LRPC)</b> is
+        <b>vertical at the natural rate of unemployment U*</b>, the rate that prevails when the labour market clears
+        and actual output equals potential output. The short- and long-run curves intersect where
+        <b>actual inflation equals expected inflation</b>.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 (see Figure 8.2). Vertical axis = inflation; horizontal axis = unemployment.
+        The economy starts at <b>E</b> on PC₁ with unemployment U* and inflation π₁. A monetary expansion moves the
+        economy <b>up along PC₁</b> to <b>A</b>, where unemployment is U₁ &lt; U* but inflation is π₂ &gt; π₁. As
+        expectations adjust, the SRPC shifts up to <b>PC₂</b>, and the economy settles at <b>B</b>, back at U* but with
+        inflation permanently at π₂. The vertical LRPC through U* traces the long-run outcome.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>Part 1: why the statement is true in the short run.</b></p>
+        <p class="eng"><b>Step 1.</b> An increase in government spending financed by monetary expansion raises
+        aggregate demand. Since nominal wage growth is <b>inherited</b> from earlier bargaining, higher-than-expected
+        inflation lowers the <b>real</b> wage.</p>
+        <p class="eng"><b>Step 2.</b> Labour is now cheaper than firms expected, so they expand output and hiring:
+        the economy moves from E to A, unemployment falls to U₁ and inflation rises to π₂. In the AS-AD diagram the
+        corresponding movement is along an unchanged SAS to a point where Y &gt; Y*.</p>
+        <p class="eng"><b>Part 2: why it is false in the long run.</b></p>
+        <p class="eng"><b>Step 3.</b> If the nominal money supply continues to expand at the same rate,
+        <b>inflation expectations come to coincide with actual inflation π₂</b>, and <b>nominal wages are
+        renegotiated</b> to reflect it.</p>
+        <p class="eng"><b>Step 4.</b> Once wages catch up, <b>the real wage and employment return to their
+        pre-expansion levels</b>. The SRPC has shifted up to PC₂, and the economy moves to <b>B</b>: unemployment is
+        back at U*, but inflation is permanently higher.</p>
+        <p class="eng"><b>Step 5.</b> Since this happens at every inflation rate, the <b>LRPC is vertical</b> at U*:
+        there is <b>no long-run trade-off</b>. The government has bought a temporary fall in unemployment at the price
+        of a permanent increase in inflation. Equivalently, in the quantity theory, <b>ΔP/P = ΔM/M</b> in the long run:
+        faster money growth buys higher inflation, not higher output or employment.</p>
+        <p class="eng"><b>Part 3: the cost of reversing course.</b> Suppose a newly elected government now cuts
+        monetary growth to π₂ &lt; π₁ (Figure, Slide 40). In the short run the economy moves <b>down along the existing
+        SRPC</b> to A, and <b>unemployment rises to U₁ above U*</b>. Only as <b>expectations adjust</b> does the SRPC
+        shift down to PC₂, restoring U* at F with lower inflation. The cost of disinflation — the period of
+        above-natural unemployment — therefore depends on:</p>
+        <ul>
+          <li class="eng"><b>The speed at which expectations adjust.</b> The transition from high to low inflation
+          "may be painful if expectations are slow to adjust". If expectations adjusted instantly, the economy could
+          move straight from E to F at no cost.</li>
+          <li class="eng"><b>Policy credibility</b>, which "may speed the adjustment process". Institutional devices
+          that raise credibility include <b>central bank independence</b> — in the UK, the Bank of England's
+          <b>Monetary Policy Committee</b> since 1997, which sets interest rates according to inflation forecasts to
+          meet the inflation target — and international commitments such as the <b>Maastricht Treaty</b>.</li>
+          <li class="eng"><b>The slope of the SRPC.</b> A flatter Phillips curve means a given reduction in inflation
+          requires a larger rise in unemployment.</li>
+        </ul>
+        <p class="eng"><b>Part 4: is the inflation worth avoiding?</b> This depends on which costs apply. If inflation
+        is <b>fully anticipated and institutions have adapted</b> — indexed nominal interest rates, tax rates and
+        transfer payments — costs are limited to <b>shoe-leather costs</b> (high nominal rates make people economise
+        on real balances) and <b>menu costs</b>. If inflation is anticipated but institutions have <b>not</b> adapted,
+        interest rates may not fully reflect inflation and taxes become distorted through <b>fiscal drag</b> — for
+        example, with nominal and real interest rates both at 4% and a 40% tax rate, the after-tax real return is only
+        2.4%. The most serious case is <b>unanticipated</b> inflation, which redistributes income arbitrarily
+        <b>from lenders to borrowers, from the private to the public sector, and from old to young</b>, and generates
+        <b>uncertainty</b> that makes planning harder and may discourage investment — which the course identifies as
+        <b>the most important cost of inflation</b>.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">The statement is therefore <b>true only in the short run and only once</b>. Because the SRPC's
+        position depends on expected inflation, a government can trade higher inflation for lower unemployment only
+        for as long as inflation exceeds expectations. Once expectations and nominal wages adjust, unemployment
+        returns to U* and the economy is left with permanently higher inflation: the LRPC is vertical and there is no
+        long-run trade-off. Worse, the policy is asymmetric — reversing it requires a period of unemployment
+        <b>above</b> U*, whose length depends on how quickly expectations adjust and hence on the credibility of the
+        anti-inflation commitment. This asymmetry is the central case for delegating monetary policy to an
+        <b>independent central bank with an explicit inflation target</b>, which lowers expected inflation directly
+        and so reduces the real cost of maintaining price stability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-07.html">← Lecture 7</a>
+  <a href="../tutorials/tutorial-08.html">Tutorial 8 →</a>
+  <a href="lecture-09.html">Lecture 9 · Unemployment →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

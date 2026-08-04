@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorial 2 · Output and Aggregate Demand — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <a class="nav" href="../lectures/lecture-02.html">← Lecture 2 讲解</a>
+  <div class="navgroup">本次 Tutorial</div>
+  <a class="nav active" href="#focus">🎯 课堂重点题</a>
+  <a class="nav" href="#a">Section A（1–14）</a>
+  <a class="nav" href="#b">Section B（1–12）</a>
+  <a class="nav" href="#c">Section C（选做）</a>
+  <a class="nav" href="#skills">✍️ 答题结构点评</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Tutorial 2 · Output and Aggregate Demand</h1>
+  <div class="sub">对应 <a href="../lectures/lecture-02.html">Lecture 2</a>：45° 线模型 · 乘数 · 节俭悖论</div>
+  <div>
+    <span class="tag">Section A: 1, 6, 7, 13</span>
+    <span class="tag">Section B: 5, 11</span>
+    <span class="tag b-hot">↑ 课堂重点讲的题</span>
+  </div>
+</div>
+
+<section id="focus">
+  <div class="sec-h"><span class="kicker">Priority</span><h2>🎯 课堂重点题速览</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:14%">题号</th><th>考什么</th><th style="width:28%">对应 Lecture 2 章节</th></tr>
+      <tr><td><b>A1</b></td><td>求均衡收入；<b>比较两个不同消费函数</b></td><td>§5 均衡产出</td></tr>
+      <tr><td><b>A6</b></td><td>乘数计算 + <b>节俭悖论的数值验证</b></td><td>§9 乘数、§10 节俭悖论</td></tr>
+      <tr><td><b>A7</b></td><td>ΔY 中有多少是消费；<b>两种画法（AD 法与 S=I 法）</b></td><td>§5–6</td></tr>
+      <tr><td><b>A13</b></td><td>三种"悲观"的图形区别：<b>ΔI / ΔA / Δc</b></td><td>§5 截距 vs 斜率</td></tr>
+      <tr><td><b>B5</b></td><td>完整数表：储蓄、AD、<b>非计划存货、实际投资</b></td><td>§7 planned vs actual</td></tr>
+      <tr><td><b>B11</b></td><td>沿线移动 vs 曲线移位、斜率 vs 截距</td><td>§8 移动 vs 移位</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="a">
+  <div class="sec-h"><span class="kicker">Section A</span><h2>Section A · 主要练习</h2></div>
+
+  <div class="card">
+    <h3>Q1 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算</span></h3>
+    <p class="lead">(a) Find equilibrium income when investment demand is 400 and C = 0.8Y.
+    (b) Would output be higher or lower if the consumption function were C = 100 + 0.7Y?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml">
+(a) Y = C + I
+    Y = 400 + 0.8Y
+    0.2Y = 400
+    <b>Y = £2000</b>
+
+(b) Y = C + I
+    Y = 100 + 0.7Y + 400 = 500 + 0.7Y
+    0.3Y = 500
+    <b>Y = £1,667</b>   ⇒ <b>Therefore, the output is LOWER.</b>
+      </div>
+      <div class="callout c-tip"><span class="t">💡 为什么产出反而更低（值得多写一句）</span>
+        (b) 的自主支出<b>更高</b>（500 &gt; 400），但 <b>MPC 更低（0.7 &lt; 0.8）</b>，
+        乘数从 <b>5 降到 3.33</b>。<b>乘数下降的效果压过了自主支出的上升。</b><br>
+        验算：(a) 400 × 5 = 2000；(b) 500 × 3.33 = 1667 ✓
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q2 <span class="badge b-mcq">选择</span></h3>
+    <p class="lead">Which statement is correct? (a) Any tax is a tax on jobs because it reduces AD.
+    (b) Provided the government spends the tax revenue, the impact of higher spending outweighs the adverse demand
+    effect of higher taxes. (c) Autonomous consumption demand is directly related to consumer confidence.
+    (d) All the above could be true.</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng"><b>(d) All the above statements could be true, depending on the other things assumed equal.</b></p>
+      <div class="callout c-tip"><span class="t">💡 为什么 (b) 也可能成立</span>
+        这就是 <b>平衡预算乘数 = 1</b>（Lecture 3 §7）：ΔG 使 AD 上移全额，
+        而 ΔT 只使 AD 下移 <b>c</b>ΔT ⇒ 净效应仍是扩张。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q3 <span class="badge b-essay">机制</span></h3>
+    <p class="lead">Suppose firms are initially surprised by changes in demand. (a) When demand falls, what is the
+    initial effect on stocks? (b) What do firms plan to do to stocks once they can adjust production? Does this
+    reduce or increase the initial fall in demand? (c) Once stocks have been adjusted, what happens to output?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng"><b>(a)</b> There is an <b>unplanned rise in stocks</b>.</p>
+      <p class="eng"><b>(b)</b> Firms plan <b>negative inventory investment</b> to reduce stocks — this provides a
+      <b>second-round reduction in aggregate demand</b>（即：为了消化存货，企业进一步压缩生产，
+      使 AD 二次下降 —— <b>加剧</b>了最初的需求下降）。</p>
+      <p class="eng"><b>(c)</b> Once stocks have been adjusted, there is <b>no need to keep planning to reduce them</b>,
+      so planned inventory investment <b>increases (from a negative number to zero)</b>. This effect is one of the
+      causes of a <b>subsequent RISE in aggregate demand and hence a CYCLICAL response to the initial shock</b>.</p>
+      <div class="callout c-exam"><span class="t">🎯 这题是 Lecture 11 的伏笔</span>
+        "存货调整完毕后，计划存货投资由负回到零，本身就构成一次需求上升"——
+        这正是 <b>Lecture 11 §5 存货波动引起商业周期</b>的机制。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q4 <span class="badge b-essay">概念</span></h3>
+    <p class="lead">Could the multiplier ever be less than 1?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng">In the simple model used in this chapter, the multiplier <b>1/s is always greater than +1</b>,
+      since <b>0 &lt; s &lt; 1</b>. <b>However, the combined leakages other than savings may be sufficient to reduce
+      the multiplier below unity.</b></p>
+      <div class="fml"><span class="lab">数值验证（用 Lecture 3 的完整乘数）</span>
+k = 1/[s + ct + z]
+若 s = 0.2、c = 0.8、t = 0.5、z = 0.5：
+分母 = 0.2 + 0.4 + 0.5 = 1.1 ⇒ <b>k = 0.91 &lt; 1</b> ✓
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q5 <span class="badge b-essay">辨析</span></h3>
+    <p class="lead">Why are these statements wrong? (a) If people were prepared to save more, investment would
+    increase and we could get the economy moving again. (b) Lower output leads to lower spending and yet lower
+    output. The economy could spiral downwards forever.</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng"><b>(a)</b> <b>This is the essence of the Keynesian revolution.</b> Ultimately, in a closed
+      economy <b>I and S are equal but it is the level of I which determines the level of saving, and NOT vice
+      versa</b>. Higher saving <b>reduces</b> aggregate demand and so the level of economic activity would be
+      <b>further reduced</b> rather than "get moving again".</p>
+      <p class="eng"><b>(b)</b> <b>Because MPC &lt; 1, each fall in output causes a SMALLER fall in demand, so the
+      process eventually comes to a halt.</b></p>
+      <div class="callout c-tip"><span class="t">💡 (b) 的数学本质</span>
+        每一轮的收缩是上一轮的 c 倍：ΔY = ΔI(1 + c + c² + …)。
+        因为 <b>0 &lt; c &lt; 1</b>，这个等比级数<b>收敛</b>到 <b>1/(1−c)</b>，<b>不会无限下滑</b>。
+        这也正是<b>乘数是有限数</b>的原因。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q6 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算</span></h3>
+    <p class="lead">Economy in equilibrium. Planned investment £100, MPC = 0.6. (a) Investment rises by £30 — what
+    happens to equilibrium output? Now the consumption function changes from C = 0.8Y to C = 0.5Y.
+    (b) What happens to equilibrium income (planned investment being £100)? (c) What happens to the equilibrium
+    proportion of income saved? Explain.</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml">
+(a) The multiplier is <b>2.5 (= 1/(1 − 0.6))</b>
+    ⇒ output increases by <b>£30 × 2.5 = £75</b>
+
+(b) When C = 0.8Y：Y = 0.8Y + 100 ⇒ 0.2Y = 100 ⇒ <b>Y = £500</b>
+    If C falls to 0.5Y：Y = 0.5Y + 100 ⇒ 0.5Y = 100 ⇒ <b>Y = £200</b>
+
+(c) In the absence of government and export/import sectors, <b>S = I</b>.
+    <b>Savings therefore remains unchanged at £100</b>, but which is now equal to 0.5Y.
+      </div>
+      <div class="callout c-exam"><span class="t">🎯 (c) 就是节俭悖论的数值版</span>
+        储蓄倾向从 <b>0.2 升到 0.5</b>（MPS 翻了 1.5 倍），
+        但<b>均衡储蓄仍然是 £100</b>——因为 <b>I 外生不变，均衡要求 S = I</b>。<br>
+        <b>变的是收入：500 → 200。</b><br>
+        验算：0.2 × 500 = 100 ✓；0.5 × 200 = 100 ✓ <b>两者完全相同。</b>
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q7 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算+图</span></h3>
+    <p class="lead">MPC = 0.6, investment demand rises by £30. (a) By how much does equilibrium output increase?
+    (b) How much of that increase is extra consumption demand? Draw the corresponding diagram using planned
+    investment and planned saving, assuming initial output is 100.</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml">
+(a) 乘数 = 1/(1 − 0.6) = 2.5 ⇒ <b>ΔY = 30 × 2.5 = 75</b>
+(b) ΔY = ΔI + ΔC ⇒ ΔC = 75 − 30 = <b>45</b>
+    （或直接：ΔC = c × ΔY = 0.6 × 75 = 45 ✓）
+新均衡产出 = 100 + 75 = <b>175</b>
+      </div>
+      <p><b>参考解答对两张图的文字描述（画图时照这个写标注）：</b></p>
+      <div class="tw"><table>
+        <tr><th style="width:24%">图</th><th>参考描述</th></tr>
+        <tr><td><b>(a) AD 法</b></td>
+          <td><b>Aggregate demand is an upward sloping line, with positive height when output is zero, and a slope
+          of 0.6.</b> The increase in investment leads to a <b>parallel upward shift</b> in the AD curve by a
+          <b>vertical distance of 30</b>. It now intersects the 45-degree line at an output level that is
+          <b>75 units higher</b>. Investment increases by 30 and <b>planned consumption by 45</b>.<br>
+          <span class="muted">图上标：截距由 40 升到 70，交点由 100 移到 175。</span></td></tr>
+        <tr><td><b>(b) S = I 法</b></td>
+          <td><b>Investment is a horizontal line and the saving function slopes upward</b> as output increases.
+          A <b>vertical upward shift of 30</b> in investment now intersects the saving function at an output that is
+          <b>75 units higher</b>. Again, if investment accounts for 30 of the total increase, <b>planned consumption
+          must account for 45</b>.</td></tr>
+      </table></div>
+      <figure>
+        <svg viewBox="0 0 900 300" role="img" aria-label="Two ways to show the multiplier">
+          <text class="lbl" x="120" y="16">(a) AD / 45° 线法</text>
+          <line class="ax" x1="70" y1="255" x2="410" y2="255"/>
+          <line class="ax" x1="70" y1="255" x2="70" y2="30"/>
+          <line x1="70" y1="255" x2="290" y2="35" class="cv" stroke="#8089bd"/>
+          <text class="lbl-s" x="258" y="44" fill="#8089bd">45°</text>
+          <line x1="70" y1="205" x2="395" y2="70" class="cv c-ad"/>
+          <text class="lbl-s" x="352" y="64" fill="#6c8bff">AD₀ (slope 0.6)</text>
+          <line x1="70" y1="175" x2="395" y2="40" class="cv c-alt"/>
+          <text class="lbl-s" x="352" y="34" fill="#33d6a6">AD₁</text>
+          <circle class="pt" cx="163" cy="162" r="5"/><text class="lbl-s" x="140" y="156">E₀</text>
+          <circle class="pt" cx="216" cy="109" r="5"/><text class="lbl-s" x="222" y="104">E₁</text>
+          <line x1="163" y1="162" x2="163" y2="255" class="dsh"/><text class="lbl-s" x="150" y="271">100</text>
+          <line x1="216" y1="109" x2="216" y2="255" class="dsh"/><text class="lbl-s" x="204" y="271">175</text>
+          <text class="lbl-s" x="34" y="209">40</text><text class="lbl-s" x="34" y="179">70</text>
+          <line x1="100" y1="175" x2="100" y2="205" stroke="#ffb454" stroke-width="3"/>
+          <text class="lbl-s" x="106" y="196" fill="#ffb454">ΔI=30</text>
+
+          <text class="lbl" x="580" y="16">(b) S = I 法</text>
+          <line class="ax" x1="510" y1="255" x2="855" y2="255"/>
+          <line class="ax" x1="510" y1="255" x2="510" y2="30"/>
+          <line x1="510" y1="180" x2="840" y2="180" class="cv c-alt2"/>
+          <text class="lbl-s" x="800" y="174" fill="#ffb454">I₀</text>
+          <line x1="510" y1="150" x2="840" y2="150" class="cv c-alt"/>
+          <text class="lbl-s" x="800" y="144" fill="#33d6a6">I₁</text>
+          <line x1="525" y1="252" x2="820" y2="60" class="cv c-ad"/>
+          <text class="lbl-s" x="782" y="56" fill="#6c8bff">S</text>
+          <circle class="pt" cx="620" cy="180" r="5"/><text class="lbl-s" x="600" y="198">E₀</text>
+          <circle class="pt" cx="666" cy="150" r="5"/><text class="lbl-s" x="672" y="168">E₁</text>
+          <line x1="620" y1="180" x2="620" y2="255" class="dsh"/><text class="lbl-s" x="608" y="271">100</text>
+          <line x1="666" y1="150" x2="666" y2="255" class="dsh"/><text class="lbl-s" x="654" y="271">175</text>
+          <line x1="550" y1="150" x2="550" y2="180" stroke="#ffb454" stroke-width="3"/>
+          <text class="lbl-s" x="556" y="170" fill="#ffb454">30</text>
+        </svg>
+        <figcaption>两种画法完全等价：ΔI = 30 ⇒ ΔY = 75，其中 ΔC = 45。</figcaption>
+      </figure>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q8 <span class="badge b-calc">计算</span></h3>
+    <p class="lead">C = 0.75Y and planned investment is 40. (a) Draw the AD schedule. (b) If actual output is 100,
+    what unplanned actions will occur? (c) Equilibrium output? (d) Same answer using planned S = planned I?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml">
+(a) <b>Intercept = 40, slope = 0.75</b>（AD = 40 + 0.75Y）
+
+(b) 产出 100 时：AD = 40 + 75 = 115 &gt; 100
+    ⇒ 需求超过产出 ⇒ <b>Destocking</b>（非计划存货减少）
+
+(c) Y = 40 + 0.75Y ⇒ 0.25Y = 40 ⇒ <b>Y = 160</b>
+
+(d) <b>Yes</b>：S = −0 + 0.25Y，令 S = I：
+    <b>40 = 0.25Y ⇒ Y = 40/0.25 = 160</b> ✓ 两法一致
+      </div>
+      <div class="callout c-trap"><span class="t">⚠️ 注意"destocking"的方向</span>
+        AD &gt; Y ⇒ 卖得比产得多 ⇒ <b>存货被动减少（destocking）</b> ⇒ 企业下期<b>增产</b>。<br>
+        很多人会把方向记反。口诀：<b>需求旺 → 货被抢光 → 加班生产</b>。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q9 <span class="badge b-essay">概念</span></h3>
+    <p class="lead">The diagram shows AD and output. Is there an inflationary gap or a deflationary gap in the
+    economy if the answer is 250?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng">There is a <b>DEFLATIONARY GAP</b> in the economy of <b>£100 billion</b>.
+      <b>The aggregate demand is insufficient to allow an equilibrium output of £250 billion.</b></p>
+      <div class="callout c-tip"><span class="t">💡 两个 gap 的定义（考试要能区分）</span>
+        <b>Deflationary gap（紧缩缺口）</b>：AD <b>不足</b>以支撑充分就业产出 ⇒ 均衡产出 &lt; Y* ⇒ 失业。<br>
+        <b>Inflationary gap（通胀缺口）</b>：AD <b>超过</b>充分就业产出所能提供的 ⇒ 只能推高价格（Lecture 7）。<br>
+        缺口的大小是<b>垂直距离</b>（AD 的缺口），不是水平距离（产出的缺口）——
+        产出缺口 = 缺口 × 乘数。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q10 <span class="badge b-calc">进阶</span></h3>
+    <p class="lead">Suppose confidence depends a little on current output: <b>I = aY + I*</b> and
+    <b>C = [A* + bY] + cY</b>. (a) New multiplier? (b) Higher or lower? (c) Is equilibrium output higher?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml"><span class="lab">(a) 推导</span>
+Y = C + I = A* + bY + cY + aY + I*
+Y(1 − c − a − b) = I* + A*
+<b>Y = [I* + A*] / [1 − c − a − b]</b>
+<b>Multiplier = 1 / [1 − c − a − b]</b>
+
+⚠️ <b>乘数为正的条件：(a + b + c) &lt; 1</b>
+      </div>
+      <p class="eng"><b>If confidence depends 'too much' on current output, the economy is EXPLOSIVE</b> — a gain in
+      output boosts confidence and demand, leading to further output and confidence gains that <b>keep going
+      indefinitely</b>.</p>
+      <p class="eng"><b>(b) The new multiplier is HIGHER than before</b>（分母从 1−c 变小到 1−c−a−b）。</p>
+      <p class="eng"><b>(c)</b> Whether equilibrium output is higher <b>depends on how I* and A* compare with the
+      previous autonomous values of I and A</b>. <b>If they are the same, the additional confidence effect implies
+      that equilibrium output is HIGHER because of the larger multiplier.</b></p>
+      <div class="callout c-exam"><span class="t">🎯 这题是 Lecture 11 "爆炸性周期"的先声</span>
+        "信心过度依赖当前产出 ⇒ 经济是爆炸性的"，与 Lecture 11 §4
+        <b>"explosive cycles that get larger and larger"</b> 是同一个数学结构。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q11 · Q12 · Q14 <span class="badge b-essay">Essay</span></h3>
+    <details><summary>Q11：节俭悖论在什么情况下不成立？</summary><div class="body">
+      <p class="eng">The paradox of thrift <b>relies on output and income adjusting to restore desired injections and
+      desired leakages</b>. In the model explained in this chapter that can always happen. <b>Once we reintroduce
+      aggregate supply, and in particular, a MAXIMUM CAPACITY for the entire economy, it is possible that there is an
+      OUTPUT CEILING above which output and income cannot go. The paradox of thrift might then be frustrated.</b></p>
+      <div class="callout c-tip"><span class="t">💡 完整的三条失效条件</span>
+        本答案给了<b>供给约束（产出上限）</b>这一条。Lecture 2 §10 还给了另外两条：<br>
+        ② <b>投资不再外生</b>（储蓄上升压低利率 → 投资上升，IS-MP 框架）；<br>
+        ③ <b>开放经济</b>（内需下降减少进口，改善贸易余额，部分抵消收缩）。<br>
+        考试答"何时失效"时，<b>三条一起写</b>。
+      </div>
+    </div></details>
+    <details><summary>Q12（Essay）：消费与收入的强相关是否说明"我们本质上都是物质主义者"？</summary><div class="body">
+      <p class="eng">This certainly seems to be the trend in most economies. Recent events in Britain have highlighted
+      <b>the fall in the savings ratio and the accumulation of household debt</b> arising mainly from mortgages,
+      unsecured loans and credit card liabilities. The <b>"boom years" 1997–2007</b> allowed households benefiting
+      from increased incomes to indulge in instant gratification.</p>
+      <p><b>但经济学家提出了其他理论来解释消费模式（这才是本题的得分点）：</b></p>
+      <ul>
+        <li class="eng"><b>Wealth effects</b> [when spending exceeds disposable income, net wealth falls] and
+        <b>changes in consumer credit</b> are responsible for most of the shifts in the consumption function.
+        Financing dissaving involves <b>selling off assets and/or borrowing money</b>.</li>
+        <li class="eng"><b>Money and interest rates</b> alter consumer spending by affecting <b>the quantity of
+        consumer credit and the interest rates charged on it</b>.</li>
+        <li class="eng"><b>The permanent income hypothesis</b> (Milton Friedman) argues that consumption depends on
+        <b>permanent income</b>, not on current or disposable income.</li>
+        <li class="eng"><b>The life cycle hypothesis</b> (Franco Modigliani) assumes people make <b>a lifetime
+        consumption plan that is affordable out of lifetime income</b>.</li>
+      </ul>
+      <div class="callout c-exam"><span class="t">🎯 这题的核心答法</span>
+        <b>相关不等于因果、也不等于"人性物质主义"。</b>
+        永久收入假说与生命周期假说说明：消费与<b>当期</b>收入的强相关，
+        可能只是因为<b>当期收入是永久收入的良好代理</b>，而不是因为人们急于花钱。<br>
+        这两个假说的详细内容见 <a href="../lectures/lecture-05.html#s10">Lecture 5 §10</a>。
+      </div>
+    </div></details>
+    <details><summary>Q14：衰退中人们想多储蓄，节俭悖论如何解释后果？</summary><div class="body">
+      <p class="eng">The paradox of thrift suggests that <b>a change in the amount households wish to save at each
+      income leads to a change in equilibrium income, but NO change in equilibrium saving</b>, which must still equal
+      planned investment.</p>
+      <p class="eng">If individuals try to save more during recession, <b>consumption decreases, which reduces
+      aggregate demand and thus reduces the total savings in the economy</b>. In equilibrium, <b>planned saving always
+      equals planned investment, and the latter is unaltered. Hence planned saving cannot change.</b> If savings
+      increase, <b>the income falls just enough to equate planned saving and investment at the equilibrium.</b></p>
+      <p class="eng"><b>In the LONG RUN</b>, once the economy has time to return to potential output, an increase in
+      the desire to save will <b>increase saving and reduce consumption at potential output</b>. Other adjustments may
+      then induce <b>investment demand to rise</b> to restore aggregate demand to its full-employment level.
+      <b>Hence, in the long run, society may BENEFIT from an increase in the desire to save. Investment will rise and
+      the economy's capital stock and potential output may grow more quickly.</b></p>
+      <div class="callout c-exam"><span class="t">🎯 最后这一段是满分与及格的分水岭</span>
+        <b>短期：储蓄有害（节俭悖论）；长期：储蓄有益（增长）。</b>
+        这正是 <a href="../lectures/lecture-10.html#s7">Lecture 10 §7</a> Solow 模型的结论。
+        <b>任何"节俭悖论"的 essay 都应该以这一段收尾。</b>
+      </div>
+    </div></details>
+  </div>
+</section>
+
+<section id="b">
+  <div class="sec-h"><span class="kicker">Section B</span><h2>Section B · 计算与选择</h2></div>
+
+  <div class="card">
+    <h3>B5 <span class="badge b-hot">重点</span> <span class="badge b-calc">数表</span></h3>
+    <p class="lead">Planned investment is autonomous at <b>H$60 bn</b> per period. 补全下表并回答 (c)–(g)。</p>
+    <details><summary>参考答案（完整数表）</summary><div class="body">
+      <div class="tw"><table>
+        <tr><th>Income (output)</th><th>Planned consumption</th><th>Planned investment</th><th>Savings</th>
+          <th>Aggregate Demand</th><th>Unplanned inventory change</th><th>Actual investment</th></tr>
+        <tr><td>50</td><td>35</td><td>60</td><td>15</td><td>95</td><td class="cross">−45</td><td>15</td></tr>
+        <tr><td>100</td><td>70</td><td>60</td><td>30</td><td>130</td><td class="cross">−30</td><td>30</td></tr>
+        <tr><td>150</td><td>105</td><td>60</td><td>45</td><td>165</td><td class="cross">−15</td><td>45</td></tr>
+        <tr style="background:rgba(51,214,166,.12)"><td><b>200</b></td><td><b>140</b></td><td><b>60</b></td>
+          <td><b>60</b></td><td><b>200</b></td><td><b>0</b></td><td><b>60</b></td></tr>
+        <tr><td>250</td><td>175</td><td>60</td><td>75</td><td>235</td><td class="tick">15</td><td>75</td></tr>
+        <tr><td>300</td><td>210</td><td>60</td><td>90</td><td>270</td><td class="tick">30</td><td>90</td></tr>
+        <tr><td>350</td><td>245</td><td>60</td><td>105</td><td>305</td><td class="tick">45</td><td>105</td></tr>
+        <tr><td>400</td><td>280</td><td>60</td><td>120</td><td>340</td><td class="tick">60</td><td>120</td></tr>
+      </table></div>
+      <div class="fml"><span class="lab">每一列怎么算</span>
+Savings = Income − Planned consumption
+Aggregate Demand = Planned consumption + Planned investment
+<b>Unplanned inventory change = Income − Aggregate Demand</b>
+<b>Actual investment = Planned investment + Unplanned inventory change</b>
+  （注意：<b>Actual investment 每一行都恰好等于 Savings</b> ⇒ <b>actual I ≡ actual S</b> ✓）
+      </div>
+      <p class="eng"><b>(c) 收入 = 100 时：Increase output.</b> With income at 100, aggregate demand is 130, so that
+      <b>stocks will be rapidly run down</b>. Producers are likely to react by <b>producing more output</b> next period.</p>
+      <p class="eng"><b>(d) 收入 = 350 时：Reduce output.</b> With income at 350, aggregate demand is only 305 and
+      producers <b>cannot sell their output, so stocks begin to build up</b>. They are thus likely to
+      <b>reduce output</b> next period.</p>
+      <p class="eng"><b>(e)</b> <b>Only at income of 200</b> do we find that aggregate demand equals aggregate supply —
+      or, equivalently, that <b>planned investment equals planned savings</b>. This is the <b>equilibrium level of
+      income</b>.</p>
+      <p class="eng"><b>(f)</b> As income increases by 50, consumption increases by 35, so
+      <b>MPC = 35/50 = 0.7</b>.</p>
+      <p class="eng"><b>(g)</b> An increase in investment of H$15 bn to H$75 bn would carry equilibrium income to
+      <b>250</b> — an increase of <b>15/0.3 = 50</b>.</p>
+      <div class="callout c-exam"><span class="t">🎯 这张表是 Lecture 2 §7 "planned vs actual" 的完美教具</span>
+        看两列：<b>Planned investment 永远是 60</b>；<b>Actual investment 随收入变化</b>。
+        <b>只有在 Y = 200 这一行，两者才相等（非计划存货 = 0）</b>——这就是均衡的定义。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>B6 <span class="badge b-calc">计算</span></h3>
+    <p class="lead">C = A + cY. (a) MPC? (b) How is saving related to income? Given A = 400, c = 0.75, I = 500:
+    (c) At what income is saving zero? (d) Equilibrium income?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml">
+(a) <b>MPC = c</b>
+
+(b) S = Y − C = Y − A − cY ⇒ <b>S = −A + (1 − c)Y</b>
+
+(c) 代入：S = −400 + 0.25Y，令 S = 0 ⇒ <b>Y = 1600</b>
+
+(d) C = 400 + 0.75Y，均衡 Y = C + I：
+    Y = 400 + 0.75Y + 500
+    0.25Y = 900
+    <b>Y = 3600</b>
+      </div>
+      <div class="callout c-trap"><span class="t">⚠️ 参考答案里的一个笔误</span>
+        Solutions 原文写作 <span class="mono">"Y = 400 + 0.25Y + 500"</span>，
+        <b>这里 0.25 应为 0.75</b>（等式左移后才出现 0.25Y = 900）。
+        <b>最终答案 Y = 3600 是正确的</b>，按上面的写法推导即可。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>B1–B4, B7–B12 <span class="badge b-mcq">MCQ</span></h3>
+    <details><summary>全部选择题答案与解析</summary><div class="body">
+      <div class="tw"><table>
+        <tr><th style="width:8%">题</th><th style="width:10%">答案</th><th>解析</th></tr>
+        <tr><td><b>B1</b></td><td class="tick">C</td>
+          <td>Potential output 是<b>投入被充分就业（fully employed）</b>时的产出。</td></tr>
+        <tr><td><b>B2</b></td><td class="tick">C</td>
+          <td>无政府无外贸时 <b>AD = personal consumption + private investment</b>。</td></tr>
+        <tr><td><b>B3</b></td><td class="tick">C</td>
+          <td>投资外生时，<b>AD 的斜率由 MPC 决定</b>。</td></tr>
+        <tr><td><b>B4</b></td><td class="tick">B</td>
+          <td>商品市场均衡 ⟺ 产出 <b>等于</b> 计划支出/总需求。</td></tr>
+        <tr><td><b>B7</b></td><td class="tick">D</td>
+          <td>乘数告诉我们<b>总需求变动后产出变动多少</b>（output, aggregate demand）。</td></tr>
+        <tr><td><b>B8</b></td><td>—</td>
+          <td>参考解释：<b>"The paradox of thrift shows that regardless of the desire to save, savings will remain
+          constant. This is because in equilibrium savings must equal investment. Because investment is autonomous
+          and therefore independent of income, then investment is constant. So therefore savings must be
+          constant."</b></td></tr>
+        <tr><td><b>B9</b></td><td class="tick">B (False)</td>
+          <td><b>自主支出不为零</b>——<b>"It is positive, since the horizontal intercept of the saving function
+          is −A."</b>（储蓄函数的纵轴截距是 −A，说明 A &gt; 0）</td></tr>
+        <tr><td><b>B10</b></td><td class="tick">C</td>
+          <td>MPS = 0.1 ⇒ 乘数 = 1/0.1 = <b>10</b> ⇒ <b>£1 的投资增加带来 £10 的收入增加</b>。<br>
+          <span class="muted">A 错：AD 斜率 = MPC = 0.9 ≠ 1；B 错：£5 的消费增加带来 £50——但 B 描述的是"消费"而非自主支出，且与 A 组合的 D 也就不成立。</span></td></tr>
+        <tr><td><b>B11</b></td><td class="tick">D</td>
+          <td><b>D 的结论是错的</b>（题目问哪个"不正确"）。参考解释：
+          <b>"Households cannot use their savings to increase consumption spending, i.e. the AUTONOMOUS COMPONENT
+          decreases."</b> ⇒ 冻结账户使 <b>A 下降 ⇒ AD 曲线平行下移</b>，
+          <b>不是变陡</b>（斜率 MPC 未变）。<br>
+          <span class="muted">A、B、C 都正确：收入变化 = 沿线移动；乐观 = AD 上移；储蓄偏好上升 = MPC 下降 = AD 变平坦。</span></td></tr>
+        <tr><td><b>B12</b></td><td class="tick">A</td>
+          <td>收入越低，<b>储蓄/收入之比越低</b>（甚至为负）。参考解释：
+          <b>"This is due to the autonomous component A, which weighs more for low incomes."</b><br>
+          <span class="muted">B 错：MPC 是常数 c，不随收入变；C 错：斜率是 c 不是 1/c；D 错：A 按定义与 Y 无关。</span></td></tr>
+      </table></div>
+      <div class="callout c-exam"><span class="t">🎯 B11 是本 tutorial 最重要的一道 MCQ</span>
+        它一次性考了 <b>沿线移动 vs 曲线移位</b>、<b>截距 vs 斜率</b> 两组区分——
+        正是 <a href="../lectures/lecture-02.html#s8">Lecture 2 §8</a> 的核心考点。
+      </div>
+    </div></details>
+  </div>
+</section>
+
+<section id="c">
+  <div class="sec-h"><span class="kicker">Section C</span><h2>Section C · 讨论题（选做）</h2></div>
+  <div class="card">
+    <details><summary>C1：45° 线模型能解释中国 90–00 年代的低通胀高增长吗？</summary><div class="body">
+      <p class="eng">The Keynesian 45° line assumes <b>an abundance of underemployed economic resources (plus fixed
+      prices/wages)</b>. China's growth in recent years has been fuelled almost entirely by <b>growth in aggregate
+      demand, particularly exports</b>. China's ability to grow so rapidly <b>without inflation reflects the almost
+      perfectly elastic nature of SUPPLY within the economy</b>. However, <b>as growth continues and all resources are
+      employed, inflation may rise and the Keynesian 45° diagram may no longer be an appropriate description</b>.</p>
+      <div class="callout c-tip"><span class="t">💡 这题把 Lecture 2 与 Lecture 7 连起来了</span>
+        <b>供给近乎完全弹性 = 水平的 SAS</b>；一旦资源用尽 ⇒ <b>SAS 变陡直至垂直的 LAS</b>
+        ⇒ 需求扩张只推高价格。
+      </div>
+    </div></details>
+    <details><summary>C2：人口老龄化如何改变消费函数？</summary><div class="body">
+      <p class="eng">The longer you live, particularly beyond retirement, <b>the more you need to save</b>. Therefore
+      <b>the MPC will fall, leading to a FLATTER consumption function</b>. However, the answer may change <b>if people
+      postpone retirement</b> because of increased life expectancy. Further complications arise when consideration is
+      given to <b>state intervention and how pensions are financed</b>.</p>
+    </div></details>
+    <details><summary>C3：为什么消费函数的形状在短期与长期可能不同？</summary><div class="body">
+      <p class="eng">Autonomous consumption is consumption <b>unrelated to income</b>; households wish to consume this
+      amount <b>even if income is zero</b>. <b>In the short run this is possible by running down savings and assets.
+      However, in the long run this level of consumption may no longer be possible.</b></p>
+    </div></details>
+    <details><summary>C4：投资在多大程度上是自主支出？</summary><div class="body">
+      <p class="eng">According to Keynes, <b>"animal spirits"</b> are an important determinant of investment. But how
+      are animal spirits affected by <b>macroeconomic stability, consumption patterns and export growth</b>?
+      <b>Investment is therefore unlikely to be autonomous.</b> Also, even if animal spirits matter, there are surely
+      a number of economic factors — <b>interest rates, profits, taxation</b> — that will have at least some
+      influence.</p>
+      <div class="callout c-tip"><span class="t">💡 这正是 Lecture 5–6 要做的事</span>
+        引入 <b>I = I(r)</b>（II 曲线）⇒ 得到向下倾斜的 <b>IS 曲线</b>。
+      </div>
+    </div></details>
+    <details><summary>C5：考虑其他漏出后乘数会怎样？</summary><div class="body">
+      <p class="eng">A <b>higher rate of saving leakage leads to a lower multiplier</b>. Therefore it is an easy step
+      to show that <b>a higher number of leakages (taxes and imports) will lead to a lower multiplier</b>.</p>
+      <p class="muted">⇒ 完整乘数 <b>k = 1/[s + ct + z]</b>，见 <a href="../lectures/lecture-03.html#s10">Lecture 3 §10</a>。</p>
+    </div></details>
+    <details><summary>C6：如果家庭想<b>减少</b>储蓄，节俭悖论意味着什么？</summary><div class="body">
+      <p class="eng">An increase in autonomous consumption leads to an <b>increase in equilibrium income</b>.
+      However, <b>equilibrium saving must still equal planned investment (assumed autonomous) and is therefore
+      unchanged.</b></p>
+      <div class="callout c-tip"><span class="t">💡 节俭悖论是对称的</span>
+        想多存 ⇒ 收入下降、储蓄不变；想少存 ⇒ 收入上升、储蓄<b>仍然不变</b>。
+        <b>变的永远是收入，不是储蓄。</b>
+      </div>
+    </div></details>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sec-h"><span class="kicker">Exam Technique</span><h2>✍️ 本次 Tutorial 的答题结构点评</h2></div>
+  <div class="card">
+    <h3>题型 1：求均衡产出（A1, A6, A8, B6）</h3>
+    <div class="model">
+      <div class="step"><span class="h">固定四步</span>
+        <p>① 写均衡条件 <span class="mono">Y = AD = C + I</span>；<br>
+        ② 代入消费函数与投资，<b>把含 Y 的项移到左边</b>；<br>
+        ③ 解出 Y，<b>写清乘数是多少</b>；<br>
+        ④ <b>用 S = I 法验算一遍</b>（A8(d) 就是明确要求这样做）。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:22px">题型 2：画图题（A7, A13）</h3>
+    <div class="callout c-exam"><span class="t">🎯 A13 是"三种冲击的图形区别"，务必分清</span>
+      <div class="tw"><table style="margin-top:8px">
+        <tr><th style="width:26%">变化</th><th>图形</th><th>新均衡（参考答案）</th></tr>
+        <tr><td><b>(a) I 由 100 降到 50</b></td><td rowspan="2"><b>AD 平行下移 50</b>（截距变，斜率不变）</td>
+          <td rowspan="2"><b>Y 由 1000 降到 750</b></td></tr>
+        <tr><td><b>(b) A 由 100 降到 50</b></td></tr>
+        <tr><td><b>(c) c 由 0.8 降到 0.7</b></td>
+          <td><b>AD 绕纵轴截距旋转变平坦</b>（截距不变，斜率变）</td>
+          <td><b>Y 由 1000 降到 667</b></td></tr>
+      </table></div>
+      参考评语：<b>"Note that a small change in the marginal propensity to consume can have a LARGE effect on the
+      multiplier and on equilibrium output/income."</b>（0.8→0.7 使乘数由 5 降到 3.33）<br><br>
+      <b>初始状态：AD 截距 200（= A 100 + I 100），斜率 0.8，与 45° 线交于 Y = 1000。</b>
+    </div>
+
+    <h3 style="margin-top:22px">题型 3：Why are these statements wrong?（A5）</h3>
+    <p>与 Tutorial 1 相同的套路：<b>指出概念错误 → 给出正确表述 → 承认部分正确之处</b>。
+    A5(a) 的参考答案值得注意——它先说<b>"This is the essence of the Keynesian revolution"</b>，
+    把这句话<b>提升到理论史的高度</b>，这类"点明命题的理论地位"的写法很拿分。</p>
+
+    <h3 style="margin-top:22px">题型 4：节俭悖论 Essay（A11, A14, C6）</h3>
+    <div class="model">
+      <div class="step"><span class="h">四段结构</span>
+        <p><b>① Define</b>：节俭悖论 + 模型假设（价格固定、需求决定产出、I 外生）<br>
+        <b>② Diagram</b>：<b>上下两格图</b>（AD/45° 线 + S/I 图），标出 E → E′、ΔY<br>
+        <b>③ Analyse</b>：ΔA &lt; 0 → AD 下移 → 非计划存货累积 → 乘数收缩 →
+        <span class="mono">ΔS = (−ΔA) + (1−c)ΔY = 0</span><br>
+        <b>④ Conclude</b>：<b>收入下降、储蓄不变</b> + <b>三条失效条件</b>（产能上限 / I 内生 / 开放经济）
+        + <b>长期反转</b>（储蓄提高资本存量与潜在产出）</p>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:12px">完整范例见
+    <a href="../lectures/lecture-02.html#model">Lecture 2 页面的答题范例</a>。</p>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="tutorial-01.html">← Tutorial 1</a>
+  <a href="../lectures/lecture-02.html">Lecture 2</a>
+  <a href="tutorial-03.html">Tutorial 3 →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

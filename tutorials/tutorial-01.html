@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutorial 1 · National Income Accounting — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <a class="nav" href="../lectures/lecture-01.html">← Lecture 1 讲解</a>
+  <div class="navgroup">本次 Tutorial</div>
+  <a class="nav active" href="#focus">🎯 课堂重点题</a>
+  <a class="nav" href="#a">Section A（1–14）</a>
+  <a class="nav" href="#b">Section B（1–13）</a>
+  <a class="nav" href="#c">Section C（选做）</a>
+  <a class="nav" href="#skills">✍️ 答题结构点评</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Tutorial 1 · National Income Accounting</h1>
+  <div class="sub">对应 <a href="../lectures/lecture-01.html">Lecture 1</a>：循环流量图 · GDP 三种度量 · 名义与实际 GDP</div>
+  <div>
+    <span class="tag">Section A: 1, 4, 7, 8</span>
+    <span class="tag">Section B: 1, 2, 7</span>
+    <span class="tag b-hot">↑ 课堂重点讲的题</span>
+  </div>
+</div>
+
+<div class="callout c-tip" style="margin-top:20px"><span class="t">💡 使用方法</span>
+  每题<b>先自己动手算/写</b>，再点开 <b>▸ 参考答案</b> 对照。
+  带 <span class="badge b-hot">重点</span> 的是 tutorial 课上讲的题，优先掌握。
+</div>
+
+<section id="focus">
+  <div class="sec-h"><span class="kicker">Priority</span><h2>🎯 课堂重点题速览</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:16%">题号</th><th>考什么</th><th style="width:26%">对应 Lecture 1 章节</th></tr>
+      <tr><td><b>A1</b></td><td>增加值（value added）的计算，避免重复计算</td><td>§5 GDP 三种度量法</td></tr>
+      <tr><td><b>A4</b></td><td>GDP deflator ↔ 名义/实际 GDP ↔ 通胀率</td><td>§8–9 名义 vs 实际、deflator</td></tr>
+      <tr><td><b>A7</b></td><td>国民收入核算的六栏结构图</td><td>§7 GDP/GNP/NNP/NI</td></tr>
+      <tr><td><b>A8</b></td><td><b>漏出 = 注入</b>求均衡产出；预算盈余/赤字</td><td>§4 恒等式</td></tr>
+      <tr><td><b>B1</b></td><td>用指数计算实际 GNP 与人均实际 GNP</td><td>§8–9</td></tr>
+      <tr><td><b>B2</b></td><td><b>真实 UK 数据</b>：支出法与收入法算 GDP/GNP/NNP/NI</td><td>§6–7</td></tr>
+      <tr><td><b>B7</b></td><td>五企业增加值表（<b>机器不是中间投入</b>）</td><td>§5 课件例题</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="a">
+  <div class="sec-h"><span class="kicker">Section A</span><h2>Section A · 主要练习</h2></div>
+
+  <div class="card">
+    <h3>Q1 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算</span></h3>
+    <p class="lead">Car firms buy raw materials (steel), intermediate goods (windscreens, tyres) and labour to make
+    cars. Windscreen and tyre companies hire workers and also buy raw materials from other industries.
+    <b>What is the value added of the car industry (the three firms shown below)?</b></p>
+    <div class="tw"><table>
+      <tr><th>Producer of</th><th>Output</th><th>Intermediate goods used</th><th>Raw materials used</th><th>Labour input</th></tr>
+      <tr><td>Cars</td><td>1000</td><td>250</td><td>100</td><td>100</td></tr>
+      <tr><td>Windscreens</td><td>150</td><td></td><td>10</td><td>50</td></tr>
+      <tr><td>Tyres</td><td>100</td><td></td><td>10</td><td>30</td></tr>
+    </table></div>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng"><b>The value added is the value of the final product less the value of the raw material used.</b>
+      Assuming that "the car industry" includes all three firms, then: <b>1000 − 120 = 880</b>.</p>
+      <div class="fml"><span class="lab">为什么是减 120，不是减 250 + 100 + 10 + 10</span>
+把三家企业<b>当作一个"产业"</b>看待：
+• 挡风玻璃（150）与轮胎（100）是<b>产业内部</b>的交易 ⇒ <b>不能重复计算</b>
+• 只有从<b>产业外部</b>购入的原材料才要扣除：100 + 10 + 10 = <b>120</b>
+• 产业的最终产出 = 汽车 <b>1000</b>
+⇒ <b>Value added = 1000 − 120 = 880</b>
+
+⚠️ 劳动投入（100 + 50 + 30）<b>不扣除</b>——工资是<b>要素收入</b>，本身就是增加值的组成部分。
+      </div>
+      <div class="callout c-trap"><span class="t">⚠️ 最常见的两个错误</span>
+        ① 把中间品 250 也减掉 ⇒ 那是把产业内部交易重复扣除了；<br>
+        ② 把劳动成本减掉 ⇒ 增加值 = 工资 + 利润 + 租金 + 利息，<b>工资在增加值之内</b>。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q2 <span class="badge b-calc">计算</span></h3>
+    <p class="lead">GNP at market prices is £300 billion. Depreciation is £30 billion, indirect taxes £20 billion.
+    (a) What is the national income? (b) Why does depreciation cause a discrepancy between GNP and national income?
+    (c) Why do indirect taxes enter the calculation?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml">(a) <b>Both depreciation and indirect taxes need to be subtracted</b>:
+    300 − 30 − 20 = <b>£250 billion</b>
+      </div>
+      <p class="eng">(b) <b>National income is net national product at basic prices. Depreciation is part of the cost
+      of producing output</b>（折旧是生产产出的成本的一部分，所以要从 gross 里扣掉才得到 net）。</p>
+      <p class="eng">(c) <b>Indirect taxes do not add to the value of the national income. If they did, nations would
+      be able to become richer and richer simply by taxing more.</b></p>
+      <div class="callout c-tip"><span class="t">💡 (c) 这句反证法很漂亮，值得直接背下来用</span>
+        "如果间接税算作国民收入，那国家只要不停加税就能越来越富"——用归谬法说明为什么要用基本价格。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q3</h3>
+    <p class="lead">Which of the following statements is correct? (a) Increasing the staff of the police force in
+    response to higher crime <b>raises</b> national income because government spending is higher. (b) Increasing the
+    staff of the police force <b>reduces</b> national income because society wastes resources tackling crime.
+    (c) There is <b>no effect</b> on national income.</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng"><b>(a) is correct</b>, because government expenditure in wages (e.g. wages of teachers, soldiers,
+      cleaners, and, as in this question, the police) <b>adds to the national income</b>. The arguments put forward in
+      (b) and (c) are really couched in terms of <b>national well-being or welfare</b> (which may be more important
+      than national income).</p>
+      <div class="callout c-exam"><span class="t">🎯 这题考的是"国民收入 ≠ 福利"</span>
+        警察工资是<b>要素收入</b>，计入 GDP。但更多警察是 Lecture 1 §10 说的
+        <b>"the production of 'regrettables'"</b>——计入 GDP 却不提升福利。
+        <b>题目问的是 national income，不是 welfare，所以选 (a)。</b>
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q4 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算</span></h3>
+    <p class="lead">Given the data below: (a) What is 2010 GDP in 2009 prices? (b) What is the growth rate of real
+    GDP from 2009 to 2010? (c) What is the inflation rate?</p>
+    <div class="tw"><table>
+      <tr><th>Year</th><th>Nominal GDP (£)</th><th>GDP deflator</th></tr>
+      <tr><td>2009</td><td>2000</td><td>100</td></tr>
+      <tr><td>2010</td><td>2400</td><td>110</td></tr>
+    </table></div>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml"><span class="lab">(a) 用 deflator 把名义 GDP 折成 2009 年价格</span>
+Real GDP<sub>2010</sub> = Nominal GDP<sub>2010</sub> × (100 / 110)
+                        = 2400 × (100/110) = <b>£2182</b>
+      </div>
+      <div class="fml"><span class="lab">(b) 实际 GDP 增长率</span>
+2009 年实际 GDP = 2000（因为 deflator = 100，基期）
+增长 = 2182 − 2000 = 182
+增长率 = 182 / 2000 × 100 = <b>9.1%</b>
+      </div>
+      <div class="fml"><span class="lab">(c) 通胀率</span>
+deflator 由 100 升到 110 ⇒ <b>inflation rate = 10%</b>
+      </div>
+      <div class="callout c-tip"><span class="t">💡 交叉验证</span>
+        名义增长 = 2400/2000 − 1 = <b>20%</b>；实际增长 <b>9.1%</b> + 通胀 <b>10%</b> ≈ 19.1%，
+        与 20% 接近（差额是交叉项 0.091 × 0.10 ≈ 0.9%）。<br>
+        <b>近似关系：名义增长率 ≈ 实际增长率 + 通胀率</b> —— 考场上可以用它快速自检。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q5 <span class="badge b-essay">辨析</span></h3>
+    <p class="lead">Common fallacies. Why are these statements wrong? (a) Unemployment benefit props up national
+    income in years when employment is low. (b) A high per capita real GDP is always a good thing. (c) In 2010,
+    Crummy Movie earned £1 billion more at the box office than Gone With the Wind earned 50 years ago. Crummy Movie
+    is definitely a bigger box office success.</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng"><b>(a)</b> Unemployment benefit itself is a <b>transfer payment</b>, since it <b>does not add to
+      real output</b>. However, <b>its expenditure adds to demand and may create the employment of others</b>, so the
+      statement is <b>not completely wrong</b>.</p>
+      <p class="eng"><b>(b)</b> <b>It depends on how the income is distributed.</b> It might conceivably be undesirable
+      if achieved by <b>very unequal income distribution</b>.</p>
+      <p class="eng"><b>(c)</b> The £1 billion <b>has to be adjusted for inflation</b>. <b>In real terms, Gone With The
+      Wind wins by a mile!</b></p>
+      <div class="callout c-exam"><span class="t">🎯 三个错误各对应一个核心概念</span>
+        (a) <b>转移支付不计入 GDP</b>；(b) <b>总量掩盖分配</b>；(c) <b>名义 vs 实际</b>。<br>
+        注意 (a) 的答法很讲究：<b>先指出错在哪，再承认它"不完全错"</b>——
+        这种"两面兼顾"的写法正是英式评分喜欢的。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q6 <span class="badge b-essay">恒等式</span></h3>
+    <p class="lead">Suppose a country is unable to borrow from abroad and must always equate the value of its exports
+    and imports. If the private sector is saving a lot more than it is investing, is the government in surplus or
+    deficit? Why?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng">Since <b>total leakages equal total injections</b>, and since <b>exports equal imports</b>, this
+      means that, if the economy is in equilibrium, the remaining injections (<b>investment + government spending</b>)
+      must be equal to the remaining leakages (<b>saving + taxes</b>). Hence, <b>if saving exceeds investment,
+      government spending must exceed taxes</b>. <b>The private sector surplus is offset by the government deficit.</b></p>
+      <div class="fml"><span class="lab">用 Lecture 1 的恒等式一步到位</span>
+(S − I) + (NT − G) ≡ (X − Z)
+题目给定 X = Z ⇒ 右边 = 0
+⇒ (S − I) = −(NT − G) = <b>G − NT</b>
+S ≫ I ⇒ 左边 &gt; 0 ⇒ <b>G &gt; NT ⇒ 政府赤字（deficit）</b>
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q7 <span class="badge b-hot">重点</span> <span class="badge b-essay">图</span></h3>
+    <p class="lead">It is the year 2060. Nation states have been abolished and there is a <b>world government whose
+    spending is entirely financed by income tax</b>. How does the (national accounts) diagram have to be amended?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p>逐栏解释（这正是 Lecture 1 §7 的六栏结构图）：</p>
+      <div class="tw"><table>
+        <tr><th style="width:16%">栏</th><th>内容与本题的修改</th></tr>
+        <tr><td><b>第 1 栏</b></td><td>GNP（= GNI）at market prices</td></tr>
+        <tr><td><b>第 2 栏</b></td><td>GNP 的<b>支出</b>度量：家庭消费 C、企业投资 I、政府对商品与服务的支出 G。<br>
+          <b>⚠️ 修改：没有净出口 NX，也没有来自国外的净国际转移（NYA）</b>——因为世界政府下不存在"国外"</td></tr>
+        <tr><td><b>第 3 栏</b></td><td>从 GNP 到 GDP。<b>⚠️ 本经济中 GNP = GDP</b>，因为没有净国际转移支付</td></tr>
+        <tr><td><b>第 4 栏</b></td><td>gross 与 net 的差别：<b>扣除物质资本的折旧</b>（建筑与机器磨损或过时）⇒ NNP</td></tr>
+        <tr><td><b>第 5 栏</b></td><td>间接税的作用。<b>⚠️ 修改：由于政府支出完全由所得税融资，<b>没有间接税</b>
+          ⇒ <b>NNP at market prices = NNP at basic prices</b></b></td></tr>
+        <tr><td><b>第 6 栏</b></td><td>要素收入：<b>wages and salaries、self-employed work、rent、profits</b></td></tr>
+      </table></div>
+      <div class="callout c-tip"><span class="t">💡 记忆口诀</span>
+        市场价格 vs 基本价格的差 = <b>间接税</b>；GNP vs GDP 的差 = <b>NYA</b>；
+        gross vs net 的差 = <b>折旧</b>。本题把<b>前两个差都设为零</b>，所以图被"压扁"了。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q8 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算</span></h3>
+    <p class="lead">Suppose the injections (I, G, X) do not depend on Y, while leakages increase as output increases.
+    (a) Suppose saving S = 0.1Y. If total injections equal 10, what is the equilibrium level of output? (Assume
+    NT = 0 and Z = 0). (b) Now suppose imports Z = 0.4Y, and taxes T = 0.5Y. If G = £40, is the government budget
+    (G − T) in surplus or deficit?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml"><span class="lab">(a) 漏出 = 注入</span>
+<b>Leakages are always equal to injections:</b>
+    0.1Y = 10
+    <b>Y = 100</b>
+      </div>
+      <div class="fml"><span class="lab">(b)</span>
+T = 0.5Y = 0.5 × 100 = <b>50</b>
+G = 40
+⇒ G − T = 40 − 50 = <b>−10 ⇒ 政府盈余（surplus）为 10</b>
+      </div>
+      <div class="callout c-trap"><span class="t">⚠️ 注意题目的措辞</span>
+        题目问的是 <b>"(G − T) in surplus or deficit"</b>。<b>G − T &lt; 0 意味着盈余</b>，不是赤字。
+        参考答案原文：<b>"the government surplus is therefore 10 if G = 40"</b>。<br>
+        另注意 (b) 沿用 (a) 的 Y = 100（题目未要求重算均衡）。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q9 <span class="badge b-calc">计算</span></h3>
+    <p class="lead">GNP = £2000, C = £1700, G = £50 and NX = £40. (a) What is investment I? (b) If exports are 350,
+    what are imports? (c) If depreciation = £130, what is national income? (d) Could net exports be negative?
+    (Assume GNP at market prices; NYA = 0; indirect taxes = 0.)</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml">
+(a) GNP = C + I + G + NX
+    C + G + NX = 1700 + 50 + 40 = 1790
+    <b>I = 2000 − 1790 = £210</b>
+
+(b) NX = X − Z = 40，X = 350 ⇒ <b>Z = 350 − 40 = £310</b>
+
+(c) 因为 NYA = 0 且间接税 = 0：National income = GNP − depreciation
+    = 2000 − 130 = <b>£1870</b>
+
+(d) <b>Yes</b>, if the value of imports exceeds the value of exports.
+    The economy would have a <b>balance of payments deficit</b>.
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q10 <span class="badge b-essay">概念</span></h3>
+    <p class="lead">Should these be in a comprehensive measure of GNP: (a) time spent by students in lectures;
+    (b) the income of muggers; (c) the wage paid to traffic wardens; (d) dropping litter?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <p class="eng">This is a difficult question because <b>"should" implies what ought to happen, a concept
+      economists normally avoid, rather than what actually does.</b></p>
+      <ul>
+        <li class="eng"><b>(a)</b> Not included <b>unless the students are in paid employment</b> (e.g. apprentices on
+        day release). The grants of full-time students are <b>transfer payments, not earned income</b>. However, a case
+        could be made for including the time even of full-time grant-less students, since <b>investment in human
+        capital occurs</b>.</li>
+        <li class="eng"><b>(b)</b> <b>No</b> — this is simply a <b>"transfer" payment</b>, though if the mugged person
+        claimed on the insurance that would be counted.</li>
+        <li class="eng"><b>(c)</b> <b>Yes</b>, they are earnings.</li>
+        <li class="eng"><b>(d)</b> Environmentalists argue that <b>pollution should ideally be subtracted from GNP</b>.
+        <b>Paradoxically, however, the wages paid to those who pick it up are counted, so in this way pollution
+        actually ADDS to GNP</b> (as, for example, does the cost of preventing crime).</li>
+      </ul>
+      <div class="callout c-tip"><span class="t">💡 (d) 是全 tutorial 最值得记的一句</span>
+        <b>污染本身不减 GDP，清理污染的工资反而加 GDP</b>——这是 Lecture 1 §10
+        "GDP 不是福利指标"最有力的一个例子。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>Q11 · Q13 · Q14 <span class="badge b-essay">Essay</span></h3>
+    <details><summary>Q11：电视机价格 30 年不变说明什么？</summary><div class="body">
+      <p class="eng">(i) <b>The nominal price has been constant therefore the REAL price has fallen a lot.</b>
+      (ii) <b>Quality has improved hugely</b> over the period. To explain both of these simultaneously, there must
+      have been <b>a lot of technical progress</b>. Deciding how to revalue goods because of their superior quality is
+      just one of the problems facing a statistician working on the national accounts.</p>
+      <div class="callout c-exam"><span class="t">🎯 这题实际考的是"价格指数的质量偏误"</span>
+        CPI 与 deflator 都难以充分调整质量改善 ⇒ <b>通胀被高估、实际增长被低估</b>。
+      </div>
+    </div></details>
+    <details><summary>Q13：如何把闲暇的价值纳入 GDP？</summary><div class="body">
+      <p class="eng">The place to start is that <b>by taking leisure, people reveal that this is at least as valuable
+      to them as working more</b>, provided that they have that choice. For all such people, you would have to decide
+      how many hours a day are the <b>fixed costs of being alive</b> — sleeping, eating, washing — and hence how many
+      hours could potentially be allocated between work and leisure. Knowing something about <b>national wage rates
+      and hours of work</b>, you could have a stab at valuing total leisure hours.</p>
+      <p class="eng">In theory, decisions between work and leisure are made <b>at the margin</b>. Thus in many
+      industries <b>"overtime" is paid at a higher rate</b> in order to make work more attractive than leisure.
+      A person working a 35-hour week would probably value an extra hour's leisure <b>less</b> than someone working a
+      45-hour week.</p>
+      <p class="eng">Complications: (a) people who <b>don't have the choice</b> — the young, the sick, those caught in
+      a poverty trap; (b) the distinction between those working but choosing some leisure and those on benefit schemes
+      who <b>simultaneously get money and leisure</b>; (c) how to treat <b>parents who stay at home</b> to look after
+      children.</p>
+    </div></details>
+    <details><summary>Q14（Essay）：GDP 有多大用处？我们能轻易有更好的指标吗？</summary><div class="body">
+      <p class="eng"><b>The statement in inverted commas is wrong</b> — it is far from pointless to try to measure GDP,
+      <b>provided the result is used with awareness of its limitations</b>. There are many suggestions for constructing
+      a better measure, but <b>none are easy</b>.</p>
+      <p><b>参考解答给的三段式提纲（essay 直接照这个骨架写）：</b></p>
+      <div class="tw"><table>
+        <tr><th style="width:30%">段落</th><th>要点</th></tr>
+        <tr><td><b>① Acknowledge the limitations of GDP</b></td>
+          <td>• GDP should measure <b>income per head</b>, not just total income<br>
+          • GDP gives no information about <b>income distribution/equality</b><br>
+          • GDP ignores <b>untraded goods and services</b>（housework、voluntary work、own produce、
+            developing countries 的 subsistence farming、服务互换）<br>
+          • GDP does not report the <b>informal / "back pocket" economy</b><br>
+          • 国际比较应使用 <b>purchasing power parity rate 而非 market rate</b></td></tr>
+        <tr><td><b>② Suggestions for improving GDP</b></td>
+          <td>• <b>Subtracting for resource use</b>（扣除资源消耗）<br>
+          • <b>Subtracting for "bads"</b> such as pollution and congestion</td></tr>
+        <tr><td><b>③ Attempts at constructing a better measure</b></td>
+          <td>• <b>UN 的 Human Development Index (HDI)</b>：包含 <b>life expectancy at birth、
+            mean years of schooling、expected years of schooling、GNI at PPP per capita</b>；
+            <b>对比较发展中国家特别有用</b><br>
+          • 其他可纳入的福祉指标：<b>leisure and working hours、Gini coefficient、
+            stability of marriages/partnerships、age of retirement、
+            incidence of mental illness and suicide、% of young people in higher education、
+            access to theatres/museums/libraries</b><br>
+          • <b>"Happiness" itself is difficult to measure, but some of the above are easily quantifiable.</b></td></tr>
+      </table></div>
+      <div class="callout c-exam"><span class="t">🎯 这道题的完整范例</span>
+        参见 <a href="../lectures/lecture-01.html#model">Lecture 1 页面的答题范例</a>，
+        以及 Lecture 1 §10 的两大类局限（<b>A 遗漏项 + B 概念不对口</b>）。
+      </div>
+    </div></details>
+  </div>
+</section>
+
+<section id="b">
+  <div class="sec-h"><span class="kicker">Section B</span><h2>Section B · 计算与选择</h2></div>
+
+  <div class="card">
+    <h3>B1 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算</span></h3>
+    <p class="lead">下表是某国连续两年的数据（GNP 指数衡量<b>名义</b> GNP，零售价格指数衡量价格水平）。
+    评价四个陈述：</p>
+    <div class="tw"><table>
+      <tr><th></th><th>Index of GNP</th><th>Retail price index</th><th>Index of population</th><th>Average working week (hrs)</th></tr>
+      <tr><td>Year 1</td><td>105</td><td>102</td><td>102</td><td>44</td></tr>
+      <tr><td>Year 2</td><td>110</td><td>106</td><td>103</td><td>44</td></tr>
+    </table></div>
+    <p>(a) Real GNP increased. (b) Real GNP per capita increased. (c) The standard of living of all people within the
+    country fell. (d) The working population increased in size.</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml"><span class="lab">(a) 用价格指数去平减名义 GNP 指数</span>
+Real GNP index<sub>Year1</sub> = 105/102 × 100 = <b>102.9</b>
+Real GNP index<sub>Year2</sub> = 110/106 × 100 = <b>103.8</b>
+⇒ 上升 (103.8 − 102.9)/102.9 = <b>+0.87%</b>
+⇒ <b>(a) TRUE：实际 GNP 增加了</b>
+      </div>
+      <div class="fml"><span class="lab">(b)</span>
+人口从 102 升到 103 ⇒ <b>约 +1%</b>
+人口增速（1%）<b>快于</b>实际 GNP 增速（0.87%）
+⇒ <b>(b) FALSE：人均实际 GNP 下降了</b>
+      </div>
+      <p class="eng"><b>(c) FALSE.</b> The fact that real GNP per capita fell <b>does not imply that ALL people were
+      worse off</b> in year 2. <b>We do not know about the distribution of income</b> in the country.</p>
+      <p class="eng"><b>(d) Cannot tell.</b> The total population increased, but <b>without knowing about the age
+      distribution and about people's decisions about labour force participation, we can say nothing about changes in
+      the working population.</b></p>
+      <div class="callout c-tip"><span class="t">💡 这题的得分关键在 (c)(d)</span>
+        (c)(d) 都是 <b>"数据不足，无法判断"</b>类型。英式评分很看重
+        <b>"知道自己不知道"</b>——写出"我们不知道分配 / 不知道年龄结构与参与率"就是拿分点。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>B2 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算</span></h3>
+    <p class="lead">UK 2007 年国民账户数据（£ million）。用支出法计算 (a)–(e)，并用收入法计算 (f)。</p>
+    <div class="tw"><table>
+      <tr><td>Final consumption expenditure* (C)</td><td style="text-align:right">545,124</td>
+        <td>Capital consumption# (折旧)</td><td style="text-align:right">88,771</td></tr>
+      <tr><td>Subsidies</td><td style="text-align:right">7,453</td>
+        <td>Stock changes</td><td style="text-align:right">3,621</td></tr>
+      <tr><td>Other direct taxes**</td><td style="text-align:right">17,619</td>
+        <td>Fixed investment</td><td style="text-align:right">148,202</td></tr>
+      <tr><td>Net income from abroad</td><td style="text-align:right">11,737</td>
+        <td>Exports (X)</td><td style="text-align:right">224,202</td></tr>
+      <tr><td>Government final consumption (G)</td><td style="text-align:right">153,564</td>
+        <td>Employment income</td><td style="text-align:right">463,398</td></tr>
+      <tr><td>Taxes on products*** (T<sub>e</sub>)</td><td style="text-align:right">103,634</td>
+        <td>Mixed income</td><td style="text-align:right">43,379</td></tr>
+      <tr><td>Profits and rent</td><td style="text-align:right">223,212</td>
+        <td>Imports (Z)</td><td style="text-align:right">232,714</td></tr>
+    </table></div>
+    <details><summary>参考答案</summary><div class="body">
+      <p><b>第一步：把项目翻译成课本记号（参考答案的建议）</b></p>
+      <div class="tw"><table>
+        <tr><th style="width:56%">Item</th><th>Notation</th></tr>
+        <tr><td>Final consumption expenditure</td><td><b>C</b></td></tr>
+        <tr><td><b>Fixed investment PLUS stock changes</b></td><td><b>I</b></td></tr>
+        <tr><td>Government final consumption</td><td><b>G</b></td></tr>
+        <tr><td>Exports</td><td><b>X</b></td></tr>
+        <tr><td>Imports</td><td><b>Z</b></td></tr>
+        <tr><td>Taxes on products <b>less subsidies</b></td><td><b>T<sub>e</sub></b></td></tr>
+      </table></div>
+      <p class="eng"><b>Note:</b> "other direct taxes" are taxes on expenditure by firms and
+      <b>do not register in the expenditure-side calculation</b>.</p>
+      <div class="fml"><span class="lab">计算</span>
+I = 148,202 + 3,621 = <b>151,823</b>
+T<sub>e</sub> = 103,634 − 7,453 = <b>96,181</b>
+
+(a) <b>GDP at market prices</b> = C + I + G + X − Z
+    = 545,124 + 151,823 + 153,564 + 224,202 − 232,714 = <b>841,999</b>
+
+(b) <b>GNP at market prices</b> = GDP<sub>mp</sub> + net income from abroad
+    = 841,999 + 11,737 = <b>853,736</b>
+
+(c) <b>GDP at basic prices</b> = GDP<sub>mp</sub> − T<sub>e</sub>
+    = 841,999 − 96,181 = <b>745,818</b>
+
+(d) <b>NNP at market prices</b> = GNP<sub>mp</sub> − capital consumption
+    = 853,736 − 88,771 = <b>764,965</b>
+
+(e) <b>Net national income at basic prices</b> = NNP<sub>mp</sub> − T<sub>e</sub>
+    = 764,965 − 96,181 = <b>668,784</b>
+
+(f) <b>GDP<sub>mp</sub> from the INCOME side</b>
+    = profits/rent + employment income + mixed income + T<sub>e</sub> + other direct taxes
+    = 223,212 + 463,398 + 43,379 + 96,181 + 17,619 = <b>843,789</b>
+      </div>
+      <p class="eng"><b>(g)</b> In an ideal world, the two methods should give the same results. However, in practice
+      <b>the problems of accurate measurement are too great</b>. In the ONS Blue Book there is a
+      <b>'statistical discrepancy' item</b>, which is used in the accounts to create consistency between the estimates.</p>
+      <div class="callout c-trap"><span class="t">⚠️ 这题最容易掉分的三处</span>
+        ① <b>I 必须含 stock changes</b>（存货变动是投资，Lecture 1 §6）；<br>
+        ② <b>T<sub>e</sub> 是"产品税 − 补贴"</b>，不是产品税本身；<br>
+        ③ <b>"Other direct taxes" 只在收入侧出现</b>，支出侧不能加。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>B3 <span class="badge b-calc">计算</span> <span class="muted" style="font-size:13px">（预习 Lecture 2）</span></h3>
+    <p class="lead">In a hypothetical closed economy with no government, <b>planned consumption is 150, planned
+    investment is 50 and total production is 210.</b> (a) Total planned expenditure? (b) Unplanned stock changes?
+    (c) Savings? (d) Actual investment? (e) How would producers react next period?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="fml">
+(a) Planned consumption + planned investment = 150 + 50 = <b>200</b>
+
+(b) Production less expenditure = 210 − 200 = <b>10</b>
+    This quantity represents an <b>unplanned addition to inventories</b>.
+
+(c) Income less consumption = 210 − 150 = <b>60</b>
+
+(d) Planned investment plus stock changes = 50 + 10 = <b>60</b>
+    Thus <b>actual investment = actual savings</b> ✓
+      </div>
+      <p class="eng"><b>(e)</b> Producers <b>have not sold as much output as they expected</b> and witness an
+      <b>increase in stock levels</b>. Two responses are possible: <b>to reduce output or reduce price</b>.
+      We will initially assume that <b>prices are fixed</b> — so the response to an unplanned increase in stocks
+      will be to <b>reduce output</b>.</p>
+      <div class="callout c-exam"><span class="t">🎯 这题是 Lecture 2 的完美预演</span>
+        它把 <b>actual S ≡ actual I（60 = 60）</b> 与 <b>planned S ≠ planned I（60 ≠ 50）</b> 同时展示出来，
+        差额恰好是 <b>非计划存货 10</b>。<b>价格固定 ⇒ 产出调整</b>——这就是 45° 线模型的全部机制。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>B7 <span class="badge b-hot">重点</span> <span class="badge b-calc">计算</span></h3>
+    <p class="lead">Five firms in a closed economy: steel producer, rubber producer, machine tool-maker, tyre producer
+    and bicycle manufacturer. Bicycles sold to final customers for <b>£8000</b>. The bicycle firm buys tyres
+    (£1000), steel (£2500) and machine tools (£1800). The tyre manufacturer buys rubber (£600); the machine
+    tool-maker buys steel (£1000). (a) Contribution of the bicycle industry to GDP? (b) Total final expenditure?</p>
+    <details><summary>参考答案</summary><div class="body">
+      <div class="tw"><table>
+        <tr><th>Good</th><th>Seller</th><th>Buyer</th><th>Transaction value (£)</th><th>Value added (£)</th></tr>
+        <tr><td>Steel</td><td>Steel producer</td><td>Machine tool-maker</td><td>1000</td><td>1000</td></tr>
+        <tr><td>Steel</td><td>Steel producer</td><td>Bicycle manufacturer</td><td>2500</td><td>2500</td></tr>
+        <tr><td>Rubber</td><td>Rubber producer</td><td>Tyre producer</td><td>600</td><td>600</td></tr>
+        <tr><td>Machine</td><td>Machine tool-maker</td><td>Bicycle manufacturer</td><td>1800</td><td><b>800</b></td></tr>
+        <tr><td>Tyres</td><td>Tyre producer</td><td>Bicycle manufacturer</td><td>1000</td><td><b>400</b></td></tr>
+        <tr><td>Bicycles</td><td>Bicycle manufacturer</td><td>Final consumers</td><td>8000</td><td><b>4500</b></td></tr>
+        <tr><th colspan="4">Total</th><th>9800</th></tr>
+      </table></div>
+      <div class="fml"><span class="lab">关键：自行车厂的增加值怎么算</span>
+Value added by the bicycle manufacturer
+  = 交易额 £8000
+  − 生产过程中<b>被用掉的</b>商品：tyres (£1000) + steel (£2500)
+  = <b>£4500</b>
+
+⚠️ <b>不减机器 £1800</b>！参考答案原文：
+<b>"but NOT the machine, which is not 'used up' but kept for future use also."</b>
+（机器不是被消耗掉的中间投入，而是<b>保留下来供未来使用的资本</b>）
+
+其他两项：
+  machine tool-maker：1800 − 1000（钢材）= <b>800</b>
+  tyre producer：1000 − 600（橡胶）= <b>400</b>
+      </div>
+      <p class="eng"><b>(a)</b> The contribution is <b>the sum of the value added = £9800</b>.</p>
+      <p class="eng"><b>(b)</b> Total final expenditure is composed of two elements — <b>consumers' expenditure on
+      bicycles (£8000)</b> and <b>the bicycle manufacturer's purchase of machine tools (£1800)</b>, totalling
+      <b>£9800</b> ✓（两种方法结果一致）。</p>
+      <div class="callout c-trap"><span class="t">⚠️ 全 tutorial 最经典的陷阱</span>
+        <b>机器（资本品）= 投资 = 最终支出</b>，<b>不是中间投入</b>。<br>
+        这与 Lecture 1 §5 课件例题中"machine 进入 spending on final goods 一列 = 2000"是<b>同一个考点</b>，
+        考试反复出现。
+      </div>
+    </div></details>
+  </div>
+
+  <div class="card">
+    <h3>B4–B6, B8–B13 <span class="badge b-mcq">MCQ</span></h3>
+    <details><summary>全部选择题答案与解析</summary><div class="body">
+      <div class="tw"><table>
+        <tr><th style="width:8%">题</th><th style="width:10%">答案</th><th>题干与解析</th></tr>
+        <tr><td><b>B4</b></td><td class="tick">B</td>
+          <td>Investment is the purchase of <b>new capital goods</b> by firms。<br>
+          <span class="muted">A 股票是金融资产不是实物资本；C 原材料是中间投入；D 电力是中间投入。</span></td></tr>
+        <tr><td><b>B5</b></td><td class="tick">C</td>
+          <td><b>Inventories</b> or stocks are goods currently held by a firm for future production or sale。</td></tr>
+        <tr><td><b>B6</b></td><td class="tick">C</td>
+          <td>Injections are <b>investment, government expenditure, exports</b>。<br>
+          <span class="muted">税收与转移支付都不是注入（税是漏出，转移支付不对应产出）。</span></td></tr>
+        <tr><td><b>B8</b></td><td class="tick">D</td>
+          <td>Real GNP is crude because it excludes <b>work in the home</b>（非市场活动）。</td></tr>
+        <tr><td><b>B9</b></td><td class="tick">D</td>
+          <td>deflator 283 → 296：<b>(296 − 283)/283 × 100 = 4.6%</b>。<br>
+          参考提示：<b>inflation rate = [(new − old)/old] × 100</b>。</td></tr>
+        <tr><td><b>B10</b></td><td class="tick">A</td>
+          <td>A 的说法<b>错误</b>：<b>通胀是价格的百分比上升，不是水平的差值</b>。<br>
+          参考提示：<b>"The inflation rate is the percentage increase in the average price of goods and services."</b></td></tr>
+        <tr><td><b>B11</b></td><td class="tick">A</td>
+          <td><b>Households supply productive factors, hence capital too.</b>
+          （所以 A 对、B 错——是家庭供给要素，不是企业）</td></tr>
+        <tr><td><b>B12</b></td><td class="tick">B</td>
+          <td><b>GDP deflator 就是名义 GDP 与实际 GDP 之比</b>。deflator 上升 5%
+          ⇒ 该比率上升 ⇒ <b>名义 GDP 的增长快于实际 GDP</b>。<br>
+          <span class="muted">A 错（比率变了）；C 错（无法判断实际 GDP 的方向）。</span></td></tr>
+        <tr><td><b>B13</b></td><td class="tick">D</td>
+          <td><b>All the above</b>：非市场活动、外部性、黑色经济<b>都被排除</b>。</td></tr>
+      </table></div>
+    </div></details>
+  </div>
+</section>
+
+<section id="c">
+  <div class="sec-h"><span class="kicker">Section C</span><h2>Section C · 讨论题（选做，但答案很适合当 essay 素材）</h2></div>
+  <div class="card">
+    <details><summary>C1：更高的 GDP 增长与更低的通胀，哪个宏观目标更重要？</summary><div class="body">
+      <p class="eng">It is <b>misleading to think that one of these objectives is more important than the other.
+      Both are important.</b> It might be argued that there is an <b>optimal rate of economic growth, and an optimal
+      rate of inflation</b>, and the extent to which the government should focus on one rather than the other
+      <b>depends on the extent to which the objectives are being missed</b> — so if inflation is approximately at its
+      optimal rate but growth is severely suboptimal, the government should focus more on growth. A further point is
+      that <b>the objectives may be interrelated</b> — for example, <b>low inflation may be a prerequisite for economic
+      growth</b>.</p>
+    </div></details>
+    <details><summary>C2：收入法、支出法、增加值法哪个更可取？</summary><div class="body">
+      <p class="eng">These are <b>three equivalent ways of measuring the same thing</b>, so it is difficult to see how
+      one way can be preferable. <b>It may be easier to measure it in one particular way, possibly because of data
+      availability.</b></p>
+    </div></details>
+    <details><summary>C3：循环流量图与生产可能性边界如何关联？</summary><div class="body">
+      <p class="eng">Both are linked by <b>the scarcity of factor resources</b>. The size of the circular flow of
+      income is determined by <b>the amount and the productivity of factor resources</b>, as is the production
+      possibility frontier. The circular flow moves the analysis on by <b>highlighting the flows of factor resources
+      and incomes</b>, indicating <b>through leakages and injections how the economy might be managed</b>.</p>
+    </div></details>
+    <details><summary>C4：为什么人均实际 GDP 比名义 GDP 更准确？</summary><div class="body">
+      <p class="eng">Since it is <b>physical quantities of output that yield people utility</b>, it can be misleading
+      to judge performance by nominal GDP. <b>Real GDP</b> adjusts for inflation by measuring GDP at <b>base-year
+      prices</b>. <b>Per capita</b> GDP measures the standard of living on average. <b>However, it does not capture the
+      degree of equality</b>: the more the income distribution changes over time, the less reliable is the change in
+      per capita real GDP as an indicator of what is happening to <b>any particular person</b>.</p>
+    </div></details>
+    <details><summary>C5：应纳入 GNP 的重要因素有哪些？为何 GNP 仍最广泛使用？</summary><div class="body">
+      <p class="eng">GNP <b>ignores non-market activities, "bads" such as pollution, valuable activities such as work
+      in the home, and production unreported by tax evaders. Nor does it measure the value of leisure.</b> However, it
+      is <b>expensive, and sometimes impossible, to make regular and accurate measurements of all these activities</b>.
+      Therefore <b>in practice GNP is the most widely used measure of national performance</b>.</p>
+      <div class="callout c-exam"><span class="t">🎯 这个"承认缺陷 → 但解释为何仍在用"的结构，是 essay 结论段的标准写法</span></div>
+    </div></details>
+    <details><summary>C6：瑞士、摩纳哥、百慕大人均 GDP 最高，说明它们增加值更高吗？</summary><div class="body">
+      <p class="eng"><b>All of these countries are tax havens.</b> Therefore the higher GDP per capita
+      <b>probably reflects the level of WEALTH within these economies, rather than any value added</b>.</p>
+      <div class="callout c-tip"><span class="t">💡 这题实际考的是 GDP vs GNP</span>
+        避税天堂里登记的收入<b>并非在当地生产</b>。这类"人在哪 vs 钱记在哪"的问题，
+        正是 <b>GDP（地域）与 GNP（国籍）</b>区分的现实版本。
+      </div>
+    </div></details>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sec-h"><span class="kicker">Exam Technique</span><h2>✍️ 本次 Tutorial 的答题结构点评</h2></div>
+  <div class="card">
+    <h3>题型 1：计算题（A1, A4, A8, A9, B1, B2, B7）</h3>
+    <div class="model">
+      <div class="step"><span class="h">写法</span>
+        <p>① <b>先写出符号形式的公式</b>（如 <span class="mono">GDP<sub>mp</sub> = C + I + G + X − Z</span>）；<br>
+        ② <b>再代入数字</b>，中间步骤不能省；<br>
+        ③ <b>给出带单位的答案</b>（£ million、%）；<br>
+        ④ <b>一句话解释含义</b>或做一次交叉验证。</p>
+        <p class="muted">B2 就是典型：参考答案第一步是"把项目翻译成课本记号"，这一步本身就是得分点。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:22px">题型 2：Why are these statements wrong?（A5, A3, A10）</h3>
+    <div class="model">
+      <div class="step"><span class="h">写法</span>
+        <p>① <b>先说清这句话在哪个概念上出错</b>（转移支付 / 名义 vs 实际 / 总量 vs 分配）；<br>
+        ② <b>给出正确表述</b>；<br>
+        ③ <b>如果它"部分正确"，一定要说出来</b>——例如 A5(a) 参考答案就明确写
+        <b>"so the statement is not completely wrong"</b>。<br>
+        <b>只写"错"而不给出正确表述，拿不到解释分。</b></p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:22px">题型 3：数据不足型（B1(c)(d)）</h3>
+    <div class="callout c-exam"><span class="t">🎯 这类题的满分答案有固定套路</span>
+      <b>"We cannot tell, because we do not know about X."</b><br>
+      B1(c)：不知道<b>收入分配</b>；B1(d)：不知道<b>年龄结构与劳动参与率</b>。<br>
+      <b>明确指出缺少哪一项信息，比含糊地说"不一定"要高一个档次。</b>
+    </div>
+
+    <h3 style="margin-top:22px">题型 4：Essay（A14）</h3>
+    <p>参考答案已经给了三段式提纲——<b>Limitations → Suggestions for improving → Attempts at a better measure</b>。
+    按 <a href="../lectures/lecture-01.html#model">Define → Diagram → Analyse → Conclude</a> 的四段结构套用即可：
+    定义 GDP 与 welfare 的区别 → （本题可用循环流量图或六栏图）→ 分点论证局限与改进 →
+    结论：<b>"far from pointless, provided the result is used with awareness of its limitations"</b>。</p>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="../lectures/lecture-01.html">← Lecture 1</a>
+  <a href="../index.html">总目录</a>
+  <a href="tutorial-02.html">Tutorial 2 →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

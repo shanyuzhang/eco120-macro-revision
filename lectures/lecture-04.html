@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 4 · Money, Banking and Financial Markets — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 货币的定义与四大职能 ⭐</a>
+  <a class="nav" href="#s2">2 · 货币总量 M0–M4</a>
+  <a class="nav" href="#s3">3 · 金融资产入门</a>
+  <a class="nav" href="#s4">4 · 现代银行与金融中介</a>
+  <a class="nav" href="#s5">5 · 存款创造 & 存款乘数 ⭐</a>
+  <a class="nav" href="#s6">6 · 货币供给 vs 货币基础</a>
+  <a class="nav" href="#s7">7 · 货币乘数（一般式）⭐</a>
+  <a class="nav" href="#s8">8 · 持币的四大动机 ⭐</a>
+  <a class="nav" href="#s9">9 · MB / MC 分析</a>
+  <a class="nav" href="#s10">10 · 实际货币需求与 LL 曲线 ⭐</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-04.html">→ Tutorial 4</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 4 · Money, Banking and Financial Markets</h1>
+  <div class="sub">货币的职能与度量 · 商业银行创造存款 · 货币乘数 · 货币需求</div>
+  <div>
+    <span class="tag">34 slides</span>
+    <span class="tag">Begg Ch.19</span>
+    <span class="tag">对应 Tutorial 4 / EOC Ch19</span>
+    <span class="tag b-hot">⭐ 真题 B2 常考</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">Lecture 2–3 的模型里完全没有货币。本讲把<b>货币这一侧</b>补上，
+    为 Lecture 5 的货币市场均衡、Lecture 6 的 MP 曲线做准备。核心问题只有两个：
+    <b>货币供给从哪来（银行创造）？货币需求由什么决定（收入与利率）？</b></p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+【供给侧】
+  什么是货币（定义 + 四大职能）
+     ↓ 怎么量（M0 → M1 → M2 → M4；narrow vs broad）
+     ↓ 谁创造货币（商业银行的部分准备金制度）
+     ↓ 存款乘数 = 1/rr
+     ↓ 更一般：货币乘数 = (c<sub>p</sub>+1)/(c<sub>p</sub>+c<sub>b</sub>)
+     ↓ <b>M = 货币乘数 × 货币基础 H</b>
+
+【需求侧】
+  为什么要持有货币（四大动机）
+     ↓ 持币的成本收益（MB = MC）
+     ↓ 货币需求是对<b>实际余额 M/P</b> 的需求
+     ↓ 取决于<b>实际收入（+）</b>与<b>名义利率（−）</b>，<b>不取决于价格水平</b>
+     ↓ 画成向下倾斜的 <b>LL 曲线</b>
+    </div>
+
+    <div class="callout c-link"><span class="t">启下</span>
+      本讲的 <b>货币供给 M<sup>s</sup></b> 与 <b>LL 曲线</b> 在 <b>Lecture 5</b> 直接相交得到货币市场均衡利率；
+      <b>Lecture 6</b> 用它画 LM/MP 曲线；<b>Lecture 8</b> 的货币数量论 MV = PY 直接建立在"货币供给由央行控制"之上。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slides 4–6</span><h2>1 · 货币的定义与四大职能 ⭐（定义题必考）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义（一字不改地背下来）</span>
+      <b>Money is any generally accepted means of payment for delivery of goods or the settlement of debt.</b>
+    </div>
+    <div class="tw"><table>
+      <tr><th style="width:22%">类型</th><th>说明</th><th style="width:24%">例子</th></tr>
+      <tr><td><b>Legal money</b></td><td>法定货币</td><td>notes and coins</td></tr>
+      <tr><td><b>Customary money</b></td><td><b>IOU ('I owe you') money</b>，基于私人企业或个人的<b>债务</b></td><td>bank deposits 银行存款</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:22px">四大职能（Four functions of money）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:24%">职能</th><th>课件定义</th></tr>
+      <tr><td><b>① Medium of exchange</b><br>交换媒介</td>
+        <td>an object that is <b>generally accepted in exchange for goods and services</b>。<br>
+        没有货币时人们必须<b>直接以物易物（barter）</b>；barter 需要 <b>double coincidence of wants</b>
+        （需求的双重巧合），这很罕见，所以 barter 成本高昂。</td></tr>
+      <tr><td><b>② Unit of account</b><br>记账单位</td>
+        <td>a unit in which <b>prices are quoted and accounts are kept</b></td></tr>
+      <tr><td><b>③ Store of value</b><br>价值储藏</td>
+        <td>货币可以被持有一段时间后再换取商品与服务。<br>
+        <b>但</b>：货币<b>不付利息</b>，且其<b>实际购买力被通胀侵蚀</b>，
+        所以还有<b>更好的价值储藏方式</b>。</td></tr>
+      <tr><td><b>④ Standard of deferred payment</b><br>延期支付标准</td>
+        <td>a unit of account <b>over time</b>：这使得<b>借贷成为可能</b></td></tr>
+    </table></div>
+    <p>今天的货币由两部分构成：<b>Currency</b>（bills and coins 的统称）+ <b>Deposits</b>（银行与其他金融机构的存款）。</p>
+
+    <div class="callout c-trap"><span class="t">⚠️ Tutorial 4 Q1 原型陷阱</span>
+      "用旧车折价换新车，旧车是 medium of exchange 吗？这是 barter 吗？"<br>
+      → 旧车<b>不是</b> medium of exchange（它不是"generally accepted"，只是被这一个特定买家接受）；<br>
+      → 这<b>部分是</b> barter（以物换物的成分），但因为差价用货币结算，是<b>混合交易</b>。<br>
+      判定标准永远回到定义里的 <b>"generally accepted"</b> 这个词。
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 8–10</span><h2>2 · 货币总量 The Monetary Aggregates ⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">IMF 的口径（层层相加，必背）</span>
+<b>M0</b>（monetary base 的一部分）= <b>Cash in circulation</b>（流通中的现金）
+   ↓ + sight deposits（活期/支票存款 chequing accounts）
+<b>M1</b> = M0 + sight deposits
+   ↓ + time deposits（定期存款 savings accounts）
+<b>M2</b> = M1 + time deposits
+    </div>
+    <div class="tw"><table>
+      <tr><th style="width:26%">国家/地区</th><th>使用的口径</th></tr>
+      <tr><td><b>UK</b></td><td><b>M0, M4</b></td></tr>
+      <tr><td>ECB（欧洲央行）</td><td>M1, M2, M3</td></tr>
+      <tr><td>China</td><td>M0, M1, M2, M3（M0 即现金）</td></tr>
+      <tr><td>US, Japan, ECB</td><td>货币总量<b>从 M1 开始</b>统计</td></tr>
+    </table></div>
+    <div class="fml"><span class="lab">窄币 vs 广义货币</span>
+<b>Narrow money</b>：M0, M1
+<b>Broad money</b>：M2 – M4
+    </div>
+    <div class="callout c-tip"><span class="t">💡 课件强调的一个跨国比较要点</span>
+      各国具体口径不同，<b>只有 M0 和 M1 在全世界大致一致</b>（"only M0 and M1 are roughly consistent around the world"）。
+      这是解释"为什么跨国比较货币供给要小心"的标准答案。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 10</span>UK 数据（ECB 口径，£ million）</h3>
+    <div class="tw"><table>
+      <tr><td>Currency in circulation</td><td style="text-align:right">35 213</td></tr>
+      <tr><td>+ Overnight deposits</td><td style="text-align:right">642 652</td></tr>
+      <tr><th>= M1</th><th style="text-align:right">677 865</th></tr>
+      <tr><td>+ Deposits with agreed maturity up to 2 years</td><td style="text-align:right">88 696</td></tr>
+      <tr><td>+ Deposits redeemable up to 3 months' notice</td><td style="text-align:right">328 908</td></tr>
+      <tr><th>= M2</th><th style="text-align:right">1 095 469</th></tr>
+      <tr><td>+ Repos</td><td style="text-align:right">114 344</td></tr>
+      <tr><td>+ Money market funds and paper</td><td style="text-align:right">61 031</td></tr>
+      <tr><th>= M3</th><th style="text-align:right">1 270 844</th></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 数据里的关键观察</span>
+      现金只占 M1 的约 <b>5%</b>（35,213 / 677,865）。<b>绝大部分货币是商业银行创造的存款，不是央行印的钞票</b>——
+      这正是下一节"存款创造"的现实意义，也是真题 B2 常考的落点。
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 11–12</span><h2>3 · 金融资产入门（按流动性排序）</h2></div>
+  <div class="card">
+    <p><b>Financial asset</b>：a piece of paper entitling the owner to a <b>specified stream of income</b> for a
+    <b>specified period</b>。</p>
+    <div class="tw"><table>
+      <tr><th style="width:20%">资产</th><th>定义</th><th style="width:22%">流动性</th></tr>
+      <tr><td><b>Cash</b></td><td>notes and coins，<b>零利息</b></td><td><b>最高</b>（most liquid）</td></tr>
+      <tr><td><b>Bills</b><br>短期票据</td><td>短期金融资产，<b>不直接支付利息</b>，但有<b>已知的回购日期与已知的回购价格</b></td>
+        <td><b>高</b>（people can get money out easily / cheaply / predictably）</td></tr>
+      <tr><td><b>Bonds</b><br>债券</td><td>公司或政府发行的<b>长期</b>金融资产，作为长期借款手段</td>
+        <td><b>较低</b>（未来收入流的不确定性更大）</td></tr>
+      <tr><td><b>Perpetuities</b><br>永续债</td><td>债券的<b>极端形式</b>，<b>永不被发行者回购</b>，永远支付利息，如 <b>Consols</b></td><td>低</td></tr>
+      <tr><td><b>Company shares (equities)</b><br>股票</td><td>获取<b>公司股息 dividends</b> 的权利</td><td><b>不太流动</b>（not very liquid）</td></tr>
+      <tr><td><b>Gilt-edged securities</b></td><td><b>英国的政府债券</b></td><td>—</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 13–14</span><h2>4 · 现代银行：金融中介与部分准备金制度</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:26%">术语</th><th>定义</th></tr>
+      <tr><td><b>Financial intermediary</b><br>金融中介</td>
+        <td>an institution specialised in <b>bringing lenders (depositors) and borrowers together</b>。<br>
+        例：<b>商业银行</b>（持有政府牌照可以放贷与发行存款，包括可开支票的存款）；
+        其他例子：<b>insurance companies、pension funds</b>。</td></tr>
+      <tr><td><b>Clearing system</b><br>清算系统</td>
+        <td>a set of arrangements in which <b>debts between banks are settled</b></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 14</span>银行如何在"安全"与"盈利"之间取舍</h3>
+    <ul>
+      <li>为了给储户提供安全保障，银行把资金分为两部分：<b>reserves 与 loans</b>。</li>
+      <li><b>Bank reserves</b>：the money a bank has available to <b>meet possible withdrawals by depositors</b>。</li>
+      <li><b>Bank lending</b> 采取三种形式：<b>liquid assets、investment securities、loans</b>。</li>
+    </ul>
+    <div class="callout c-exam"><span class="t">🎯 Fractional reserve banking（必背定义）</span>
+      商业银行只需持有<b>资产的一部分</b>作为现金准备（通常由<b>央行</b>规定），
+      <b>这使它们能够通过放贷创造存款（create deposits by lending）</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 15–18</span><h2>5 · 存款创造与存款乘数 ⭐⭐（计算题必考）</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 15</span>多家银行时为什么结果和一家银行一样</h3>
+    <ol>
+      <li>有多家银行时，某家银行放出超额准备金后，<b>不能指望自己的存款增加全部贷出的金额</b>。</li>
+      <li><b>一部分贷出的准备金流入其他银行</b>。</li>
+      <li>但那些银行于是有了<b>超额准备金，它们也会放贷</b>。</li>
+      <li>最终，<b>只要所有贷款都被存入银行系统</b>，整个银行体系的效果<b>与只有一家银行时相同</b>。</li>
+      <li>这个过程中创造出的存款，<b>是货币供给的一部分</b>。</li>
+    </ol>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 16–17</span>数值过程（准备金率 rr = 25%）</h3>
+    <div class="tw"><table>
+      <tr><th>银行</th><th>新增存款</th><th>保留准备金 (25%)</th><th>放贷 (75%)</th></tr>
+      <tr><td>Bank A</td><td>£100,000</td><td>£25,000</td><td>£75,000</td></tr>
+      <tr><td>Bank B</td><td>£75,000</td><td>£18,750</td><td>£56,250</td></tr>
+      <tr><td>Bank C</td><td>£56,250</td><td>£14,062.5</td><td>£42,187.5</td></tr>
+      <tr><td>Bank D</td><td>£42,187.5</td><td>£10,546.9</td><td>£31,640.6</td></tr>
+      <tr><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+      <tr><th>合计</th><th>£400,000</th><th>£100,000</th><th>£300,000</th></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 18</span>代数推导（考试写全过程）</h3>
+    <div class="fml"><span class="lab">设准备金率为 rr，初始存款变动为 D</span>
+TD = D + (1−rr)D + (1−rr)²D + (1−rr)³D + …
+   = D[1 + (1−rr) + (1−rr)² + (1−rr)³ + …]
+   = D · 1/[1 − (1 − rr)]
+   = <b>D / rr</b>
+   = <b>R / rr</b>
+
+<b>Deposit multiplier = TD (存款总变动) / R (准备金变动) = 1/rr</b>
+
+本例验证：TD/R = £400,000 / £100,000 = 1/0.25 = <b>4</b> ✓
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 这个简单乘数的两个隐含假设</span>
+      ① <b>所有贷款都被重新存回银行系统</b>（没有现金漏出）；<br>
+      ② <b>银行不持有超额准备金</b>（恰好持有 rr 的比例）。<br>
+      现实中这两条都不成立——这正是下一节要用<b>更一般的货币乘数</b>的原因。考试问"为什么实际货币乘数小于 1/rr"，答这两条。
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slides 19–20</span><h2>6 · 货币供给 vs 货币基础（务必分清）</h2></div>
+  <div class="card">
+    <div class="grid2">
+      <div class="fml"><span class="lab">Money supply（货币供给）</span>
+<b>Money = Cash in circulation + Deposits</b>
+
+可用不同的货币总量度量：M0 – M4
+      </div>
+      <div class="fml"><span class="lab">Monetary base（货币基础 / 高能货币）</span>
+<b>Monetary Base H = Cash + Reserves</b>
+
+Cash：私人流通中的钞票与硬币数量
+Reserves：<b>银行体系持有的准备金</b>数量
+      </div>
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 最容易混淆的一点</span>
+      两者<b>都包含"流通中现金"</b>，区别在第二项：<br>
+      • <b>货币供给</b>的第二项是 <b>公众持有的银行存款 D</b>；<br>
+      • <b>货币基础</b>的第二项是 <b>银行持有的准备金 R</b>。<br>
+      货币基础是<b>央行能直接控制的</b>；货币供给是<b>商业银行放贷后被放大的结果</b>。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 560 260" role="img" aria-label="Monetary base and money supply">
+        <rect x="40" y="30" width="220" height="46" rx="8" fill="#232a55" stroke="#ffb454"/>
+        <text class="lbl" x="52" y="58">Monetary base H = Cash + Reserves</text>
+        <rect x="40" y="96" width="105" height="40" rx="8" fill="#1c2145" stroke="#8089bd"/>
+        <text class="lbl-s" x="52" y="113">Cash in</text><text class="lbl-s" x="52" y="128">circulation (M0)</text>
+        <rect x="155" y="96" width="105" height="40" rx="8" fill="#1c2145" stroke="#8089bd"/>
+        <text class="lbl-s" x="172" y="120">Bank reserves</text>
+        <path d="M207,136 L207,166" class="dsh" marker-end="url(#a4)"/>
+        <defs><marker id="a4" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+          <path d="M0,0 L7,3.2 L0,6.4 z" fill="#aeb6e6"/></marker></defs>
+        <rect x="140" y="168" width="200" height="38" rx="8" fill="#1c2145" stroke="#33d6a6"/>
+        <text class="lbl-s" x="152" y="192">Deposit creation by commercial banks</text>
+        <rect x="360" y="96" width="170" height="40" rx="8" fill="#1c2145" stroke="#8089bd"/>
+        <text class="lbl-s" x="392" y="120">Deposits of banks</text>
+        <path d="M340,187 L440,187 L440,140" class="dsh" marker-end="url(#a4)"/>
+        <rect x="300" y="30" width="230" height="46" rx="8" fill="#232a55" stroke="#33d6a6"/>
+        <text class="lbl" x="312" y="52">Money supply M</text>
+        <text class="lbl-s" x="312" y="68">= Cash in circulation + Deposits</text>
+        <path d="M95,96 L95,44" class="dsh"/><path d="M420,96 L420,76" class="dsh"/>
+        <text class="lbl" x="120" y="238" fill="#ffb454">Money Multiplier = Money supply / Monetary base</text>
+      </svg>
+      <figcaption>Figure 4.1 — 货币基础经商业银行放大成货币供给（课件 Slide 20 的结构）。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slides 21–24</span><h2>7 · 货币乘数（一般形式）⭐⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">设定（Slide 21）</span>
+银行希望持有的现金准备 R 是存款 D 的一个比例 c<sub>b</sub>：  <b>R = c<sub>b</sub>D</b>
+私人部门希望持有的流通现金 C 是存款 D 的一个比例 c<sub>p</sub>：<b>C = c<sub>p</sub>D</b>
+
+货币基础：<b>H = C + R = (c<sub>p</sub> + c<sub>b</sub>)D</b>
+货币供给：<b>M = C + D = (c<sub>p</sub> + 1)D</b>
+
+<b>Money multiplier = M/H = (c<sub>p</sub> + 1)/(c<sub>p</sub> + c<sub>b</sub>)</b>
+
+<b>M = [(c<sub>p</sub> + 1)/(c<sub>p</sub> + c<sub>b</sub>)] × H</b>
+即：<b>Money supply = Money multiplier × Monetary base</b>
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 定义（必背）</span>
+      <b>Money multiplier: the change in the money stock for a £1 change in the quantity of the monetary base.</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 为什么乘数 &gt; 1</span>
+      因为 <b>c<sub>b</sub> &lt; 1</b>（部分准备金），所以分子 (c<sub>p</sub>+1) &gt; 分母 (c<sub>p</sub>+c<sub>b</sub>)。<br>
+      特例：若 <b>c<sub>p</sub> = 0</b>（公众不持现金），乘数退化为 <b>1/c<sub>b</sub></b>——正是上一节的存款乘数 1/rr。
+      <b>c<sub>p</sub> &gt; 0 时货币乘数总是小于 1/rr</b>，因为现金漏出削弱了创造过程。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 23</span>比较静态：什么使货币乘数上升</h3>
+    <div class="fml">
+<b>c<sub>b</sub>↓（银行意愿准备金率下降）或 c<sub>p</sub>↓（公众现金/存款比下降）</b>
+  ⇒ 提高货币乘数
+  ⇒ 在<b>货币基础不变</b>的情况下提高<b>货币供给</b>
+    </div>
+
+    <h3 style="margin-top:20px">c<sub>p</sub> 由什么决定（公众的现金偏好）</h3>
+    <ul>
+      <li><b>Institutional factors</b>：例如企业发工资是用支票还是现金。</li>
+      <li><b>持有现金以进行无法追踪的支付、逃避税收</b>的动机。</li>
+      <li><b>信用卡</b>作为临时支付手段，<b>减少了现金的使用</b>（使 c<sub>p</sub> 下降）。</li>
+    </ul>
+
+    <h3 style="margin-top:20px">c<sub>b</sub> 由什么决定（银行的准备金偏好）</h3>
+    <ul>
+      <li><b>Required reserves</b>：一些国家由<b>货币当局规定</b>必须持有的准备金比例。</li>
+      <li><b>Excess reserves</b>：银行持有的<b>超出法定要求</b>的准备金。</li>
+      <li><b>利差（interest rate spread）越高</b>，银行越想放贷，越愿意<b>冒险持有较低</b>的准备金/存款比。</li>
+      <li><b>提款越不可预测</b>，或银行的<b>高流动性贷款机会越少</b>，则对任何存款水平都必须<b>持有更高</b>的现金准备。</li>
+    </ul>
+    <div class="callout c-trap"><span class="t">⚠️ 政策含义（essay 常用）</span>
+      央行只能<b>直接控制货币基础 H</b>，<b>无法完全控制货币供给 M</b>，因为货币乘数取决于<b>银行与公众的行为</b>
+      （c<sub>b</sub>、c<sub>p</sub>）。金融危机中银行囤积超额准备金（c<sub>b</sub>↑），
+      即使央行大幅扩张 H，M 也可能几乎不增长——这是"量化宽松为何效果有限"的标准解释。
+    </div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slides 26–27</span><h2>8 · 持有货币的四大动机 ⭐（定义题必考）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:22%">动机</th><th>原因</th><th style="width:30%">取决于</th></tr>
+      <tr><td><b>① Transactions motive</b><br>交易动机</td>
+        <td>收支<b>并非完全同步</b>（payments and receipts are not perfectly synchronised）；
+        持币以<b>为已知的交易融资</b></td>
+        <td><b>收入</b>与<b>支付安排</b>（income and payment arrangements）</td></tr>
+      <tr><td><b>② Precautionary motive</b><br>预防动机</td>
+        <td>因为<b>不确定性</b>；持币以<b>应对未预见的意外</b></td>
+        <td><b>（名义）利率</b></td></tr>
+      <tr><td><b>③ Asset motive</b><br>资产动机</td>
+        <td>人们<b>厌恶风险</b>；把货币作为<b>混合资产组合中的低风险组成部分</b>持有</td>
+        <td><b>机会成本（名义利率）</b></td></tr>
+      <tr><td><b>④ Speculative motive</b><br>投机动机</td>
+        <td>若<b>预期债券价格下跌</b>（即<b>预期利率上升</b>），人们宁可持有货币而非债券（卖出债券）</td>
+        <td><b>利率</b>与<b>对债券价格的预期</b></td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 债券价格与利率反向（必须理解）</span>
+      债券价格 ↑ ⟺ 到期收益率（利率）↓。所以"预期债券价格下跌" = "预期利率上升"。
+      预期利率将上升时，现在买债券会遭受资本损失，因此宁可先持币观望——这就是投机动机。
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 28–29, 31–32</span><h2>9 · MB / MC 分析：持币的最优数量</h2></div>
+  <div class="card">
+    <h3>设定</h3>
+    <ul>
+      <li>假设只有<b>两种金融资产：货币与债券</b>。</li>
+      <li><b>持币的收益</b>来自上述四大动机；<b>Marginal Benefit</b> = 多持有一单位货币带来的<b>额外收益</b>。</li>
+      <li><b>Marginal cost of holding money 是持币的机会成本</b>，即<b>放弃的利息</b>
+        （losing the interest from interest-earning assets by instead holding money）。</li>
+    </ul>
+    <div class="fml"><span class="lab">机会成本的两种口径（Slide 29，考点）</span>
+持有<b>现金（窄币）</b>的机会成本 = <b>债券利率 R<sub>b</sub></b>
+持有<b>广义货币（如 M2）</b>的机会成本 = <b>利差 (R<sub>b</sub> − R<sub>d</sub>)</b>
+   其中 R<sub>d</sub> 是<b>银行存款利率</b>
+    </div>
+
+    <h3 style="margin-top:20px">两条曲线的形状（Slide 31，必须能解释"为什么"）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:16%">曲线</th><th style="width:16%">形状</th><th>原因</th></tr>
+      <tr><td><b>MC</b></td><td><b>水平</b></td>
+        <td>在<b>给定利率</b>下绘制：每多持有一单位货币，<b>放弃的利息是恒定的</b></td></tr>
+      <tr><td><b>MB</b></td><td><b>向下倾斜</b></td>
+        <td>在<b>给定实际收入</b>下绘制：当<b>交易性与预防性需求已被满足</b>后，
+        再多持有货币的额外收益<b>递减</b></td></tr>
+    </table></div>
+    <p><b>最优实际货币持有量在 MB = MC 的 E 点。</b></p>
+
+    <figure>
+      <svg viewBox="0 0 540 300" role="img" aria-label="MB MC analysis of money demand">
+        <line class="ax" x1="70" y1="255" x2="490" y2="255"/>
+        <line class="ax" x1="70" y1="255" x2="70" y2="30"/>
+        <text class="lbl" x="300" y="280">Real money holdings (M/P)</text>
+        <line x1="70" y1="160" x2="470" y2="160" class="cv c-alt2"/>
+        <text class="lbl" x="424" y="152" fill="#ffb454">MC</text>
+        <line x1="70" y1="100" x2="470" y2="100" class="cv c-as"/>
+        <text class="lbl" x="424" y="92" fill="#ff5c7a">MC′ (利率↑)</text>
+        <path d="M85,55 C170,120 260,178 460,225" class="cv c-ad"/>
+        <text class="lbl" x="400" y="240" fill="#6c8bff">MB</text>
+        <path d="M85,25 C185,95 290,150 470,196" class="cv c-alt"/>
+        <text class="lbl" x="400" y="188" fill="#33d6a6">MB′ (实际收入↑)</text>
+        <circle class="pt" cx="222" cy="160" r="5"/><text class="lbl" x="228" y="176">E</text>
+        <circle class="pt" cx="146" cy="100" r="5"/><text class="lbl" x="114" y="94">E′</text>
+        <circle class="pt" cx="310" cy="160" r="5"/><text class="lbl" x="316" y="176">E″</text>
+        <line x1="146" y1="100" x2="146" y2="255" class="dsh"/>
+        <line x1="222" y1="160" x2="222" y2="255" class="dsh"/>
+        <line x1="310" y1="160" x2="310" y2="255" class="dsh"/>
+        <text class="lbl-s" x="138" y="271">L′</text><text class="lbl-s" x="216" y="271">L</text><text class="lbl-s" x="304" y="271">L″</text>
+      </svg>
+      <figcaption>Figure 4.2 — MB/MC 分析。利率↑ ⇒ MC 上移 ⇒ 持币量下降（E→E′）；实际收入↑ ⇒ MB 上移 ⇒ 持币量上升（E→E″）。</figcaption>
+    </figure>
+
+    <div class="fml"><span class="lab">Slide 32 的三条比较静态（务必背熟方向）</span>
+① <b>利率上升</b> ⇒ MC 上移至 MC′ ⇒ 均衡从 E 到 E′ ⇒ <b>最优货币持有量下降</b>（L → L′）
+② <b>实际收入上升</b> ⇒ MB 上移至 MB′ ⇒ 均衡从 E 到 E″ ⇒ <b>意愿货币持有量上升</b>（L → L″）
+③ <b>价格上升</b>（实际收入与利率不变）⇒ <b>名义货币余额按比例上升</b>，
+   <b>实际货币持有量 M/P 保持不变</b>
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slides 30, 33–34</span><h2>10 · 实际货币需求与 LL 曲线 ⭐⭐</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 本讲最重要的一句话（Slide 30）</span>
+      <b>The demand for money is a demand for REAL money balances (nominal money / price level, i.e. M/P).</b>
+    </div>
+    <div class="tw"><table>
+      <tr><th style="width:26%">决定因素</th><th style="width:10%">方向</th><th>机制</th></tr>
+      <tr><td><b>Real income</b> 实际收入</td><td class="tick">+</td>
+        <td>实际 GDP 上升 ⇒ <b>支出量增加</b> ⇒ 人们计划持有的实际货币量增加</td></tr>
+      <tr><td><b>Nominal interest rate</b> 名义利率<br><span class="muted">（持币的机会成本）</span></td><td class="cross">−</td>
+        <td>债券利率上升 ⇒ 人们计划持有的货币量减少</td></tr>
+      <tr><td><b>Price level</b> 价格水平</td><td><b>不影响</b></td>
+        <td>价格上升使<b>名义</b>货币量按<b>同比例</b>上升，但<b>实际</b>货币需求 M/P <b>不变</b>
+        （购买力不变）</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 34</span>LL 曲线：沿线移动 vs 曲线移位</h3>
+    <div class="tw"><table>
+      <tr><th style="width:30%">变化</th><th>图形反应</th></tr>
+      <tr><td><b>利率变化</b>（其他不变）</td>
+        <td><b>沿着 LL 曲线移动</b>（moves along LL，如从 A 到 B）</td></tr>
+      <tr><td><b>实际收入上升</b>（利率不变）</td>
+        <td>对实际货币余额的需求上升 ⇒ <b>LL 曲线整体右移</b>（LL → LL′）</td></tr>
+    </table></div>
+    <p>课件表述：<i>"Other things being equal, the demand for real money balances will be <b>lower</b> when the
+    opportunity cost (the rate of interest) is relatively <b>high</b>"</i>——这就是 LL 向下倾斜的原因。
+    <b>LL 曲线的位置取决于实际收入。</b></p>
+
+    <figure>
+      <svg viewBox="0 0 520 300" role="img" aria-label="LL money demand schedule">
+        <line class="ax" x1="70" y1="255" x2="480" y2="255"/>
+        <line class="ax" x1="70" y1="255" x2="70" y2="30"/>
+        <text class="lbl" x="290" y="280">Real money holdings (M/P)</text>
+        <text class="lbl" x="36" y="45">r</text>
+        <path d="M110,45 C185,110 250,175 400,232" class="cv c-ad"/>
+        <text class="lbl" x="348" y="248" fill="#6c8bff">LL</text>
+        <path d="M180,42 C258,108 322,172 466,228" class="cv c-alt"/>
+        <text class="lbl" x="418" y="244" fill="#33d6a6">LL′ (实际收入↑)</text>
+        <circle class="pt" cx="146" cy="82" r="5"/><text class="lbl" x="128" y="74">B</text>
+        <circle class="pt" cx="238" cy="163" r="5"/><text class="lbl" x="222" y="155">A</text>
+        <circle class="pt" cx="310" cy="163" r="5"/><text class="lbl" x="316" y="155">C</text>
+        <line x1="70" y1="82" x2="146" y2="82" class="dsh"/><text class="lbl-s" x="50" y="86">r₂</text>
+        <line x1="70" y1="163" x2="310" y2="163" class="dsh"/><text class="lbl-s" x="50" y="167">r₁</text>
+        <line x1="146" y1="82" x2="146" y2="255" class="dsh"/><text class="lbl-s" x="138" y="271">L₂</text>
+        <line x1="238" y1="163" x2="238" y2="255" class="dsh"/><text class="lbl-s" x="230" y="271">L₁</text>
+        <line x1="310" y1="163" x2="310" y2="255" class="dsh"/><text class="lbl-s" x="302" y="271">L₃</text>
+      </svg>
+      <figcaption>Figure 4.3 — LL 曲线。利率由 r₁ 升至 r₂：<b>沿 LL 从 A 到 B</b>；实际收入上升：<b>LL 右移到 LL′</b>，同一利率下需求由 L₁ 升至 L₃。</figcaption>
+    </figure>
+
+    <div class="callout c-trap"><span class="t">⚠️ 高频陷阱</span>
+      "价格水平上升会使货币需求曲线右移"——<span class="cross">错</span>。<br>
+      LL 画的是<b>实际</b>货币余额需求，价格上升不改变实际需求，<b>LL 不动</b>。
+      移动的是<b>实际货币供给曲线</b>（M<sup>s</sup>/P 左移）——这一点在 Lecture 5 与 Lecture 7 推导 AD 曲线时至关重要。
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">货币总量</span>
+M0 = cash in circulation
+M1 = M0 + sight deposits
+M2 = M1 + time deposits
+Narrow: M0, M1     Broad: M2 – M4     UK 用 M0 与 M4
+    </div>
+    <div class="fml"><span class="lab">存款创造</span>
+TD = D/rr = R/rr
+<b>Deposit multiplier = TD/R = 1/rr</b>
+    </div>
+    <div class="fml"><span class="lab">货币乘数（一般式）</span>
+R = c<sub>b</sub>D，  C = c<sub>p</sub>D
+H = C + R = (c<sub>p</sub> + c<sub>b</sub>)D      ← Monetary base
+M = C + D = (c<sub>p</sub> + 1)D        ← Money supply
+<b>Money multiplier = M/H = (c<sub>p</sub> + 1)/(c<sub>p</sub> + c<sub>b</sub>)</b>
+<b>M = [(c<sub>p</sub>+1)/(c<sub>p</sub>+c<sub>b</sub>)] × H</b>
+c<sub>b</sub>↓ 或 c<sub>p</sub>↓ ⇒ 乘数↑ ⇒ 给定 H 下 M↑
+    </div>
+    <div class="fml"><span class="lab">货币需求</span>
+<b>L = L(Y⁺, r⁻)</b>，需求的是<b>实际余额 M/P</b>
+持币机会成本：窄币 = R<sub>b</sub>；广义货币 = R<sub>b</sub> − R<sub>d</sub>
+最优持币量：<b>MB = MC</b>
+利率↑ → 沿 LL 左上移；实际收入↑ → LL 右移；价格↑ → LL 不动
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>货币基础 = 货币供给</td><td>H = Cash + <b>Reserves</b>；M = Cash + <b>Deposits</b>；M = 乘数 × H</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>只有央行创造货币</td><td><b>商业银行通过放贷创造存款</b>，绝大部分货币是银行存款</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>货币乘数 = 1/rr（一般情形）</td><td>一般式是 <b>(c<sub>p</sub>+1)/(c<sub>p</sub>+c<sub>b</sub>)</b>；只有 c<sub>p</sub>=0 时才退化为 1/c<sub>b</sub></td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>价格上升使实际货币需求上升</td><td>实际需求 M/P <b>不受价格水平影响</b>；名义需求按比例上升</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>货币是最好的价值储藏手段</td><td>货币<b>不付利息</b>且<b>被通胀侵蚀</b>，有<b>更好</b>的储藏方式</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>投机动机 = 赌股票</td><td>指<b>预期债券价格下跌（利率上升）</b>时宁可持币</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>广义货币机会成本 = R<sub>b</sub></td><td>广义货币是<b>利差 R<sub>b</sub> − R<sub>d</sub></b>（存款本身付利息）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>MC 曲线向下倾斜</td><td><b>MC 水平</b>（给定利率下机会成本恒定）；<b>MB 向下倾斜</b></td><td><span class="badge b-essay">图</span></td></tr>
+      <tr><td>利率变化使 LL 移位</td><td>利率变化是<b>沿 LL 移动</b>；只有<b>实际收入</b>变化才使 LL 移位</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>bills 支付利息</td><td>bills <b>不直接支付利息</b>，收益来自已知的<b>回购价格</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span> <span class="badge b-calc">含计算</span>
+      <span class="muted" style="font-size:13px">（对应真题 B2 类型）</span></h3>
+    <p class="lead"><i>"(a) Distinguish between the monetary base and the money supply. (b) Explain how commercial banks
+    create deposits, and derive the money multiplier. (c) The banks' desired reserve ratio is 0.1 and the public's
+    desired cash-to-deposit ratio is 0.25. Calculate the money multiplier. (d) Why might the central bank be unable
+    to control the money supply precisely?"</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng"><b>Money</b> is any generally accepted means of payment for the delivery of goods or the
+        settlement of debt. The <b>monetary base</b> (or high-powered money) <i>H</i> is the sum of cash in private
+        circulation and the reserves held by the banking system: <i>H = C + R</i>. The <b>money supply</b> <i>M</i> is
+        the sum of cash in circulation and bank deposits held by the public: <i>M = C + D</i>. The
+        <b>money multiplier</b> is the change in the money stock for a £1 change in the monetary base.</p>
+        <p class="eng">Under <b>fractional reserve banking</b>, commercial banks are required to hold only a proportion
+        of their assets as cash reserves, which enables them to create deposits by lending.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 (see Figure 4.1 above): the monetary base splits into cash in circulation and bank
+        reserves. Bank reserves support a <b>multiple</b> of deposits through the deposit-creation process; cash in
+        circulation plus those deposits constitute the money supply. The vertical distance between the base and the
+        money stock is the multiplier effect. A balance-sheet table for four banks with a 25% reserve ratio
+        (deposits £100,000 → £75,000 → £56,250 → …, totalling £400,000) illustrates the same point numerically.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>(b) Deposit creation.</b> Step 1: a bank receiving a new deposit <i>D</i> keeps a fraction
+        <i>rr</i> as reserves and lends out (1 − <i>rr</i>)<i>D</i>. Step 2: the amount lent is spent and redeposited
+        at another bank, which again keeps <i>rr</i> and lends the rest. Step 3: with many banks, an individual bank
+        cannot expect its own deposits to rise by the full amount lent, since some reserves leak to other banks — but
+        those banks then have excess reserves and lend them in turn. Provided all loans are redeposited in the banking
+        system, the aggregate outcome is the same as with a single bank. Step 4: summing the geometric series,</p>
+        <div class="fml">TD = D + (1−rr)D + (1−rr)²D + … = D/[1 − (1 − rr)] = <b>D/rr</b>
+Deposit multiplier = TD/R = <b>1/rr</b></div>
+        <p class="eng">Step 5: allowing for the public's cash preference, let <i>R</i> = <i>c<sub>b</sub>D</i> and
+        <i>C</i> = <i>c<sub>p</sub>D</i>. Then</p>
+        <div class="fml">H = C + R = (c<sub>p</sub> + c<sub>b</sub>)D,  M = C + D = (c<sub>p</sub> + 1)D
+<b>M/H = (c<sub>p</sub> + 1)/(c<sub>p</sub> + c<sub>b</sub>)</b></div>
+
+        <p class="eng"><b>(c) Calculation.</b></p>
+        <div class="fml">c<sub>b</sub> = 0.1, c<sub>p</sub> = 0.25
+Money multiplier = (0.25 + 1)/(0.25 + 0.1) = 1.25/0.35 = <b>3.57</b>
+
+比较：若 c<sub>p</sub> = 0，乘数将是 1/c<sub>b</sub> = <b>10</b>。</div>
+        <p class="eng">The public's desire to hold cash reduces the multiplier from 10 to 3.57, because cash held
+        outside the banking system cannot be lent on and so does not support further deposit creation.</p>
+
+        <p class="eng"><b>(d) Limits to control.</b> Since <i>M</i> = [(c<sub>p</sub> + 1)/(c<sub>p</sub> + c<sub>b</sub>)]<i>H</i>,
+        the central bank controls <i>H</i> directly but the multiplier depends on <b>private behaviour</b>.
+        <i>c<sub>p</sub></i> varies with institutional payment arrangements, the incentive to make untraceable
+        payments to evade tax, and the spread of credit cards. <i>c<sub>b</sub></i> varies with required reserves,
+        with banks' desired <b>excess</b> reserves, with the interest-rate spread (a wider spread makes banks willing
+        to lend more and hold fewer reserves), and with the predictability of withdrawals and the availability of
+        liquid lending opportunities. If, for example, banks become risk-averse in a financial crisis and raise
+        <i>c<sub>b</sub></i>, an expansion of <i>H</i> may leave <i>M</i> almost unchanged.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">The monetary base and the money supply are therefore distinct: the base is the central bank's
+        liability and is under its direct control, while the money supply is largely composed of deposits
+        <b>created by commercial banks</b> through fractional reserve lending. The link between them is the money
+        multiplier (c<sub>p</sub> + 1)/(c<sub>p</sub> + c<sub>b</sub>), which in the example equals 3.57. Because the
+        multiplier is determined by the portfolio choices of banks and the public rather than by the authorities, the
+        central bank can influence but cannot precisely control the money supply. This is a central reason why modern
+        central banks — as Lecture 5 shows — set an <b>interest rate</b> as their operating instrument rather than
+        targeting a monetary aggregate directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-03.html">← Lecture 3</a>
+  <a href="../tutorials/tutorial-04.html">Tutorial 4 →</a>
+  <a href="lecture-05.html">Lecture 5 · Interest Rates →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

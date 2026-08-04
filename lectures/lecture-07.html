@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 7 · The AS-AD Model — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 凯恩斯 vs 古典模型 ⭐</a>
+  <a class="nav" href="#s2">2 · AD 曲线：从 rr 规则推导 ⭐</a>
+  <a class="nav" href="#s3">3 · AD 的斜率与移动</a>
+  <a class="nav" href="#s4">4 · 总供给基本面与 LAS ⭐</a>
+  <a class="nav" href="#s5">5 · SAS：为什么向上倾斜 ⭐⭐</a>
+  <a class="nav" href="#s6">6 · LAS / SAS 的移动</a>
+  <a class="nav" href="#s7">7 · 长期 vs 短期均衡</a>
+  <a class="nav" href="#s8">8 · 需求冲击与调整</a>
+  <a class="nav" href="#s9">9 · 供给冲击：永久 vs 暂时 ⭐⭐</a>
+  <a class="nav" href="#s10">10 · 货币目标的权衡 ⭐</a>
+  <a class="nav" href="#s11">11 · 调整速度与劳动市场</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例（石油冲击）</a>
+  <a class="nav" href="../tutorials/tutorial-07.html">→ Tutorial 7</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 7 · The AS-AD Model</h1>
+  <div class="sub">古典模型 · AD 曲线 · LAS 与 SAS · 需求冲击与供给冲击 · 货币政策的权衡</div>
+  <div>
+    <span class="tag">48 slides</span>
+    <span class="tag">Begg Ch.22</span>
+    <span class="tag">对应 Tutorial 7 / EOC Ch22</span>
+    <span class="tag b-hot">⭐⭐ 真题 B3 核心（石油冲击）</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">前六讲价格始终是<b>固定的</b>，所以只能谈产出。本讲第一次<b>放开价格</b>，
+    因此可以同时决定<b>产出与通胀</b>。这是全课程从"短期凯恩斯"走向"长期古典"的<b>枢纽</b>。</p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+两种世界观：<b>凯恩斯（价格黏性，短期）</b> vs <b>古典（价格完全弹性，长期）</b>
+   ↓ AD 侧：通胀↑ ⇒ 央行按 rr 规则提高实际利率 ⇒ AD↓ ⇒ <b>AD 曲线向下倾斜</b>
+   ↓ AS 侧：Y = F(L, K, A)
+        长期：工资价格完全调整 ⇒ <b>LAS 垂直于 Y*</b>
+        短期：<b>名义工资增长率是继承下来的（给定的）</b> ⇒ <b>SAS 向上倾斜</b>
+   ↓ 长期均衡 = AD ∩ LAS ∩ SAS 三线交于一点
+   ↓ 需求冲击：短期 Y 变，长期靠 <b>SAS 移动</b>回到 Y*
+   ↓ 供给冲击：<b>永久</b>（LAS 与 SAS 同时右移）vs <b>暂时</b>（只有 SAS 移动，会自行复原）
+   ↓ 由此得出：<b>盯通胀只对需求冲击有效；面对供给冲击必须在通胀与产出之间权衡</b>
+   ↓ 解决方案：<b>Taylor rule</b> 或 <b>flexible inflation targeting</b>
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：AD 曲线的斜率来自 <b>Lecture 6</b> 的两个环节（利率对通胀的反应 + AD 对利率的反应）；
+      Taylor rule 与 Lecture 6 完全相同。<br>
+      <b>启下</b>：<b>Lecture 8</b> 的短期/长期菲利普斯曲线，本质上就是 <b>SAS 与 LAS 换一对坐标轴</b>
+      （把"产出"换成"失业率"）。<b>Lecture 9</b> 详细展开本讲的劳动力市场部分。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slides 3–5</span><h2>1 · 凯恩斯模型 vs 古典模型 ⭐（对比题必考）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:24%">维度</th><th>The Keynesian Model（短期）</th><th>The Classical Model（长期）</th></tr>
+      <tr><td><b>价格与工资</b></td>
+        <td>假设 <b>sticky wages &amp; prices</b>（黏性，调整缓慢）</td>
+        <td>假设 <b>full wage &amp; price flexibility</b>（完全弹性）</td></tr>
+      <tr><td><b>市场出清</b></td><td>不能立即出清</td><td><b>Markets clear instantly</b>（市场瞬时出清）</td></tr>
+      <tr><td><b>产出</b></td>
+        <td>产出<b>可以偏离 Y*</b>（存在 <b>output gap</b>）；需求冲击改变产出与就业</td>
+        <td>经济<b>始终处于潜在产出 Y*</b></td></tr>
+      <tr><td><b>货币/财政政策</b></td>
+        <td><b>可以稳定产出</b></td>
+        <td><b>只影响价格，对产出没有影响</b></td></tr>
+      <tr><td><b>适用范围</b></td><td>Relevant for the <b>short run</b></td><td>Relevant for the <b>long run</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 AS-AD 模型的用途（Slide 5，定义题）</span>
+      我们用 AS 与 AD 模型来<b>确定实际产出与价格水平（因而是通胀）</b>。该模型使我们能理解宏观经济表现的<b>三个特征</b>：<br>
+      ① <b>growth of potential GDP</b>（潜在 GDP 的增长）<br>
+      ② <b>inflation</b>（通胀）<br>
+      ③ <b>business cycle fluctuations</b>（商业周期波动）
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 7–13</span><h2>2 · AD 曲线：从货币政策规则推导 ⭐⭐</h2></div>
+  <div class="card">
+    <div class="callout c-trap"><span class="t">⚠️ 本课程 AD 曲线的推导与很多教科书不同——务必用课件的版本</span>
+      课件的 AD 曲线<b>纵轴是通胀 π，不是价格水平 P</b>，且它向下倾斜的原因<b>不是</b>"实际余额效应"，
+      而是 <b>央行的政策反应</b>。写答案时如果说成"价格上升使实际货币余额下降"，会被判为用错模型。
+    </div>
+
+    <h3><span class="slide-no">Slide 7</span>AD 的定义</h3>
+    <p><b>The quantity of output demanded, Y,</b> is the total amount of final goods and services produced in the
+    domestic economy that <b>people, businesses, governments and foreigners plan to buy</b>：</p>
+    <div class="fml"><b>Y = C + I + G + X − M</b></div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 8–11</span>rr 曲线：货币政策规则</h3>
+    <div class="fml"><span class="lab">简化的 rr 规则（只看通胀那一项）</span>
+<b>r − r* = a(π − π*)</b>,  a &gt; 0
+    </div>
+    <ul>
+      <li>这显示了<b>当利率是为追求通胀目标而设定时</b>货币政策如何运作。</li>
+      <li><b>通胀高于（低于）目标 π* 时，实际利率被设定得高于（低于）正常水平</b>。</li>
+      <li><b>沿着 rr 曲线</b>，执行的是<b>同一个给定的货币政策</b>。</li>
+      <li>若通胀率恰为 π*，对应的实际利率就是 <b>r*</b>。</li>
+    </ul>
+    <div class="fml"><span class="lab">rr 曲线的移动（Slide 10）</span>
+<b>更宽松</b>的货币政策 ⇒ rr 曲线<b>下移</b>：在每一个可能的通胀率上都对应<b>更低</b>的利率
+<b>更紧缩</b>的货币政策 ⇒ rr 曲线<b>上移</b>：在每一个可能的通胀率上都对应<b>更高</b>的利率
+    </div>
+    <div class="callout c-tip"><span class="t">💡 名义 vs 实际（Slide 11，容易考）</span>
+      央行关心的是<b>实际利率</b>（因为它影响 AD），但央行<b>无法直接控制产出价格或通胀率</b>。
+      因此要实现 rr 曲线，央行<b>先预测通胀，再设定一个名义利率 i</b>，
+      以达到它想要的实际利率 <b>r = i − π</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 12</span>Taylor Rule 的名义形式</h3>
+    <div class="fml">
+实际形式：<b>r − r* = a(π − π*) + b(Y − Y*)</b>,  a &gt; 0, b &gt; 0
+由费雪关系：<b>i* = r* + π*</b>
+⇒ 名义形式：<b>i − i* = (1 + a)(π − π*) + b(Y − Y*)</b>,  a &gt; 0
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 系数 (1 + a) 的含义 —— Taylor 原则</span>
+      通胀上升 1 个百分点，<b>名义</b>利率必须上升 <b>(1 + a) &gt; 1</b> 个百分点，
+      这样<b>实际</b>利率才会真的上升 a 个百分点。<b>名义利率的上升幅度必须超过通胀的上升幅度</b>，
+      否则实际利率反而下降、政策变成火上浇油。<br>
+      课件补充：名义利率的长期目标既取决于<b>长期通胀目标</b>，也取决于<b>长期希望的实际利率水平</b>，
+      而后者<b>可能取决于货币—财政政策组合（monetary–fiscal mix）</b>（呼应 Lecture 6 的 policy mix）。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 13</span>AD 曲线的定义</h3>
+    <div class="fml" style="font-size:15px">
+<b>The aggregate demand schedule (AD) shows that higher inflation reduces aggregate demand
+by inducing the central bank to raise real interest rates.</b>
+    </div>
+    <div class="fml"><span class="lab">AD 向下倾斜的完整传导链（答题写这一条）</span>
+π ↑  →（按 rr / Taylor 规则）→ r ↑  →  C ↓ 且 I ↓（Lecture 5 传导机制）→  AD ↓  →  Y ↓
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 900 290" role="img" aria-label="rr schedule and AD curve">
+        <text class="lbl" x="110" y="16">rr 曲线（政策规则）</text>
+        <line class="ax" x1="70" y1="245" x2="410" y2="245"/>
+        <line class="ax" x1="70" y1="245" x2="70" y2="32"/>
+        <text class="lbl-s" x="290" y="268">Inflation π</text>
+        <text class="lbl-s" x="14" y="46">Real interest rate</text>
+        <line x1="95" y1="220" x2="390" y2="60" class="cv c-ad"/>
+        <text class="lbl-s" x="346" y="54" fill="#6c8bff">rr</text>
+        <line x1="95" y1="245" x2="390" y2="85" class="cv c-alt" stroke-dasharray="5 4"/>
+        <text class="lbl-s" x="330" y="98" fill="#33d6a6">rr′ (looser)</text>
+        <circle class="pt" cx="230" cy="147" r="5"/>
+        <line x1="70" y1="147" x2="230" y2="147" class="dsh"/><text class="lbl-s" x="48" y="151">r*</text>
+        <line x1="230" y1="147" x2="230" y2="245" class="dsh"/><text class="lbl-s" x="222" y="261">π*</text>
+
+        <text class="lbl" x="620" y="16">AD 曲线</text>
+        <line class="ax" x1="510" y1="245" x2="860" y2="245"/>
+        <line class="ax" x1="510" y1="245" x2="510" y2="32"/>
+        <text class="lbl-s" x="700" y="268">Output</text>
+        <text class="lbl-s" x="474" y="46">π</text>
+        <path d="M545,50 C625,120 690,168 830,222" class="cv c-as"/>
+        <text class="lbl" x="778" y="238" fill="#ff5c7a">AD</text>
+        <circle class="pt" cx="660" cy="147" r="5"/>
+        <line x1="510" y1="147" x2="660" y2="147" class="dsh"/><text class="lbl-s" x="488" y="151">π*</text>
+        <line x1="660" y1="147" x2="660" y2="245" class="dsh"/><text class="lbl-s" x="652" y="261">Y*</text>
+        <text class="lbl-s" x="560" y="200">π↑ ⇒ r↑ ⇒ C,I↓ ⇒ Y↓</text>
+      </svg>
+      <figcaption>Figure 7.1 — 由货币政策规则推导 AD。通胀越高，央行设定的实际利率越高，需求越低。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 14–15</span><h2>3 · AD 曲线的斜率与移动</h2></div>
+  <div class="card">
+    <h3>斜率由<b>两个</b>环节共同决定（必须两条都写）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:20%">AD 曲线</th><th>条件</th></tr>
+      <tr><td><b>平坦（flat）</b></td>
+        <td>① <b>利率决策对通胀反应很大</b>（a 大）<b>且</b><br>
+            ② <b>总需求对利率变化高度敏感</b>（IS 平坦）</td></tr>
+      <tr><td><b>陡峭（steep）</b></td>
+        <td>① <b>利率决策对通胀反应不大</b> <b>且</b><br>
+            ② <b>总需求对利率变化反应很小</b></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px">移动（Slide 15）</h3>
+    <p><b>任何在给定通胀水平下提高（降低）产出的因素，都会使 AD 曲线右移（左移）</b>：</p>
+    <ul>
+      <li><b>宽松的货币政策</b>——注意课件的提醒：<b>这同时也使 rr 曲线移动</b>；
+        <b>对于货币政策变化，rr 与 AD 朝同一方向移动</b>。</li>
+      <li><b>更高的政府支出</b>。</li>
+      <li>其他影响总需求的因素。</li>
+    </ul>
+    <div class="callout c-trap"><span class="t">⚠️ 一个很细的考点</span>
+      "宽松货币政策使 rr <b>下移</b>、AD <b>右移</b>"——课件用的措辞是 "both rr and AD shift towards the same direction"。
+      理解为：<b>都朝着"扩张"的方向</b>（rr 下、AD 右）。<b>通胀本身的变化不会移动 AD，只是沿 AD 移动</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 17–23</span><h2>4 · 总供给基本面与长期总供给 LAS ⭐</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 17</span>总供给的三个决定因素</h3>
+    <div class="fml">
+供给的商品与服务总量取决于三个因素：
+  • <b>The quantity of labour (L)</b>
+  • <b>The quantity of capital (K)</b>
+  • <b>The state of technology (A)</b>
+
+<b>Aggregate production function：Y = F(L, K, A)</b>
+
+短期内我们可以把<b>潜在产出视为给定</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 18–19</span>劳动力市场与充分就业</h3>
+    <ul>
+      <li>在任一时点，<b>资本数量与技术水平是固定的，但劳动数量可以变动</b>。</li>
+      <li>劳动力市场可能处于三种状态之一：<b>full employment</b>、<b>above full employment</b>、<b>below full employment</b>。</li>
+      <li>使<b>劳动需求量等于劳动供给量</b>的工资率是<b>均衡工资率</b>，此时劳动力市场处于<b>充分就业</b>。</li>
+      <li><b>在充分就业时</b>：<b>实际产出 = 潜在产出</b>；<b>失业率被称为自然失业率（the natural rate of unemployment）</b>。</li>
+      <li><b>在商业周期中</b>：就业围绕充分就业波动；实际产出围绕潜在产出波动。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 20–22</span>长期总供给曲线 LAS</h3>
+    <div class="fml"><span class="lab">定义（必背）</span>
+<b>The macroeconomic long run</b> is a time frame that is sufficiently long for <b>all adjustments to be made</b>
+so that <b>actual and potential output are equal, and full employment prevails</b>.
+
+<b>The long-run aggregate supply curve (LAS)</b> is the relationship between the quantity of actual GDP
+supplied and the price level (inflation) <b>when actual GDP equals potential GDP</b>.
+⇒ 这由一条<b>垂直的</b>供给曲线表示。
+    </div>
+    <div class="tw"><table>
+      <tr><th style="width:34%">古典/长期 AS 的四条性质</th><th>含义</th></tr>
+      <tr><td>AS 曲线<b>垂直于潜在产出</b></td><td>Y 恒等于 Y*</td></tr>
+      <tr><td><b>均衡产出可以在不同的通胀水平上实现</b></td>
+        <td>通胀是<b>纯粹的货币现象</b>，与实际产出无关</td></tr>
+      <tr><td>人们<b>不受货币幻觉（money illusion）之苦</b></td>
+        <td>人们看穿名义值，只对实际值作反应</td></tr>
+      <tr><td><b>只有实际变量的变化才会影响其他实际变量</b></td>
+        <td>这就是<b>古典二分法（classical dichotomy）</b>与<b>货币中性</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 长期均衡（Slide 23）</span>
+      在 <b>AD = AS</b> 的 <b>A 点</b>，产出为潜在产出 <b>Y*</b>，通胀为 <b>π*</b>。
+      课件强调：<b>在 A 点，商品市场、货币市场与劳动力市场全部处于均衡</b>。
+      写 essay 时这句话是描述长期均衡的标准句式。
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 27–32</span><h2>5 · 短期总供给 SAS ⭐⭐（本讲最难也最常考的一节）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义（必背，注意括号里的条件）</span>
+      <b>The macroeconomic short run</b> is a period during which actual output has <b>fallen below or risen above
+      potential output</b>，同时<b>失业率高于或低于自然失业率</b>。<br><br>
+      <b>The short-run aggregate supply curve (SAS)</b> is the relationship between the quantity of actual output
+      supplied and the inflation in the short run <b>when: the nominal wage growth rate and the potential output
+      remain constant</b>.
+    </div>
+
+    <h3>为什么短期产出会偏离潜在产出（Slide 28）</h3>
+    <ul>
+      <li><b>若调整不是瞬时的</b>，短期内产出可能偏离潜在水平。</li>
+      <li>企业可以<b>改变劳动投入</b>——通过<b>工时（加班或裁员）</b>。</li>
+      <li>面对总需求下降时，<b>工资可能反应迟缓（sluggish），无法恢复充分就业</b>。</li>
+      <li>SAS 显示<b>在给定的、继承下来的名义工资增长率下</b>，意愿产出如何随通胀变化。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 29–30</span>SAS 为什么向上倾斜（核心机制，必须能完整讲）</h3>
+    <div class="fml"><span class="lab">起点：经济在 A 点处于潜在产出</span>
+短期内企业<b>继承了一个给定的名义工资增长率</b>。
+之前的工资谈判<b>预期</b>经济将维持在长期均衡 A 点、通胀为 π₀。
+通过<b>跟上通胀</b>，名义工资增长被预期能<b>维持劳动力市场均衡所需的正确实际工资</b>。
+    </div>
+    <div class="tw"><table>
+      <tr><th style="width:26%">情形</th><th>机制（课件原文逻辑）</th><th style="width:16%">移动</th></tr>
+      <tr><td><b>通胀超出预期<br>(π &gt; π₀)</b></td>
+        <td>这<b>帮了企业</b>：<b>产出价格上升</b>而名义工资已被锁定 ⇒ <b>实际工资低于预期</b>。
+        如果这在工资谈判时被预见到，继承的名义工资本会更高；<b>但它没有被预见到！</b>
+        企业<b>利用这个好运气，供给多得多的产出</b>。</td>
+        <td><b>A → C</b>（沿 SAS 上移）</td></tr>
+      <tr><td><b>通胀低于预期<br>(π &lt; π₀)</b></td>
+        <td>实际工资<b>高于</b>议定名义工资时所预期的水平。<b>由于劳动现在很昂贵，企业大幅削减产出</b>。</td>
+        <td><b>A → B</b>（沿 SAS 下移）</td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 一句话抓住 SAS 的本质</span>
+      <b>SAS 向上倾斜完全来自"名义工资被提前锁定"这一条。</b>
+      通胀意外上升 ⇒ 实际工资意外下降 ⇒ 劳动变便宜 ⇒ 企业多生产。<br>
+      长期中工资谈判会把通胀完全反映进去 ⇒ 实际工资回到均衡水平 ⇒ <b>产出回到 Y*</b> ⇒ LAS 垂直。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 31–32</span>SAS 曲线如何移动（调整机制）</h3>
+    <div class="fml"><span class="lab">课件的调整叙述（务必背下这条链）</span>
+如果需求与产出<b>持续低迷</b>：
+  ⇒ <b>议定的名义工资增长率逐渐下降</b>
+  ⇒ 工资增长更低 ⇒ 企业<b>不需要那么快地提高产出价格</b>
+  ⇒ <b>SAS 曲线下移</b>（SAS → SAS₁）
+  ⇒ <b>更低的通胀使经济沿着 AD 曲线下移，增加了对商品的需求</b>
+  ⇒ 如果<b>充分就业与潜在产出仍未恢复</b>，议定工资增长<b>再次下降</b>
+  ⇒ SAS 继续下移（→ SAS₂）…… 直到回到 Y*
+    </div>
+    <p>课件的总结句（Slide 32）：</p>
+    <ul>
+      <li><b>企业在工资成本上升时提价。每一条 SAS 函数都反映一个不同的、继承下来的名义工资增长率。</b></li>
+      <li><b>对于任何给定的（工资增长）率，更高的通胀使企业沿着一条给定的短期供给曲线向上移动。</b></li>
+      <li><b>持续的繁荣或衰退会逐渐把名义工资增长率抬高或压低，从而移动短期供给曲线。</b></li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 33</span>沿 LAS 移动 vs 沿 SAS 移动（很细的 MCQ 考点）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:34%">变化</th><th>结果</th></tr>
+      <tr><td>价格水平变化，<b>且名义工资率同比例变化</b>（<b>实际工资不变</b>）</td>
+        <td>产生<b>沿 LAS 曲线的移动</b></td></tr>
+      <tr><td>价格水平变化，<b>但名义工资率不变</b></td>
+        <td>产生<b>沿 SAS 曲线的移动</b></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slides 34–35</span><h2>6 · LAS 与 SAS 的移动因素</h2></div>
+  <div class="card">
+    <div class="grid2">
+      <div>
+        <h4>LAS 移动的三个原因（Slide 34）</h4>
+        <p class="muted" style="font-size:14px">总供给移动的前提：存在<b>价格水平/通胀之外</b>对生产计划的影响</p>
+        <ul>
+          <li><b>Better technology</b>（更好的技术）⇒ AS 右移，潜在产出增加</li>
+          <li><b>Increased potential labour supply</b>（潜在劳动供给增加）⇒ AS 右移</li>
+          <li><b>More capital</b>（使用更多资本）⇒ AS 右移</li>
+        </ul>
+        <p class="muted" style="font-size:13.5px">↑ 这三条正是 <b>Y = F(L, K, A)</b> 的三个自变量，也是 Lecture 10 增长核算的三项。</p>
+      </div>
+      <div>
+        <h4>SAS 移动的三类因素（Slide 35）</h4>
+        <ul>
+          <li><b>凡是移动 LAS 的因素，对 SAS 有相同效果</b>：潜在 GDP 增加时，<b>LAS 与 SAS 同时右移</b>。</li>
+          <li><b>名义工资增长率的变化</b>：改变短期总供给、<b>移动 SAS</b>；
+            <b>但对长期总供给没有影响，LAS 不移动</b>。</li>
+          <li><b>短期内影响生产成本的因素，例如油价</b>。
+            <span class="muted">（名义工资增长率也是影响生产成本的因素之一。）</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 判断题的黄金准则</span>
+      问"某冲击移动 LAS 还是只移动 SAS"，就问一句：<b>它改变了 Y = F(L, K, A) 中的 L、K、A 吗？</b><br>
+      • 改变了 ⇒ <b>LAS 与 SAS 同时移动</b>（永久性冲击）<br>
+      • 没改变，只是改变了<b>短期成本</b>（工资增长率、油价）⇒ <b>只有 SAS 移动</b>（暂时性冲击）
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slides 36–37</span><h2>7 · 长期均衡 vs 短期均衡</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:22%"></th><th>定义（课件原文）</th></tr>
+      <tr><td><b>Long-run equilibrium</b></td>
+        <td>发生在 <b>AD 与 LAS 曲线相交</b>处，并且在 <b>名义工资率已经调整到使 SAS 曲线通过该长期均衡点</b>时出现。<br>
+        即：<b>实际产出 = 潜在产出</b>，经济位于其 <b>LAS 曲线上</b>。<b>三条线交于一点。</b></td></tr>
+      <tr><td><b>Short-run equilibrium</b></td>
+        <td><b>只有 AD 与 SAS 相交</b>的地方；<b>实际产出可以大于或小于潜在产出</b>。</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:18px">向长期均衡的调整过程（Slide 37，三句话）</h3>
+    <ol>
+      <li>当 SAS 与 AD 结合（短期均衡）时，<b>AD 的变化在短期主要导致产出的变化</b>。</li>
+      <li>随着时间推移，<b>对充分就业的偏离逐渐改变名义工资增长率，使 SAS 向长期位置移动</b>。</li>
+      <li>因此，<b>经济逐渐回到潜在产出</b>。</li>
+    </ol>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slides 25, 39, 43</span><h2>8 · 需求冲击与调整</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 25</span>正向需求冲击（长期视角）</h3>
+    <div class="fml">
+从 A 点出发，<b>投资增加</b>带来的总需求上升
+   ⇒ AD₀ 移到 AD₁，移到新均衡 B
+   ⇒ 在 B 点，<b>潜在产出不变</b>，但<b>通胀更高（π₁* &gt; π₀*）</b>
+   ⇒ <b>央行会提高利率，把 AD₁ 移回 AD₀</b>
+   ⇒ 从而<b>在 A 点恢复均衡</b>
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 39</span>降低通胀目标（紧缩性需求冲击，完整的三阶段调整）⭐</h3>
+    <div class="fml"><span class="lab">课件逐步描述（这是"反通胀成本"的标准图）</span>
+从长期均衡 E 出发：
+① <b>通胀目标从 π* 下调到 π₃*</b>：为实现它而<b>提高利率</b>，<b>AD 移到 AD′</b>。
+② <b>给定工资水平，企业在短期调整到 E′</b>（产出下降，通胀降到 π₁）。
+③ 通胀降到 π₁ 但<b>工资未变</b> ⇒ <b>实际工资上升</b> ⇒ <b>带来非自愿失业</b>
+   (bringing <b>involuntary unemployment</b>)。
+④ 随着<b>劳动力市场（工资）调整</b>，<b>SAS 移动</b>（如移到 SAS′、SAS₃）。
+⑤ <b>最终在 E₃ 达成均衡，回到 Y*</b>，通胀为新目标 π₃*。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 540 330" role="img" aria-label="Lower inflation target adjustment">
+        <line class="ax" x1="80" y1="285" x2="500" y2="285"/>
+        <line class="ax" x1="80" y1="285" x2="80" y2="28"/>
+        <text class="lbl" x="400" y="308">Output</text>
+        <text class="lbl" x="44" y="42">π</text>
+        <line x1="310" y1="285" x2="310" y2="35" class="cv c-alt2"/>
+        <text class="lbl" x="288" y="28" fill="#ffb454">LAS</text>
+        <path d="M110,52 C190,110 250,150 400,215" class="cv c-ad"/>
+        <text class="lbl-s" x="358" y="232" fill="#6c8bff">AD</text>
+        <path d="M92,110 C170,168 232,208 380,272" class="cv" stroke="#a9bcff" stroke-width="2.4" fill="none"/>
+        <text class="lbl-s" x="330" y="286" fill="#a9bcff">AD′</text>
+        <line x1="150" y1="228" x2="450" y2="60" class="cv c-as"/>
+        <text class="lbl-s" x="410" y="56" fill="#ff5c7a">SAS</text>
+        <line x1="150" y1="272" x2="450" y2="104" class="cv" stroke="#ff8aa0" stroke-width="2.2"/>
+        <text class="lbl-s" x="410" y="100" fill="#ff8aa0">SAS′</text>
+        <line x1="150" y1="312" x2="450" y2="144" class="cv" stroke="#ffd0d8" stroke-width="2"/>
+        <text class="lbl-s" x="410" y="140" fill="#ffd0d8">SAS₃</text>
+        <circle class="pt" cx="310" cy="144" r="5.5"/><text class="lbl-s" x="316" y="138">E</text>
+        <circle class="pt" cx="238" cy="184" r="5"/><text class="lbl-s" x="208" y="180">E′</text>
+        <circle class="pt" cx="266" cy="208" r="5"/><text class="lbl-s" x="270" y="204">E₂</text>
+        <circle class="pt" cx="310" cy="228" r="5.5"/><text class="lbl-s" x="316" y="224">E₃</text>
+        <line x1="80" y1="144" x2="310" y2="144" class="dsh"/><text class="lbl-s" x="56" y="148">π*</text>
+        <line x1="80" y1="184" x2="238" y2="184" class="dsh"/><text class="lbl-s" x="56" y="188">π₁</text>
+        <line x1="80" y1="208" x2="266" y2="208" class="dsh"/><text class="lbl-s" x="56" y="212">π₂</text>
+        <line x1="80" y1="228" x2="310" y2="228" class="dsh"/><text class="lbl-s" x="52" y="232">π₃*</text>
+        <line x1="310" y1="285" x2="310" y2="295" class="dsh"/><text class="lbl-s" x="302" y="308">Y*</text>
+      </svg>
+      <figcaption>Figure 7.2 — 下调通胀目标。短期产出下降（E→E′，非自愿失业），SAS 逐步下移，最终回到 Y* 但通胀更低（E₃）。
+      <b>E 到 E₃ 之间的产出损失就是反通胀的成本（sacrifice ratio 的图形来源）。</b></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 24, 40–41</span><h2>9 · 供给冲击：永久 vs 暂时 ⭐⭐（真题 B3 核心）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 这一节是历年真题最常考的图</span>
+      务必区分：<b>永久性供给冲击移动 LAS 与 SAS 两条线</b>；<b>暂时性供给冲击只移动 SAS，且最终会自行退回</b>。
+    </div>
+
+    <h3><span class="slides">Slides 24, 40</span>永久性（有利的）供给冲击</h3>
+    <div class="fml"><span class="lab">Slide 40 的完整叙述</span>
+<b>永久性的经济增长使 LAS 与 SAS 同时右移</b>（LAS₀→LAS₁，SAS₀→SAS₁）。
+为了<b>维持通胀目标 π*</b>，央行<b>永久性地降低利率</b>，把 <b>AD₀ 移到 AD₁</b>。
+均衡从 <b>E₀ 移到 E₁</b>：<b>产出更高（Y₀*→Y₁*），通胀保持在目标水平</b>。
+    </div>
+    <div class="fml"><span class="lab">Slide 24 的补充（若央行不移动 AD 会怎样）</span>
+有利的供给冲击把 AS₀ 移到 AS₁ ⇒ 潜在产出上升，<b>通胀降到 π₂*（D 点）</b>。
+若央行的目标是 π₀*，它<b>必须以降低目标实际利率来回应</b>。
+这将导致<b>被需求的货币量增加</b>：为在该利率上实现货币市场均衡，
+<b>央行必须供给更多货币</b>（呼应 Lecture 5–6：央行盯利率，货币量被动供给）。
+    </div>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 41</span>暂时性供给冲击（<b>油价上涨</b>）⭐⭐⭐</h3>
+    <div class="fml"><span class="lab">课件逐句（这就是真题的标准答案骨架）</span>
+① <b>更高的油价迫使企业提价，所以 SAS 移到 SAS′</b>（左上移）。
+② <b>均衡从 E 移到 E′</b>：<b>通胀上升（π* → π′），产出下降（Y* → Y′）</b> —— 即 <b>stagflation 滞胀</b>。
+③ <b>更高的通胀降低总需求，因为央行提高了实际利率</b>（沿 AD 曲线向上移动）。
+④ <b>E′ 处更低的产出与就业逐渐降低通胀与名义工资增长</b>，
+   <b>使 SAS′ 移回 SAS，从而恢复 Y*</b>。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 540 320" role="img" aria-label="Temporary supply shock oil price">
+        <line class="ax" x1="80" y1="275" x2="500" y2="275"/>
+        <line class="ax" x1="80" y1="275" x2="80" y2="28"/>
+        <text class="lbl" x="400" y="298">Output</text>
+        <text class="lbl" x="44" y="42">π</text>
+        <line x1="330" y1="275" x2="330" y2="35" class="cv c-alt2"/>
+        <text class="lbl" x="308" y="28" fill="#ffb454">LAS</text>
+        <path d="M110,52 C200,115 265,158 430,222" class="cv c-ad"/>
+        <text class="lbl" x="386" y="240" fill="#6c8bff">AD</text>
+        <line x1="170" y1="248" x2="470" y2="72" class="cv c-as"/>
+        <text class="lbl-s" x="432" y="68" fill="#ff5c7a">SAS</text>
+        <line x1="118" y1="248" x2="418" y2="72" class="cv" stroke="#ff8aa0" stroke-width="2.4"/>
+        <text class="lbl-s" x="372" y="66" fill="#ff8aa0">SAS′ (油价↑)</text>
+        <circle class="pt" cx="330" cy="154" r="5.5"/><text class="lbl-s" x="336" y="150">E</text>
+        <circle class="pt" cx="262" cy="120" r="5.5"/><text class="lbl-s" x="232" y="114">E′</text>
+        <line x1="80" y1="154" x2="330" y2="154" class="dsh"/><text class="lbl-s" x="56" y="158">π*</text>
+        <line x1="80" y1="120" x2="262" y2="120" class="dsh"/><text class="lbl-s" x="56" y="124">π′</text>
+        <line x1="330" y1="275" x2="330" y2="285" class="dsh"/><text class="lbl-s" x="322" y="298">Y*</text>
+        <line x1="262" y1="275" x2="262" y2="285" class="dsh"/><text class="lbl-s" x="254" y="298">Y′</text>
+        <path d="M200,196 L156,196" class="dsh" stroke="#ff8aa0" marker-end="url(#a7)"/>
+        <defs><marker id="a7" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+          <path d="M0,0 L7,3.2 L0,6.4 z" fill="#ff8aa0"/></marker></defs>
+        <text class="lbl-s" x="118" y="212" fill="#ff8aa0">① SAS 左移</text>
+        <text class="lbl-s" x="118" y="90">滞胀：π↑ 且 Y↓</text>
+      </svg>
+      <figcaption>Figure 7.3 — 暂时性供给冲击（油价上涨）。SAS 左移导致<b>滞胀</b>；由于 LAS 不变，
+      低产出会逐步压低工资增长，SAS 自行回移，长期恢复 Y*。</figcaption>
+    </figure>
+
+    <div class="callout c-tip"><span class="t">💡 真题常追问的两问，答案在这里</span>
+      <b>Q：油价冲击下央行该怎么办？</b><br>
+      如果<b>盯住通胀</b>：必须紧缩 AD ⇒ 产出<b>跌得更深</b>，但通胀更快回到目标。<br>
+      如果<b>盯住产出</b>：必须扩张 AD ⇒ 产出稳住，但<b>通胀居高不下</b>（甚至被固化进工资谈判）。<br>
+      <b>Q：如果没有央行（不作反应）会怎样？</b><br>
+      AD 曲线不移动，经济停在 E′；随后<b>靠劳动力市场自行调整</b>（低产出压低名义工资增长）
+      使 SAS′ 慢慢回到 SAS，<b>最终仍回到 Y*，但过程更慢、失业持续更久</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slides 42–45</span><h2>10 · 货币政策目标的权衡 ⭐（essay 高分点）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">Slide 42 三句话（必背）</span>
+• <b>Inflation targeting works well when all shocks are DEMAND shocks.</b>
+• 当冲击是<b>供给冲击</b>时，<b>稳定通胀可能导致产出高度不稳定</b>。
+• 反之，<b>稳定产出的政策可能导致通胀高度不稳定</b>。
+    </div>
+
+    <h3><span class="slide-no">Slide 43</span>需求冲击：没有权衡（两个目标一致）</h3>
+    <ul>
+      <li>需求在 AD′ 与 AD″ 之间波动，造成产出与通胀的波动。</li>
+      <li>若<b>央行反应迅速</b>，它可以通过改变 i* 把需求移回 AD，从而<b>抵消需求冲击</b>。</li>
+      <li><b>把通胀稳定在 π* 的做法，同时也把产出稳定在了 Y*。</b></li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 为什么需求冲击没有权衡</span>
+      需求冲击使 <b>π 与 Y 同方向变动</b>（都升或都降），所以<b>反向操作 AD 可以同时修好两个</b>。
+      供给冲击使 <b>π 与 Y 反方向变动</b>（滞胀），移动 AD 只能<b>修好一个、恶化另一个</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 44</span>供给冲击：真正的权衡</h3>
+    <ul>
+      <li>短期供给在 SAS′ 与 SAS″ 之间波动。</li>
+      <li><b>要把通胀维持在 π*，产出必须在 Y′ 与 Y″ 之间大幅波动。</b></li>
+      <li><b>面对供给冲击，货币政策无法同时稳定产出与通胀。</b></li>
+      <li>因此<b>合理的做法是设定利率，允许一些通胀波动，以减少一点产出（波动）</b>。</li>
+      <li>经济于是在 E′ 与 E″ 之间波动。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 45</span>两种解决办法（必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:32%">办法</th><th>说明</th></tr>
+      <tr><td><b>① 使用 Taylor Rule</b></td>
+        <td><b>走中间路线</b>：一个<b>同时考虑通胀与产出对其长期水平偏离</b>的规则
+        —— 即 <span class="mono">r − r* = a(π − π*) + b(Y − Y*)</span> 中<b>两项都在</b></td></tr>
+      <tr><td><b>② Flexible inflation targeting</b><br>弹性通胀目标制</td>
+        <td>因为<b>通胀目标是一个中期目标</b>，这<b>允许一定的相机抉择空间来降低产出的波动性</b></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="sec-h"><span class="kicker">Slides 46–47</span><h2>11 · 调整速度与劳动力市场的时间框架</h2></div>
+  <div class="card">
+    <ul>
+      <li><b>古典世界中调整是迅速的</b>，所以经济<b>始终处于潜在产出（充分就业）</b>。</li>
+      <li>若<b>工资与价格是迟缓的</b>，产出可能偏离潜在水平。</li>
+      <li><b>工资与价格固定的凯恩斯世界，可以描述调整完成之前的短期时期。</b></li>
+    </ul>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 47</span>劳动力市场调整的三个时间框架（表格必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:22%"></th><th><b>Short-run</b><br>First few months</th><th><b>Medium-run</b><br>2 years</th><th><b>Long-run</b><br>4–6 years</th></tr>
+      <tr><td><b>WAGES</b></td><td><b>Largely given</b></td><td>Beginning to adjust</td><td><b>Clearing the labour market</b></td></tr>
+      <tr><td><b>HOURS</b></td><td><b>Flexible</b></td><td><b>Flexible</b></td><td>Normal work week</td></tr>
+      <tr><td><b>EMPLOYMENT</b></td><td><b>Largely given</b></td><td>Beginning to adjust</td><td><b>Full employment</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 这张表回答了"短期到底有多短"</span>
+      <b>短期（头几个月）：工资与就业基本给定，企业只能调整工时</b>（呼应 Slide 28 的"via hours of work"）。<br>
+      <b>长期（4–6 年）：工资出清劳动力市场，回到充分就业与正常工作周。</b><br>
+      答题时给出这个<b>具体的时间尺度</b>，是很容易得到的印象分。
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">政策规则</span>
+简化 rr 规则：<b>r − r* = a(π − π*)</b>,  a &gt; 0
+Taylor rule（实际）：<b>r − r* = a(π − π*) + b(Y − Y*)</b>
+Taylor rule（名义）：<b>i − i* = (1 + a)(π − π*) + b(Y − Y*)</b>，其中 <b>i* = r* + π*</b>
+    </div>
+    <div class="fml"><span class="lab">总供给</span>
+<b>Y = F(L, K, A)</b>
+<b>LAS 垂直于 Y*</b>（长期，价格工资完全弹性，无货币幻觉，货币中性）
+<b>SAS 向上倾斜</b>（短期，名义工资增长率与潜在产出给定）
+    </div>
+    <div class="fml"><span class="lab">冲击速查表</span>
+<b>需求冲击</b>：π 与 Y <b>同向</b> ⇒ 盯通胀 = 盯产出，<b>无权衡</b>
+<b>暂时供给冲击</b>（油价）：只移 SAS ⇒ <b>滞胀</b>（π↑ Y↓）⇒ <b>有权衡</b>；长期 SAS 自行回移
+<b>永久供给冲击</b>（技术/劳动/资本）：<b>LAS 与 SAS 同时移动</b> ⇒ 央行须永久调整利率移动 AD
+    </div>
+    <div class="fml"><span class="lab">移动 vs 沿线</span>
+价格变、名义工资<b>同比例</b>变（实际工资不变）⇒ 沿 <b>LAS</b> 移动
+价格变、名义工资<b>不变</b> ⇒ 沿 <b>SAS</b> 移动
+LAS 移动：技术 A、劳动供给 L、资本 K
+SAS 移动：上述三项 + <b>名义工资增长率</b> + <b>短期生产成本（油价）</b>
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>用"实际余额效应"解释 AD 向下倾斜</td><td>本课程用<b>央行政策反应</b>：π↑ ⇒ 央行提高 r ⇒ C,I↓ ⇒ Y↓</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>SAS 向上倾斜因为"成本上升"</td><td>因为<b>名义工资增长率被提前锁定</b>，通胀意外上升 ⇒ 实际工资意外下降 ⇒ 企业增产</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>油价冲击移动 LAS</td><td>暂时性油价冲击<b>只移动 SAS</b>；LAS 只被 L、K、A 移动</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>永久供给冲击只移 LAS</td><td><b>LAS 与 SAS 同时右移</b>；央行还需移动 AD 才能守住通胀目标</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>通胀目标制总是最优</td><td><b>只在冲击全是需求冲击时</b>有效；供给冲击下必须权衡</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>名义利率上升 = 紧缩</td><td>要看<b>实际</b>利率：名义利率必须涨 <b>(1+a)</b> 倍于通胀，实际利率才真的上升</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>短期均衡也要三线交于一点</td><td><b>短期均衡只需 AD ∩ SAS</b>；<b>长期均衡才要 AD ∩ LAS ∩ SAS</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>古典模型中货币政策能提产出</td><td>古典模型中政策<b>只影响价格，无产出效应</b>（无货币幻觉，货币中性）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>忘记画 LAS</td><td>任何 AS-AD 图<b>都要画上垂直的 LAS</b>，否则无法讨论长期</td><td><span class="badge b-essay">图</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例（石油冲击 —— 真题 B3 原型）</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span></h3>
+    <p class="lead"><i>"Using the AS-AD model, analyse the short-run and long-run effects of a large rise in the price
+    of oil. Explain what would happen if the central bank did not respond, and discuss the trade-off the central bank
+    faces."</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng">A rise in the oil price is a <b>temporary adverse supply shock</b>: it raises firms' production
+        costs in the short run without changing the economy's productive potential, i.e. without changing
+        <i>L</i>, <i>K</i> or <i>A</i> in the aggregate production function <i>Y</i> = <i>F</i>(<i>L</i>, <i>K</i>, <i>A</i>).</p>
+        <p class="eng">The <b>AD schedule</b> shows that higher inflation reduces aggregate demand by inducing the
+        central bank to raise real interest rates, following the rule <i>r</i> − <i>r</i>* = <i>a</i>(π − π*) +
+        <i>b</i>(<i>Y</i> − <i>Y</i>*). The <b>LAS curve</b> is vertical at potential output <i>Y</i>*, the output
+        produced when wages and prices are fully flexible and the labour market clears at full employment. The
+        <b>SAS curve</b> shows how desired output varies with inflation <b>for a given inherited rate of nominal wage
+        growth</b>; it slopes upward because unexpectedly high inflation lowers the real wage and induces firms to
+        supply more.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 (see Figure 7.3). Vertical axis = inflation π; horizontal axis = output <i>Y</i>.
+        Initially the economy is in <b>long-run equilibrium at E</b>, where AD, SAS and the vertical LAS all intersect
+        at <i>Y</i>* and π*. The oil shock shifts <b>SAS leftward/upward to SAS′</b>. The new short-run equilibrium is
+        at <b>E′</b>, with higher inflation π′ and lower output <i>Y</i>′ &lt; <i>Y</i>*. LAS does <b>not</b> move.
+        As the labour market adjusts, SAS′ shifts back to SAS and the economy returns to <b>E</b>.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>Step 1 (impact).</b> Higher oil prices raise costs, so at every level of output firms must
+        raise prices faster: SAS shifts up to SAS′. The economy moves from E to E′ along the unchanged AD schedule.</p>
+        <p class="eng"><b>Step 2 (stagflation).</b> At E′ inflation is <b>higher</b> and output and employment are
+        <b>lower</b> — the defining feature of a supply shock is that π and <i>Y</i> move in <b>opposite</b>
+        directions. Unemployment rises above the natural rate.</p>
+        <p class="eng"><b>Step 3 (the demand-side response along AD).</b> Higher inflation itself reduces aggregate
+        demand, because the central bank, following its rule, <b>raises the real interest rate</b>; this is a movement
+        <b>along</b> AD, not a shift of it, and it is why the fall in output at E′ is larger than the supply shift
+        alone would suggest.</p>
+        <p class="eng"><b>Step 4 (long-run adjustment).</b> Since LAS is unchanged, <i>Y</i>′ is below potential and
+        there is involuntary unemployment. Persistent slack <b>gradually reduces the growth rate of negotiated
+        nominal wages</b>. With lower wage growth firms need not raise prices so quickly, so <b>SAS′ shifts back
+        down towards SAS</b>. Lower inflation moves the economy back <b>down along AD</b>, raising demand. The process
+        continues until full employment and potential output are restored at <b>E</b>: in the long run the economy
+        returns to <i>Y</i>* and to the original inflation rate.</p>
+        <p class="eng"><b>If the central bank does not respond.</b> The AD schedule stays where it is; the economy sits
+        at E′ with stagflation and relies entirely on the <b>labour market</b> to adjust. Using the timescales of
+        Lecture 7, wages are <b>largely given in the first few months</b>, <b>begin to adjust after about two years</b>,
+        and only <b>clear the labour market after four to six years</b>. So the economy does eventually return to
+        <i>Y</i>*, but slowly, and the cost is a prolonged period of involuntary unemployment. Doing nothing is
+        therefore not costless — it simply shifts the cost from inflation onto output and employment, and over a
+        longer horizon.</p>
+        <p class="eng"><b>The trade-off.</b> Inflation targeting works well when all shocks are <b>demand</b> shocks,
+        because then π and <i>Y</i> move together and offsetting the shift in AD stabilises both simultaneously.
+        With a <b>supply</b> shock this is impossible:</p>
+        <ul>
+          <li class="eng">To hold inflation at π*, the bank must <b>tighten</b>, shifting AD left. Inflation returns
+          to target quickly, but output falls <b>further below</b> <i>Y</i>′ — stabilising inflation makes output
+          highly variable.</li>
+          <li class="eng">To hold output at <i>Y</i>*, the bank must <b>loosen</b>, shifting AD right. Output is
+          protected, but inflation is <b>permanently higher</b> and may become embedded in wage bargaining, shifting
+          SAS up again.</li>
+        </ul>
+        <p class="eng">Monetary policy therefore <b>cannot stabilise both output and inflation in response to supply
+        shocks</b>. The sensible response is to set the interest rate so as to allow <b>some</b> inflation fluctuation
+        in order to reduce the output loss. Two devices implement this compromise: a <b>Taylor rule</b>, which puts
+        weight on deviations of <b>both</b> inflation and output from their long-run levels, and <b>flexible inflation
+        targeting</b>, under which the target is a <b>medium-run</b> one, allowing discretion to reduce output variability.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">A rise in the oil price is a temporary adverse supply shock which, in the <b>short run</b>,
+        raises inflation and lowers output and employment — stagflation — because SAS shifts up while LAS, determined
+        by <i>L</i>, <i>K</i> and <i>A</i>, is unaffected. In the <b>long run</b> the shock is self-correcting: slack
+        in the labour market reduces nominal wage growth, SAS returns to its original position, and the economy is
+        restored to potential output <i>Y</i>* at the original inflation rate. The central bank cannot improve both
+        margins at once: any attempt to stabilise inflation deepens the output loss, and any attempt to stabilise
+        output entrenches the inflation. The appropriate response is therefore a <b>partial</b> one — a Taylor-rule
+        or flexible-inflation-targeting compromise — and, crucially, since the shock is temporary the bank should
+        avoid over-reacting to what is only a <b>transitory</b> movement in inflation. This would <b>not</b> be true of
+        a <b>permanent</b> supply shock, which shifts LAS as well as SAS and therefore requires a permanent change in
+        the interest rate to move AD to the new potential output.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-06.html">← Lecture 6</a>
+  <a href="../tutorials/tutorial-07.html">Tutorial 7 →</a>
+  <a href="lecture-08.html">Lecture 8 · Inflation &amp; Phillips Curve →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 2 · Output and Aggregate Demand — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 模型假设（三大假设）</a>
+  <a class="nav" href="#s2">2 · 消费函数 C = A + cY</a>
+  <a class="nav" href="#s3">3 · 储蓄函数与 MPC + MPS ≡ 1</a>
+  <a class="nav" href="#s4">4 · 投资函数（外生）</a>
+  <a class="nav" href="#s5">5 · AD 曲线与 45° 线均衡</a>
+  <a class="nav" href="#s6">6 · S = I 等价法</a>
+  <a class="nav" href="#s7">7 · Planned vs Actual ⭐</a>
+  <a class="nav" href="#s8">8 · 均衡的调整机制</a>
+  <a class="nav" href="#s9">9 · 乘数：代数与轮次</a>
+  <a class="nav" href="#s10">10 · 节俭悖论 ⭐</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-02.html">→ Tutorial 2</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 2 · Output and Aggregate Demand</h1>
+  <div class="sub">凯恩斯收入—支出模型（45° 线模型）· 乘数 · 节俭悖论</div>
+  <div>
+    <span class="tag">36 slides</span>
+    <span class="tag">Begg Ch.17</span>
+    <span class="tag">对应 Tutorial 2</span>
+    <span class="tag b-hot">⭐ 全课最核心的模型之一</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">这一讲建立整门课的<b>第一个完整宏观模型</b>。它回答：
+    <b>在价格固定的短期，产出由什么决定？</b>答案是——<b>由总需求决定（demand-determined）</b>。</p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+先立假设（短期、价格固定、只有银行部门）
+   ↓ 拆解 AD 的两个组成：C 与 I
+   ↓ C 的行为方程：C = A + cY  （斜率 = MPC）
+   ↓ 由 C 反推 S = −A + (1−c)Y  （斜率 = MPS）
+   ↓ I 假设为外生常数
+   ↓ AD = C + I（垂直相加）
+   ↓ 均衡条件：AD = Y（45° 线）  ⟺  planned S = planned I（等价）
+   ↓ 均衡如何达成：非计划存货变动驱动产出调整
+   ↓ 均衡如何改变：AD 上移 → 乘数放大 → ΔY = ΔAS/(1−c)
+   ↓ 反直觉推论：节俭悖论（想多存钱，结果收入下降、储蓄不变）
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：本讲用的是 Lecture 1 循环流量图的 <b>Case 2（银行部门）</b>，
+      恒等式 <span class="mono">I ≡ S</span> 在这里升级为<b>行为均衡条件</b> planned I = planned S。<br>
+      <b>启下</b>：<b>Lecture 3</b> 往这个模型里加 G、T、X、Z（乘数分母变成 1−c(1−t)+m）；
+      <b>Lecture 6</b> 把这个模型的均衡点集合画成 <b>IS 曲线</b>。
+      所以 45° 线模型不是孤立知识点，是 IS 曲线的"母体"。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slides 3–5</span><h2>1 · 模型假设（答题时必须先写出来）</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slides 3–4</span>假设 ①：Short run — wages and prices are fixed</h3>
+    <ul>
+      <li>短期内 <b>工资与价格固定（fixed）</b>——这是"凯恩斯短期模型"（the short-run Keynesian model）的定义性假设。</li>
+      <li>区分 <b>actual output Y</b> 与 <b>potential output Y*</b>（用课件符号 Y`）：
+        <b>potential output</b> = 若所有生产要素<b>充分就业</b>时经济会生产的产出，此时经济处于<b>长期均衡</b>。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 4</span>假设 ②：Actual output is demand-determined</h3>
+    <p>当 <b>Y &lt; Y*</b> 时（短期，深度衰退）：</p>
+    <ul>
+      <li>产出低于潜在产出，失业率高；</li>
+      <li>经济中存在 <b>spare capacity / excess capacity（闲置产能）</b>；</li>
+      <li><b>Demand matters：output is demand-driven</b>——需求先被计划出来；</li>
+      <li>企业<b>乐于供给任何被需求的产出</b>（"firms would happily supply any output demanded"）。</li>
+    </ul>
+    <div class="callout c-trap"><span class="t">⚠️ 这条假设是整个模型成立的前提</span>
+      如果经济已在充分就业（Y = Y*），供给受限，再增加需求<b>只会推高价格而非产出</b>——那就不再是本模型，
+      而是 <b>Lecture 7</b> 的垂直 LRAS 情形。考试若问"凯恩斯模型的局限"，第一条就答这个。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 5</span>假设 ③：只有银行部门</h3>
+    <div class="grid2">
+      <div>
+        <ul>
+          <li>只有私人储蓄与投资（= Lecture 1 循环流量图 <b>Case 2</b>）</li>
+          <li><b>No government</b>（无财政政策，G = 0，T = 0）</li>
+          <li><b>No trade</b>（封闭经济，X = Z = 0）</li>
+        </ul>
+      </div>
+      <div>
+        <p><b>产出与收入相等，统一记为 Y</b>，因为：</p>
+        <ul>
+          <li>假设<b>无折旧</b>（no depreciation）</li>
+          <li><b>无间接税</b>（no indirect taxes）</li>
+          <li><b>对外国要素净支付为零</b></li>
+          <li>⇒ <b>GDP = GNP = National Income</b> 三者相等</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 6–12</span><h2>2 · 消费函数 The Consumption Function</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">AD 的两个组成部分（Slide 6）</span>
+<b>Consumption C</b>：households' <b>desired or planned</b> demand for goods and services
+<b>Investment I</b>：firms' <b>desired or planned</b> additions to physical capital &amp; inventories
+
+<b>Aggregate Demand: AD = C + I</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 关键词 "desired / planned"</span>
+      AD 的每一项都是<b>意愿量</b>，不是实际量。这个词是后面区分 planned 与 actual 的伏笔，写定义时不要漏。
+    </div>
+
+    <h3 style="margin-top:20px">可支配收入与消费</h3>
+    <div class="fml">
+Disposable income:  Y<sub>d</sub> = Y + benefits − income taxes
+无政府时 benefits = taxes = 0  ⇒  <b>Y<sub>d</sub> = Y</b>
+    </div>
+    <p>经验事实（课件 Slide 8，UK 1948–2011）：<b>每多 £1 的 GDP，约伴随 £0.7 的额外消费</b>——
+    这就是 MPC ≈ 0.7 的现实依据。</p>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 11</span>消费函数的三个组成部分（必背定义）</h3>
+    <div class="fml" style="font-size:17px"><b>C = A + cY<sub>d</sub></b></div>
+    <div class="tw"><table>
+      <tr><th style="width:24%">符号</th><th>英文定义（考试必须这么写）</th></tr>
+      <tr><td><b>A</b><br><span class="muted">Autonomous consumption</span></td>
+        <td>the part of consumption that is <b>independent of disposable income</b>；
+        即收入为零时仍会发生的消费（靠动用储蓄或借贷维持）</td></tr>
+      <tr><td><b>c</b><br><span class="muted">Marginal propensity to consume (MPC)</span></td>
+        <td>the <b>fraction of disposable income devoted to consumption</b>；
+        <b>MPC = ΔC/ΔY<sub>d</sub></b>，且 <b>0 &lt; MPC &lt; 1</b>；<b>是消费函数的斜率</b></td></tr>
+      <tr><td><b>Y<sub>d</sub></b></td><td>disposable income；无政府时 Y<sub>d</sub> = Y</td></tr>
+    </table></div>
+    <p class="muted">课件也提到还有其他影响因素（real interest rate、wealth、expected future income），
+    但在本模型中<b>被假设不变</b>，留待后面章节处理。</p>
+
+    <div class="callout c-exam"><span class="t">🎯 定义题标准答法</span>
+      "The consumption function shows <b>desired aggregate consumption at each level of aggregate income</b>."
+      —— 这句是课件 Slide 12 原文，写定义直接照搬。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 480 300" role="img" aria-label="Consumption function">
+        <line class="ax" x1="60" y1="255" x2="440" y2="255"/>
+        <line class="ax" x1="60" y1="255" x2="60" y2="30"/>
+        <text class="lbl" x="360" y="278">Income, Y</text>
+        <text class="lbl" x="14" y="45">C</text>
+        <line x1="60" y1="215" x2="420" y2="70" class="cv c-ad"/>
+        <text class="lbl" x="352" y="62" fill="#6c8bff">C = A + cY</text>
+        <circle class="pt" cx="60" cy="215" r="4"/>
+        <text class="lbl" x="26" y="219">A</text>
+        <line x1="240" y1="143" x2="310" y2="143" class="dsh"/>
+        <line x1="310" y1="143" x2="310" y2="115" class="dsh"/>
+        <text class="lbl-s" x="266" y="159">1</text>
+        <text class="lbl-s" x="318" y="133">c</text>
+        <text class="lbl-s" x="70" y="240">0</text>
+        <text class="lbl-s" x="150" y="200">slope = MPC = c</text>
+      </svg>
+      <figcaption>Figure 2.1 — Consumption function. 截距 = autonomous consumption A；斜率 = MPC = c。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 13–14</span><h2>3 · 储蓄函数与 MPC + MPS ≡ 1</h2></div>
+  <div class="card">
+    <ul>
+      <li>储蓄函数显示<b>每一收入水平下的意愿储蓄</b>。</li>
+      <li>因为所有收入不是被消费就是被储蓄，<b>储蓄函数可以直接由消费函数推导</b>（反之亦然）。</li>
+      <li>收入中比例 <b>c</b> 用于消费，剩下的比例 <b>s = 1 − c</b> 被储蓄；<b>s 就是 MPS</b>。</li>
+    </ul>
+    <div class="fml"><span class="lab">Slide 14 Summing Up —— 整块必背</span>
+Y<sub>d</sub> ≡ C + S              Disposable income
+C = A + cY<sub>d</sub>             Consumption function
+<b>S = −A + (1 − c)Y<sub>d</sub></b>     Saving function
+MPC = c                            Marginal Propensity to Consume
+MPS = 1 − c = s                    Marginal Propensity to Save
+其中 ΔC + ΔS = ΔY<sub>d</sub>
+<b>MPC + MPS = c + s ≡ 1</b>
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 储蓄函数的截距是 −A（负数）</span>
+      收入为零时，人们仍消费 A，只能靠动用过去积蓄，因此 <b>S = −A &lt; 0</b>（dis-saving 负储蓄）。
+      画图时储蓄函数必须<b>从纵轴负半轴出发</b>，画在原点上方是常见失分点。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 480 300" role="img" aria-label="Saving function">
+        <line class="ax" x1="60" y1="165" x2="440" y2="165"/>
+        <line class="ax" x1="60" y1="270" x2="60" y2="30"/>
+        <text class="lbl" x="365" y="188">Income, Y</text>
+        <text class="lbl" x="14" y="45">S</text>
+        <line x1="60" y1="220" x2="420" y2="60" class="cv c-alt"/>
+        <text class="lbl" x="348" y="52" fill="#33d6a6">S = −A + (1−c)Y</text>
+        <circle class="pt" cx="60" cy="220" r="4"/>
+        <text class="lbl" x="24" y="226">−A</text>
+        <circle class="pt" cx="184" cy="165" r="4"/>
+        <text class="lbl-s" x="150" y="182">break-even</text>
+        <text class="lbl-s" x="240" y="120">slope = MPS = 1 − c</text>
+        <text class="lbl-s" x="66" y="158">0</text>
+      </svg>
+      <figcaption>Figure 2.2 — Saving function. 截距 −A；斜率 = MPS。与 Figure 2.1 是同一枚硬币的两面。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 15–16</span><h2>4 · 投资函数（本模型中为外生）</h2></div>
+  <div class="card">
+    <ul>
+      <li>定义：firm's <b>desired or planned</b> additions to <b>physical capital</b>（工厂与机器）<b>and to inventories</b>（存货）。</li>
+      <li><b>本模型的关键假设</b>：<b>investment demand does not depend on income (Y)</b>，
+        <b>I 是外生常数（autonomous）</b>，图上是一条<b>水平线</b>。</li>
+      <li>课件明说：其他决定因素（企业对未来的预期、<b>real interest rate</b>）留到后面的模型（<b>Lecture 6 IS 曲线</b>）处理。</li>
+    </ul>
+    <div class="callout c-link"><span class="t">🔗 这个假设在哪里被放松</span>
+      <b>Lecture 6</b> 引入 <b>I = I(r)</b>（投资对利率敏感），正是这一步让 45° 线模型变成向下倾斜的 <b>IS 曲线</b>。
+      考试问"IS 曲线为何向下倾斜"，根子就在这里。
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 17–19</span><h2>5 · AD 曲线与 45° 线均衡 ⭐</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 17</span>AD 曲线怎么来的</h3>
+    <ul>
+      <li><b>AD 函数是 C 与 I 的垂直相加</b>（the vertical addition of C and I）。</li>
+      <li>因为 I 是常数，AD 只是把 C 曲线<b>整体上移 I 个单位</b> ⇒ <b>AD 的斜率仍是 MPC</b>。</li>
+      <li>纵轴截距 = <b>autonomous spending = A + I</b>。</li>
+    </ul>
+    <div class="fml">
+AD = C + I = (A + cY) + I = <b>(A + I) + cY</b>
+             └ autonomous spending AS ┘  └ slope = MPC ┘
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slides 18–19</span>45° 线的含义与均衡点</h3>
+    <ul>
+      <li>45° 线上<b>两轴的量相等</b>，斜率 = 1，代表方程 <b>AD = Y</b>。</li>
+      <li><b>45° 线显示了意愿支出（AD）等于产出（收入）的所有点</b>。</li>
+      <li>给定 AD 曲线，<b>均衡在 E 点</b>：这是 <b>planned spending = actual output and income</b> 的那一点。</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 520 350" role="img" aria-label="45 degree line equilibrium">
+        <line class="ax" x1="60" y1="300" x2="490" y2="300"/>
+        <line class="ax" x1="60" y1="300" x2="60" y2="25"/>
+        <text class="lbl" x="380" y="325">Output, Income  Y</text>
+        <text class="lbl" x="12" y="45">AD, Desired</text><text class="lbl" x="12" y="60">Spending</text>
+        <line x1="60" y1="300" x2="335" y2="25" class="cv" stroke="#8089bd"/>
+        <text class="lbl" x="292" y="36" fill="#8089bd">45° line (AD = Y)</text>
+        <text class="lbl-s" x="78" y="292">45°</text>
+        <line x1="60" y1="238" x2="470" y2="53" class="cv c-ad"/>
+        <text class="lbl" x="398" y="48" fill="#6c8bff">AD = C + I</text>
+        <circle class="pt" cx="60" cy="238" r="4"/>
+        <text class="lbl-s" x="4" y="242">A + I</text>
+        <circle class="pt" cx="205" cy="170" r="5.5"/>
+        <text class="lbl" x="212" y="163">E</text>
+        <line x1="205" y1="170" x2="205" y2="300" class="dsh"/>
+        <text class="lbl" x="196" y="318">Y*</text>
+        <line x1="130" y1="300" x2="130" y2="205" class="dsh"/>
+        <text class="lbl-s" x="122" y="318">Y₁</text>
+        <circle cx="130" cy="130" r="3.5" fill="#33d6a6"/><text class="lbl-s" x="106" y="126">F</text>
+        <circle cx="130" cy="204" r="3.5" fill="#ffb454"/><text class="lbl-s" x="138" y="200">B</text>
+        <line x1="300" y1="300" x2="300" y2="128" class="dsh"/>
+        <text class="lbl-s" x="292" y="318">Y₂</text>
+        <circle cx="300" cy="60" r="3.5" fill="#33d6a6"/><text class="lbl-s" x="308" y="56">H</text>
+        <circle cx="300" cy="127" r="3.5" fill="#ffb454"/><text class="lbl-s" x="308" y="123">G</text>
+        <text class="lbl-s" x="96" y="98">AD &gt; Y ⇒ 产出上升 →</text>
+        <text class="lbl-s" x="316" y="96">← AD &lt; Y ⇒ 产出下降</text>
+      </svg>
+      <figcaption>Figure 2.3 — 45° line model. E 为短期均衡；Y₁ 处 AD &gt; Y（存货非计划减少，产出上升）；Y₂ 处 AD &lt; Y（存货非计划累积，产出下降）。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slides 20–21</span><h2>6 · 等价方法：S = I 法</h2></div>
+  <div class="card">
+    <p class="lead">课件强调 <b>"The two approaches are equivalent."</b> —— 均衡既可以用 AD = Y 表述，
+    也可以用 planned S = planned I 表述，两者数学上完全等价。</p>
+
+    <div class="fml"><span class="lab">Slide 21 的推导（三行，考试直接照抄）</span>
+均衡条件：  Y = AD = C + I
+会计恒等：  Y ≡ S + C
+两式相减消去 C ⇒  <b>S = I</b>
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 20</span>三种状态的完整对照表（必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">产出低于均衡</th><th style="width:26%">均衡</th><th style="width:26%">产出高于均衡</th></tr>
+      <tr><td>Y &lt; I + C</td><td><b>Y = AD = I + C</b></td><td>Y &gt; I + C</td></tr>
+      <tr><td>Y − C &lt; I</td><td>Y ≡ S + C</td><td>Y − C &gt; I</td></tr>
+      <tr><td><b>S &lt; I</b><br><span class="muted">意愿储蓄 &lt; 意愿投资</span></td>
+          <td><b>S = I</b><br><span class="muted">planned S = planned I</span></td>
+          <td><b>S &gt; I</b><br><span class="muted">意愿储蓄 &gt; 意愿投资</span></td></tr>
+      <tr><td>非计划存货<b>减少</b> ⇒ 企业增产 ⇒ Y ↑</td><td>无非计划存货变动</td><td>非计划存货<b>累积</b> ⇒ 企业减产 ⇒ Y ↓</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slide 22</span><h2>7 · Planned vs Actual ⭐（全课最重要的概念区分）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 这一页几乎每年考</span>
+      Tutorial 2、Tutorial 3 都有原题，真题 essay 里也常作为"解释均衡如何达成"的核心。
+    </div>
+    <div class="fml"><span class="lab">Slide 22 原文逻辑（逐条）</span>
+① 由 Lecture 1 的国民核算：<b>(actual) withdrawals ≡ (actual) injections</b>
+   在只有银行部门时即：<b>actual I = actual S</b>  ← 恒等式，永远成立
+
+② <b>Actual investment (saving) = planned I (S) + unplanned I (S)</b>
+
+③ <b>ONLY in equilibrium</b>：
+     planned I = planned S
+     planned spending = actual income/output
+
+④ <b>Out of equilibrium</b>：
+     会出现 <b>unplanned I</b>（非计划存货变动），企业据此调整产出走向均衡
+     隐含假设：<b>actual S = planned S（unplanned S = 0）</b>
+     所以 S = actual I = planned I + unplanned I
+    </div>
+    <div class="callout c-tip"><span class="t">💡 一句话答题版</span>
+      <i>"The accounting identity actual saving ≡ actual investment always holds, because any excess of output over
+      planned spending is automatically recorded as an unplanned change in inventories, which counts as investment.
+      Equilibrium, by contrast, requires that <b>planned</b> saving equals <b>planned</b> investment, i.e. that
+      unplanned investment is zero."</i>
+    </div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slides 23–24</span><h2>8 · 均衡如何达成（Adjustment to Equilibrium）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">Slide 23 三行判据</span>
+If Y = AD, then S = planned I     ← 均衡
+If Y &lt; AD, then S &lt; planned I     ← 产出不足，存货非计划减少
+If Y &gt; AD, then S &gt; planned I     ← 产出过剩，存货非计划累积
+    </div>
+
+    <h3>E 点右侧（产出 Y₁ &gt; Y*）的调整过程（课件 Slide 24）</h3>
+    <ol>
+      <li><b>Desired spending &lt; income and output</b>（意愿支出小于产出）。</li>
+      <li>为应对低需求，出现 <b>unplanned I</b>，企业<b>非自愿地增加存货</b>（involuntary increase in inventories）。</li>
+      <li>因此 <b>产出下降</b>。</li>
+      <li>这带来<b>沿着 AD 曲线的移动</b>（movements <b>along</b> the AD schedule），直到回到均衡点 E。</li>
+    </ol>
+    <p>E 点左侧对称：意愿支出 &gt; 产出 → 存货非计划<b>减少</b> → 企业<b>增产</b> → 沿 AD 曲线向右移动至 E。</p>
+
+    <div class="callout c-trap"><span class="t">⚠️ 移动 vs 移位（沿线 vs 曲线整体移动）——高频 MCQ</span>
+      课件 Slide 24 明确区分：<br>
+      • <b>收入本身的变化</b> → <b>沿着 AD 曲线移动</b>（movement <b>along</b>）<br>
+      • <b>收入以外</b>的因素改变 AD（A、I、预期、财富等）→ <b>AD 曲线整体移位</b>（<b>shift</b> of AD）<br>
+      并且：<b>Income is the adjustment variable</b>——本模型中调整变量是<b>收入/产出</b>，不是价格（价格假设固定）。
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 25–33</span><h2>9 · 乘数 The Multiplier ⭐（计算题必考）</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 25</span>现象：ΔY 大于最初的 ΔAD</h3>
+    <p>经济初始在 E₀。<b>I 上升</b> ⇒ AD 从 AD₀ 上移到 AD₁ ⇒ 均衡产出上升到 Y₁。
+    课件设问："the change in equilibrium output is <b>larger</b> than the original change in AD. <b>Why?</b>"</p>
+
+    <figure>
+      <svg viewBox="0 0 520 340" role="img" aria-label="Shift in AD and the multiplier">
+        <line class="ax" x1="60" y1="295" x2="490" y2="295"/>
+        <line class="ax" x1="60" y1="295" x2="60" y2="25"/>
+        <text class="lbl" x="375" y="320">Output, Income</text>
+        <text class="lbl" x="12" y="42">AD</text>
+        <line x1="60" y1="295" x2="330" y2="25" class="cv" stroke="#8089bd"/>
+        <text class="lbl-s" x="290" y="34" fill="#8089bd">45°</text>
+        <line x1="60" y1="245" x2="470" y2="62" class="cv c-ad"/>
+        <text class="lbl" x="400" y="58" fill="#6c8bff">AD₀</text>
+        <line x1="60" y1="205" x2="470" y2="22" class="cv c-alt"/>
+        <text class="lbl" x="400" y="18" fill="#33d6a6">AD₁</text>
+        <circle class="pt" cx="192" cy="167" r="5.5"/><text class="lbl" x="168" y="162">E₀</text>
+        <circle class="pt" cx="258" cy="102" r="5.5"/><text class="lbl" x="266" y="98">E₁</text>
+        <line x1="192" y1="167" x2="192" y2="295" class="dsh"/>
+        <line x1="258" y1="102" x2="258" y2="295" class="dsh"/>
+        <text class="lbl-s" x="184" y="312">Y₀</text><text class="lbl-s" x="250" y="312">Y₁</text>
+        <line x1="192" y1="295" x2="258" y2="295" stroke="#33d6a6" stroke-width="3"/>
+        <text class="lbl-s" x="206" y="288" fill="#33d6a6">ΔY</text>
+        <line x1="120" y1="209" x2="120" y2="169" stroke="#ffb454" stroke-width="3"/>
+        <text class="lbl-s" x="126" y="194" fill="#ffb454">ΔI</text>
+        <text class="lbl-s" x="150" y="60">ΔY &gt; ΔI ⇒ 乘数效应</text>
+      </svg>
+      <figcaption>Figure 2.4 — I 上升使 AD 垂直上移 ΔI，但均衡产出增加 ΔY = ΔI/(1−c) &gt; ΔI。</figcaption>
+    </figure>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slides 26–27</span>代数推导（考试务必写全过程）</h3>
+    <div class="fml"><span class="lab">求均衡产出 Y*</span>
+Y = AD = C + I = (A + cY) + I = (A + I) + cY
+Y − cY = A + I
+Y(1 − c) = A + I
+<b>Y* = (A + I) / (1 − c)</b>
+其中 (A + I) 是 <b>autonomous spending (AS)</b>，<b>1/(1 − c) 是乘数 the multiplier</b>
+    </div>
+    <div class="fml"><span class="lab">乘数的定义与公式（Slide 27）</span>
+ΔY* = <b>[1/(1 − c)] × ΔAS</b>
+
+<b>Multiplier = ΔY*/ΔAS = 1/(1 − c) = 1/s</b>
+
+定义：the ratio of <b>the change in equilibrium output</b> to <b>the change in autonomous spending</b>
+that causes it；衡量自主支出变动<b>一个单位</b>所引起的均衡产出的<b>总变动</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 28</span>MPC / MPS 对乘数大小的作用</h3>
+    <ul>
+      <li>因为 0 &lt; MPC &lt; 1 且 0 &lt; MPS &lt; 1，<b>乘数 1/(1−c) = 1/s 恒大于 1</b>。</li>
+      <li><b>MPC 越大（AD 曲线越陡）⇒ 乘数越大</b>。</li>
+      <li><b>MPS 越高</b> ⇒ 每一单位额外收入中<b>漏出到储蓄的越多</b> ⇒
+        回到循环流量中去创造后续 AD、产出与收入的越少 ⇒ <b>乘数越小</b>。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 29–32</span>轮次法（Multiplier rounds）——直觉解释</h3>
+    <p><b>基本思想</b>：自主支出增加 → AD 与实际 GDP 上升 → 意愿支出上升 → AD 与实际 GDP 进一步上升 →
+    ……⇒ 实际 GDP 的增加<b>大于</b>最初的自主支出增加。</p>
+    <div class="tw"><table>
+      <tr><th>Round</th><th>Injection</th><th>ΔY</th><th>ΔC</th><th>Withdrawal ΔS</th></tr>
+      <tr><td>1</td><td>I</td><td>I</td><td>cI</td><td>(1−c)I</td></tr>
+      <tr><td>2</td><td></td><td>cI</td><td>c²I</td><td>(1−c)cI</td></tr>
+      <tr><td>3</td><td></td><td>c²I</td><td>c³I</td><td>(1−c)c²I</td></tr>
+      <tr><td>4</td><td></td><td>c³I</td><td>c⁴I</td><td>(1−c)c³I</td></tr>
+      <tr><td>…</td><td></td><td>…</td><td>…</td><td>…</td></tr>
+      <tr><th>合计</th><th></th><th>I/(1−c)</th><th>cI/(1−c)</th><th><b>(1−c)/(1−c)·I = I</b></th></tr>
+    </table></div>
+    <div class="fml"><span class="lab">等比数列求和</span>
+ΔY = ΔI + cΔI + c²ΔI + c³ΔI + …
+   = ΔI(1 + c + c² + c³ + …) = <b>ΔI/(1 − c)</b>，  因为 0 &lt; c &lt; 1
+    </div>
+    <div class="callout c-tip"><span class="t">💡 表格最后一列的深意（Slide 32）</span>
+      漏出合计恰好 <b>= 最初的注入 I</b>。课件原话：<i>"Whatever the leakages, a 1-unit increase in injections must
+      eventually induce a <b>1-unit increase in desired leakages</b> to restore equilibrium."</i>
+      —— 这就是"漏出 = 注入"在动态过程中的体现，写 essay 时是很漂亮的收尾句。
+    </div>
+
+    <h3 style="margin-top:20px">两个课件例题</h3>
+    <div class="grid2">
+      <div class="fml"><span class="lab">Example 1（Slide 32）MPC = 0.9</span>
+ΔI = ¥10,000m
+Multiplier = 1/(1 − 0.9) = <b>10</b>
+ΣΔY = <b>100,000m</b>
+ΣΔC = 90,000m
+ΣΔW = <b>10,000m</b> ← 等于最初注入
+      </div>
+      <div class="fml"><span class="lab">Example 2（Slide 33）MPC = 0.75</span>
+ΔAS = £50bn
+Multiplier = 1/(1 − 0.75) = <b>4</b>
+ΔY = 4 × 50 = <b>£200bn</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slides 34–36</span><h2>10 · 节俭悖论 The Paradox of Thrift ⭐</h2></div>
+  <div class="card">
+    <h3>推理链（Slide 34 原文顺序）</h3>
+    <div class="fml">
+人们想要多储蓄  ⇒ S↑（等价于 <b>A↓</b>，自主消费下降）
+   ⇒ 给定收入水平下 <b>C↓</b>
+   ⇒ AD 曲线下移
+   ⇒ 通过<b>乘数效应</b>，均衡收入（产出）<b>下降</b>
+   ⇒ 收入 Y↓
+   ⇒ 由 S = −A + (1−c)Y，收入下降又把储蓄<b>拉回来</b>
+   ⇒ <b>最终均衡储蓄不变</b>
+    </div>
+
+    <h3 style="margin-top:18px">为什么储蓄最终没变（Slide 36 的关键论证）</h3>
+    <ul>
+      <li>两个相反效应<b>恰好互相抵消</b>，使均衡（意愿）储蓄保持不变。</li>
+      <li>本模型中 <b>I 是外生的</b>，不受储蓄意愿变化影响。</li>
+      <li>而均衡条件要求 <b>planned I = planned S</b>；既然 I 不变，<b>均衡时的 S 也必须不变</b>。</li>
+      <li>这就是"悖论"：<b>想多存钱的集体努力，只降低了收入，没有增加储蓄。</b></li>
+    </ul>
+    <div class="fml"><span class="lab">代数验证（Slide 36）</span>
+S = −A + (1 − c)Y
+ΔS = (−ΔA) + (1 − c)ΔY
+     ↑ 自主储蓄意愿上升（A 下降）使 ΔS &gt; 0
+                    ↑ 但收入下降 ΔY &lt; 0 使这一项 &lt; 0
+两项<b>恰好抵消</b>：ΔS = 0
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 520 420" role="img" aria-label="Paradox of thrift">
+        <line class="ax" x1="60" y1="230" x2="490" y2="230"/>
+        <line class="ax" x1="60" y1="230" x2="60" y2="25"/>
+        <text class="lbl" x="12" y="42">AD</text>
+        <line x1="60" y1="230" x2="265" y2="25" class="cv" stroke="#8089bd"/>
+        <text class="lbl-s" x="230" y="34" fill="#8089bd">45°</text>
+        <line x1="60" y1="185" x2="470" y2="45" class="cv c-ad"/>
+        <text class="lbl" x="410" y="40" fill="#6c8bff">AD</text>
+        <line x1="60" y1="215" x2="470" y2="75" class="cv c-as"/>
+        <text class="lbl" x="410" y="72" fill="#ff5c7a">AD′</text>
+        <circle class="pt" cx="214" cy="132" r="5"/><text class="lbl" x="222" y="126">E</text>
+        <circle class="pt" cx="160" cy="180" r="5"/><text class="lbl" x="126" y="176">E′</text>
+        <line x1="214" y1="132" x2="214" y2="400" class="dsh"/>
+        <line x1="160" y1="180" x2="160" y2="400" class="dsh"/>
+
+        <line class="ax" x1="60" y1="390" x2="490" y2="390"/>
+        <line class="ax" x1="60" y1="400" x2="60" y2="270"/>
+        <text class="lbl" x="12" y="288">S, I</text>
+        <text class="lbl" x="378" y="412">Output, Income</text>
+        <line x1="60" y1="345" x2="470" y2="345" class="cv c-alt2"/>
+        <text class="lbl" x="428" y="338" fill="#ffb454">I</text>
+        <line x1="70" y1="392" x2="450" y2="288" class="cv c-alt"/>
+        <text class="lbl" x="404" y="292" fill="#33d6a6">S</text>
+        <line x1="70" y1="378" x2="450" y2="274" class="cv c-as"/>
+        <text class="lbl" x="404" y="272" fill="#ff5c7a">S′</text>
+        <circle class="pt" cx="214" cy="345" r="5"/><text class="lbl-s" x="222" y="362">E</text>
+        <circle class="pt" cx="160" cy="345" r="5"/><text class="lbl-s" x="130" y="362">E′</text>
+        <text class="lbl-s" x="152" y="406">Y*′</text><text class="lbl-s" x="206" y="406">Y*</text>
+        <text class="lbl-s" x="248" y="320" fill="#ffb454">均衡储蓄不变（= I，外生）</text>
+      </svg>
+      <figcaption>Figure 2.5 — 节俭悖论。储蓄意愿上升（S→S′）使 AD 下移，均衡收入由 Y* 降至 Y*′，
+      但因 I 外生不变，<b>新均衡处的储蓄量与原来完全相同</b>。</figcaption>
+    </figure>
+
+    <div class="callout c-exam"><span class="t">🎯 essay 加分点</span>
+      写完悖论后加一句限定：<i>"The paradox depends critically on the assumption that investment is exogenous and that
+      the economy has spare capacity. If higher saving lowered the interest rate and thereby raised investment
+      (as in the IS-MP model of Lecture 6), or if the economy were at full employment, the result would not follow."</i>
+      —— 这句话直接把答案从 2:1 拉到 first。
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">行为方程</span>
+C = A + cY<sub>d</sub>        （MPC = c，斜率）
+S = −A + (1 − c)Y<sub>d</sub>  （MPS = s = 1 − c）
+I = 常数（autonomous）
+AD = C + I = (A + I) + cY
+<b>MPC + MPS ≡ 1</b>
+    </div>
+    <div class="fml"><span class="lab">均衡（两种等价写法）</span>
+① AD = Y      ② planned S = planned I
+<b>Y* = (A + I)/(1 − c)</b>
+    </div>
+    <div class="fml"><span class="lab">乘数</span>
+<b>k = ΔY*/ΔAS = 1/(1 − c) = 1/s &gt; 1</b>
+ΔY* = k × ΔAS
+轮次法：ΔY = ΔI(1 + c + c² + …) = ΔI/(1 − c)
+    </div>
+    <div class="fml"><span class="lab">Planned vs Actual</span>
+actual I ≡ actual S（恒等式，永远成立）
+actual I = planned I + unplanned I
+均衡 ⟺ unplanned I = 0 ⟺ planned I = planned S
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>把 actual S ≡ I 当成均衡条件</td><td>恒等式永远成立；均衡条件是 <b>planned</b> S = <b>planned</b> I</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>储蓄函数截距画成正的</td><td>截距是 <b>−A</b>，低收入时为负储蓄</td><td><span class="badge b-essay">图</span></td></tr>
+      <tr><td>说 AD 曲线斜率是 1</td><td>斜率 = <b>MPC = c &lt; 1</b>；斜率为 1 的是 <b>45° 线</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>收入变化说成"AD 曲线移位"</td><td>收入变化 = <b>沿 AD 曲线移动</b>；其他因素变化才 <b>shift</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>乘数写成 1/c</td><td>乘数 = <b>1/(1−c) = 1/MPS</b></td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>MPC 越大乘数越小</td><td><b>MPC 越大乘数越大</b>；MPS 越大乘数越小</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>节俭悖论说成"储蓄下降"</td><td>均衡<b>储蓄不变</b>（因为 I 外生不变），下降的是<b>收入</b></td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>模型中价格会调整</td><td>短期<b>价格与工资固定</b>；<b>收入</b>才是调整变量</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>忘记模型的适用前提</td><td>只在 <b>Y &lt; Y*、有闲置产能</b>时成立</td><td><span class="badge b-essay">Essay</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span></h3>
+    <p class="lead"><i>"Using the Keynesian 45° line model, explain the paradox of thrift. Under what conditions
+    might the paradox fail to hold?"</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng">The <b>paradox of thrift</b> states that an increase in the desire to save, if not matched by
+        an increase in planned investment, reduces equilibrium income while leaving equilibrium saving unchanged.</p>
+        <p class="eng">The model is the short-run Keynesian income-expenditure (45° line) model, with the following
+        assumptions: (i) wages and prices are <b>fixed</b>; (ii) there is <b>spare capacity</b>, so actual output
+        <i>Y</i> lies below potential output <i>Y*</i> and is <b>demand-determined</b>; (iii) there is a banking
+        sector only — no government and no foreign trade; (iv) investment is <b>autonomous</b>. The behavioural
+        equations are</p>
+        <div class="fml">C = A + cY,  S = −A + (1 − c)Y,  I = Ī,  AD = C + I
+Equilibrium: Y = AD, equivalently planned S = planned I.</div>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 has two panels sharing the horizontal axis (output/income <i>Y</i>).</p>
+        <p class="eng"><b>Upper panel:</b> vertical axis = aggregate demand. The 45° line represents <i>AD = Y</i>.
+        Initial equilibrium is at <b>E</b>, where AD₀ cuts the 45° line, giving output <i>Y*</i>. An increased desire
+        to save lowers autonomous consumption, shifting the AD schedule <b>down</b> to AD′; the new equilibrium is
+        <b>E′</b> at the lower output <i>Y*′</i>.</p>
+        <p class="eng"><b>Lower panel:</b> vertical axis = saving and investment. Investment is the horizontal line
+        <i>I</i>. The saving schedule shifts <b>up</b> from <i>S</i> to <i>S′</i>. The new intersection <b>E′</b>
+        occurs at the <b>same height</b> as <b>E</b> — the level of saving is unchanged — but at a <b>lower</b> level
+        of income.</p>
+        <p class="eng">(见本页 Figure 2.5。)</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>Step 1.</b> A greater desire to save means households consume less at every income level:
+        autonomous consumption falls, ΔA &lt; 0. Since AD = (A + I) + cY, the AD schedule shifts down by |ΔA|.</p>
+        <p class="eng"><b>Step 2.</b> At the original output <i>Y*</i>, planned spending now falls short of output.
+        Firms experience an <b>unplanned accumulation of inventories</b> (unplanned investment &gt; 0) and cut production.</p>
+        <p class="eng"><b>Step 3.</b> Output falls, which reduces income, which reduces consumption further — the
+        multiplier process. The total fall in income is</p>
+        <div class="fml">ΔY* = [1/(1 − c)] × ΔA &lt; 0</div>
+        <p class="eng"><b>Step 4.</b> Now consider what has happened to saving. From the saving function,</p>
+        <div class="fml">ΔS = (−ΔA) + (1 − c)ΔY</div>
+        <p class="eng">The first term is positive (greater thrift raises saving at any income); the second is negative
+        (lower income reduces saving). Substituting ΔY = ΔA/(1 − c) shows the two terms are <b>exactly equal and
+        opposite</b>, so ΔS = 0.</p>
+        <p class="eng"><b>Step 5.</b> The intuition is the equilibrium condition itself. In equilibrium planned saving
+        must equal planned investment. Investment is exogenous and unaffected by thrift, so equilibrium saving
+        <b>cannot</b> change. The only variable free to adjust is <b>income</b>, and it falls until saving is dragged
+        back to its original level.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">Therefore, in the simple Keynesian model, a collective attempt to save more is self-defeating:
+        it lowers equilibrium output and income by ΔA/(1 − c) but leaves aggregate saving unchanged. What is prudent
+        for an individual household is contractionary for the economy as a whole — a <b>fallacy of composition</b>.</p>
+        <p class="eng">The paradox <b>fails</b> under three conditions. <b>First</b>, if investment is not exogenous:
+        if higher saving lowers the interest rate and stimulates investment (the IS-MP framework), equilibrium saving
+        and investment both rise and output need not fall. <b>Second</b>, if the economy is at <b>full employment</b>
+        (Y = Y*), output is supply-constrained, so extra saving releases resources for investment rather than depressing
+        demand — the classical case. <b>Third</b>, in an <b>open economy</b>, lower domestic demand reduces imports and
+        improves the trade balance, partly offsetting the contraction. Hence the paradox is a genuine short-run result
+        for a demand-constrained closed economy, not a general proposition — and it is precisely why higher saving is
+        desirable for <b>long-run growth</b> (Lecture 10) even though it is contractionary in the short run.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-01.html">← Lecture 1</a>
+  <a href="../tutorials/tutorial-02.html">Tutorial 2 →</a>
+  <a href="lecture-03.html">Lecture 3 · Fiscal Policy →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 9 · Unemployment — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 就业状态与三个定义 ⭐</a>
+  <a class="nav" href="#s2">2 · 劳动力市场流量图</a>
+  <a class="nav" href="#s3">3 · 失业的三种类型 ⭐</a>
+  <a class="nav" href="#s4">4 · 自愿 vs 非自愿；自然失业率 ⭐</a>
+  <a class="nav" href="#s5">5 · 劳动力市场模型 LD/LF/AJ ⭐⭐</a>
+  <a class="nav" href="#s6">6 · 古典失业</a>
+  <a class="nav" href="#s7">7 · 凯恩斯失业 ⭐</a>
+  <a class="nav" href="#s8">8 · 供给侧政策 ⭐⭐</a>
+  <a class="nav" href="#s9">9 · 效率工资与激励相容失业</a>
+  <a class="nav" href="#s10">10 · 奥肯定律 ⭐</a>
+  <a class="nav" href="#s11">11 · 滞后效应 Hysteresis ⭐⭐</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-09.html">→ Tutorial 9</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 9 · Unemployment</h1>
+  <div class="sub">劳动力市场 · 失业类型 · LD/LF/AJ 模型 · 供给侧政策 · 滞后效应</div>
+  <div>
+    <span class="tag">37 slides</span>
+    <span class="tag">Begg Ch.23</span>
+    <span class="tag">对应 Tutorial 9 / EOC Ch23</span>
+    <span class="tag b-hot">⭐ LD/LF/AJ 图必考</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">Lecture 7 和 8 反复出现 <b>Y*</b> 与 <b>U*</b>，但一直把它们当作外生给定。
+    本讲<b>打开这个黑箱</b>：U* 到底由什么决定？为什么它不为零？什么政策能降低它？</p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+先把人分类（劳动力 / 非参与者）⇒ 定义失业率与参与率
+   ↓ 失业从哪来（劳动力市场流量图）
+   ↓ 失业分三类：<b>摩擦性 + 结构性（构成 U*）</b>、<b>需求不足型（周期性）</b>
+   ↓ 现代视角：<b>自愿 vs 非自愿</b>
+   ↓ 建模：<b>LD（需求）、LF（劳动力规模）、AJ（愿意接受工作的人数）</b>
+   ↓ 均衡失业 = <b>EF = LF − AJ 之间的距离</b>（全部是自愿的）
+   ↓ 两种偏离：<b>古典失业</b>（工资被顶在均衡之上）、<b>凯恩斯失业</b>（需求下降 + 工资黏性）
+   ↓ 怎么降低 U*？<b>供给侧政策</b>：减税、降低失业救济、工会改革、培训
+   ↓ 其他视角：<b>效率工资</b>（工资弹性也消除不了的失业）、<b>奥肯定律</b>
+   ↓ 最危险的情形：<b>Hysteresis</b> —— 短期需求下降可能<b>永久性地</b>抬高 U*
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：Slide 13 明确画出 <b>U* ↔ Y*</b>、<b>LRPC ↔ LAS</b> 的对应，直接续 Lecture 7–8。
+      "凯恩斯失业"就是 Lecture 2–3 需求不足的劳动市场版本。<br>
+      <b>启下</b>：<b>Hysteresis</b> 意味着 <b>LRPC/LAS 本身会移动</b>，这动摇了 Lecture 8
+      "长期无权衡"的结论；<b>供给侧政策</b>则是 <b>Lecture 10</b> 长期增长的政策工具。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slides 3–6</span><h2>1 · 就业状态与三个核心定义 ⭐</h2></div>
+  <div class="card">
+    <h3><span class="slides">Slides 3–4</span>谁算"参与者"，谁算"非参与者"</h3>
+    <div class="tw"><table>
+      <tr><th style="width:50%">Participants（劳动力参与者）</th><th>Non-participants（非参与者）</th></tr>
+      <tr><td>
+        • <b>Employee</b>（雇员）<br>
+        • <b>Self-employed</b>（自雇）<br>
+        • <b>Job seekers</b>（求职者）<br><br>
+        <b>界定不清的（取决于国家）：</b><br>
+        • zero-hours staff（零工时合同）<br>
+        • 实习或工作体验安排中的人<br>
+        • 固定期限或滚动合同<br>
+        • peripatetic（无固定工作地点）<br><br>
+        <span class="muted">美国口径：<b>只要在调查期内获得过报酬，就算就业</b></span>
+      </td><td>
+        • Homemakers（家务操持者）<br>
+        • 长期病患与残障者（英国口径）<br>
+        • Students / Training programmes（学生与培训项目）<br>
+        • <b>Discouraged workers</b>（灰心工人）<br>
+        • Retired（退休）<br>
+        • 未达工作年龄（<b>工作人口 &gt; 16 岁</b>）
+      </td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 英国"失业者"的参考解答定义（Slide 3，可能直接考）</span>
+      <b>Someone who is not in work, has looked for work in the last FOUR weeks and is ready to start work in
+      the next TWO weeks.</b> 也包括<b>目前没有工作、但已找到工作并将在未来两周内开始</b>的人。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 5</span>三个定义（一字不改地背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:24%">术语</th><th>定义</th></tr>
+      <tr><td><b>Labour force</b><br>劳动力</td>
+        <td>those people <b>holding a job OR registered as being willing and available for work</b><br>
+        <span class="muted">（&lt;16 岁、学生与退休者<b>被排除</b>，即使他们愿意且有能力工作）</span></td></tr>
+      <tr><td><b>Participation rate</b><br>参与率</td>
+        <td>the percentage of <b>the population of working age</b> declaring themselves to be <b>in the labour force</b></td></tr>
+      <tr><td><b>Unemployment rate</b><br>失业率</td>
+        <td>the percentage of <b>the labour force</b> without a job but <b>registered as being willing and
+        available for work</b></td></tr>
+    </table></div>
+    <div class="callout c-trap"><span class="t">⚠️ 分母不同！高频 MCQ</span>
+      <b>参与率的分母是"工作年龄人口"</b>；<b>失业率的分母是"劳动力"</b>。<br>
+      推论：<b>灰心工人退出劳动力时，失业率会下降</b>（分子分母同减），
+      但这<b>不代表就业改善</b>——这是奥肯定律与滞后效应部分反复用到的一点。
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 6</span>各国如何测量（可能考细节）</h3>
+    <ul>
+      <li><b>UK</b>：每月对 <b>40,000 户家庭中的 100,000 名 16 岁以上成年人</b>调查，随机抽取地址样本。</li>
+      <li><b>US</b>：每月对 <b>60,000 户非农家庭</b>的代表性样本调查；
+        <b>Nonfarm payrolls</b> 就业报告<b>通常在每月第一个星期五发布</b>。</li>
+      <li><b>China</b>：每月对 <b>340,000 户非农家庭</b>调查。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slide 7</span><h2>2 · 劳动力市场流量（Labour market flows）</h2></div>
+  <div class="card">
+    <p class="lead">失业是一个<b>存量</b>，由若干<b>流量</b>不断进出决定。理解这张图，就理解了为什么
+    "失业率不变"并不意味着"没有人换工作"。</p>
+    <figure>
+      <svg viewBox="0 0 620 300" role="img" aria-label="Labour market flows">
+        <rect x="45" y="35" width="530" height="130" rx="12" fill="none" stroke="#6c8bff" stroke-dasharray="6 5"/>
+        <text class="lbl-s" x="270" y="28" fill="#6c8bff">LABOUR FORCE</text>
+        <rect x="70" y="80" width="120" height="46" rx="10" fill="#232a55" stroke="#33d6a6"/>
+        <text class="lbl" x="98" y="108">Working</text>
+        <rect x="430" y="80" width="120" height="46" rx="10" fill="#232a55" stroke="#ff5c7a"/>
+        <text class="lbl" x="450" y="108">Unemployed</text>
+        <path d="M430,92 L192,92" class="dsh" stroke="#33d6a6" marker-end="url(#a9)"/>
+        <text class="lbl-s" x="256" y="72" fill="#33d6a6">New hires · Recalls</text>
+        <path d="M192,116 L428,116" class="dsh" stroke="#ff5c7a" marker-end="url(#a9)"/>
+        <text class="lbl-s" x="236" y="140" fill="#ff5c7a">Job-losers · Lay-offs · Quits</text>
+        <defs><marker id="a9" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+          <path d="M0,0 L7,3.2 L0,6.4 z" fill="#aeb6e6"/></marker></defs>
+        <rect x="200" y="215" width="220" height="46" rx="10" fill="#1c2145" stroke="#8089bd"/>
+        <text class="lbl" x="238" y="243">Non-participants</text>
+        <path d="M120,128 L232,213" class="dsh" marker-end="url(#a9)"/>
+        <text class="lbl-s" x="70" y="176">Retiring ·</text><text class="lbl-s" x="70" y="190">Temporarily leaving</text>
+        <path d="M228,213 L128,130" class="dsh" marker-end="url(#a9)"/>
+        <text class="lbl-s" x="150" y="208">Taking a job</text>
+        <path d="M488,128 L398,213" class="dsh" marker-end="url(#a9)"/>
+        <text class="lbl-s" x="470" y="176">Discouraged workers</text>
+        <path d="M406,213 L496,132" class="dsh" marker-end="url(#a9)"/>
+        <text class="lbl-s" x="430" y="200">Re-entrants · New entrants</text>
+      </svg>
+      <figcaption>Figure 9.1 — 劳动力市场流量。失业存量由 job-losers/lay-offs/quits 流入，由 new hires/recalls 流出；
+      灰心工人从失业流向<b>非参与</b>（因此不再被统计为失业）。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 8–10</span><h2>3 · 失业的三种类型 ⭐（Tutorial 9 Q1 直接考）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:24%">类型</th><th>定义</th><th style="width:30%">课件的例子</th></tr>
+      <tr><td><b>Frictional unemployment</b><br>摩擦性失业</td>
+        <td><b>people between jobs</b>（因为<b>求职过程不是瞬时的</b>）；
+        人们只是<b>暂时性失业</b></td>
+        <td>大学毕业生正在找工作</td></tr>
+      <tr><td><b>Structural unemployment</b><br>结构性失业</td>
+        <td><b>mismatch of skills and job opportunities</b>，当<b>需求与生产的模式发生变化</b>时</td>
+        <td><b>汽车生产的自动化</b>：一些工人经培训成为技术工人；
+        <b>另一些未能适应的人经历结构性失业</b>，他们可能选择继续教育、完成认证项目或转向其他行业</td></tr>
+      <tr><td><b>Demand-deficient unemployment</b><br>需求不足型失业<br>
+        <span class="muted">（= Keynesian = cyclical）</span></td>
+        <td><b>纯粹是总需求下降的后果</b>，产出低于充分产能；<br>
+        <b>只有当需求回到其长期水平时，需求不足型失业才会被消除</b></td>
+        <td><b>疫情期间</b>餐厅关闭、因需求下降而裁员</td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 分类题的判定口诀</span>
+      • 问题出在<b>"找工作需要时间"</b> ⇒ <b>frictional</b><br>
+      • 问题出在<b>"技能与岗位对不上"</b>（产业衰落、技术变革）⇒ <b>structural</b><br>
+      • 问题出在<b>"总需求不够"</b>（衰退、紧缩政策、央行加息）⇒ <b>demand-deficient / cyclical</b><br>
+      • 问题出在<b>"实际工资太高，高于市场出清水平"</b> ⇒ <b>classical</b>（见第 6 节）
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 11–13</span><h2>4 · 自愿 vs 非自愿；自然失业率 ⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">现代视角（Slide 11）</span>
+现代分析强调<b>自愿失业与非自愿失业的区别</b>：
+
+<b>Voluntary unemployment</b>
+  = when a worker <b>chooses not to accept a job at the going wage rate</b>
+    （在现行工资率下<b>选择不接受</b>工作）
+
+<b>Involuntary unemployment</b>
+  = when a worker <b>would be willing to accept a job at the going wage but cannot get an offer</b>
+    （<b>愿意</b>在现行工资率下工作，<b>但得不到工作机会</b>）
+    </div>
+
+    <div class="callout c-exam"><span class="t">🎯 自然失业率的定义（Slide 12，必背全部四点）</span>
+      • <b>The natural rate of unemployment is the rate of unemployment when the labour market is in
+        equilibrium.</b><br>
+      • 因此也被称为 <b>equilibrium unemployment</b>（均衡失业）。<br>
+      • <b>This is entirely VOLUNTARY.</b>（<b>它完全是自愿的</b>）<br>
+      • 它包括：<b>frictional unemployment</b> + <b>structural unemployment</b>。
+    </div>
+    <p>Slide 13 补充：在<b>不断增长、稳定的经济中（经济健康时）</b>，
+    摩擦性失业与结构性失业<b>构成了自然失业率 U*</b>；此时
+    <b>LAS 垂直于 Y*</b>，<b>LRPC 垂直于 U*</b>——两图一一对应。</p>
+    <div class="callout c-trap"><span class="t">⚠️ 最常错的一点</span>
+      <b>自然失业率不包含需求不足型（凯恩斯）失业。</b>
+      U* 是<b>劳动力市场均衡时</b>的失业率，只由摩擦性与结构性失业构成，<b>而且全部是自愿的</b>。
+      衰退时实际失业率高于 U*，多出来的那部分才是<b>非自愿的</b>凯恩斯失业。
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 15–17</span><h2>5 · 劳动力市场模型：LD / LF / AJ ⭐⭐（本讲核心图）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:14%">曲线</th><th style="width:26%">含义</th><th>形状与原因</th></tr>
+      <tr><td><b>LD</b></td><td><b>labour demand</b><br>劳动需求</td>
+        <td><b>向下倾斜</b>：<b>企业在更低的实际工资下需要更多工人，因为劳动成本更低</b></td></tr>
+      <tr><td><b>LF</b></td><td><b>size of labour force</b><br>劳动力规模</td>
+        <td><b>非常陡峭</b>：<b>更高的实际工资会增加劳动力规模，但幅度很小</b></td></tr>
+      <tr><td><b>AJ</b></td><td><b>the number of workers prepared to accept jobs</b><br>愿意接受工作的人数</td>
+        <td><b>位于 LF 的左侧</b>，因为<b>劳动力中的一些成员正处于工作之间（between jobs），
+        另一些在等待更好的报价</b></td></tr>
+    </table></div>
+
+    <div class="callout c-exam"><span class="t">🎯 均衡失业的图形定义（Slide 17，必背）</span>
+      <b>均衡在 w*、N*。EF 这段距离就是均衡失业（equilibrium unemployment）。</b><br>
+      它由四个因素决定：<b>normal labour market turnover（正常的劳动力市场周转）、
+      structural mismatch（结构性错配）、union power（工会力量）、
+      incentives in the labour market（劳动力市场的激励）</b>。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 540 320" role="img" aria-label="Equilibrium unemployment LD LF AJ">
+        <line class="ax" x1="80" y1="275" x2="500" y2="275"/>
+        <line class="ax" x1="80" y1="275" x2="80" y2="28"/>
+        <text class="lbl" x="360" y="298">Number of workers</text>
+        <text class="lbl" x="14" y="44">Real wage</text>
+        <line x1="270" y1="275" x2="310" y2="40" class="cv c-alt"/>
+        <text class="lbl" x="242" y="34" fill="#33d6a6">AJ</text>
+        <line x1="340" y1="275" x2="368" y2="40" class="cv c-alt2"/>
+        <text class="lbl" x="356" y="34" fill="#ffb454">LF</text>
+        <line x1="120" y1="55" x2="470" y2="252" class="cv c-as"/>
+        <text class="lbl" x="432" y="248" fill="#ff5c7a">LD</text>
+        <circle class="pt" cx="292" cy="152" r="5.5"/><text class="lbl" x="276" y="144">E</text>
+        <circle class="pt" cx="355" cy="152" r="5.5"/><text class="lbl" x="360" y="144">F</text>
+        <line x1="80" y1="152" x2="292" y2="152" class="dsh"/><text class="lbl" x="56" y="156">w*</text>
+        <line x1="292" y1="152" x2="292" y2="275" class="dsh"/><text class="lbl-s" x="284" y="291">N*</text>
+        <line x1="355" y1="152" x2="355" y2="275" class="dsh"/><text class="lbl-s" x="347" y="291">N₁</text>
+        <line x1="292" y1="152" x2="355" y2="152" stroke="#ffb454" stroke-width="4"/>
+        <text class="lbl-s" x="290" y="128" fill="#ffb454">EF = 均衡失业（全部自愿）</text>
+      </svg>
+      <figcaption>Figure 9.2 — 均衡失业。LD ∩ AJ 决定 (w*, N*)；<b>EF = LF − AJ 在 w* 处的水平距离</b>，
+      即自然失业率对应的人数。</figcaption>
+    </figure>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 16</span>劳动供给背后的两个效应（可能考"为什么 LF 很陡"）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">效应</th><th>方向</th></tr>
+      <tr><td><b>Substitution effect</b><br>替代效应</td>
+        <td>更高的工资<b>提高了一小时工作相对于一小时闲暇的收益</b>，
+        导致<b>想要多工作、少消费闲暇</b> ⇒ 劳动供给<b>增加</b></td></tr>
+      <tr><td><b>Income effect</b><br>收入效应</td>
+        <td>更高的工资<b>使人们更富有</b>，提高了对商品<b>与闲暇</b>的需求量，
+        这使人们在工资更高时<b>对工作兴趣更低</b> ⇒ 劳动供给<b>减少</b></td></tr>
+    </table></div>
+    <p><b>两个效应方向相反，几乎相互抵消 ⇒ 这就是 LF 曲线"很陡"的原因。</b></p>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slide 18</span><h2>6 · 古典失业（Classical unemployment）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">课件原文</span>
+假设<b>工会力量成功地把实际工资维持在 w₂</b>（高于 w*）。
+
+• <b>均衡在 A 点</b>，<b>失业为 AC</b>；
+• 其中 <b>BC 是自愿的</b>，<b>AB 从单个工人的视角看是非自愿的</b>；
+• <b>长期中，AC 显示的是劳动力通过强制实施工资 w₂ 而集体选择的失业量</b>，
+  <b>因此它全部是自愿失业</b>。
+    </div>
+    <figure>
+      <svg viewBox="0 0 540 320" role="img" aria-label="Classical unemployment">
+        <line class="ax" x1="80" y1="275" x2="500" y2="275"/>
+        <line class="ax" x1="80" y1="275" x2="80" y2="28"/>
+        <text class="lbl" x="360" y="298">Number of workers</text>
+        <text class="lbl" x="14" y="44">Real wage</text>
+        <line x1="270" y1="275" x2="310" y2="40" class="cv c-alt"/>
+        <text class="lbl" x="242" y="34" fill="#33d6a6">AJ</text>
+        <line x1="340" y1="275" x2="368" y2="40" class="cv c-alt2"/>
+        <text class="lbl" x="356" y="34" fill="#ffb454">LF</text>
+        <line x1="120" y1="55" x2="470" y2="252" class="cv c-as"/>
+        <text class="lbl" x="432" y="248" fill="#ff5c7a">LD</text>
+        <line x1="80" y1="108" x2="470" y2="108" stroke="#ff8aa0" stroke-width="2" stroke-dasharray="5 4"/>
+        <text class="lbl" x="52" y="112">w₂</text>
+        <circle class="pt" cx="198" cy="108" r="5"/><text class="lbl" x="182" y="100">A</text>
+        <circle class="pt" cx="300" cy="108" r="5"/><text class="lbl" x="294" y="100">B</text>
+        <circle class="pt" cx="360" cy="108" r="5"/><text class="lbl" x="366" y="100">C</text>
+        <circle class="pt" cx="292" cy="152" r="5"/><text class="lbl-s" x="276" y="168">E</text>
+        <circle class="pt" cx="355" cy="152" r="5"/><text class="lbl-s" x="360" y="168">F</text>
+        <line x1="80" y1="152" x2="292" y2="152" class="dsh"/><text class="lbl" x="52" y="156">w*</text>
+        <line x1="198" y1="275" x2="198" y2="112" class="dsh"/><text class="lbl-s" x="190" y="291">N₂</text>
+        <line x1="292" y1="275" x2="292" y2="156" class="dsh"/><text class="lbl-s" x="284" y="291">N*</text>
+        <line x1="355" y1="275" x2="355" y2="156" class="dsh"/><text class="lbl-s" x="347" y="291">N₁</text>
+        <line x1="198" y1="90" x2="300" y2="90" stroke="#ff5c7a" stroke-width="4"/>
+        <text class="lbl-s" x="204" y="82" fill="#ff5c7a">AB 非自愿（个体视角）</text>
+        <line x1="300" y1="90" x2="360" y2="90" stroke="#33d6a6" stroke-width="4"/>
+        <text class="lbl-s" x="368" y="84" fill="#33d6a6">BC 自愿</text>
+      </svg>
+      <figcaption>Figure 9.3 — 古典失业。实际工资被顶在 w₂ &gt; w*，失业扩大到 AC（&gt; EF）。</figcaption>
+    </figure>
+    <div class="callout c-tip"><span class="t">💡 "个体视角非自愿、集体视角自愿"这句话怎么理解</span>
+      单个工人在 w₂ 下愿意工作却找不到工作 ⇒ 对<b>他个人</b>是非自愿的。
+      但这个高工资是<b>劳动力集体（通过工会）自己选择并强制实施的</b> ⇒ 从<b>集体</b>看，
+      他们是选择了"高工资 + 高失业"这个组合，因此是自愿的。<b>这句区分是本页的得分点。</b>
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slides 21–22</span><h2>7 · 凯恩斯失业（Keynesian unemployment）⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">课件原文（三阶段）</span>
+从 <b>E 点</b>开始，假设<b>劳动需求下降到 LD′</b>。
+
+• <b>短期</b>：由于<b>工资与价格黏性</b>，经济将移动到 <b>A 点</b>的均衡，
+  <b>失业为 AF</b>；其中 <b>EF 是自愿的</b>，<b>AE 是非自愿的（即凯恩斯失业）</b>。
+• <b>长期</b>：如果劳动需求维持在 LD′，<b>当工资与价格完全调整后</b>，
+  <b>新的均衡将在 G 点</b>（实际工资降到 w₂，失业回到均衡水平）。
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 三种失业在同一张图上的位置（考试很爱问）</span>
+      • <b>EF</b>（LD 与 AJ 的交点到 LF 的距离）= <b>均衡/自然失业</b>，<b>自愿</b>；<br>
+      • <b>AE</b>（需求下降造成的额外部分）= <b>凯恩斯/需求不足型失业</b>，<b>非自愿</b>；<br>
+      • <b>AF = AE + EF</b> = 衰退期的<b>实际总失业</b>。
+    </div>
+    <p>Slide 22 的经验证据：图中显示了三个低失业国家——<b>Switzerland、Japan、UK</b>——
+    随着经济改善，实际失业<b>略有下降</b>。<b>就"失业缺口（unemployment gap）"也下降的程度而言，
+    这意味着凯恩斯失业正在被消除。</b></p>
+    <div class="callout c-tip"><span class="t">💡 "失业缺口"这个概念很好用</span>
+      <b>unemployment gap = 实际失业率 − 自然失业率</b>。<br>
+      缺口 &gt; 0 ⇒ 存在凯恩斯失业 ⇒ <b>需求政策有效</b>；<br>
+      缺口 = 0 但 U* 本身很高 ⇒ <b>只有供给侧政策才有用</b>。<br>
+      这一条直接决定了下一节"该用什么政策"的答案。
+    </div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slides 24–28</span><h2>8 · 供给侧政策 ⭐⭐（essay 高频）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义（Slide 24，必背）</span>
+      <b>Supply-side economics entails the use of MICROECONOMIC INCENTIVES to alter：</b><br>
+      • <b>the level of full employment</b>（充分就业的水平）<br>
+      • <b>the level of potential output</b>（潜在产出的水平）<br>
+      • <b>the natural rate of unemployment</b>（自然失业率）<br><br>
+      并且：<b>在长期中，经济的表现只能通过影响充分就业的水平以及相应的潜在产出水平来改变。</b>
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 25</span>Mismatch（错配如何提高均衡失业）</h3>
+    <div class="fml">
+当劳动需求为 <b>LD</b> 时，均衡失业为 <b>AB</b>。
+<b>错配减少了对工人所拥有技能的需求</b>，因此<b>使劳动需求曲线下移到 LD′</b>。
+⇒ <b>均衡失业增加到 CD</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 26</span>减税如何降低失业 ⭐</h3>
+    <div class="fml"><span class="lab">课件原文（务必看懂 w₁/w₃ 这对楔子）</span>
+企业支付的<b>毛工资是 w₁</b>；
+<b>w₁ &gt; w₃</b>（w₃ 是<b>工人拿到手的净工资</b>）。
+
+• 有税时：均衡在 <b>N₁</b>，<b>AB 是税额（税楔 tax wedge）</b>，<b>失业为 BC</b>；
+• <b>没有税时</b>：均衡在 <b>E</b> 点，<b>失业为 EF</b>；
+• <b>EF &lt; BC，即失业被降低了。</b>
+    </div>
+    <figure>
+      <svg viewBox="0 0 540 320" role="img" aria-label="Tax cuts and unemployment">
+        <line class="ax" x1="80" y1="275" x2="500" y2="275"/>
+        <line class="ax" x1="80" y1="275" x2="80" y2="28"/>
+        <text class="lbl" x="360" y="298">Number of workers</text>
+        <text class="lbl" x="14" y="44">Real wage</text>
+        <line x1="268" y1="275" x2="308" y2="40" class="cv c-alt"/>
+        <text class="lbl" x="240" y="34" fill="#33d6a6">AJ</text>
+        <line x1="338" y1="275" x2="366" y2="40" class="cv c-alt2"/>
+        <text class="lbl" x="354" y="34" fill="#ffb454">LF</text>
+        <line x1="120" y1="55" x2="470" y2="252" class="cv c-as"/>
+        <text class="lbl" x="432" y="248" fill="#ff5c7a">LD</text>
+        <line x1="80" y1="104" x2="470" y2="104" class="dsh"/><text class="lbl" x="52" y="108">w₁</text>
+        <line x1="80" y1="152" x2="470" y2="152" class="dsh"/><text class="lbl" x="52" y="156">w₂</text>
+        <line x1="80" y1="196" x2="470" y2="196" class="dsh"/><text class="lbl" x="52" y="200">w₃</text>
+        <circle class="pt" cx="192" cy="104" r="5"/><text class="lbl" x="176" y="96">A</text>
+        <circle class="pt" cx="192" cy="196" r="5"/><text class="lbl" x="176" y="212">B</text>
+        <circle class="pt" cx="256" cy="196" r="5"/><text class="lbl" x="262" y="212">C</text>
+        <circle class="pt" cx="292" cy="152" r="5"/><text class="lbl" x="278" y="144">E</text>
+        <circle class="pt" cx="352" cy="152" r="5"/><text class="lbl" x="358" y="144">F</text>
+        <line x1="192" y1="104" x2="192" y2="196" stroke="#ff5c7a" stroke-width="4"/>
+        <text class="lbl-s" x="118" y="152" fill="#ff5c7a">AB = 税楔</text>
+        <line x1="192" y1="230" x2="256" y2="230" stroke="#ff5c7a" stroke-width="4"/>
+        <text class="lbl-s" x="176" y="248" fill="#ff5c7a">BC（有税）</text>
+        <line x1="292" y1="230" x2="352" y2="230" stroke="#33d6a6" stroke-width="4"/>
+        <text class="lbl-s" x="290" y="248" fill="#33d6a6">EF（无税）</text>
+        <line x1="192" y1="275" x2="192" y2="285" class="dsh"/><text class="lbl-s" x="184" y="298">N₁</text>
+        <line x1="292" y1="275" x2="292" y2="285" class="dsh"/><text class="lbl-s" x="284" y="298">N₂</text>
+      </svg>
+      <figcaption>Figure 9.4 — 税楔与失业。所得税在企业成本 w₁ 与工人到手 w₃ 之间打入楔子 AB，
+      使就业降到 N₁、失业扩大到 BC；<b>取消税收后失业缩小到 EF</b>。</figcaption>
+    </figure>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 27</span>降低失业救济金 ⭐</h3>
+    <div class="fml">
+对给定的劳动力曲线 LF，<b>削减失业救济金</b>：
+  • <b>提高了搜寻的成本</b>（raises the cost of searching）
+  • <b>因此使"接受工作"曲线从 AJ 右移到 AJ′</b>
+  • <b>从而把均衡失业从 AB 降低到 CD</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 为什么是 AJ 移动而不是 LF 移动</span>
+      失业救济不影响<b>有多少人在劳动力中（LF）</b>，只影响<b>其中有多少人愿意在给定工资下接受工作（AJ）</b>。
+      救济少了，挑工作的成本变高，人们更快接受报价 ⇒ <b>AJ 右移，向 LF 靠拢 ⇒ 两线间距（失业）缩小</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 28</span>其他供给侧政策</h3>
+    <ul>
+      <li><b>Trade union reform</b>：<b>削弱工会力量可以限制劳动力市场中的扭曲</b>（呼应古典失业那一页）。</li>
+      <li><b>其他劳动供给政策</b>：
+        <ul>
+          <li><b>training and retraining measures</b>（培训与再培训措施）</li>
+          <li><b>improving the efficiency of the labour market</b>（提高劳动力市场效率）</li>
+          <li><b>reducing the replacement ratio</b>（降低替代率，即救济金/工资之比）</li>
+        </ul>
+        课件明确：<b>这些措施可能影响摩擦性失业与结构性失业</b>。</li>
+    </ul>
+    <div class="callout c-exam"><span class="t">🎯 政策匹配题的黄金判据</span>
+      <b>需求不足型（凯恩斯）失业 ⇒ 用需求政策</b>（财政/货币扩张，Lecture 3、5、6）；<br>
+      <b>摩擦性 + 结构性失业（即 U* 本身）⇒ 只能用供给侧政策</b>，需求政策对它<b>无效</b>
+      （只会推高通胀，见 Lecture 8 的 LRPC 垂直）。<br>
+      这一条判据几乎是所有"什么政策能降低失业"类题目的答案框架。
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slide 30</span><h2>9 · 激励相容失业与效率工资</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:30%">概念</th><th>定义</th></tr>
+      <tr><td><b>Incentive compatible unemployment</b><br>激励相容失业</td>
+        <td><b>The unemployment needed to prevent workers from SHIRKING when they cannot easily be
+        monitored.</b>（当工人难以被监督时，为防止其偷懒所需要的失业）</td></tr>
+      <tr><td><b>Efficiency wage</b><br>效率工资</td>
+        <td><b>Wages paid by firms IN EXCESS of the market-clearing (equilibrium) wage, to induce workers to
+        increase productivity.</b><br>
+        <b>关键：This cannot be eliminated by wage flexibility.</b>
+        （<b>这种失业无法通过工资弹性来消除</b>）</td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 为什么效率工资失业无法靠降工资消除</span>
+      企业<b>故意</b>把工资定在市场出清水平之上——因为高工资使"丢掉工作"变得昂贵，从而抑制偷懒。
+      如果失业消失了，被解雇也无所谓，威慑就失效了。所以<b>企业需要一定量的失业存在</b>，
+      不会为了消除失业而降低工资。<b>这是对"失业只因工资不够灵活"这一说法的有力反驳</b>，
+      写 essay 评价段时非常好用。
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slide 31</span><h2>10 · 奥肯定律（Okun's Law）⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">课件原文</span>
+沿着失业的<b>周期性变动</b>，奥肯定律成立：
+
+<b>产出（总需求）增加 1%，会带来<b>不到</b> 1% 的就业上升，
+以及<b>更小</b>的失业率下降。</b>
+    </div>
+    <h3>两条原因（必须能解释）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:20%">阶段</th><th>机制</th></tr>
+      <tr><td><b>In a slump</b><br>衰退中</td>
+        <td><b>灰心工人（discouraged workers）</b>退出劳动力，导致<b>失业率的变化更小</b>
+        （产出跌了很多，但失业率没涨那么多，因为一部分人干脆不算劳动力了）</td></tr>
+      <tr><td><b>In a boom</b><br>繁荣中</td>
+        <td>劳动力市场之外的人<b>可能加入也可能不加入</b>（他们可以选择留在家里）⇒
+        <b>就业的上升不会以相同的绝对量减少被统计的失业</b>。<br>
+        <b>课件的原话：创造 100 个岗位并不意味着消除 100 个失业者，因为他们可能选择留在家里。</b></td></tr>
+    </table></div>
+    <div class="callout c-trap"><span class="t">⚠️ 这一节与第 1 节的定义直接相关</span>
+      奥肯定律之所以成立，根子在于<b>"失业率的分母是劳动力，而劳动力规模本身会随周期变动"</b>。
+      答题时把这条讲出来，比单纯背"1% 产出对应少于 1% 就业"要高一个层次。
+    </div>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="sec-h"><span class="kicker">Slides 32–33</span><h2>11 · 滞后效应 Hysteresis ⭐⭐（essay 王牌）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义（Slide 32，必背）</span>
+      <b>Hysteresis is the situation where changes in one part of the economy take time to have an effect on
+      other parts.</b><br><br>
+      核心命题：<b>一个（短期的）总需求下降，可能导致失业的持续存在，即使总需求的下降已经被逆转。</b><br>
+      <b>这有助于解释 1980 年代欧洲高企而持久的失业。</b>
+    </div>
+
+    <h3 style="margin-top:18px">四条渠道（Four channels，必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">渠道</th><th>机制（课件原文）</th></tr>
+      <tr><td><b>① Insider-outsider distinction</b><br>内部人—外部人</td>
+        <td><b>只有在职者参与工资谈判，而他们保护自己的位置</b>
+        （failed to bargain on behalf of the unemployed）⇒ 工资不下降，失业者进不来</td></tr>
+      <tr><td><b>② Discouraged workers</b><br>灰心工人</td>
+        <td><b>人们停止找工作</b> ⇒ 技能与求职习惯退化，即使需求恢复也难以重新就业</td></tr>
+      <tr><td><b>③ Search and mismatch</b><br>搜寻与错配</td>
+        <td><b>企业与工人都习惯了低搜寻强度</b> ⇒ 匹配效率下降</td></tr>
+      <tr><td><b>④ Capital stock</b><br>资本存量</td>
+        <td><b>衰退中低水平的投资导致永久性偏低的资本存量水平</b>
+        ⇒ 劳动需求 LD 永久性左移 ⇒ 潜在产出也下降</td></tr>
+    </table></div>
+
+    <div class="callout c-exam"><span class="t">🎯 Hysteresis 为什么是 essay 王牌</span>
+      它<b>推翻了本课程一系列"长期结论"</b>，因此可以用来给任何"长期无效"的结论加限定：<br>
+      • 推翻 Lecture 8 的 <b>"LRPC 垂直、长期无权衡"</b>——因为 <b>U* 本身会被短期需求冲击改变</b>；<br>
+      • 推翻 Lecture 7 的 <b>"衰退会自我修复"</b>——因为衰退可能<b>永久性地</b>降低 Y*；<br>
+      • 推翻 Lecture 6 的 <b>"需求政策长期无效"</b>——如果存在滞后效应，
+        <b>及时的需求刺激具有长期收益</b>，因为它防止了 U* 的永久上升。<br><br>
+      标准写法：<i>"However, if hysteresis is present, this conclusion no longer holds: a temporary
+      demand-deficient recession can raise the natural rate itself through insider-outsider effects,
+      discouraged workers, deteriorating search and a permanently lower capital stock. In that case the
+      long-run Phillips curve is not independent of short-run demand management, and prompt stabilisation
+      policy has permanent benefits."</i>
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 34–36</span>案例：美国男女劳动参与率</h3>
+    <div class="tw"><table>
+      <tr><th style="width:20%">年份</th><th>女性参与率</th><th>男性参与率</th></tr>
+      <tr><td><b>1950</b></td><td><b>33%</b></td><td><b>87%</b></td></tr>
+      <tr><td><b>2009</b></td><td><b>59%</b></td><td><b>72%</b></td></tr>
+    </table></div>
+    <div class="grid2">
+      <div>
+        <h4>女性参与率上升的原因</h4>
+        <ul>
+          <li><b>New technologies</b>：减少了完成日常家务所需的时间</li>
+          <li><b>Improved birth control</b>：减少了典型家庭的生育数量</li>
+          <li><b>Changing political and social attitudes</b></li>
+        </ul>
+      </div>
+      <div>
+        <h4>男性参与率下降的原因</h4>
+        <ul>
+          <li><b>年轻男性</b>：在校时间更长</li>
+          <li><b>年长男性</b>：更早退休且寿命更长</li>
+          <li>随着更多女性就业，<b>更多父亲留在家中抚养孩子</b></li>
+        </ul>
+        <p class="muted" style="font-size:13.5px">被计为<b>不在劳动力中</b>的：全日制学生、退休者、
+        <b>全职爸爸（stay-at-home dads）</b>。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">定义（注意分母）</span>
+Labour force = 就业者 + 登记为愿意且可工作者
+<b>Participation rate = 劳动力 / 工作年龄人口</b>
+<b>Unemployment rate = 失业者 / 劳动力</b>
+Unemployment gap = 实际失业率 − 自然失业率 U*
+    </div>
+    <div class="fml"><span class="lab">失业类型</span>
+<b>U* = 摩擦性 + 结构性</b>（劳动力市场均衡时的失业，<b>全部自愿</b>）
+<b>Demand-deficient / Keynesian / cyclical</b>：需求不足，<b>非自愿</b>
+<b>Classical</b>：实际工资被顶在 w* 之上（工会/最低工资）
+    </div>
+    <div class="fml"><span class="lab">三条曲线</span>
+<b>LD</b> 向下倾斜（工资越低雇得越多）
+<b>LF</b> 很陡（替代效应与收入效应几乎抵消）
+<b>AJ</b> 在 LF 左侧（有人在换工作，有人等更好报价）
+<b>均衡失业 EF = LF − AJ</b>（在 w* 处的水平距离）
+决定因素：<b>周转、结构错配、工会力量、劳动力市场激励</b>
+    </div>
+    <div class="fml"><span class="lab">供给侧政策如何作用于图形</span>
+减税 ⇒ 消除<b>税楔</b> ⇒ 就业↑、失业 BC → EF
+降低失业救济 ⇒ 搜寻成本↑ ⇒ <b>AJ 右移</b> ⇒ 失业 AB → CD
+工会改革 ⇒ 减少工资扭曲 ⇒ 消除古典失业
+培训/再培训 ⇒ 减少<b>错配</b> ⇒ 阻止 LD 下移
+    </div>
+    <div class="fml"><span class="lab">其他</span>
+<b>Okun's Law</b>：产出↑1% ⇒ 就业↑&lt;1% ⇒ 失业率↓更少（灰心工人 + 自愿进出劳动力）
+<b>Efficiency wage</b>：工资高于出清水平以提高生产率 ⇒ <b>工资弹性也消除不了这种失业</b>
+<b>Hysteresis 四渠道</b>：内部人—外部人 · 灰心工人 · 搜寻与错配 · 资本存量
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>自然失业率包含周期性失业</td><td><b>U* 只含摩擦性 + 结构性</b>，且<b>全部是自愿的</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>自然失业率是"坏事"、应该为零</td><td>U* 是<b>劳动力市场均衡</b>的结果，反映正常周转与匹配过程；零失业既不可能也不可取</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>参与率与失业率分母相同</td><td>参与率分母 = <b>工作年龄人口</b>；失业率分母 = <b>劳动力</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>灰心工人算失业</td><td>他们<b>退出劳动力</b>，成为非参与者，<b>失业率反而下降</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>用需求政策治结构性失业</td><td>结构性失业属 U*，<b>需求政策无效</b>（只推高通胀），须用<b>供给侧政策</b></td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>降低失业救济使 LF 移动</td><td>移动的是 <b>AJ</b>（愿意接受工作的人数），不是 LF</td><td><span class="badge b-essay">图</span></td></tr>
+      <tr><td>失业只因工资不够灵活</td><td><b>效率工资失业无法靠工资弹性消除</b>（企业故意高于出清工资）</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>产出增 1% 失业就降 1%</td><td><b>奥肯定律</b>：就业升不到 1%，失业率降得更少</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>U* 永远不变</td><td><b>Hysteresis</b>：短期需求冲击可<b>永久性抬高 U*</b></td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>古典失业是非自愿的</td><td><b>个体视角非自愿（AB），集体视角全部自愿（AC）</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span></h3>
+    <p class="lead"><i>"Explain what determines the natural rate of unemployment and evaluate the policies a
+    government could use to reduce it. Under what circumstances might demand management also affect the natural rate?"</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng">The <b>natural rate of unemployment</b> <i>U</i>* is the rate of unemployment when the
+        <b>labour market is in equilibrium</b>; it is therefore also called <b>equilibrium unemployment</b>, and it is
+        <b>entirely voluntary</b>. It comprises <b>frictional unemployment</b> — people between jobs, because the
+        job-hunting process is not instantaneous — and <b>structural unemployment</b> — a mismatch of skills and job
+        opportunities when the pattern of demand and production changes. It excludes <b>demand-deficient (Keynesian
+        or cyclical) unemployment</b>, which is purely the consequence of a fall in aggregate demand below full
+        capacity.</p>
+        <p class="eng"><b>Supply-side economics</b> entails the use of <b>microeconomic incentives</b> to alter the
+        level of full employment, the level of potential output and the natural rate of unemployment.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 (see Figure 9.2). Vertical axis = real wage; horizontal axis = number of workers.
+        <b>LD</b> slopes down because firms demand more workers at a lower real wage. <b>LF</b> shows the size of the
+        labour force and is <b>steep</b>, because the substitution and income effects of a higher wage largely offset
+        one another. <b>AJ</b> shows the number of workers prepared to accept jobs and lies <b>to the left of LF</b>,
+        because some members of the labour force are between jobs and others are waiting for better offers.
+        Equilibrium is at <b>(w*, N*)</b> where LD cuts AJ, and the horizontal distance <b>EF</b> between AJ and LF at
+        <i>w</i>* is <b>equilibrium unemployment</b> — the natural rate.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>Part 1: what determines U*.</b> The size of the gap EF is determined by <b>normal labour
+        market turnover</b>, <b>structural mismatch</b>, <b>union power</b> and <b>incentives in the labour market</b>.
+        Anything that widens the gap between LF and AJ, or shifts LD left, raises <i>U</i>*. For example,
+        <b>mismatch</b> reduces the demand for the skills workers actually possess, shifting labour demand down from
+        LD to LD′ and raising equilibrium unemployment from AB to CD.</p>
+
+        <p class="eng"><b>Part 2: policies to reduce U*.</b></p>
+        <ul>
+          <li class="eng"><b>Cutting income tax.</b> Taxation drives a <b>wedge</b> between the gross wage
+          <i>w</i>₁ paid by firms and the take-home pay <i>w</i>₃ received by workers. In Figure 9.4 the wedge AB
+          reduces employment to <i>N</i>₁ and raises unemployment to BC. Without the tax, equilibrium is at E with
+          unemployment EF, and <b>EF &lt; BC</b>: unemployment is reduced. <b>Evaluation:</b> the gain must be set
+          against the lost tax revenue, which must be raised elsewhere or matched by lower spending.</li>
+          <li class="eng"><b>Reducing unemployment benefit</b> (lowering the <b>replacement ratio</b>). This
+          <b>raises the cost of searching</b>, so more of the labour force is prepared to accept jobs at any given
+          wage: <b>AJ shifts right towards LF</b>, cutting equilibrium unemployment from AB to CD.
+          <b>Evaluation:</b> effective, but at a real cost in insurance and equity — it lowers unemployment partly by
+          forcing workers to accept worse job matches, which may reduce productivity.</li>
+          <li class="eng"><b>Trade union reform.</b> If union power maintains the real wage at <i>w</i>₂ above
+          <i>w</i>*, unemployment rises to AC (Figure 9.3), of which AB is involuntary from an individual worker's
+          point of view. Reducing union power <b>limits distortions in the labour market</b>.
+          <b>Evaluation:</b> in the long run AC is the amount of unemployment chosen collectively by the labour force,
+          so this is a distributional as much as an efficiency question.</li>
+          <li class="eng"><b>Training and retraining, and improving the efficiency of the labour market.</b> These
+          attack <b>frictional and structural</b> unemployment directly, by improving matching rather than by cutting
+          workers' incomes. <b>Evaluation:</b> arguably the least costly in welfare terms, but slow-acting and
+          expensive up-front.</li>
+        </ul>
+
+        <p class="eng"><b>Part 3: the limits of demand policy — and the exception.</b> The standard conclusion is that
+        <b>demand management cannot reduce U*</b>. Aggregate demand policy can eliminate the
+        <b>unemployment gap</b> — the excess of actual unemployment over <i>U</i>*, i.e. the Keynesian component AE in
+        the labour-market diagram — but once that gap is closed, further demand expansion merely raises inflation,
+        since the long-run Phillips curve is vertical at <i>U</i>* (Lecture 8). In the long run, "the performance of
+        the economy can only be changed by affecting the level of full employment and the corresponding level of
+        potential output".</p>
+        <p class="eng">There are, however, two important qualifications. <b>First, efficiency wages.</b> Firms may
+        deliberately pay wages <b>in excess of the market-clearing wage</b> to induce higher productivity, and the
+        resulting <b>incentive-compatible unemployment</b> — the unemployment needed to prevent shirking when workers
+        cannot easily be monitored — <b>cannot be eliminated by wage flexibility</b>. Supply-side policies that work
+        purely by making wages more flexible will therefore fail against this component.</p>
+        <p class="eng"><b>Second, and more fundamentally, hysteresis.</b> Hysteresis is the situation where changes in
+        one part of the economy take time to affect other parts: a <b>short-run</b> fall in aggregate demand can lead
+        to a <b>persistence of unemployment even after the fall in demand has been reversed</b>. Four channels operate:
+        the <b>insider-outsider distinction</b> (only those in work take part in wage bargaining, and they protect
+        their own positions); <b>discouraged workers</b> (people stop looking for jobs); <b>search and mismatch</b>
+        (firms and workers get used to low search); and the <b>capital stock</b> (low investment in a recession leaves
+        a permanently lower capital stock, shifting LD permanently left). This helps explain the high and persistent
+        European unemployment of the 1980s.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">The natural rate is determined by the horizontal gap between the labour force and those prepared
+        to accept jobs at the equilibrium wage, and hence by turnover, structural mismatch, union power and labour
+        market incentives. Reducing it therefore requires <b>microeconomic, supply-side</b> measures — cutting the tax
+        wedge, lowering the replacement ratio, union reform and above all training and better matching — rather than
+        demand management, which can close the unemployment gap but cannot lower <i>U</i>* itself.</p>
+        <p class="eng">That conclusion must, however, be qualified in two ways. Where firms pay <b>efficiency wages</b>,
+        some unemployment is <b>immune to wage flexibility</b> and to the incentive-based policies above. And where
+        <b>hysteresis</b> is present, the sharp separation between demand and supply policy breaks down: a prolonged
+        demand-deficient recession can itself <b>raise the natural rate</b> through insider power, discouragement,
+        decayed search and a lower capital stock. In that case prompt demand stabilisation is not merely a short-run
+        palliative but has <b>permanent</b> supply-side benefits — and, symmetrically, allowing a deep recession to
+        persist inflicts a permanent cost on potential output. The policy conclusion is therefore that supply-side
+        measures should be the <b>primary</b> instrument against <i>U</i>*, but that timely demand management remains
+        important precisely because short-run demand failures can become long-run supply failures.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-08.html">← Lecture 8</a>
+  <a href="../tutorials/tutorial-09.html">Tutorial 9 →</a>
+  <a href="lecture-10.html">Lecture 10 · Economic Growth →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

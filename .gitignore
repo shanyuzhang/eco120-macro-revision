@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Course materials — never commit copyrighted PDFs or exam papers
+*.pdf
+Lecture/
+tutorial/
+final paper/

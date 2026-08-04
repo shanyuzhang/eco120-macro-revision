@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>核心变量反向索引 · I / C / M / π / U / 汇率 — ECO120</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.vhead{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:4px}
+.vsym{font-size:40px;font-weight:850;line-height:1;background:linear-gradient(135deg,var(--brand),var(--brand2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;min-width:56px}
+.vname{font-size:20px;font-weight:800}
+.vname small{display:block;color:var(--muted);font-size:12.5px;font-weight:600;letter-spacing:.6px;margin-top:2px}
+.vtag{margin-left:auto;font-size:12px;color:var(--ink2);background:rgba(255,255,255,.05);
+  border:1px solid var(--line);border-radius:20px;padding:5px 13px}
+.blk{margin-top:20px}
+.blkh{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:1.2px;padding:3px 11px;
+  border-radius:7px;color:#0c0f24;margin-bottom:10px}
+.h1c{background:var(--brand)}.h2c{background:var(--warn)}.h3c{background:var(--accent)}.h4c{background:var(--hot)}
+.up{color:#6fe6c3;font-weight:800}.dn{color:#ff8aa0;font-weight:800}.nc{color:var(--muted);font-weight:700}
+table.vt td:first-child{white-space:nowrap}
+.chain{background:#0c0f24;border:1px solid rgba(108,139,255,.3);border-radius:12px;padding:14px 18px;
+  margin:12px 0;font-family:"SF Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#dfe6ff;
+  line-height:2;overflow-x:auto}
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.jump a{background:var(--card2);border:1px solid var(--line);border-radius:11px;padding:9px 16px;
+  font-weight:800;font-size:15px;color:var(--ink)}
+.jump a:hover{border-color:rgba(108,139,255,.6);text-decoration:none}
+.jump a small{display:block;font-size:11px;color:var(--muted);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="index.html">← 返回总目录</a>
+  <div class="navgroup">六个核心变量</div>
+  <a class="nav active" href="#I">I · 投资</a>
+  <a class="nav" href="#C">C · 消费</a>
+  <a class="nav" href="#M">M · 货币供给</a>
+  <a class="nav" href="#pi">π · 通胀</a>
+  <a class="nav" href="#U">U · 失业</a>
+  <a class="nav" href="#e">e · 汇率</a>
+  <div class="navgroup">串联</div>
+  <a class="nav" href="#net">🔗 五条联动链</a>
+  <a class="nav" href="#howto">🎯 考场用法</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>核心变量反向索引</h1>
+  <div class="sub">不按讲次、按<b>变量</b>组织：每个变量各自的「依赖什么 · 什么政策能动它 · 对应哪张图」</div>
+  <div>
+    <span class="tag">I · C · M · π · U · e</span>
+    <span class="tag">全部链接到对应 Lecture 小节</span>
+    <span class="tag b-hot">⭐ 考场遇到「X 会怎么变」时反查这里</span>
+  </div>
+  <div class="jump">
+    <a href="#I">I<small>投资</small></a>
+    <a href="#C">C<small>消费</small></a>
+    <a href="#M">M<small>货币供给</small></a>
+    <a href="#pi">π<small>通胀</small></a>
+    <a href="#U">U<small>失业</small></a>
+    <a href="#e">e<small>汇率</small></a>
+  </div>
+</div>
+
+<div class="callout c-tip" style="margin-top:20px"><span class="t">💡 这份索引解决什么问题</span>
+  按讲次复习时，知识是<b>「Lecture 6 讲挤出效应」</b>这样存的。
+  但考场上题目问的是<b>「利率上升，投资会怎样？」</b>——需要<b>反向</b>查。<br>
+  每个变量四块：<b>① 依赖什么（函数形式 + 决定因素）② 什么政策能动它（方向 + 机制）
+  ③ 对应哪张图（在图上是什么）④ 陷阱</b>。
+</div>
+
+<section id="I">
+  <div class="sec-h"><span class="kicker">Variable 1</span><h2>I · 投资</h2></div>
+  <div class="card">
+    <div class="vhead">
+      <div class="vsym">I</div>
+      <div class="vname">Investment<small>INVESTMENT DEMAND</small></div>
+      <div class="vtag">L2 · L5 · L6 · L11</div>
+    </div>
+    <p class="lead"><b>定义</b>：firms' <b>desired or planned</b> additions to <b>physical capital and to inventories</b>。
+    构成 = <b>fixed capital</b>（transport equipment · machinery · dwellings · other buildings）
+    + <b>working capital</b>（<b>stocks/inventories</b> · work in progress）。
+    <b>仅指私人部门投资——公共部门投资算在 G 里。</b></p>
+
+    <div class="blk"><span class="blkh h1c">① 依赖什么</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:24%">在哪个模型里</th><th style="width:26%">函数形式</th><th>说明</th></tr>
+        <tr><td><b>L2 45° 线模型</b></td><td><b>I = 常数（autonomous）</b></td>
+          <td>课件明确假设 <b>investment demand does not depend on income</b>，图上是水平线。
+          <b>这一讲里 I 不依赖利率</b>——别提前引入 r。</td></tr>
+        <tr><td><b>L5 传导机制</b></td><td><b>I = I(r)</b>，II 曲线向下倾斜</td>
+          <td>投资是<b>当前牺牲换未来收益</b>；项目被采纳的条件是
+          <b>expected returns must outweigh the opportunity cost</b>。
+          <b>利率越高，可行项目越少。</b></td></tr>
+        <tr><td><b>L6 IS-MP</b></td><td>I(r) 是 <b>IS 向下倾斜的根源</b></td>
+          <td>r↓ ⇒ I↑ ⇒ AD↑ ⇒ Y↑，把这些 (r, Y) 点连起来就是 IS。</td></tr>
+        <tr><td><b>L11 加速数</b></td><td><b>I = a[Y<sub>−1</sub> − Y<sub>−2</sub>]</b></td>
+          <td>投资取决于产出的<b>变化量</b>而非水平。
+          <b>产出只要停止增长，投资就会大幅下降</b>——这是周期的来源。</td></tr>
+      </table></div>
+      <div class="fml"><span class="lab">II 曲线的三个决定因素（L5 §11）</span>
+<b>沿线移动</b>：<b>利率 r</b>（唯一）
+<b>曲线移位</b>：① <b>资本品价格下降</b> ⇒ II <b>上移</b>
+              ② <b>对未来产出需求的乐观预期、更高的预期未来利润流</b> ⇒ II <b>上移</b>
+<b>斜率</b>：<b>长寿命的房屋与工厂 ⇒ II 更平坦（利率弹性更大）⇒ 货币传导更有力</b>
+      </div>
+    </div>
+
+    <div class="blk"><span class="blkh h2c">② 什么政策能动它</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:26%">政策 / 冲击</th><th style="width:10%">I 的方向</th><th>机制</th></tr>
+        <tr><td><b>货币扩张</b>（OMO 买债券 / 降息）</td><td class="up">↑</td>
+          <td>Mˢ↑ ⇒ r↓ ⇒ <b>沿 II 曲线下移</b> ⇒ 更多项目的预期回报超过机会成本</td></tr>
+        <tr><td><b>财政扩张</b>（↑G，债券融资）</td><td class="dn">↓</td>
+          <td><b>挤出效应</b>：IS 右移 ⇒ Y↑ ⇒ 货币需求↑ ⇒ 沿 MP 曲线 r↑ ⇒ I↓。
+          <b>挤出程度取决于 MP 斜率 b 与 II 的利率弹性</b></td></tr>
+        <tr><td><b>企业信心上升</b></td><td class="up">↑</td>
+          <td>预期未来利润↑ ⇒ <b>II 上移</b> ⇒ <b>IS 右移</b>（这是需求侧冲击）</td></tr>
+        <tr><td><b>资本品降价</b></td><td class="up">↑</td><td>II 上移</td></tr>
+        <tr><td><b>银行信贷崩溃</b></td><td class="dn">↓</td>
+          <td>企业<b>难以为营运资本融资</b> ⇒ 不仅 I 下降，<b>SAS 也左移</b>（Tutorial 7 Q5）</td></tr>
+        <tr><td><b>未预期通胀 / 不确定性</b></td><td class="dn">↓</td>
+          <td><b>企业在通胀下发现规划更困难，这可能抑制投资</b>
+          ——课程称这是<b>通胀最重要的成本</b></td></tr>
+        <tr><td><b>提高储蓄率（长期）</b></td><td class="up">↑</td>
+          <td>Solow：sy 曲线上移 ⇒ 资本深化 ⇒ 稳态 k* 与 y* 上升（<b>水平效应</b>）</td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h3c">③ 对应哪张图</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:30%">图</th><th style="width:26%">I 在图上是什么</th><th>去哪看</th></tr>
+        <tr><td><b>II schedule</b>（投资需求曲线）</td><td>横轴就是 investment demand</td>
+          <td><a href="lectures/lecture-05.html#s11">L5 §11</a></td></tr>
+        <tr><td><b>45° 线图</b></td><td>AD 截距的一部分（A + I + G + X）</td>
+          <td><a href="lectures/lecture-02.html#s5">L2 §5</a></td></tr>
+        <tr><td><b>S = I 图</b></td><td>一条<b>水平线</b>（外生）</td>
+          <td><a href="lectures/lecture-02.html#s6">L2 §6</a></td></tr>
+        <tr><td><b>IS-MP 图</b></td><td>I(r) 是 IS 向下倾斜的原因；<b>Y₁Y′ 就是被挤出的 I</b></td>
+          <td><a href="lectures/lecture-06.html#s8">L6 §8</a></td></tr>
+        <tr><td><b>漏出 = 注入图</b></td><td><b>注入线 I+G+X 的一部分</b>（水平线）</td>
+          <td><a href="lectures/lecture-03.html#s11">L3 §11</a></td></tr>
+        <tr><td><b>Solow 图</b></td><td><b>sy 曲线</b>（人均储蓄 = 人均投资）</td>
+          <td><a href="lectures/lecture-10.html#s6">L10 §6</a></td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h4c">④ 陷阱</span>
+      <div class="callout c-trap">
+        • <b>存货变动（changes in inventories）计入 I</b>——包括<b>非计划</b>存货变动。
+        这是 <span class="mono">actual I ≡ actual S</span> 恒等式成立的原因。<br>
+        • <b>公共部门投资不算 I，算 G</b>。<br>
+        • <b>企业买机器 = 投资 = 最终支出</b>，<b>不是</b>中间投入
+        （<a href="tutorials/tutorial-01.html">Tutorial 1 B7</a> 的经典陷阱：算增加值时<b>不减机器</b>）。<br>
+        • <b>L2 里 I 是外生的</b>，别写"L2 中利率上升使 I 下降"——那是 L5 之后的事。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="C">
+  <div class="sec-h"><span class="kicker">Variable 2</span><h2>C · 消费</h2></div>
+  <div class="card">
+    <div class="vhead">
+      <div class="vsym">C</div>
+      <div class="vname">Consumption<small>CONSUMPTION DEMAND</small></div>
+      <div class="vtag">L2 · L3 · L5 · L6</div>
+    </div>
+    <p class="lead"><b>定义</b>：households' <b>desired or planned</b> demand for goods and services。
+    消费函数显示 <b>desired aggregate consumption at each level of aggregate income</b>。</p>
+
+    <div class="blk"><span class="blkh h1c">① 依赖什么</span>
+      <div class="fml"><span class="lab">核心函数（必须能默写）</span>
+<b>C = A + cY<sub>d</sub></b>,  Y<sub>d</sub> = Y − NT = <b>(1 − t)Y</b>
+⇒ <b>C = A + c(1 − t)Y</b>
+
+<b>A</b> = autonomous consumption：<b>与可支配收入无关</b>的那部分消费
+<b>c</b> = MPC = ΔC/ΔY<sub>d</sub>，<b>0 &lt; c &lt; 1</b>，是<b>消费函数的斜率</b>
+<b>c(1 − t)</b> = MPC out of <b>national income</b>（比 c 小）
+      </div>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:26%">决定因素</th><th style="width:12%">影响哪一项</th><th>出处与机制</th></tr>
+        <tr><td><b>可支配收入 Y<sub>d</sub></b></td><td>沿线移动</td>
+          <td>L2：每多 £1 GDP 约伴随 £0.7 额外消费（UK 1948–2011）</td></tr>
+        <tr><td><b>财富（wealth）</b></td><td><b>A</b></td>
+          <td>L5 §10 <b>财富效应两条路径</b>：<b>直接</b>（实际货币余额是财富的一部分）、
+          <b>间接</b>（r↓ ⇒ 债券与股票价格↑ ⇒ 持股者感觉更富有）</td></tr>
+        <tr><td><b>消费信贷的数量</b></td><td><b>A</b></td>
+          <td>L5：信贷数量增加 ⇒ <b>自主消费上升 ⇒ 消费函数上移</b></td></tr>
+        <tr><td><b>消费信贷的成本（利率）</b></td><td><b>A</b></td>
+          <td>L5：<b>利率越高家庭借得越少</b> ⇒ 耐用品消费下降</td></tr>
+        <tr><td><b>永久收入 / 生命周期</b></td><td>整条函数</td>
+          <td>L5 §10：消费者<b>试图平滑消费</b>，依据<b>预期一生（永久）收入</b>；
+          <b>中年储蓄、青年与老年负储蓄</b>。<br>
+          <span class="mk">⇒ 政策含义：<b>临时性减税的效果远小于永久性减税</b></span></td></tr>
+        <tr><td><b>收入分配</b></td><td>总量 C</td>
+          <td>Tutorial 6 Q2(iv)：<b>由富人向穷人再分配会提高消费</b>，
+          因为<b>穷人的平均消费倾向（APC）更高</b> ⇒ IS 右移</td></tr>
+        <tr><td><b>预期未来收入</b></td><td><b>A</b></td>
+          <td>L6 §3：更高的预期未来收入 ⇒ 提高消费需求 ⇒ IS 右移</td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h2c">② 什么政策能动它</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:26%">政策</th><th style="width:10%">C 的方向</th><th>机制与图形后果</th></tr>
+        <tr><td><b>定额税 T₀ 上升</b></td><td class="dn">↓</td>
+          <td>C = A + c(Y − T₀) ⇒ <b>消费函数与 AD 平行下移 cΔT₀</b>；
+          <b>斜率不变 ⇒ 乘数不变</b></td></tr>
+        <tr><td><b>比例税率 t 上升</b></td><td class="dn">↓</td>
+          <td>斜率变为 c(1−t) ⇒ <b>AD 曲线变平坦</b>；<b>截距不变 ⇒ 乘数变小</b></td></tr>
+        <tr><td><b>降息（货币扩张）</b></td><td class="up">↑</td>
+          <td><b>财富效应</b>（实际余额↑ + 股债价↑）+ <b>信贷成本↓</b> ⇒ A 上移</td></tr>
+        <tr><td><b>转移支付增加</b></td><td class="up">↑</td>
+          <td>提高 Y<sub>d</sub>（NT = 税 − 转移支付）</td></tr>
+        <tr><td><b>再分配（富→穷）</b></td><td class="up">↑</td><td>穷人 APC 更高</td></tr>
+        <tr><td><b>银行冻结账户</b></td><td class="dn">↓</td>
+          <td>Tutorial 2 B11：<b>家庭无法动用储蓄</b> ⇒ <b>自主项 A 下降</b>
+          ⇒ AD <b>平行下移</b>（<b>不是</b>变陡！）</td></tr>
+        <tr><td><b>李嘉图等价情形下的减税</b></td><td class="nc">不变</td>
+          <td>家庭预期未来加税 ⇒ <b>present consumption may not adjust</b>，减税被储蓄抵消</td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h3c">③ 对应哪张图</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:30%">图</th><th style="width:28%">C 在图上是什么</th><th>去哪看</th></tr>
+        <tr><td><b>消费函数图</b></td><td>截距 = A，斜率 = c</td>
+          <td><a href="lectures/lecture-02.html#s2">L2 §2</a></td></tr>
+        <tr><td><b>储蓄函数图</b></td><td>C 的镜像：<b>截距 −A，斜率 1−c</b></td>
+          <td><a href="lectures/lecture-02.html#s3">L2 §3</a></td></tr>
+        <tr><td><b>45° 线图</b></td><td>AD = C + I 的主体；<b>AD 的斜率就是 C 的斜率</b></td>
+          <td><a href="lectures/lecture-02.html#s5">L2 §5</a></td></tr>
+        <tr><td><b>生命周期图</b></td><td>被平滑的<b>永久收入</b>水平线</td>
+          <td><a href="lectures/lecture-05.html#s10">L5 §10</a></td></tr>
+        <tr><td><b>IS-MP 图</b></td><td>C(r) 与 I(r) 共同使 IS 向下倾斜</td>
+          <td><a href="lectures/lecture-06.html#s2">L6 §2</a></td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h4c">④ 陷阱</span>
+      <div class="callout c-trap">
+        • <b>定额税使 AD 下移 cΔT₀，不是 ΔT₀</b>——多缴 1 元税只少花 c 元，另外 (1−c) 元是少储蓄。
+        <b>这正是税收乘数小于支出乘数、以及平衡预算乘数 = 1 的来源。</b><br>
+        • <b>c 与 c(1−t) 要分清</b>：题目问 "MPC out of disposable income" 还是 "out of income"。<br>
+        • <b>储蓄函数截距是 −A（负数）</b>，画在原点上方是常见失分点。<br>
+        • <b>收入变化 = 沿 AD 曲线移动</b>；其他因素变化才 <b>shift</b>。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="M">
+  <div class="sec-h"><span class="kicker">Variable 3</span><h2>M · 货币供给</h2></div>
+  <div class="card">
+    <div class="vhead">
+      <div class="vsym">M</div>
+      <div class="vname">Money Supply<small>MONEY STOCK</small></div>
+      <div class="vtag">L4 · L5 · L6 · L8</div>
+    </div>
+    <p class="lead"><b>定义</b>：<b>Money = Cash in circulation + Deposits</b>。
+    区别于<b>货币基础 H = Cash + Reserves</b>（央行的负债，可直接控制）。</p>
+
+    <div class="blk"><span class="blkh h1c">① 依赖什么</span>
+      <div class="fml"><span class="lab">核心恒等式</span>
+R = c<sub>b</sub>D（银行准备金），C = c<sub>p</sub>D（公众现金）
+<b>H = C + R = (c<sub>p</sub> + c<sub>b</sub>)D</b>       ← 央行控制
+<b>M = C + D = (c<sub>p</sub> + 1)D</b>
+
+<b>M = [(c<sub>p</sub> + 1)/(c<sub>p</sub> + c<sub>b</sub>)] × H = 货币乘数 × 货币基础</b>
+
+⇒ M 只依赖<b>三样东西</b>：<b>H（央行控）· c<sub>p</sub>（公众行为）· c<sub>b</sub>（银行行为）</b>
+   <b>c<sub>b</sub>↓ 或 c<sub>p</sub>↓ ⇒ 乘数↑ ⇒ 给定 H 下 M↑</b>
+      </div>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:22%">参数</th><th>由什么决定（课件原文要点）</th></tr>
+        <tr><td><b>c<sub>p</sub></b><br><span class="mk">公众现金/存款</span></td>
+          <td>• <b>Institutional factors</b>（企业发工资用支票还是现金）<br>
+          • 持有现金进行<b>无法追踪的支付、逃避税收</b>的动机<br>
+          • <b>信用卡</b>作为临时支付手段<b>减少现金使用</b>（使 c<sub>p</sub>↓）</td></tr>
+        <tr><td><b>c<sub>b</sub></b><br><span class="mk">银行准备金/存款</span></td>
+          <td>• <b>Required reserves</b>（货币当局规定）<br>
+          • <b>Excess reserves</b>（银行自愿超额持有）<br>
+          • <b>利差越高</b>，银行越想放贷、越愿冒险持有<b>更低</b>的准备金率<br>
+          • <b>提款越不可预测</b>、<b>高流动性贷款机会越少</b> ⇒ 必须持有<b>更高</b>准备金</td></tr>
+        <tr><td><b>H</b></td><td>央行通过 <b>OMO</b> 直接操作</td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h2c">② 什么政策能动它</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:26%">手段</th><th style="width:10%">M 的方向</th><th>机制</th></tr>
+        <tr><td><b>公开市场操作（OMO）</b><br><span class="mk">央行<b>买</b>债券</span></td><td class="up">↑</td>
+          <td>ΔH = +购买额 ⇒ <b>ΔM = 货币乘数 × ΔH</b>。<b>卖债券则相反（紧缩）</b>。
+          工具是 <b>repo</b>（sale and repurchase agreement）</td></tr>
+        <tr><td><b>准备金要求上调</b></td><td class="dn">↓</td>
+          <td>c<sub>b</sub>↑ ⇒ 乘数↓。<b>现在使用较少（now used less）</b></td></tr>
+        <tr><td><b>贴现率设为惩罚性利率</b></td><td class="dn">↓</td>
+          <td>促使商业银行<b>持有更多超额准备金</b> ⇒ c<sub>b</sub>↑ ⇒ 乘数↓</td></tr>
+        <tr><td><b>量化宽松 QE</b></td><td class="up">↑</td>
+          <td>大规模买入"安全"债券。<b>2008/5–2009/7 英国准备金 £27bn→£152bn（+£125bn），
+          广义货币 £1737bn→£2001bn（+£264bn）</b>——增幅<b>不只是</b>准备金的机械结果</td></tr>
+        <tr><td><b>银行竞争加剧</b></td><td class="up">↑</td>
+          <td>存款利率↑吸引资金入行 + 贷款利率↓刺激放贷 ⇒ 更多存款创造。<br>
+          <span class="mk">⚠️ 反向渠道：利差缩窄本身会降低银行放贷意愿</span></td></tr>
+        <tr><td><b>金融危机 / 信心崩溃</b></td><td class="dn">↓↓</td>
+          <td>银行囤积超额准备金 ⇒ <b>c<sub>b</sub> 暴涨 ⇒ 乘数崩塌</b>。
+          课件反事实：<b>若准备金不变，广义货币会跌到原来的六分之一</b></td></tr>
+      </table></div>
+      <div class="callout c-exam"><span class="t">🎯 关于 M 最重要的一条政策命题</span>
+        <b>央行可以设定利率<u>或</u>货币供给之一，但不能同时独立设定两者</b>——
+        因为 (r, L) 是<b>同一条 LL 曲线上的同一个点</b>。<br>
+        且因为<b>货币乘数由私人行为（c<sub>p</sub>、c<sub>b</sub>）决定</b>，央行<b>控制不了 M</b>，
+        <b>所以现代央行选择设定利率、被动供给均衡货币量。</b>
+      </div>
+    </div>
+
+    <div class="blk"><span class="blkh h3c">③ 对应哪张图</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:30%">图</th><th style="width:30%">M 在图上是什么</th><th>去哪看</th></tr>
+        <tr><td><b>货币基础 → 货币供给 结构图</b></td><td>整张图就是 M 的分解</td>
+          <td><a href="lectures/lecture-04.html#s6">L4 §6</a></td></tr>
+        <tr><td><b>货币市场 LL / Mˢ 图</b></td><td><b>垂直的 Mˢ 线</b>（央行决定 M/P）</td>
+          <td><a href="lectures/lecture-05.html#s4">L5 §4</a></td></tr>
+        <tr><td><b>LM 曲线</b></td><td>货币扩张 ⇒ <b>LM 右移</b>（央行控 M 的旧框架）</td>
+          <td><a href="lectures/lecture-06.html#s4">L6 §4</a></td></tr>
+        <tr><td><b>MP 曲线</b></td><td><b>M 不在图上！</b>央行定 r，<b>M 被动供给</b></td>
+          <td><a href="lectures/lecture-06.html#s5">L6 §5</a></td></tr>
+      </table></div>
+      <div class="callout c-trap"><span class="t">⚠️ 这是 IS-MP 最反直觉、也最常考的一点</span>
+        <b>货币需求的变化不移动 MP 曲线。</b>课件自问自答：
+        <b>"How does a shift in money demand affect our IS-MP diagram? <u>It doesn't!</u>"</b><br>
+        央行会<b>等量改变货币供给来容纳它</b>，以保持既定的 r–Y 关系。
+        <b>同样的冲击在 IS-LM 中会移动 LM 并改变均衡，在 IS-MP 中什么都不变。</b>
+      </div>
+    </div>
+
+    <div class="blk"><span class="blkh h4c">④ 陷阱</span>
+      <div class="callout c-trap">
+        • <b>M0 只含公众手中的现金，不含银行金库里的准备金</b>——
+        题目给 "banks' cash reserves" 就是用来骗你的。<br>
+        • <b>货币基础 ≠ 货币供给</b>：H 的第二项是<b>准备金 R</b>，M 的第二项是<b>存款 D</b>。<br>
+        • <b>货币乘数不是常数</b>（2008 年崩塌是铁证）。<br>
+        • 一般式是 <b>(c<sub>p</sub>+1)/(c<sub>p</sub>+c<sub>b</sub>)</b>；
+        <b>只有 c<sub>p</sub> = 0 时才退化为 1/c<sub>b</sub></b>。<br>
+        • <b>信用卡不是货币</b>，但它<b>降低 c<sub>p</sub> ⇒ 提高乘数</b>。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pi">
+  <div class="sec-h"><span class="kicker">Variable 4</span><h2>π · 通胀</h2></div>
+  <div class="card">
+    <div class="vhead">
+      <div class="vsym">π</div>
+      <div class="vname">Inflation<small>RATE OF CHANGE OF THE PRICE LEVEL</small></div>
+      <div class="vtag">L7 · L8 · L1</div>
+    </div>
+    <p class="lead"><b>定义</b>：a process in which <b>the general price level</b> is rising，
+    即 <b>ΔP/P</b>。注意是<b>一般价格水平</b>，不是某一商品的价格。
+    <b>Pure inflation</b> = 商品与投入品价格<b>以同一速率</b>上升。</p>
+
+    <div class="blk"><span class="blkh h1c">① 依赖什么</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:20%">时间尺度</th><th style="width:28%">决定式</th><th>说明</th></tr>
+        <tr><td><b>长期</b></td><td><b>MV = PY ⇒ ΔP/P = ΔM/M</b></td>
+          <td><b>货币数量论</b>——<b>a LONG-RUN proposition</b>：名义货币供给的变化带来
+          <b>等量的</b>价格水平变化，<b>但对产出与就业没有影响</b></td></tr>
+        <tr><td><b>短期</b></td><td>AD ∩ SAS 的交点</td>
+          <td>长期关系<b>会被打破</b>，两个原因：<b>① 流通速度 V 是可变的 ② 价格是迟缓的（sluggish）</b></td></tr>
+        <tr><td><b>短期菲利普斯</b></td><td>SRPC 的<b>位置</b></td>
+          <td><b>The position of the SRPC depends on EXPECTED INFLATION</b>。
+          SRPC 与 LRPC 相交处 = <b>实际通胀 = 预期通胀</b></td></tr>
+        <tr><td><b>供给侧</b></td><td>SAS 的位置</td>
+          <td>由<b>继承的名义工资增长率</b>与<b>短期生产成本（如油价）</b>决定</td></tr>
+        <tr><td><b>与利率的关系</b></td><td><b>r = i − π</b>（Fisher）</td>
+          <td><b>Fisher 假说：实际利率变化不大</b> ⇒ π↑1% 时 i↑约 1%</td></tr>
+      </table></div>
+      <div class="callout c-exam"><span class="t">🎯 因果方向取决于央行的政策框架（essay 加分点）</span>
+        <b>"Correlation is not causation."</b> MV = PY ⟺ M/P = Y/V 对"谁引起谁"<b>保持不可知</b>：<br>
+        • 央行<b>以货币量为中介目标</b> ⇒ <b>因果由货币流向价格</b>；<br>
+        • 央行<b>盯通胀</b> ⇒ <b>因果由价格流向货币</b>（货币被动供给）。
+      </div>
+    </div>
+
+    <div class="blk"><span class="blkh h2c">② 什么政策能动它</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:26%">政策 / 冲击</th><th style="width:10%">π 的方向</th><th>机制</th></tr>
+        <tr><td><b>货币紧缩</b>（Taylor rule）</td><td class="dn">↓</td>
+          <td><b>r − r* = a(π−π*) + b(Y−Y*)</b>；名义形式 <b>i − i* = (1+a)(π−π*) + b(Y−Y*)</b>。
+          <b>(1+a) &gt; 1 ⇒ 名义利率必须涨得比通胀更多，实际利率才真的上升</b></td></tr>
+        <tr><td><b>rr 曲线上移</b>（更紧的政策）</td><td class="dn">↓</td>
+          <td>在每一个通胀率上都设更高的利率 ⇒ AD 左移</td></tr>
+        <tr><td><b>央行独立性 / 可信度</b></td><td class="dn">↓</td>
+          <td><b>降低预期通胀 ⇒ SRPC 下移 ⇒ 反通胀的失业代价更小</b>。
+          英国 <b>1997 年起由 MPC 按通胀预测设定利率</b></td></tr>
+        <tr><td><b>不可持续的财政赤字</b></td><td class="up">↑↑</td>
+          <td>借不到新债 ⇒ <b>必须印钞维持支出</b> ⇒ 持续货币增长 ⇒ <b>恶性通胀</b></td></tr>
+        <tr><td><b>不利供给冲击（油价）</b></td><td class="up">↑</td>
+          <td>SAS 左上移 ⇒ <b>滞胀</b>（π↑ 且 Y↓）。<b>暂时性冲击长期会自行退回</b></td></tr>
+        <tr><td><b>有利供给冲击（技术）</b></td><td class="dn">↓</td>
+          <td>LAS 与 SAS 右移；<b>央行须永久降息移动 AD 才能守住通胀目标</b></td></tr>
+        <tr><td><b>Incomes policy</b></td><td class="dn">↓（暂时）</td>
+          <td><b>只能暂时性冻结工资上涨</b>，不是长期解</td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h3c">③ 对应哪张图</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:30%">图</th><th style="width:30%">π 在图上是什么</th><th>去哪看</th></tr>
+        <tr><td><b>AS-AD 图</b></td><td><b>纵轴就是 π</b>（本课程用通胀，不是价格水平 P！）</td>
+          <td><a href="lectures/lecture-07.html#s2">L7 §2</a></td></tr>
+        <tr><td><b>菲利普斯曲线图</b></td><td>纵轴 π，横轴 U</td>
+          <td><a href="lectures/lecture-08.html#s7">L8 §7</a></td></tr>
+        <tr><td><b>rr 曲线</b></td><td><b>横轴是 π</b>，纵轴是实际利率</td>
+          <td><a href="lectures/lecture-07.html#s2">L7 §2</a></td></tr>
+        <tr><td><b>通胀税拉弗曲线</b></td><td>横轴 π，纵轴 π × (M/P)</td>
+          <td><a href="lectures/lecture-08.html#s6">L8 §6</a></td></tr>
+        <tr><td><b>AS-AD ↔ PC 双图</b></td><td><b>同一个 π 出现在两张图的纵轴上</b></td>
+          <td><a href="lectures/lecture-08.html#s8">L8 §8</a></td></tr>
+      </table></div>
+      <div class="callout c-trap"><span class="t">⚠️ 本课程 AD 曲线向下倾斜的原因很特别</span>
+        <b>不是</b>"价格上升使实际货币余额下降"，<b>而是央行的政策反应</b>：<br>
+        <b>π↑ ⇒（按 rr/Taylor 规则）央行提高实际利率 ⇒ C↓、I↓ ⇒ AD↓</b><br>
+        写成"实际余额效应"会被判用错模型。
+      </div>
+    </div>
+
+    <div class="blk"><span class="blkh h4c">④ 陷阱</span>
+      <div class="callout c-trap">
+        • <b>价格水平的一次性上升 ≠ 持续的通胀</b>。供给冲击只能解释<b>初始的涨价</b>，
+        <b>持续的通胀必须伴随持续的货币供给增长</b>。<br>
+        • <b>数量论是长期命题</b>，短期因 V 可变与价格黏性而失效。<br>
+        • <b>SRPC 的位置由"预期通胀"决定</b>，不是由失业率决定。<br>
+        • <b>通胀越高，通胀税收入未必越多</b>——超过临界点后<b>实际余额萎缩更快，收入反而下降</b>。<br>
+        • <b>通胀成本三分法</b>：已预期+已适应（shoe-leather、menu）／已预期+未适应（fiscal drag、税收扭曲）／
+        <b>未预期（再分配 + 不确定性抑制投资 ← 课程称最重要）</b>。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="U">
+  <div class="sec-h"><span class="kicker">Variable 5</span><h2>U · 失业</h2></div>
+  <div class="card">
+    <div class="vhead">
+      <div class="vsym">U</div>
+      <div class="vname">Unemployment<small>UNEMPLOYMENT RATE</small></div>
+      <div class="vtag">L9 · L7 · L8 · L11</div>
+    </div>
+    <p class="lead"><b>定义</b>：the percentage of <b>the labour force</b> without a job but
+    <b>registered as being willing and available for work</b>。<br>
+    <b>拆解：实际 U = U*（自然率，自愿）+ 周期性失业（需求不足，非自愿）</b></p>
+
+    <div class="blk"><span class="blkh h1c">① 依赖什么</span>
+      <div class="fml"><span class="lab">两层结构</span>
+<b>U* = frictional + structural</b>（劳动力市场均衡时的失业，<b>完全是自愿的</b>）
+   图上 = 在均衡工资 w* 处，<b>LF 与 AJ 之间的水平距离</b>
+
+<b>U* 的四个决定因素（课件原文）</b>：
+   <b>normal labour market turnover · structural mismatch · union power ·
+   incentives in the labour market</b>
+
+<b>周期性失业 = 实际 U − U*</b>（unemployment gap），由<b>总需求不足</b>造成
+      </div>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:24%">因素</th><th style="width:10%">对 U 的影响</th><th>机制 / 图形</th></tr>
+        <tr><td><b>失业救济金（替代率）</b></td><td class="up">↑</td>
+          <td>降低搜寻成本 ⇒ <b>AJ 左移</b>（远离 LF）⇒ 均衡失业扩大</td></tr>
+        <tr><td><b>税楔（income tax）</b></td><td class="up">↑</td>
+          <td>企业付 w₁ 而工人拿 w₃ ⇒ 就业降到 N₁，失业 = BC &gt; 无税时的 EF</td></tr>
+        <tr><td><b>工会力量</b></td><td class="up">↑</td>
+          <td>把实际工资顶在 w₂ &gt; w* ⇒ <b>古典失业</b> AC</td></tr>
+        <tr><td><b>结构性错配</b></td><td class="up">↑</td>
+          <td>减少对工人现有技能的需求 ⇒ <b>LD 下移</b> ⇒ 均衡失业由 AB 增到 CD</td></tr>
+        <tr><td><b>总需求</b></td><td class="dn">↓</td>
+          <td>AD↑ ⇒ Y↑ ⇒ 周期性失业下降（<b>但只能到 U* 为止</b>）</td></tr>
+        <tr><td><b>技术进步</b></td><td class="dn">↓</td>
+          <td>提高劳动生产率 ⇒ 降低自然率。<b>"几千年的技术进步早该把失业推到 100%"</b></td></tr>
+        <tr><td><b>效率工资</b></td><td class="up">↑</td>
+          <td>企业<b>故意</b>把工资定在出清水平之上以防偷懒
+          ⇒ <b>这种失业无法通过工资弹性消除</b></td></tr>
+      </table></div>
+      <div class="fml"><span class="lab">奥肯定律（Okun's Law）——U 对 Y 的<b>非对称</b>反应</span>
+产出（总需求）增加 <b>1%</b> ⇒ 就业上升<b>不到 1%</b> ⇒ 失业率下降<b>更少</b>
+
+原因：<b>衰退中灰心工人退出劳动力</b>（失业率的变化被低估）；
+      <b>繁荣中劳动力外的人可能加入也可能不加入</b>
+      ——<b>创造 100 个岗位不等于消除 100 个失业者</b>
+      </div>
+    </div>
+
+    <div class="blk"><span class="blkh h2c">② 什么政策能动它</span>
+      <div class="callout c-exam"><span class="t">🎯 政策匹配的黄金判据（几乎所有失业题都用它）</span>
+        <b>先判断失业的类型，再选政策：</b><br>
+        • <b>需求不足型（周期性）</b> ⇒ <b>需求政策有效</b>（财政 / 货币扩张）<br>
+        • <b>摩擦性 + 结构性（即 U* 本身）</b> ⇒ <b>需求政策无效</b>（只推高通胀，LRPC 垂直），
+          <b>必须用供给侧政策</b><br>
+        • <b>古典失业</b> ⇒ 需消除工资刚性的来源（工会力量、最低工资）
+      </div>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:26%">政策</th><th style="width:10%">U 的方向</th><th>作用于哪一部分</th></tr>
+        <tr><td><b>财政 / 货币扩张</b></td><td class="dn">↓</td>
+          <td><b>只能消除 unemployment gap（周期性部分）</b>，<b>动不了 U*</b></td></tr>
+        <tr><td><b>减税（缩小税楔）</b></td><td class="dn">↓</td><td><b>U*</b>（供给侧）</td></tr>
+        <tr><td><b>降低失业救济 / 替代率</b></td><td class="dn">↓</td><td><b>U*</b>：AJ 右移</td></tr>
+        <tr><td><b>工会改革</b></td><td class="dn">↓</td><td><b>U*</b>：减少劳动力市场扭曲</td></tr>
+        <tr><td><b>培训与再培训、提高市场效率</b></td><td class="dn">↓</td>
+          <td><b>U*</b>：直接减少<b>摩擦性与结构性</b>失业</td></tr>
+        <tr><td><b>央行激进加息</b></td><td class="up">↑</td>
+          <td>AD↓ ⇒ <b>周期性失业上升</b>（考题常问这个）</td></tr>
+        <tr><td><b>反通胀（降低通胀目标）</b></td><td class="up">↑（短期）</td>
+          <td>沿 SRPC 下移到 U &gt; U*；<b>预期调整后回到 U*</b>。
+          <b>这段代价的大小取决于可信度</b></td></tr>
+      </table></div>
+      <div class="callout c-exam"><span class="t">🎯 Hysteresis —— 打破上面判据的王牌</span>
+        <b>短期的总需求下降可能永久性抬高 U* 本身</b>，四条渠道：<br>
+        <b>① 内部人—外部人</b>（只有在职者参与工资谈判）<b>② 灰心工人</b>（停止找工作）
+        <b>③ 搜寻与错配</b>（习惯了低搜寻强度）<b>④ 资本存量</b>（衰退中低投资 ⇒ 永久性低资本存量）<br>
+        ⇒ <b>若存在滞后效应，及时的需求政策具有长期的供给侧收益</b>，
+        需求政策与供给政策的界限模糊了。
+      </div>
+    </div>
+
+    <div class="blk"><span class="blkh h3c">③ 对应哪张图</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:30%">图</th><th style="width:32%">U 在图上是什么</th><th>去哪看</th></tr>
+        <tr><td><b>LD / AJ / LF 劳动市场图</b></td>
+          <td><b>在 w* 处 AJ 与 LF 的水平距离 = U*</b>；需求下降后多出的一段 = 凯恩斯失业</td>
+          <td><a href="lectures/lecture-09.html#s5">L9 §5</a></td></tr>
+        <tr><td><b>菲利普斯曲线图</b></td><td><b>横轴就是 U</b>；LRPC 垂直于 U*</td>
+          <td><a href="lectures/lecture-08.html#s7">L8 §7</a></td></tr>
+        <tr><td><b>劳动力市场流量图</b></td><td>失业是<b>存量</b>，由流入流出决定</td>
+          <td><a href="lectures/lecture-09.html#s2">L9 §2</a></td></tr>
+        <tr><td><b>税楔图 / 失业救济图</b></td><td>供给侧政策如何缩小 AJ–LF 间距</td>
+          <td><a href="lectures/lecture-09.html#s8">L9 §8</a></td></tr>
+        <tr><td><b>AS-AD 图</b></td><td><b>U 不直接在图上</b>；<b>Y &lt; Y* ⟺ U &gt; U*</b></td>
+          <td><a href="lectures/lecture-07.html#s4">L7 §4</a></td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h4c">④ 陷阱</span>
+      <div class="callout c-trap">
+        • <b>U* 完全是自愿的</b>，且<b>不包含</b>需求不足型失业。<br>
+        • <b>参与率的分母是"工作年龄人口"，失业率的分母是"劳动力"</b>——两者不同。<br>
+        • <b>灰心工人退出劳动力 ⇒ 统计失业率反而下降</b>，但就业并未改善。<br>
+        • <b>古典失业：个体视角非自愿，集体视角自愿</b>（高工资是劳动力集体自己选的）。<br>
+        • <b>身心障碍无法工作者</b>在经济学口径里算<b>自愿失业</b>（不在 AJ 上）。<br>
+        • <b>失业持续时间上升 = 流出率下降</b>，说明问题在<b>流出</b>不在流入。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="e">
+  <div class="sec-h"><span class="kicker">Variable 6</span><h2>e · 汇率</h2></div>
+  <div class="card">
+    <div class="vhead">
+      <div class="vsym">e</div>
+      <div class="vname">Exchange Rate<small>EXCHANGE RATE</small></div>
+      <div class="vtag">L12 + 若干 Tutorial 讨论</div>
+    </div>
+
+    <div class="callout c-trap"><span class="t">⚠️ 先说清楚汇率在 ECO120 里的地位</span>
+      <b>汇率不是本课程建模的核心变量。</b>课程<b>没有</b> Mundell-Fleming 模型、
+      <b>没有</b> BP 曲线、<b>没有</b>利率平价、<b>没有</b>外汇市场供求图。<br>
+      它只在<b>三处</b>出现，且<b>全部是定性讨论或简单换算</b>：<br>
+      <b>① Lecture 12 §6</b> 的汇率换算表（决定比较优势能否实现）<br>
+      <b>② Lecture 12 §1</b> 的 1930 年代 competitive devaluations<br>
+      <b>③ 若干 Tutorial 的 essay 论点</b>（希腊、苏格兰、"我们样样没竞争力"）<br><br>
+      <b>⇒ 不会考汇率计算题；但它是几道 essay 里的关键论点，必须会用。</b>
+      Tutorial 11 Q8 甚至明确写 <b>"we assume the two countries share a common currency:
+      this allows us to ignore the exchange rate."</b>
+    </div>
+
+    <div class="blk"><span class="blkh h1c">① 依赖什么 / 它决定什么</span>
+      <div class="fml"><span class="lab">Lecture 12 §6 的唯一定量内容</span>
+表中给出三档汇率：<b>¥8/$、¥6/$、¥4.8/$</b>
+
+<b>"The higher the EXR, the cheaper the Chinese goods valued in $."</b>
+<b>"With an EXR of ¥6/$, the US (China) is exporting cars (shirts) to China (US)."</b>
+
+<b>核心逻辑</b>：比较优势告诉我们<b>谁"应该"出口什么</b>，
+        但<b>实际的贸易方向由价格（即汇率）决定</b>。
+        <b>只有当汇率落在两国机会成本之间时，比较优势预测的贸易格局才会实现。</b>
+      </div>
+      <div class="fml"><span class="lab">验算（用 Lecture 12 的数字）</span>
+美国：汽车 $1,000，衬衫 $50 ⇒ <b>1 car = 20 shirts</b>
+中国：汽车 ¥8,000，衬衫 ¥240 ⇒ <b>1 car ≈ 33.3 shirts</b>
+
+在 <b>¥6/$</b>：中国汽车 = $1,333（<b>贵于</b>美国的 $1,000）
+            中国衬衫 = $40（<b>便宜于</b>美国的 $50）
+⇒ <b>美国出口汽车、中国出口衬衫</b> ✓ 与比较优势一致
+      </div>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:26%">情形</th><th>汇率扮演的角色</th></tr>
+        <tr><td><b>浮动汇率</b></td>
+          <td>Tutorial 11 Q5(a)：<b>"There is ALWAYS an equilibrium exchange rate that makes it profitable to
+          export the goods in which a country has a comparative advantage."</b><br>
+          ⇒ 用来反驳<b>"我们在所有产品上都没竞争力"</b>这个谬误</td></tr>
+        <tr><td><b>固定汇率 / 货币联盟</b></td>
+          <td>Tutorial 7 Q4（苏格兰入欧元区）：名义汇率固定，
+          <b>但实际汇率仍能通过通胀差异调整</b>——繁荣 ⇒ 通胀高于伙伴国 ⇒
+          <b>竞争力下降 ⇒ 净出口下降 ⇒ 通过乘数压低 AD</b>。<b>但这个机制很慢。</b></td></tr>
+        <tr><td><b>退出货币联盟</b></td>
+          <td>Tutorial 6 Q3(b)（希腊）：<b>汇率大幅贬值 ⇒ 出口竞争力上升 ⇒ IS 上移</b>；
+          <b>通胀与贬值还会降低债务的实际价值</b>，使未来偿还更容易</td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h2c">② 什么政策能动它</span>
+      <div class="tw"><table class="vt">
+        <tr><th style="width:26%">政策</th><th style="width:14%">效果</th><th>机制与后果</th></tr>
+        <tr><td><b>贬值（devaluation）</b></td><td class="up">出口竞争力↑</td>
+          <td>本国商品以外币计更便宜 ⇒ X↑、Z↓ ⇒ <b>注入线上移 / IS 右移 ⇒ Y↑</b></td></tr>
+        <tr><td><b>竞争性贬值</b></td><td class="dn">全体受损</td>
+          <td><b>1930 年代：关税战 + 一系列竞争性贬值最终摧毁世界贸易、对谁都没好处</b>。
+          与关税报复同属<b>以邻为壑</b></td></tr>
+        <tr><td><b>加入货币联盟</b></td><td class="dn">失去工具</td>
+          <td><b>放弃名义汇率与独立货币政策</b>（MP 曲线变<b>水平</b>）
+          ⇒ 只能靠<b>通胀差异</b>缓慢调整实际汇率</td></tr>
+        <tr><td><b>货币扩张（浮动汇率下）</b></td><td class="up">倾向贬值</td>
+          <td>课程未建模，但可作为 essay 里的一句补充</td></tr>
+      </table></div>
+    </div>
+
+    <div class="blk"><span class="blkh h3c">③ 对应哪张图</span>
+      <div class="callout c-tip"><span class="t">💡 <b>汇率没有专属的图</b>——要借别的图来表达</span>
+        <div class="tw" style="margin-top:8px"><table class="vt">
+          <tr><th style="width:34%">想表达什么</th><th>借哪张图</th></tr>
+          <tr><td>贬值提振出口 ⇒ 产出上升</td>
+            <td><b>漏出 = 注入图</b>：<b>I+G+X 线上移</b>
+            （<a href="lectures/lecture-03.html#s11">L3 §11</a>）<br>
+            或 <b>IS-MP 图</b>：<b>IS 右移</b>（<a href="lectures/lecture-06.html#s8">L6 §8</a>）</td></tr>
+          <tr><td>竞争力下降 ⇒ 净出口下降</td>
+            <td><b>漏出 = 注入图</b>：注入线下移（同贸易战报复的画法）</td></tr>
+          <tr><td>货币联盟内无法用汇率</td>
+            <td><b>IS-MP 图 + 水平的 MP 曲线</b>
+            （<a href="tutorials/tutorial-06.html">Tutorial 6 Q3</a> 的希腊图）</td></tr>
+          <tr><td>汇率与比较优势</td><td><b>无图</b>，用<b>单位劳动成本换算表</b>
+            （<a href="lectures/lecture-12.html#s6">L12 §6</a>）</td></tr>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="blk"><span class="blkh h4c">④ 考试怎么用</span>
+      <div class="callout c-exam"><span class="t">🎯 汇率在 essay 里的三个固定用法（背这三句）</span>
+        <b>① 反驳"样样没竞争力"：</b><br>
+        <i>"There is always an <b>equilibrium exchange rate</b> that makes it profitable to export the goods in
+        which a country has a <b>comparative advantage</b>."</i><br><br>
+        <b>② 讨论退出货币联盟 / 危机国：</b><br>
+        <i>"The exchange rate would probably <b>depreciate heavily, boosting export competitiveness</b> and shifting
+        the IS schedule upwards. Inflation and depreciation would also <b>reduce the real value of the debt</b>,
+        making future repayments easier."</i><br><br>
+        <b>③ 讨论贸易战 / 保护主义的历史教训：</b><br>
+        <i>"World trade was destroyed in the 1930s by a <b>tariff war and a series of competitive devaluations</b>
+        that eventually benefited nobody."</i>
+      </div>
+      <div class="callout c-trap"><span class="t">⚠️ 不要在 ECO120 的卷子上写</span>
+        <b>利率平价、Mundell-Fleming、BP 曲线、J 曲线、马歇尔—勒纳条件</b>——
+        <b>课件里都没有</b>。写了不加分，还可能显得没读课件。
+        <b>坚持用课程自己的工具：比较优势、漏出=注入、IS-MP。</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="net">
+  <div class="sec-h"><span class="kicker">Connections</span><h2>🔗 五条联动链（把六个变量串起来）</h2></div>
+  <div class="card">
+    <p class="lead">单个变量查完，还要知道<b>它们怎么互相传导</b>。这五条链覆盖了 Section B 几乎所有的分析题。</p>
+
+    <h3>① 货币政策链</h3>
+    <div class="chain">OMO 买债券 → <b>H</b>↑ → ×货币乘数 → <b>M</b>↑ → <b>r</b>↓
+  → <b>I</b>↑（沿 II 曲线）+ <b>C</b>↑（财富效应 + 信贷成本↓）
+  → AD↑ → <b>Y</b>↑ → <b>U</b>↓（奥肯，幅度更小）→ <b>π</b>↑</div>
+    <div class="callout c-tip"><span class="t">反馈回路（最容易漏的一环）</span>
+      <b>Y↑ ⇒ 交易性货币需求↑ ⇒ 通过债券市场 r 部分回升 ⇒ 抵消部分最初的扩张。</b>
+      净效应仍是 Y↑，<b>除非 C 与 I 都对 r 不敏感</b>。
+    </div>
+
+    <h3 style="margin-top:22px">② 财政政策链（挤出）</h3>
+    <div class="chain"><b>G</b>↑ → AD↑ → IS 右移 <b>kΔG</b> → <b>Y</b>↑
+  → 货币需求↑ → 沿 MP 曲线 <b>r</b>↑
+  → <b>I</b>↓、<b>C</b>↓（<b>crowding out</b>）
+  → 最终 Y₁ &lt; Y′（简单乘数的预测）</div>
+    <div class="callout c-tip"><span class="t">两个极端</span>
+      <b>MP 垂直</b>（完全产出稳定）⇒ <b>完全挤出，ΔY = 0</b>；
+      <b>MP 水平</b>（钉住利率 / 欧元区成员）⇒ <b>零挤出，ΔY = kΔG</b>。
+    </div>
+
+    <h3 style="margin-top:22px">③ 供给冲击链（滞胀与自我修复）</h3>
+    <div class="chain">油价↑ → 生产成本↑ → <b>SAS 左上移</b>（<b>LAS 不动</b>）
+  → <b>π</b>↑ 且 <b>Y</b>↓（<b>stagflation</b>）→ <b>U</b>↑
+  → 劳动市场松弛 → <b>名义工资增长率↓</b> → SAS 移回
+  → 沿 AD 下移 → 回到 <b>Y*</b>、<b>U*</b>、原来的 π</div>
+    <div class="callout c-tip"><span class="t">关键限定</span>
+      <b>因为 LAS 与 LRPC 都没动，冲击会自行退回</b>——但很慢
+      （工资<b>头几个月给定 → 约 2 年开始调整 → 4–6 年出清</b>）。
+      <b>永久性供给冲击则 LAS 与 SAS 同时移动，不会退回。</b>
+    </div>
+
+    <h3 style="margin-top:22px">④ 贸易政策链（关税与报复）</h3>
+    <div class="chain">加关税 → <b>z</b>↓ → 漏出线变平坦 → 乘数 <b>k</b>↑ → <b>Y</b>↑（A→B）
+  ⚠️ 但 <b>本国进口 = 他国出口</b>
+  → 他国报复 → <b>X</b>↓ → 注入线下移 → <b>Y</b>↓（B→D，可能低于起点）
+  → "nobody gains employment but world trade disappears"</div>
+
+    <h3 style="margin-top:22px">⑤ 长期增长链（与前四条不同：动的是 Y* 本身）</h3>
+    <div class="chain">储蓄率 <b>s</b>↑ → sy 曲线上移 → sy &gt; nk → <b>资本深化</b>
+  → 稳态 <b>k*</b>↑、<b>y*</b>↑（<b>水平效应</b>）
+  → 但长期<b>增长率仍是 n</b>（或含技术进步时的 t）
+  ⚠️ 例外：<b>AK 模型（α=1）中 g = sA − n，s 永久影响增长率</b></div>
+    <div class="callout c-trap"><span class="t">⚠️ 与链条 ① ② 的根本区别</span>
+      前四条链动的是 <b>Y 相对于 Y* 的位置</b>（短期、需求侧）；
+      第五条动的是 <b>Y* 本身</b>（长期、供给侧）。<br>
+      <b>把两者混为一谈是最严重的概念错误</b>——例如"财政扩张能提高长期增长率"就是错的。
+    </div>
+  </div>
+</section>
+
+<section id="howto">
+  <div class="sec-h"><span class="kicker">Usage</span><h2>🎯 考场用法</h2></div>
+  <div class="card">
+    <h3>拿到「X 会怎么变？」这类问题时，按四步走</h3>
+    <div class="model">
+      <div class="step"><span class="h">① 定位变量</span>
+        <p>题目问的是 <b>I / C / M / π / U</b> 中的哪一个？（<b>汇率</b>基本只在贸易 essay 里出现）</p>
+      </div>
+      <div class="step"><span class="h">② 查"依赖什么"</span>
+        <p>写出<b>函数形式</b>，指出题目改动的是<b>哪一个自变量</b>——
+        这一步就是英式评分里的 <b>definition marks</b>。</p>
+      </div>
+      <div class="step"><span class="h">③ 查"对应哪张图"</span>
+        <p>画出来，标注<b>坐标轴、曲线名、E₀ → E₁、移动方向箭头</b>，
+        并<b>在正文里用文字交代图上发生了什么</b>。</p>
+      </div>
+      <div class="step"><span class="h">④ 查"什么政策能动它" + 联动链</span>
+        <p>沿链条写出<b>分步因果</b>，最后给<b>净效应的方向与大小</b>，
+        并说明它<b>依赖什么条件</b>（弹性、斜率、短期/长期）。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:24px">三个最常见的问法与对应入口</h3>
+    <div class="tw"><table class="vt">
+      <tr><th style="width:34%">题目长这样</th><th>查哪里</th></tr>
+      <tr><td>"How might aggressive interest rate hikes affect unemployment?"
+        <span class="mk">（典型考题）</span></td>
+        <td><a href="#U">U</a> 的政策表 + <a href="#net">链条 ①</a> 反向：
+        r↑ ⇒ I↓C↓ ⇒ AD↓ ⇒ Y↓ ⇒ <b>周期性失业↑</b></td></tr>
+      <tr><td>"How did supply chain disruptions affect the SRAS curve and price levels?"
+        <span class="mk">（典型考题）</span></td>
+        <td><a href="#pi">π</a> 的政策表 + <a href="#net">链条 ③</a>：
+        成本↑ ⇒ <b>SAS 左上移，LAS 不动</b> ⇒ 滞胀</td></tr>
+      <tr><td>"Explain how the monetary authorities might try to affect the size of money supply."
+        <span class="mk">（典型考题）</span></td>
+        <td><a href="#M">M</a> 的政策表：<b>三种手段 + 为什么控制不了乘数</b></td></tr>
+    </table></div>
+
+    <div class="callout c-exam" style="margin-top:20px"><span class="t">🎯 一句话总纲</span>
+      <b>ECO120 的 Section B 本质上只在做一件事：给定一个冲击，追踪它沿着这六个变量传导的路径。</b><br>
+      <b>索引告诉你「往哪走」，Lecture 页的答题范例告诉你「怎么用英文写出来」。</b>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="index.html">← 总目录</a>
+  <a href="mcq-drill.html">查缺补漏 MCQ →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

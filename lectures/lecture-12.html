@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 12 · International Trade — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 贸易格局与世界贸易</a>
+  <a class="nav" href="#s2">2 · 国际贸易公平吗</a>
+  <a class="nav" href="#s3">3 · 比较优势：核心定义 ⭐⭐</a>
+  <a class="nav" href="#s4">4 · 一要素两商品例题 ⭐⭐</a>
+  <a class="nav" href="#s5">5 · 贸易利得的计算 ⭐</a>
+  <a class="nav" href="#s6">6 · 汇率与贸易方向</a>
+  <a class="nav" href="#s7">7 · 多商品与两要素模型</a>
+  <a class="nav" href="#s8">8 · 产业内贸易 ⭐</a>
+  <a class="nav" href="#s9">9 · 关税的经济效应 ⭐⭐⭐</a>
+  <a class="nav" href="#s10">10 · 支持关税的论据 ⭐⭐</a>
+  <a class="nav" href="#s11">11 · 其他贸易政策与出口补贴 ⭐</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例（关税福利）</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 12 · International Trade</h1>
+  <div class="sub">比较优势 · 贸易利得 · 产业内贸易 · 关税的福利分析 · 出口补贴</div>
+  <div>
+    <span class="tag">39 slides</span>
+    <span class="tag">Begg Ch.28</span>
+    <span class="tag">练习见 EOC Ch23 Solutions</span>
+    <span class="tag b-hot">⭐⭐ 真题 B4 关税题核心</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">Lecture 3 只是把 X 与 Z 加进了凯恩斯模型，从未问过<b>"为什么会有贸易"</b>。
+    本讲从<b>微观</b>层面回答两个问题：<b>贸易的原因是什么？限制贸易的政策会带来什么后果？</b></p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+先看事实（贸易增长、格局变化、服务贸易兴起）
+   ↓ 贸易为什么发生？<b>因为各国的机会成本不同</b>
+   ↓ <b>比较优势法则</b>：专业化于<b>相对成本较低</b>的产品
+        ⚠️ 关键：<b>看的是相对成本，不是绝对成本</b>
+   ↓ 用一要素两商品例题算出<b>贸易利得是纯粹的增益（pure gain）</b>
+   ↓ 扩展：多商品（按相对 ULR 排序）、两要素（<b>要素禀赋</b>决定专业化方向）
+   ↓ 但现实中大量贸易是<b>同一产业内的双向贸易</b> ⇒ <b>产业内贸易</b>
+        （消费者偏好多样性 + 规模经济 + 地理因素）
+   ↓ 既然贸易有利，为什么还要限制？⇒ <b>贸易政策</b>
+   ↓ <b>关税的福利分析</b>：转移（给政府、给生产者）+ <b>净社会损失 A 与 B</b>
+   ↓ 支持关税的论据：<b>好论据只有"最优关税"（first-best）</b>，
+        其余全是 <b>second-best</b>（有更好的直接工具）——<b>targeting principle</b>
+   ↓ 其他手段：配额、非关税壁垒、<b>出口补贴</b>
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：Lecture 3 Slide 34 的"进口是否抢工作 + 报复"是本讲的<b>宏观版本</b>；
+      本讲 Slide 3 的"1930 年代关税战摧毁世界贸易"正是那一页的历史证据。<br>
+      <b>本讲是全课程最后一讲</b>，也是真题 <b>B4（关税计算 + 福利分析）</b>的直接来源。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slides 3–6</span><h2>1 · 贸易格局与世界贸易的事实</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 开篇的历史教训（可作 essay 的引子与结尾）</span>
+      <b>"World trade was destroyed in the 1930s by a TARIFF WAR and a series of COMPETITIVE DEVALUATIONS
+      that eventually benefited NOBODY."</b><br>
+      —— 与 Lecture 3 的 "nobody gains employment but world trade disappears" 完全呼应。
+    </div>
+
+    <h3>关键数据（背几个就够用）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:34%">事实</th><th>数据</th></tr>
+      <tr><td>1950 年后世界贸易增长</td>
+        <td>Slide 3：<b>年均 6%</b>；Slide 4：<b>自 1950 年以来年均 8%</b></td></tr>
+      <tr><td>出口占 GDP 比重</td>
+        <td><b>1950–2017 年间在多数国家大幅上升</b>；
+        <b>英国 1967–2017 由 18% 升至 31%</b></td></tr>
+      <tr><td>开放程度</td>
+        <td><b>除最大的几个国家（US、Japan、China）外，各国现在对国际贸易非常开放</b></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 5</span>贸易格局 1980 → 2008（% of world exports）</h3>
+    <div class="tw"><table>
+      <tr><th rowspan="2" style="width:26%">Origin of exports</th><th colspan="2">1980（Destination）</th><th colspan="2">2008（Destination）</th></tr>
+      <tr><th>Developed</th><th>Other</th><th>Developed</th><th>Other</th></tr>
+      <tr><td><b>Developed Countries</b></td><td><b>50</b></td><td>21</td><td><b>41</b></td><td>16</td></tr>
+      <tr><td><b>Other</b></td><td>21</td><td>8</td><td>24</td><td><b>19</b></td></tr>
+    </table></div>
+    <ul>
+      <li><b>直到 1980 年，发达国家仍是世界出口 71% 的来源地与目的地，其中大部分是它们彼此之间的贸易。</b></li>
+      <li><b>新兴市场经济体（如 BRIC）的快速增长，以及前苏联与东欧的经济自由化，改变了贸易格局。</b>
+        （注意表中 Other→Other 由 8% 升至 <b>19%</b>，增幅最大。）</li>
+      <li><b>中国在近 35 年里享有接近每年 10% 的人均收入增长，
+        正在打破所有从"非常贫穷"到"接近富裕"的转型纪录。</b></li>
+    </ul>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 6</span>贸易的商品构成</h3>
+    <ul>
+      <li><b>1955 年服务在跨境国际贸易中是可忽略的组成部分，但已增长到全部贸易的近四分之一。</b></li>
+      <li><b>货物贸易（merchandise trade）在绝对量上大幅增长，但占世界贸易总额的份额下降。</b></li>
+    </ul>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 8–9</span><h2>2 · 国际贸易公平吗（五个议题）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:26%">议题</th><th>内容</th></tr>
+      <tr><td><b>① Raw materials prices</b><br>原材料价格</td>
+        <td><b>欠发达国家（LDCs）声称受到工业国的剥削</b>——
+        例如<b>廉价买入原材料、高价卖出制成品</b></td></tr>
+      <tr><td><b>② Agricultural protection</b><br>农业保护</td>
+        <td><b>富国的农民同时从补贴与关税保护中获益</b>；<br>
+        <b>LDCs 声称其后果是：它们只能以比原本更低的价格卖出更少的东西</b></td></tr>
+      <tr><td><b>③ Manufactured exports from LDCs</b><br>LDC 的制成品出口</td>
+        <td><b>一些 LDCs 在出口制成品上取得成功</b>，
+        <b>导致工业国抱怨其就业岗位受到威胁</b></td></tr>
+      <tr><td><b>④ Globalisation</b><br>全球化</td>
+        <td><b>更低的运输成本与更好的信息技术，正逐渐打破国家市场的分割，
+        提高国家之间的竞争</b>；<b>关税的下降强化了这一趋势</b></td></tr>
+      <tr><td><b>⑤ A level playing field?</b><br>公平的竞争环境？</td>
+        <td><b>LDCs 感到这一进程在很大程度上是由富国按其自身利益主导的</b>；<br>
+        它们主张：<b>通过降低富国的农业保护来提高对 LDC 出口品的需求，将极大地帮助 LDCs</b></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slide 11</span><h2>3 · 比较优势：四个核心定义 ⭐⭐（定义题必考）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:28%">术语</th><th>课件定义（英文必背）</th></tr>
+      <tr><td><b>Opportunity cost of a good</b><br>某商品的机会成本</td>
+        <td><b>the quantity of OTHER goods sacrificed to make ONE MORE UNIT of that good</b></td></tr>
+      <tr><td><b>贸易的收益来源</b></td>
+        <td><b>Trade offers benefits when there are INTERNATIONAL DIFFERENCES in the opportunity cost of goods.</b></td></tr>
+      <tr><td><b>Absolute advantage</b><br>绝对优势</td>
+        <td><b>means a country is the LOWEST-COST PRODUCER of that good</b></td></tr>
+      <tr><td><b>The law of comparative advantage</b><br>比较优势法则</td>
+        <td><b>states that countries should SPECIALISE in producing and exporting the goods that they produce
+        at a LOWER RELATIVE COST than other countries</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 全讲最重要的一句话</span>
+      <b>贸易的基础是"相对"成本的差异，不是"绝对"成本的差异。</b><br>
+      即使一国在所有商品上都有绝对优势（生产率都更高），只要<b>相对生产率</b>有差异，
+      <b>双方仍然都能从贸易中获益</b>。这是本讲所有题目的核心。
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 12–14</span><h2>4 · 一要素两商品例题 ⭐⭐（务必背下这张表）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%"></th><th>US</th><th>China</th></tr>
+      <tr><td colspan="3" style="background:rgba(108,139,255,.08)"><b>Unit labour requirement (hrs/output unit)</b></td></tr>
+      <tr><td>Cars</td><td><b>100</b></td><td><b>200</b></td></tr>
+      <tr><td>Shirts</td><td><b>5</b></td><td><b>6</b></td></tr>
+      <tr><td colspan="3" style="background:rgba(108,139,255,.08)"><b>Wage per hour</b></td></tr>
+      <tr><td></td><td>$10</td><td>¥40</td></tr>
+      <tr><td colspan="3" style="background:rgba(108,139,255,.08)"><b>Unit labour cost</b></td></tr>
+      <tr><td>Cars</td><td>$1,000</td><td>¥8,000</td></tr>
+      <tr><td>Shirts</td><td>$50</td><td>¥240</td></tr>
+      <tr><td colspan="3" style="background:rgba(108,139,255,.08)"><b>Opportunity cost</b></td></tr>
+      <tr><td>Cars</td><td><b>20 shirts</b></td><td><b>33.3 shirts</b></td></tr>
+      <tr><td>Shirts</td><td><b>1/20 Cars</b></td><td><b>6/200 Cars</b></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px">方法一：用相对单位劳动需求（Slide 13）</h3>
+    <div class="fml">
+• <b>美国在两种商品上都有绝对优势</b>（100 &lt; 200，5 &lt; 6）
+• <b>相对于中国，美国生产汽车所需的劳动比生产衬衫所需的劳动"更省"</b>
+• <b>US/China 的相对 ULR：汽车是 100/200 = 1/2；衬衫是 5/6</b>
+• <b>1/2 &lt; 5/6 ⇒ 美国在汽车上更具相对优势</b>
+• <b>相对生产率的差异正是国际贸易的基础</b>
+⇒ <b>美国（中国）在汽车（衬衫）上具有比较优势</b>
+    </div>
+
+    <h3 style="margin-top:20px">方法二：用机会成本（Slide 14，更直观）</h3>
+    <div class="fml"><span class="lab">机会成本怎么算</span>
+美国生产 1 辆车需 100 小时；这 100 小时本可生产 100/5 = <b>20 件衬衫</b>
+   ⇒ 美国汽车的机会成本 = <b>20 shirts</b>
+中国生产 1 辆车需 200 小时；这 200 小时本可生产 200/6 ≈ <b>33.3 件衬衫</b>
+   ⇒ 中国汽车的机会成本 = <b>33.3 shirts</b>
+
+<b>汽车的机会成本：US &lt; China</b>
+<b>衬衫的机会成本：US &gt; China</b>
+⇒ 在美国（中国），造汽车（衬衫）比造衬衫（汽车）<b>代价更小</b>
+⇒ <b>比较优势使中国专业化于衬衫、美国专业化于汽车 ⇒ 两国将进行贸易</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 考场上最快的判别法</span>
+      算<b>相对 ULR 比值</b>并<b>排序</b>：<br>
+      汽车 100/200 = <b>0.5</b>；衬衫 5/6 ≈ <b>0.83</b>。<br>
+      <b>比值最小的商品，美国有比较优势；比值最大的，中国有比较优势。</b>
+      多商品情形（第 7 节）用的就是这个排序方法。
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 15–17</span><h2>5 · 贸易利得的计算 ⭐（课件的完整算例）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">情形 A：无贸易（两国都生产两种商品）</span>
+基准：各用 <b>200 单位劳动</b>
+
+美国 200 小时：生产 <b>1 辆车（100h）+ 20 件衬衫（100h）</b>
+中国 200 小时：<b>要么 1 辆车，要么约 33 件衬衫</b>
+
+⇒ 无贸易时世界总产出 = <b>2 cars + 20 shirts</b>；或 <b>1 car + 53 shirts</b>
+    </div>
+    <div class="fml"><span class="lab">情形 B：完全专业化 + 贸易</span>
+美国只生产汽车：200h ÷ 100 = <b>2 cars</b>
+中国只生产衬衫：200h ÷ 6 ≈ <b>33 shirts</b>
+
+⇒ 世界总产出 = <b>2 cars + 33 shirts</b>
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 比较与结论（Slide 16–17，必背）</span>
+      • 无贸易：<b>2 cars + 20 shirts</b>；专业化后：<b>2 cars + 33 shirts</b>
+        ⇒ <b>多出 13 件衬衫，没有任何东西减少</b>。<br>
+      • 贸易后：<b>美国可以得到 1 car + 20 shirts 或更多</b>；
+        <b>中国可以得到 1 car + 13 shirts 或更少</b> ⇒ <b>世界经济获益</b>。<br>
+      • <b>Only when opportunity costs are EQUAL is there NO gain from trade.</b>
+        （只有当机会成本相等时才没有贸易利得）<br>
+      • <b>"Trade leads to a PURE GAIN with extra output to be shared between two countries."</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 答题时把"纯增益"说清楚</span>
+      贸易利得不是"一国得益、另一国受损"的零和转移，而是<b>世界总产出真的变多了</b>——
+      因为每件商品都改由<b>机会成本更低</b>的国家生产。至于这多出来的 13 件衬衫<b>如何在两国间分配</b>，
+      则取决于<b>贸易条件（terms of trade）</b>——也就是下一节的汇率问题。
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slide 18</span><h2>6 · 汇率如何决定贸易方向</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">课件的三点</span>
+表中给出了在三种不同汇率下（<b>¥8/$、¥6/$、¥4.8/$</b>）
+汽车与衬衫以人民币计的单位劳动成本与价格，<b>以美元计的中国商品价格因而不同</b>。
+
+• <b>汇率越高（¥/$ 越大），以美元计的中国商品越便宜。</b>
+• <b>在 ¥6/$ 的汇率下，美国（中国）向中国（美国）出口汽车（衬衫）。</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 这一页想说明什么</span>
+      比较优势告诉我们<b>谁"应该"出口什么</b>，但<b>实际的贸易方向由价格（即汇率）决定</b>。<br>
+      <b>只有当汇率落在两国机会成本之间时，比较优势预测的贸易格局才会实现。</b><br>
+      验算：美国汽车 $1,000，衬衫 $50 ⇒ 1 car = 20 shirts；
+      中国 ¥8,000 与 ¥240 ⇒ 1 car ≈ 33.3 shirts。<br>
+      在 ¥6/$ 时，中国汽车 = $1,333（贵于美国的 $1,000），中国衬衫 = $40（便宜于美国的 $50）
+      ⇒ <b>美国出口汽车、中国出口衬衫</b> ✓ 与比较优势一致。<br>
+      若汇率极端（如 ¥8/$），中国所有商品都变便宜，贸易格局就可能被扭曲——
+      这正是 Slide 3 说的 <b>"competitive devaluations"（竞争性贬值）</b>为什么有害。
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slides 19–21</span><h2>7 · 多商品与两要素模型</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 19</span>一要素、多商品（按相对 ULR 排序）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">商品</th><th>US ULR</th><th>UK ULR</th><th><b>US/UK 相对 ULR</b></th></tr>
+      <tr><td>Computers</td><td>200</td><td>1200</td><td><b>1/6 ≈ 0.17</b></td></tr>
+      <tr><td>Cars</td><td>300</td><td>600</td><td><b>1/2 = 0.50</b></td></tr>
+      <tr><td>TVs</td><td>50</td><td>90</td><td><b>5/9 ≈ 0.56</b></td></tr>
+      <tr><td>Textiles</td><td>5</td><td>8</td><td><b>5/8 = 0.625</b></td></tr>
+      <tr><td>Glass</td><td>7</td><td>6</td><td><b>7/6 ≈ 1.17</b></td></tr>
+      <tr><td>Shoes</td><td>15</td><td>10</td><td><b>3/2 = 1.50</b></td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 多商品模型怎么读</span>
+      商品已按<b>相对 ULR 从小到大</b>排列。<b>比值越小，美国的比较优势越强。</b><br>
+      <b>相对工资率</b>决定"分界线"落在哪里：<b>分界线左边的商品由美国出口，右边的由英国出口</b>。
+      如果美国工资是英国的 <b>w</b> 倍，则美国出口所有满足 <b>US/UK 相对 ULR &lt; 1/w</b> 的商品。<br>
+      注意 <b>Glass 与 Shoes 的比值 &gt; 1</b>——这两项英国有<b>绝对</b>优势，必定由英国出口。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 20–21</span>两要素：要素禀赋决定专业化方向</h3>
+    <div class="fml"><span class="lab">课件原文（必背）</span>
+• <b>国家之间的一个重要差异在于要素禀赋（factor endowments），
+  这会反映在不同的相对要素价格上。</b>
+• 例如，若与 B 国相比，<b>A 国资本相对丰裕、劳动相对稀缺</b>：
+  → <b>A 国将倾向于专业化于资本密集型商品</b>
+  → <b>B 国将倾向于专业化于劳动密集型产品</b>
+• <b>比较优势也可能反映技术上的相对优势。</b>
+    </div>
+    <p>Slide 21 的经验证据：</p>
+    <ul>
+      <li><b>土地稀缺但技能丰裕的国家，其出口中制成品的份额很高。</b></li>
+      <li><b>土地多但技能少的国家，通常出口原材料。</b></li>
+    </ul>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slides 23–26</span><h2>8 · 产业内贸易（Intra-industry trade）⭐</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义与三个原因（Slide 24，必背）</span>
+      <b>Intra-industry trade is TWO-WAY trade in goods made within the SAME industry</b>，它反映了三个因素：<br>
+      ① <b>Consumers like a wide choice of brands</b>（消费者喜欢广泛的品牌选择）<br>
+      ② <b>Economies of scale</b>（规模经济）<br>
+      ③ <b>Limitation due to geographical factors</b>（地理因素的限制）
+    </div>
+    <div class="fml"><span class="lab">Slide 24 的两条重要命题</span>
+• <b>商品越是无差异（如原材料），贸易格局就越反映基于相对资源丰裕度的比较优势。</b>
+• <b>在制成品（如汽车）中，产品差异化相对于比较优势，在贸易格局中扮演更重要的角色。</b>
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 25</span>产业内贸易指数</h3>
+    <div class="fml">
+为衡量产业内贸易的重要性，定义一个指数：
+
+<b>指数 = 0</b>：某商品的贸易<b>完全是单向的</b>——一国要么出口该商品、要么进口，<b>但不同时进行</b>
+<b>指数 = 1</b>：某商品存在<b>完全的双向贸易</b>——一国进口该商品的量<b>等于</b>其出口量
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 26</span>四条趋势性结论</h3>
+    <ul>
+      <li><b>更低的运输成本导致所有类别的产业内贸易都在增加。</b></li>
+      <li><b>最终产品的双向贸易反映了对规模经济的追求与对多样性的渴望。</b></li>
+      <li><b>中间产品双向贸易的重要性，很大程度上反映了国际价值链日益复杂精细。</b></li>
+      <li><b>市场一体化得越紧密、障碍（如距离与关税）越低，产业内贸易就越多。</b></li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 为什么产业内贸易是对比较优势理论的"补充"而非"否定"</span>
+      比较优势解释的是<b>不同产业之间</b>的贸易（英国出口机器、进口香蕉），
+      它预测<b>相似的国家之间贸易应该很少</b>。<br>
+      但事实是<b>发达国家之间的贸易占了大头</b>（Slide 5 表格：1980 年 50%），且多为同一产业内。
+      产业内贸易理论用<b>规模经济 + 产品差异化</b>补上了这个缺口。
+      <b>答题时两者一起写，才是完整答案。</b>
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 28–31</span><h2>9 · 关税的经济效应与福利成本 ⭐⭐⭐（真题 B4 核心）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">Slide 28：两个定义</span>
+• 各国可以从<b>专业化与贸易中获益</b>，<b>但并非所有国家的获益都相同</b>。
+• <b>Commercial policy</b> is <b>government policy that influences international trade through
+  TAXES or SUBSIDIES</b>（如关税），<b>or through DIRECT RESTRICTIONS on imports and exports</b>。
+    </div>
+
+    <h3><span class="slide-no">Slide 29</span>关税的数量效应（四步）</h3>
+    <div class="fml">
+DD 与 SS 是该商品的<b>国内需求与国内供给</b>。
+<b>自由贸易</b>下，世界价格为 <b>P<sub>w</sub></b>：
+  • 国内企业供给 <b>Q<sub>s</sub></b>
+  • 国内需求为 <b>Q<sub>d</sub></b>
+  • <b>两者之差即为进口</b>
+
+<b>关税可以刺激国内供给并限制进口。</b>
+在国内价格 <b>P<sub>w</sub> + T</b>（T 为关税额）下：
+  • <b>国内需求下降到 Q<sub>d</sub>′</b>
+  • <b>国内供给上升到 Q<sub>s</sub>′</b>
+  • <b>进口下降</b>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 560 340" role="img" aria-label="Welfare cost of a tariff">
+        <line class="ax" x1="80" y1="290" x2="520" y2="290"/>
+        <line class="ax" x1="80" y1="290" x2="80" y2="28"/>
+        <text class="lbl" x="410" y="313">Quantity</text>
+        <text class="lbl" x="30" y="44">Price</text>
+        <line x1="110" y1="278" x2="440" y2="48" class="cv c-as"/>
+        <text class="lbl" x="404" y="44" fill="#ff5c7a">SS</text>
+        <line x1="110" y1="52" x2="480" y2="272" class="cv c-ad"/>
+        <text class="lbl" x="446" y="286" fill="#6c8bff">DD</text>
+        <line x1="80" y1="212" x2="500" y2="212" stroke="#8089bd" stroke-width="1.6"/>
+        <text class="lbl" x="44" y="216">P<tspan baseline-shift="sub" font-size="9">w</tspan></text>
+        <line x1="80" y1="166" x2="500" y2="166" stroke="#ffb454" stroke-width="1.6"/>
+        <text class="lbl" x="24" y="170">P<tspan baseline-shift="sub" font-size="9">w</tspan>+T</text>
+        <!-- intersections -->
+        <circle class="pt" cx="205" cy="212" r="4"/><text class="lbl-s" x="196" y="306">Q<tspan baseline-shift="sub" font-size="8">s</tspan></text>
+        <line x1="205" y1="212" x2="205" y2="290" class="dsh"/>
+        <circle class="pt" cx="271" cy="166" r="4"/><text class="lbl-s" x="258" y="306">Q<tspan baseline-shift="sub" font-size="8">s</tspan>′</text>
+        <line x1="271" y1="166" x2="271" y2="290" class="dsh"/>
+        <circle class="pt" cx="302" cy="166" r="4"/><text class="lbl-s" x="292" y="306">Q<tspan baseline-shift="sub" font-size="8">d</tspan>′</text>
+        <line x1="302" y1="166" x2="302" y2="290" class="dsh"/>
+        <circle class="pt" cx="380" cy="212" r="4"/><text class="lbl-s" x="372" y="306">Q<tspan baseline-shift="sub" font-size="8">d</tspan></text>
+        <line x1="380" y1="212" x2="380" y2="290" class="dsh"/>
+        <!-- triangle A -->
+        <polygon points="205,212 271,212 271,166" fill="rgba(255,92,122,.35)" stroke="#ff5c7a"/>
+        <text class="lbl" x="238" y="206" fill="#fff">A</text>
+        <!-- triangle B -->
+        <polygon points="302,212 380,212 302,166" fill="rgba(255,92,122,.35)" stroke="#ff5c7a"/>
+        <text class="lbl" x="312" y="206" fill="#fff">B</text>
+        <!-- revenue rectangle -->
+        <rect x="271" y="166" width="31" height="46" fill="rgba(51,214,166,.3)" stroke="#33d6a6"/>
+        <text class="lbl-s" x="316" y="140" fill="#33d6a6">政府关税收入</text>
+        <line x1="300" y1="146" x2="288" y2="164" class="dsh" stroke="#33d6a6"/>
+        <text class="lbl-s" x="110" y="126" fill="#ffb454">生产者剩余增加（转移）</text>
+      </svg>
+      <figcaption>Figure 12.1 — 关税的福利分析。<b>绿色矩形</b>是转移给政府的关税收入；
+      <b>红色三角形 A 与 B 是净社会损失（deadweight loss）</b>。</figcaption>
+    </figure>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 30</span>福利成本：转移 vs 净损失 ⭐⭐</h3>
+    <div class="fml"><span class="lab">课件原文（这一段是答题的骨架）</span>
+<b>关税同时导致"转移"与"净社会损失"。</b>
+
+【转移 transfers】（不是净损失，只是从一群人到另一群人）
+  • <b>政府取得收入——即向政府的一笔转移</b>
+  • <b>以额外利润的形式向生产者的一笔转移</b>
+
+【净社会损失 net social losses】
+  • <b>存在来自生产无效率的社会成本</b>，因为<b>该商品本可以按 P<sub>w</sub> 进口</b>
+  • <b>以及消费者剩余的损失</b>
+
+<b>A = 社会为生产本可更便宜地进口的商品而多花掉的金额</b>
+  (the amount society spends by producing goods it could import more cheaply)
+<b>B = 被损失掉的、消费者收益超出社会边际成本的那部分</b>
+  (the excess of consumer benefits over social marginal cost that is lost)
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 31</span>关税的分配后果（结论段）</h3>
+    <ul>
+      <li><b>资源从消费者转移到生产者与政府。</b></li>
+      <li><b>由于价格上升与产出减少，消费者剩余被损失掉。</b></li>
+      <li><b>这就是支持自由贸易、反对关税的论据的实质。</b></li>
+      <li><b>在 GATT（关税与贸易总协定）之下，关税已大幅下降。</b></li>
+    </ul>
+    <div class="callout c-exam"><span class="t">🎯 真题 B4 的标准答题步骤</span>
+      真题常给 <b>Qd = 100 − p，Qs = 20 + p</b> 一类的线性方程 + 世界价格 + 关税额，要求算福利。
+      标准步骤：<br>
+      <b>① 自由贸易均衡</b>：代入 P<sub>w</sub> 求 Q<sub>s</sub>、Q<sub>d</sub>，<b>进口 = Q<sub>d</sub> − Q<sub>s</sub></b>。<br>
+      <b>② 加关税后</b>：价格变成 P<sub>w</sub> + T，重算 Q<sub>s</sub>′、Q<sub>d</sub>′ 与新进口量。<br>
+      <b>③ 政府收入</b> = <b>T × 新进口量</b>（图中绿色矩形）。<br>
+      <b>④ 净损失</b> = 三角形 A + 三角形 B = <b>½ × T × (Q<sub>s</sub>′ − Q<sub>s</sub>) + ½ × T × (Q<sub>d</sub> − Q<sub>d</sub>′)</b>。<br>
+      <b>⑤ 生产者剩余增加</b> = 梯形，<b>是转移不是净损失</b>——务必说明这一点。<br>
+      <b>⑥ 陷阱题（prohibitive tariff）</b>：若关税高到使 <b>P<sub>w</sub> + T ≥ 国内自给自足均衡价格</b>，
+      则<b>进口 = 0 ⇒ 政府关税收入 = 0</b>，但净损失<b>达到最大</b>。
+      这就是"禁止性关税陷阱"——<b>先检查加税后进口量是否仍为正</b>，再套公式。
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slides 32, 34–36</span><h2>10 · 支持关税的论据：好论据与次优论据 ⭐⭐</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 32</span>好论据：最优关税（The optimal tariff）</h3>
+    <div class="fml"><span class="lab">这是<b>唯一</b>的 first-best 论据</span>
+<b>Optimal tariff</b>
+  • 是一个 <b>first-best argument</b>（最优论据）
+  • <b>只在进口国大到足以影响世界价格时才成立</b>
+  • <b>最优关税把进口减少到"社会边际成本 = 社会边际收益"的水平</b>
+
+<b>这项政策符合 the PRINCIPLE OF TARGETING（针对性原则）：</b>
+  <b>达成某一给定目标最有效的方式，是使用直接影响该项活动的政策。</b>
+  <b>那些能达成目标、但同时影响其他活动的政策是 SECOND-BEST 的，
+  因为它们扭曲了那些其他活动</b>（例：<b>Trump's trade war</b>）。
+    </div>
+    <div class="callout c-tip"><span class="t">💡 特朗普贸易战的例子（Slide 33，很好用的实例）</span>
+      <b>钢铁价格 ↑ ⇒ 美国钢铁产业 ↑，但其他（使用钢铁的）产业 ↓。</b><br>
+      这正是"针对性原则"被违背的典型：目标是保护钢铁业，但关税<b>同时扭曲了所有下游产业</b>。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 34–36</span>次优论据（second-best arguments）——每条都有更好的替代工具</h3>
+    <div class="tw"><table>
+      <tr><th style="width:24%">论据</th><th>内容</th><th style="width:28%">更好的工具</th></tr>
+      <tr><td><b>① 保护"传统"生活方式</b></td>
+        <td>试图保存<b>传统的生活方式</b></td>
+        <td><b>a production subsidy would be better</b>（生产补贴更好——直接补贴生产而不扭曲消费）</td></tr>
+      <tr><td><b>② 抑制奢侈品</b></td>
+        <td>试图<b>抑制贫穷社会中富人的消费模式</b></td>
+        <td>批评者认为<b>改变富人的消费模式，用 consumption tax（消费税）更好</b></td></tr>
+      <tr><td><b>③ Infant industries</b><br>幼稚产业</td>
+        <td><b>关税使受保护的幼稚产业得以发展成能在国际市场上竞争的高效产业</b>；<br>
+        <b>→ 但这通过更高的价格伤害了国内消费者</b></td>
+        <td><b>a temporary production subsidy probably better</b>（临时性生产补贴可能更好）</td></tr>
+      <tr><td><b>④ Revenue</b><br>财政收入</td>
+        <td><b>关税可以增加政府收入</b></td>
+        <td><b>"筹集政府收入本身并不能构成关税的正当理由"</b>
+        （直接征税更有效）</td></tr>
+      <tr><td><b>⑤ Strategic trade policy</b></td><td>战略性贸易政策</td><td>—</td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 "评价关税"类 essay 的万能框架</span>
+      <b>①</b> 先画图算出福利：<b>转移（政府 + 生产者）+ 净损失 A、B</b>；<br>
+      <b>②</b> 承认<b>唯一的 first-best 论据是最优关税</b>，但注明其前提：<b>本国必须大到能影响世界价格</b>；<br>
+      <b>③</b> 逐条列出 second-best 论据，并<b>指出每一条都有更直接的工具</b>（针对性原则）；<br>
+      <b>④</b> 加上宏观层面的<b>报复风险</b>（Lecture 3：nobody gains employment but world trade disappears；
+      本讲 Slide 3：1930 年代关税战摧毁世界贸易）；<br>
+      <b>⑤</b> 结论：<b>除大国的最优关税外，关税几乎总是次优的</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="sec-h"><span class="kicker">Slides 37–38</span><h2>11 · 其他商业政策与出口补贴 ⭐</h2></div>
+  <div class="card">
+    <p><b>尽管在 GATT 之下关税税率已经下降，但其他贸易限制却大量增加：</b></p>
+    <div class="tw"><table>
+      <tr><th style="width:26%">手段</th><th>定义</th></tr>
+      <tr><td><b>Quotas</b><br>配额</td><td><b>restrict the QUANTITY of imports</b>（限制进口的数量）</td></tr>
+      <tr><td><b>Non-tariff barriers</b><br>非关税壁垒</td>
+        <td><b>administrative regulations that discriminate against foreign goods</b>
+        （歧视外国商品的行政法规），例如<b>在边境延迟进口、本国商品偏好（home-goods bias）</b></td></tr>
+      <tr><td><b>Export subsidies</b><br>出口补贴</td>
+        <td><b>government assistance to domestic firms in competing with foreign firms</b></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 38</span>出口补贴的福利分析</h3>
+    <div class="fml"><span class="lab">课件原文（对照关税图来记）</span>
+<b>自由贸易下</b>，世界价格为 P<sub>w</sub>：
+  • 消费者需求 <b>Q<sub>d</sub></b>
+  • 生产为 <b>Q<sub>s</sub></b>
+  • <b>出口为 GE</b>
+
+<b>有补贴时</b>（国内价格升至 P<sub>w</sub> + s）：
+  • <b>生产者生产 Q<sub>s</sub>′，向国内市场供给 Q<sub>d</sub>′</b>
+  • <b>出口上升到 AB</b>
+
+<b>社会成本来自：生产无效率（production inefficiency）+ 消费者剩余的损失。</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 出口补贴与关税的对照（比较题很爱考）</span>
+      <div class="tw"><table style="margin-top:8px">
+        <tr><th style="width:22%"></th><th>关税（进口品）</th><th>出口补贴（出口品）</th></tr>
+        <tr><td>国内价格</td><td><b>上升</b>到 P<sub>w</sub> + T</td><td><b>上升</b>到 P<sub>w</sub> + s</td></tr>
+        <tr><td>国内生产</td><td><b>上升</b></td><td><b>上升</b></td></tr>
+        <tr><td>国内消费</td><td><b>下降</b></td><td><b>下降</b></td></tr>
+        <tr><td>政府财政</td><td><b>获得收入</b>（+）</td><td><b>支出补贴</b>（−）</td></tr>
+        <tr><td>净社会损失</td><td>两个三角形 A、B</td><td>两个三角形（生产无效率 + 消费者剩余损失）</td></tr>
+      </table></div>
+      <b>关键差别：关税给政府带来收入，出口补贴则要政府掏钱</b>——
+      所以出口补贴对本国而言<b>福利损失更大</b>（政府的净支出也要算进去）。
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">比较优势</span>
+机会成本 = 为多生产一单位该商品而<b>牺牲的其他商品数量</b>
+<b>Absolute advantage</b>：最低成本生产者
+<b>Comparative advantage</b>：<b>相对</b>成本更低 ⇒ 应专业化并出口
+判别法①：算 <b>A国/B国 相对 ULR</b> 并排序，<b>比值最小的商品 A 国有比较优势</b>
+判别法②：算<b>机会成本</b>，<b>机会成本更低的国家有比较优势</b>
+<b>只有机会成本相等时才没有贸易利得</b>
+    </div>
+    <div class="fml"><span class="lab">课件例题（US / China）</span>
+ULR：Cars 100 / 200，Shirts 5 / 6
+相对 ULR：Cars 1/2，Shirts 5/6 ⇒ <b>US 有汽车的比较优势</b>
+机会成本：Cars 20 vs 33.3 shirts；Shirts 1/20 vs 6/200 cars
+无贸易（各 200h）：2 cars + 20 shirts
+专业化后：<b>2 cars + 33 shirts ⇒ 纯增益 13 shirts</b>
+    </div>
+    <div class="fml"><span class="lab">关税（B4 计算步骤）</span>
+自由贸易：P = P<sub>w</sub> ⇒ 进口 = Q<sub>d</sub> − Q<sub>s</sub>
+加关税：P = P<sub>w</sub> + T ⇒ Q<sub>s</sub>′↑，Q<sub>d</sub>′↓，进口↓
+<b>政府收入 = T × 新进口量</b>（矩形，<b>转移</b>）
+生产者剩余增加 = 梯形（<b>转移</b>）
+<b>净损失 = A + B = ½T(Q<sub>s</sub>′−Q<sub>s</sub>) + ½T(Q<sub>d</sub>−Q<sub>d</sub>′)</b>
+<b>A</b> = 生产无效率；<b>B</b> = 消费者收益超出社会边际成本的损失
+⚠️ <b>禁止性关税</b>：进口 = 0 ⇒ <b>政府收入 = 0</b>，净损失最大
+    </div>
+    <div class="fml"><span class="lab">关税论据</span>
+<b>First-best（唯一）：optimal tariff</b>——须本国<b>大到能影响世界价格</b>
+<b>Principle of targeting</b>：<b>用直接影响该活动的政策最有效</b>；
+  同时影响其他活动的政策是 <b>second-best</b>
+<b>Second-best</b>：传统生活方式（→生产补贴）· 抑制奢侈（→消费税）·
+  幼稚产业（→临时生产补贴）· 财政收入（不构成理由）· 战略性贸易政策
+其他手段：<b>Quotas</b>（限量）· <b>Non-tariff barriers</b>（行政歧视）· <b>Export subsidies</b>
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>用绝对优势判断贸易方向</td><td>看的是<b>比较优势（相对成本）</b>；美国两样都有绝对优势仍会与中国贸易</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>把关税收入当成社会收益</td><td>关税收入只是<b>转移</b>；<b>净损失是三角形 A、B</b></td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>禁止性关税也套 T×进口量</td><td><b>进口 = 0 ⇒ 政府收入 = 0</b>；先检查加税后进口是否为正</td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>生产者剩余增加算作净收益</td><td>它是<b>从消费者转移过来的</b>，不是新增福利</td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>幼稚产业论证明关税正当</td><td>它是 <b>second-best</b>；<b>临时性生产补贴更好</b>（不扭曲消费）</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>关税能筹钱所以是好政策</td><td>课件明说<b>"筹集政府收入本身不构成关税的正当理由"</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>最优关税对小国也成立</td><td><b>只在进口国大到能影响世界价格</b>时才成立</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>产业内贸易否定比较优势</td><td>两者<b>互补</b>：无差异品看比较优势，差异化制成品看规模经济与多样性</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>出口补贴对本国有利</td><td>国内价格上升、消费者受损、<b>政府还要掏钱</b>，社会成本大</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>忘记报复的可能</td><td>1930 年代<b>关税战与竞争性贬值最终对谁都没好处</b>（呼应 Lecture 3）</td><td><span class="badge b-essay">Essay</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例（关税福利 —— 真题 B4 原型）</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span> <span class="badge b-calc">含计算</span></h3>
+    <p class="lead"><i>"A small open economy has domestic demand Q<sub>d</sub> = 100 − p and domestic supply
+    Q<sub>s</sub> = 20 + p. The world price is p = 20. (a) Find the free-trade level of imports. (b) The government
+    imposes a specific tariff of 10. Calculate domestic production, consumption, imports, tariff revenue and the
+    deadweight loss. (c) What would happen if the tariff were 30? (d) Evaluate the case for imposing the tariff."</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng">A <b>tariff</b> is a tax on imports and is one form of <b>commercial policy</b> — government
+        policy that influences international trade through taxes or subsidies, or through direct restrictions on
+        imports and exports. In a <b>small</b> open economy the world price <i>P<sub>w</sub></i> is given and the
+        country cannot affect it, so a specific tariff <i>T</i> simply raises the domestic price to
+        <i>P<sub>w</sub></i> + <i>T</i>. A <b>transfer</b> moves surplus between groups without destroying it; a
+        <b>deadweight loss</b> is surplus destroyed and captured by no one.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 (see Figure 12.1). Vertical axis = price; horizontal axis = quantity. DD and SS are
+        domestic demand and supply. At the world price <i>P<sub>w</sub></i>, domestic firms supply
+        <i>Q<sub>s</sub></i>, domestic demand is <i>Q<sub>d</sub></i>, and the difference is imported. The tariff
+        raises the domestic price to <i>P<sub>w</sub></i> + <i>T</i>: domestic supply rises to
+        <i>Q<sub>s</sub></i>′, domestic demand falls to <i>Q<sub>d</sub></i>′, and imports fall. The rectangle between
+        the two price lines over the new import volume is <b>tariff revenue</b> (a transfer to government); the
+        trapezium to its left is <b>extra producer surplus</b> (a transfer to producers); and the two triangles
+        <b>A</b> and <b>B</b> are the <b>net social losses</b>.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>(a) Free trade, p = 20.</b></p>
+        <div class="fml">Q<sub>s</sub> = 20 + 20 = <b>40</b>
+Q<sub>d</sub> = 100 − 20 = <b>80</b>
+<b>Imports = 80 − 40 = 40</b></div>
+
+        <p class="eng"><b>(b) Tariff T = 10, so the domestic price is p = 30.</b></p>
+        <div class="fml">Q<sub>s</sub>′ = 20 + 30 = <b>50</b>   (production rises by 10)
+Q<sub>d</sub>′ = 100 − 30 = <b>70</b>   (consumption falls by 10)
+<b>Imports = 70 − 50 = 20</b>   (halved)
+
+<b>Tariff revenue</b> = T × imports = 10 × 20 = <b>200</b>   — a transfer to government
+<b>Extra producer surplus</b> = ½(40 + 50) × 10 = <b>450</b> — a transfer from consumers
+<b>Loss of consumer surplus</b> = ½(70 + 80) × 10 = <b>750</b>
+
+<b>Deadweight loss</b>:
+  A (production inefficiency) = ½ × 10 × (50 − 40) = <b>50</b>
+  B (lost consumer surplus)   = ½ × 10 × (80 − 70) = <b>50</b>
+  <b>Total DWL = A + B = 100</b>
+
+Check: 750 (consumer loss) = 450 (producer gain) + 200 (revenue) + 100 (DWL) ✓</div>
+        <p class="eng"><b>Interpretation.</b> Following the course's description: <b>A</b> is "the amount society
+        spends by producing goods it could import more cheaply" — the extra 10 units are produced domestically at a
+        marginal cost above the world price of 20. <b>B</b> is "the excess of consumer benefits over social marginal
+        cost that is lost" — 10 units of consumption are choked off even though consumers valued them above the world
+        price. Note carefully that the 450 gained by producers and the 200 gained by government are <b>transfers, not
+        social gains</b>: resources are simply transferred from consumers to producers and government.</p>
+
+        <p class="eng"><b>(c) Tariff T = 30 — the prohibitive-tariff trap.</b> The domestic price would be 50. But the
+        <b>autarky</b> price, where domestic supply equals domestic demand, is found from</p>
+        <div class="fml">20 + p = 100 − p ⇒ 2p = 80 ⇒ <b>p<sup>autarky</sup> = 40</b>, Q = 60</div>
+        <p class="eng">Since <i>P<sub>w</sub></i> + <i>T</i> = 50 &gt; 40, the tariff is <b>prohibitive</b>: the
+        domestic price cannot rise above 40, because at 40 imports are already zero and no importer would pay the
+        tariff. So the effective outcome is autarky at p = 40, Q = 60, with</p>
+        <div class="fml"><b>Imports = 0</b>  ⇒  <b>Tariff revenue = 0</b>
+DWL = ½ × 20 × (60 − 40) + ½ × 20 × (80 − 60) = 200 + 200 = <b>400</b></div>
+        <p class="eng">This is the key trap: raising the tariff from 10 to 30 <b>quadruples</b> the deadweight loss
+        while <b>eliminating</b> tariff revenue entirely. A tariff that is "more protective" is not more useful even
+        on revenue grounds — indeed the revenue argument collapses precisely when the protection is most complete.</p>
+
+        <p class="eng"><b>(d) Evaluation.</b></p>
+        <ul>
+          <li class="eng"><b>The one first-best argument does not apply here.</b> The <b>optimal tariff</b> is a
+          first-best argument, but it is "only valid where the importing country is <b>large enough to affect the world
+          price</b>", reducing imports to the level where social marginal cost equals social marginal benefit. This
+          economy is <b>small</b>, so it cannot improve its terms of trade and the optimal tariff is zero.</li>
+          <li class="eng"><b>The remaining arguments are second-best.</b> By the <b>principle of targeting</b>, the most
+          efficient way to attain a given objective is a policy that influences that activity <b>directly</b>; policies
+          which attain the objective but also influence other activities are second-best because they distort those
+          other activities. Thus: protecting <b>traditional ways of life</b> would be better served by a
+          <b>production subsidy</b>; curbing <b>luxury consumption</b> by a <b>consumption tax</b>; and the
+          <b>infant industry</b> case — that protection allows an industry to develop into one that can compete
+          internationally — by a <b>temporary production subsidy</b>, since a tariff "hurts domestic consumers through
+          higher prices". Raising <b>revenue</b> "is not a justification for tariffs themselves", as part (c) shows
+          vividly.</li>
+          <li class="eng"><b>Distortion of other industries.</b> Trump's steel tariffs illustrate the targeting failure
+          exactly: the steel price rises and the US steel industry expands, but every downstream industry that uses
+          steel contracts.</li>
+          <li class="eng"><b>Retaliation.</b> The partial-equilibrium calculation above ignores the macroeconomic
+          consequence. As Lecture 3 shows, a lower import propensity raises equilibrium output only if other countries
+          do not retaliate; if they do, the demand for domestic exports falls and output ends up <b>lower</b> than
+          before — "in the end, nobody gains employment but world trade disappears." The historical evidence is
+          decisive: world trade "was destroyed in the 1930s by a tariff war and a series of competitive devaluations
+          that eventually benefited nobody."</li>
+        </ul>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">A tariff of 10 raises domestic production from 40 to 50 and cuts consumption from 80 to 70,
+        halving imports to 20. It transfers 450 to producers and 200 to government, but destroys 100 of surplus —
+        50 through production inefficiency (goods produced domestically that could have been imported more cheaply)
+        and 50 through forgone consumption. Raising the tariff to 30 makes it <b>prohibitive</b>: imports and tariff
+        revenue both fall to zero while the deadweight loss rises fourfold to 400.</p>
+        <p class="eng">The case for the tariff is therefore weak. The only <b>first-best</b> argument — the optimal
+        tariff — requires the country to be large enough to influence the world price, which by assumption it is not.
+        Every remaining argument is <b>second-best</b>: each objective could be attained more efficiently by a policy
+        that targets the relevant activity directly, without the additional distortion of consumption. Adding the
+        risk of retaliation and the historical record of the 1930s, the analysis supports the standard conclusion that
+        <b>resources are simply transferred from consumers to producers and government, with a net social loss — and
+        this is the essence of the case for free trade and against tariffs.</b> If the government's genuine objective
+        is to support this industry, a <b>temporary production subsidy</b> of the same magnitude would achieve the same
+        increase in domestic output while avoiding triangle B entirely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-11.html">← Lecture 11</a>
+  <a href="../index.html">总目录</a>
+  <a href="../tutorials/tutorial-01.html">Tutorial 1 →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

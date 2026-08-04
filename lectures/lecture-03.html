@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 3 · Fiscal Policy and Foreign Trade — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 关键术语（BD / 财政政策 / 国债）</a>
+  <a class="nav" href="#s2">2 · 加入 G：AD 上移</a>
+  <a class="nav" href="#s3">3 · 税的种类：定额税 vs 比例税 ⭐</a>
+  <a class="nav" href="#s4">4 · 含政府的均衡与新乘数</a>
+  <a class="nav" href="#s5">5 · 相机抉择 vs 自动稳定器 ⭐</a>
+  <a class="nav" href="#s6">6 · 财政政策的局限</a>
+  <a class="nav" href="#s7">7 · 预算赤字与财政立场 ⭐</a>
+  <a class="nav" href="#s8">8 · 债务可持续性</a>
+  <a class="nav" href="#s9">9 · 加入外贸部门</a>
+  <a class="nav" href="#s10">10 · 三部门完整乘数 ⭐</a>
+  <a class="nav" href="#s11">11 · 出口上升 & 进口是否抢工作</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-03.html">→ Tutorial 3</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 3 · Fiscal Policy and Foreign Trade</h1>
+  <div class="sub">45° 线模型加入政府与外贸部门 · 税收乘数 · 自动稳定器 · 财政立场</div>
+  <div>
+    <span class="tag">34 slides</span>
+    <span class="tag">Begg Ch.18</span>
+    <span class="tag">对应 Tutorial 3</span>
+    <span class="tag b-hot">⭐ 计算题重灾区</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">本讲把 Lecture 2 的两部门模型<b>扩充到四部门</b>。核心不是"多加两项"，
+    而是搞清楚：<b>哪些新变量只移动 AD 的截距，哪些改变 AD 的斜率（从而改变乘数）</b>。</p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+Lecture 2 的模型：AD = C + I，乘数 = 1/(1−c)
+   ↓ ① 加入 G（外生）      → 只上移截距，<b>乘数不变</b>
+   ↓ ② 加入定额税 T₀       → 只下移截距（下移 cT₀），<b>乘数不变</b>
+   ↓ ③ 加入比例税 tY       → <b>改变斜率</b>为 c(1−t)，<b>乘数变小</b>
+   ↓ ④ 加入进口 zY         → <b>再次改变斜率</b>，乘数进一步变小
+   ↓ 完整乘数 = 1/[1 − c(1−t) + z] = 1/(s + ct + z)
+   ↓ 由"斜率变小 ⇒ 乘数变小"引出 <b>自动稳定器</b>
+   ↓ 由 BD = G − tY 引出 <b>赤字不是财政立场的好指标</b> → 结构性预算
+   ↓ 由开放经济恒等式 I+G+X = S+NT+Z 讨论 <b>进口是否抢工作</b>（贸易战）
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：完全沿用 Lecture 2 的 45° 线框架与所有假设（价格固定、需求决定产出）。<br>
+      <b>启下</b>：本讲的 <b>Y* = k(A+I+G+X)</b> 就是 <b>Lecture 6</b> 中 IS 曲线的方程；
+      "挤出效应"（Lecture 6）正是要说明本讲算出的乘数<b>高估</b>了 ΔG 的真实效果。
+      "进口抢工作 + 报复"那一页则直通 <b>Lecture 12</b> 的关税福利分析。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slide 4</span><h2>1 · 四个关键术语（定义题送分）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:24%">术语</th><th>课件定义（英文必背）</th></tr>
+      <tr><td><b>Budget deficit (BD)</b></td>
+        <td>the <b>excess of government outlays over government receipts</b>；<br>
+        <b>BD = G − NT</b>，其中 <b>NT (net taxes) = taxes − transfer payments</b></td></tr>
+      <tr><td><b>Fiscal policy</b></td>
+        <td>the government's <b>decisions about spending and taxes</b></td></tr>
+      <tr><td><b>Stabilization policy</b></td>
+        <td>government actions to try to <b>keep output close to its potential level</b></td></tr>
+      <tr><td><b>National debt</b></td>
+        <td>the <b>stock</b> of outstanding government debt</td></tr>
+    </table></div>
+    <div class="callout c-trap"><span class="t">⚠️ 流量 vs 存量（MCQ 常考）</span>
+      <b>Budget deficit 是流量（flow）</b>——每年的收支差；<b>National debt 是存量（stock）</b>——历年赤字累积的余额。
+      赤字下降 ≠ 债务下降；只要赤字仍为正，债务就继续<b>增加</b>，只是增速放缓。
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 5–7</span><h2>2 · 加入政府支出 G</h2></div>
+  <div class="card">
+    <h3>假设</h3>
+    <ul>
+      <li>政府通过两条渠道影响模型：<b>G（对商品与服务的支出）</b>与 <b>net taxes（税 − 转移支付）</b>。</li>
+      <li>先看 G，暂时假设无税。</li>
+      <li><b>G 独立于收入水平：G 是固定的、外生的（autonomous）</b>。</li>
+      <li>AD 变为：<b>AD = C + I + G = (A + I + G) + cY</b>。</li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 图形结论（Slide 6 原文）</span>
+      G 使 <b>AD 曲线平行上移</b>，<b>不影响 AD 的斜率</b>，因此<b>不影响乘数的大小</b>。
+    </div>
+    <div class="fml"><span class="lab">Slide 7 财政扩张的效果</span>
+ΔY = multiplier × ΔG = <b>ΔG/(1 − c)</b>
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 课件自己埋的伏笔</span>
+      Slide 7 结尾写：<i>"But this ignores some important issues – e.g. <b>the need to fund the government spending</b>."</i>
+      —— 这是后面"赤字融资 → 利率上升 → 挤出效应（Lecture 6）"与"李嘉图等价"的引子。
+      考试若问"简单凯恩斯乘数的缺陷"，这句必须写。
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 8–13</span><h2>3 · 税的种类与两类财政政策 ⭐</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 8</span>直接税 vs 间接税</h3>
+    <div class="tw"><table>
+      <tr><th style="width:22%">类型</th><th>定义</th><th style="width:26%">例子</th></tr>
+      <tr><td><b>Indirect taxes</b></td><td>taxes levied on <b>expenditures</b> on goods and services</td><td>VAT、酒类关税 duty on alcohol</td></tr>
+      <tr><td><b>Direct taxes</b></td><td>taxes on <b>earnings</b> from labour, rents, dividends and interest</td><td>income tax、corporation tax</td></tr>
+    </table></div>
+    <p><b>Net direct tax：NT = Tax − Benefits (transfer payment)</b>。为简化，<b>本模型假设所有税都是直接税</b>。</p>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 9</span>两种税制形式（这一页决定了后面所有结论）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:22%">税制</th><th style="width:18%">形式</th><th>影响什么</th></tr>
+      <tr><td><b>Lump-sum tax</b><br>定额税</td><td><b>T = T₀</b></td>
+        <td>影响消费函数与 AD 函数的<b>常数项（截距）</b>，<b>不影响斜率</b> ⇒ <b>乘数不变</b></td></tr>
+      <tr><td><b>Proportional income tax</b><br>比例所得税</td><td><b>T = tY</b><br>（t = net tax rate）</td>
+        <td>影响消费函数的<b>斜率</b>，从而影响 AD 曲线的斜率 ⇒ <b>乘数改变（变小）</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 这是本讲最高频的 MCQ 考点</span>
+      记住一句话：<b>定额税动截距，比例税动斜率。</b>只有动斜率的才会改变乘数。
+    </div>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 10</span>比例税下的消费函数与 AD</h3>
+    <div class="fml">
+Y<sub>d</sub> = Y − NT = <b>(1 − t)Y</b>
+C = A + cY<sub>d</sub> = <b>A + c(1 − t)Y</b>
+AD = C + I + G = <b>(A + I + G) + c(1 − t)Y</b>
+   垂直截距 = 三个自主部分 <b>A + I + G</b>
+   斜率 = <b>c(1 − t)</b> = marginal propensity to consume <b>out of income</b>
+        比无税时的 MPC <b>更小</b>（若 t &gt; 0）
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 两个"MPC"不要混</span>
+      <b>c = MPC out of disposable income</b>（对可支配收入的边际消费倾向）；<br>
+      <b>c(1−t) = MPC out of income</b>（对总收入的边际消费倾向）。<br>
+      题目问哪个要看清楚——这是 Tutorial 3 的常见陷阱。
+    </div>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 12</span>情形 (a)：定额税上升 ΔT₀</h3>
+    <div class="fml">
+C = A + cY<sub>d</sub> = A + c(Y − T₀) = <b>(A − cT₀) + cY</b>
+
+⇒ 消费函数（以及 AD）<b>平行下移 cΔT₀</b>
+⇒ AD 斜率不变 ⇒ <b>乘数 1/(1−c) 不变</b>
+⇒ 均衡收入下降：<b>ΔY = −(c·ΔT₀)/(1 − c)</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 为什么下移的是 <b>c</b>ΔT₀ 而不是 ΔT₀</span>
+      因为多缴 1 元税，家庭并非少花 1 元——他们只少花 <b>c</b> 元，另外 (1−c) 元是少储蓄。
+      这正是<b>税收乘数（绝对值 c/(1−c)）小于政府支出乘数 1/(1−c)</b> 的原因，也是
+      <b>平衡预算乘数 = 1</b> 的来源。
+    </div>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 13</span>情形 (b)：税率 t 上升</h3>
+    <ul>
+      <li>消费函数（及 AD）因税率 t 而<b>变平坦（flatter）</b>。</li>
+      <li>税率 t 的变化<b>改变 AD 曲线的斜率</b> ⇒ <b>乘数的值被改变</b>。</li>
+      <li><b>不影响 AD 曲线的垂直截距</b>。</li>
+      <li>t 上升时均衡收入与产出<b>下降</b>。</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 900 320" role="img" aria-label="Lump-sum tax vs tax rate">
+        <text class="lbl" x="120" y="18">(a) 定额税上升：平行下移，斜率不变</text>
+        <line class="ax" x1="55" y1="280" x2="410" y2="280"/>
+        <line class="ax" x1="55" y1="280" x2="55" y2="35"/>
+        <line x1="55" y1="280" x2="300" y2="35" class="cv" stroke="#8089bd"/>
+        <text class="lbl-s" x="266" y="44" fill="#8089bd">45°</text>
+        <line x1="55" y1="215" x2="395" y2="80" class="cv c-ad"/>
+        <text class="lbl-s" x="352" y="74" fill="#6c8bff">AD₀</text>
+        <line x1="55" y1="248" x2="395" y2="113" class="cv c-as"/>
+        <text class="lbl-s" x="352" y="128" fill="#ff5c7a">AD₁</text>
+        <circle class="pt" cx="185" cy="150" r="5"/><text class="lbl-s" x="192" y="144">E₀</text>
+        <circle class="pt" cx="147" cy="188" r="5"/><text class="lbl-s" x="116" y="184">E₁</text>
+        <line x1="185" y1="150" x2="185" y2="280" class="dsh"/>
+        <line x1="147" y1="188" x2="147" y2="280" class="dsh"/>
+        <text class="lbl-s" x="140" y="296">Y₁</text><text class="lbl-s" x="178" y="296">Y₀</text>
+        <line x1="90" y1="203" x2="90" y2="235" stroke="#ffb454" stroke-width="3"/>
+        <text class="lbl-s" x="96" y="224" fill="#ffb454">cΔT₀</text>
+
+        <text class="lbl" x="560" y="18">(b) 税率上升：变平坦，截距不变</text>
+        <line class="ax" x1="495" y1="280" x2="855" y2="280"/>
+        <line class="ax" x1="495" y1="280" x2="495" y2="35"/>
+        <line x1="495" y1="280" x2="740" y2="35" class="cv" stroke="#8089bd"/>
+        <text class="lbl-s" x="706" y="44" fill="#8089bd">45°</text>
+        <line x1="495" y1="215" x2="835" y2="80" class="cv c-ad"/>
+        <text class="lbl-s" x="792" y="74" fill="#6c8bff">AD₀</text>
+        <line x1="495" y1="215" x2="835" y2="150" class="cv c-as"/>
+        <text class="lbl-s" x="792" y="146" fill="#ff5c7a">AD₁</text>
+        <circle class="pt" cx="625" cy="150" r="5"/><text class="lbl-s" x="632" y="144">E₀</text>
+        <circle class="pt" cx="565" cy="210" r="5"/><text class="lbl-s" x="534" y="206">E₁</text>
+        <line x1="625" y1="150" x2="625" y2="280" class="dsh"/>
+        <line x1="565" y1="210" x2="565" y2="280" class="dsh"/>
+        <text class="lbl-s" x="558" y="296">Y₁</text><text class="lbl-s" x="618" y="296">Y₀</text>
+        <circle class="pt" cx="495" cy="215" r="4"/>
+        <text class="lbl-s" x="430" y="219">A+I+G</text>
+        <text class="lbl-s" x="700" y="240" fill="#ff5c7a">斜率 c(1−t) ↓</text>
+      </svg>
+      <figcaption>Figure 3.1 — 定额税与比例税的图形差异。<b>(a) 乘数不变；(b) 乘数变小。</b></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 14–16</span><h2>4 · 含政府的均衡：完整代数推导 ⭐</h2></div>
+  <div class="card">
+    <h3>情形 1：定额税 T₀</h3>
+    <div class="fml">
+Y = C + I + G = A + cY<sub>d</sub> + I + G，  Y<sub>d</sub> = Y − T₀
+Y = A + c(Y − T₀) + I + G
+Y − cY = A − cT₀ + I + G
+<b>Y* = [1/(1 − c)] × [A − cT₀ + I + G]</b>
+<b>ΔY* = [1/(1 − c)] × Δ[A − cT₀ + I + G]</b>
+   └ 乘数不变 ┘   └── 自主支出部分 ──┘
+    </div>
+
+    <h3 style="margin-top:20px">情形 2：比例税率 t</h3>
+    <div class="fml">
+T = tY  ⇒  Y<sub>d</sub> = Y − T = (1 − t)Y
+Y = A + c(1 − t)Y + I + G
+Y[1 − c(1 − t)] = A + I + G
+<b>Y* = {1/[1 − c(1 − t)]} × [A + I + G]</b>
+<b>ΔY* = {1/[1 − c(1 − t)]} × Δ[A + I + G]</b>
+     └───── 新乘数 ─────┘
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 16</span>新乘数的三种等价写法（必背）</h3>
+    <div class="fml" style="font-size:16px">
+<b>Multiplier = 1/[1 − c(1 − t)] = 1/[s + ct] = 1/[s(1 − t) + t]</b>
+    </div>
+    <p><b>为什么变小</b>（课件原文逻辑）：</p>
+    <ul>
+      <li>有了比例税率 t，<b>AD 曲线变平坦</b>；</li>
+      <li><b>更多收入以税收形式漏出循环流量</b>（more income leaks out into taxation）；</li>
+      <li>乘数过程中<b>每一轮循环的流量更少</b>；</li>
+      <li>这构成了除 MPS 之外<b>另一个"边际漏出倾向"（marginal propensity to leak）</b>的来源。</li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 三种写法怎么来的（自己会推更保险）</span>
+      1 − c(1−t) = 1 − c + ct = <b>s + ct</b>；<br>
+      又 s + ct = s − st + st + ct = s(1−t) + t(s+c) = <b>s(1−t) + t</b>（因 s + c = 1）。
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 17–20</span><h2>5 · 相机抉择 vs 自动稳定器 ⭐（essay 高频）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:22%"></th><th>Discretionary fiscal policy<br>相机抉择财政政策</th><th>Automatic stabilizers<br>自动稳定器</th></tr>
+      <tr><td><b>定义</b></td>
+        <td>the <b>decisions</b> about tax rates and levels of government spending</td>
+        <td>mechanisms in the economy that <b>automatically reduce the response of output to demand shocks</b></td></tr>
+      <tr><td><b>作用机制</b></td>
+        <td>主动改变 A、G、T 等自主项，<b>移动 AD 曲线</b></td>
+        <td><b>降低乘数</b>，从而在<b>不改变政策</b>的情况下削弱需求冲击的影响</td></tr>
+      <tr><td><b>是否需要决策</b></td><td>需要，且有时滞</td><td><b>不需要任何人做决策，永远在起作用</b></td></tr>
+      <tr><td><b>具体内容</b></td>
+        <td>扩张：减税、增支出、增转移支付<br>紧缩：加税、减支出、减转移支付</td>
+        <td>三种比例于收入的漏出：<b>saving rate s</b>、<b>tax rate t</b>、<b>marginal propensity to import z</b></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 18</span>相机抉择的两种方向</h3>
+    <div class="grid2">
+      <div class="callout c-tip"><span class="t">EXPANSIONARY POLICY</span>
+        当 <b>AD &lt; Y*</b>（产出低于潜在）：<b>Boost AD</b> —— reduce taxes, increase spending and transfer benefits。
+      </div>
+      <div class="callout c-trap"><span class="t">CONTRACTIONARY POLICY</span>
+        当 <b>AD &gt; Y*</b>（产出高于潜在）：<b>Contract AD</b> —— increase taxes, reduce spending and transfer benefits。
+      </div>
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slides 19–20</span>自动稳定器的机制</h3>
+    <div class="fml">
+ΔY* = {1/[1 − c(1 − t)]} × Δ[A + I + G] = <b>{1/(s + ct)} × Δ[A + I + G]</b>
+                                                     ↑ t 越大，分母越大，乘数越小
+    </div>
+    <ul>
+      <li><b>边际漏出倾向降低乘数</b>，从而<b>抑制（dampen）</b>外部正/负冲击对经济的影响。</li>
+      <li>所有漏出（saving rate、tax rate、marginal propensity to import）都<b>与收入成比例</b>，
+        因此都是<b>自动稳定器</b>（reduce output fluctuations）。</li>
+      <li><b>优势</b>：<i>"nobody has to decide to make any policy decisions. These stabilizers are always at work."</i></li>
+    </ul>
+    <div class="callout c-exam"><span class="t">🎯 直觉一句话（考试可以直接用）</span>
+      衰退时收入下降 → 自动少缴税、自动多领失业救济 → 可支配收入下降幅度<b>小于</b>产出下降幅度 →
+      消费下滑被缓冲 → 衰退被自动减轻。<b>无需任何政策决定。</b>
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slide 21</span><h2>6 · 财政政策的三大局限（essay 必备）</h2></div>
+  <div class="card">
+    <p class="lead">课件明确列出财政政策<b>可能无法完全抵消需求冲击</b>的三个原因：</p>
+    <div class="tw"><table>
+      <tr><th style="width:24%">局限</th><th>具体内容</th></tr>
+      <tr><td><b>① Time lags</b><br>时滞</td>
+        <td>需要时间来：<br>• <b>诊断问题</b>（to spot that AD has changed）<br>
+        • <b>采取行动</b>（to change fiscal policy）<br>
+        • <b>让乘数过程发挥完全效果</b>（for the multiplier process to operate）</td></tr>
+      <tr><td><b>② Uncertainty</b><br>不确定性</td>
+        <td>• <b>乘数的大小是未知的</b>（the size of the multiplier is not known）<br>
+        • <b>总需求本身一直在变</b>（aggregate demand is always changing）</td></tr>
+      <tr><td><b>③ Induced effects on autonomous demand</b><br>对自主需求的诱发效应</td>
+        <td>财政政策的改变可能在总需求的<b>其他组成部分</b>引起<b>抵消性效应</b><br>
+        <span class="muted">（这就是 Lecture 6 的挤出效应与李嘉图等价的预告）</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slides 22–26</span><h2>7 · 预算赤字与财政立场 ⭐（essay 高频）</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 22</span>赤字与收入的关系</h3>
+    <div class="fml">
+<b>BD = G − NT = G − tY</b>
+   G 独立于收入（水平线）；NT = tY 随收入上升（向上倾斜的直线）
+
+⇒ <b>低收入时预算赤字，高收入时预算盈余</b>，在 Y₀ 处预算平衡
+    </div>
+    <p><b>平衡预算乘数（balanced budget multiplier）</b>：课件表述为——
+    <i>"an increase in government spending plus an <b>equal</b> increase in taxes leads to <b>higher</b> equilibrium output."</i></p>
+    <div class="callout c-tip"><span class="t">💡 为什么等额增税增支出仍会扩张</span>
+      ΔG 使 AD 上移 ΔG（全额）；ΔT₀ 使 AD 下移 <b>c</b>ΔT₀（只有 c 那部分）。
+      净上移 = (1 − c)ΔG &gt; 0 ⇒ ΔY = (1−c)ΔG/(1−c) = <b>ΔG</b>，即<b>平衡预算乘数 = 1</b>。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 520 300" role="img" aria-label="Budget deficit and income">
+        <line class="ax" x1="60" y1="255" x2="480" y2="255"/>
+        <line class="ax" x1="60" y1="255" x2="60" y2="30"/>
+        <text class="lbl" x="360" y="278">Income, output</text>
+        <line x1="60" y1="160" x2="465" y2="160" class="cv c-alt2"/>
+        <text class="lbl" x="30" y="164">G</text>
+        <line x1="60" y1="248" x2="450" y2="48" class="cv c-ad"/>
+        <text class="lbl" x="404" y="46" fill="#6c8bff">NT = tY</text>
+        <circle class="pt" cx="253" cy="160" r="5"/>
+        <line x1="253" y1="160" x2="253" y2="255" class="dsh"/>
+        <text class="lbl-s" x="246" y="272">Y₀</text>
+        <text class="lbl-s" x="196" y="128">Balanced budget</text>
+        <text class="lbl-s" x="120" y="200" fill="#ff5c7a">DEFICIT</text>
+        <text class="lbl-s" x="330" y="118" fill="#33d6a6">SURPLUS</text>
+        <line x1="150" y1="255" x2="150" y2="270" class="dsh"/><text class="lbl-s" x="143" y="286">Y₁</text>
+        <line x1="370" y1="255" x2="370" y2="270" class="dsh"/><text class="lbl-s" x="363" y="286">Y₂</text>
+      </svg>
+      <figcaption>Figure 3.2 — BD = G − tY。收入在 Y₁ 或 Y₂ 时，<b>即使 G 与 t 完全不变</b>，赤字也会变化。</figcaption>
+    </figure>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 23</span>G 上升如何影响赤字（推理链，考试常考）</h3>
+    <div class="fml">
+G↑（给定税率 t）
+ → 通过乘数效应，均衡收入 Y*↑
+ → 可支配收入 Y<sub>d</sub>↑
+ → S↑（S 是 Y<sub>d</sub> 的函数）
+ → (S − I)↑（因为 I 独立于收入）→ <b>私人部门盈余增加</b>
+ → 由均衡时 planned leakages = planned injections：
+    S + NT = G + I  ⇒  <b>S − I = G − NT</b>
+ → 因此 <b>(G − NT)↑：公共部门赤字增加</b>
+   —— 尽管 Y*↑ 也会提高税收收入 tY*，但净效果仍是赤字扩大
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 24–25</span>赤字是财政立场的好指标吗？（<b>答案：不是</b>）</h3>
+    <ul>
+      <li><b>Fiscal stance</b> 定义：财政政策对需求与产出的影响——<b>扩张性 vs 紧缩性</b>。</li>
+      <li>因为 <b>BD = G − tY</b>，在 <b>G 与 t 都不变</b>的情况下，赤字也会随经济状况变化。</li>
+      <li>例如：赤字可能<b>只是衰退（收入下降）的结果</b>，而非政府主动扩张。</li>
+      <li>课件结论：<b>"the deficit may be a poor measure of fiscal stance"</b>；
+        赤字的<b>规模与符号并非完全由政府政策决定</b>，很大程度上取决于<b>经济处在商业周期的哪个位置</b>。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 26</span>两种修正后的赤字度量</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">修正</th><th>做法</th></tr>
+      <tr><td><b>The structural budget</b><br><span class="muted">= underlying / cyclically adjusted budget</span></td>
+        <td>用<b>潜在产出</b>而非实际产出计算赤字：<b>BD = G − tY*</b>。<br>
+        这样剔除了周期因素，剩下的才真正反映<b>政策立场</b>。</td></tr>
+      <tr><td><b>The inflation-adjusted budget</b></td>
+        <td>计算政府债务利息支出时，用 <b>实际利率</b>而非名义利率。<br>
+        <b>Real cost of borrowing = nominal interest rate − inflation</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 essay 万能句</span>
+      <i>"The actual deficit is a poor indicator of the fiscal stance because it is endogenous to the cycle: with G and
+      t unchanged, a recession automatically widens the deficit through lower tax revenue and higher transfers.
+      The <b>structural (cyclically adjusted) deficit</b>, computed at potential output, isolates the discretionary
+      component and is the appropriate measure."</i>
+    </div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slide 27</span><h2>8 · 债务可持续性：Debt/GDP 比率</h2></div>
+  <div class="card">
+    <ul>
+      <li><b>为什么用 debt/GDP 而不是债务绝对额</b>：GDP 是<b>在"合理"税率下可能筹集到的税收收入</b>的代理变量。</li>
+      <li>剔除新增赤字、只看继承债务的影响，本年 debt/GDP 比率的变动为：</li>
+    </ul>
+    <div class="fml" style="font-size:17px">
+<b>(i − π − g) · D/(pY)</b>
+   i = 名义利率   π = 通胀率   g = 实际产出增长率
+   D/(pY) = 债务占名义 GDP 的比率
+    </div>
+    <div class="callout c-tip"><span class="t">💡 可持续性判据（课件原话）</span>
+      <b>"The debt only becomes unsustainable if the interest rate, i, exceeds the rate of nominal income growth (π + g)."</b><br>
+      即：<b>i &gt; π + g ⇒ 债务比率自我膨胀，不可持续</b>；<b>i &lt; π + g ⇒ 债务比率自动下降</b>。<br>
+      这解释了为什么<b>通胀与增长能"稀释"债务</b>——这一点在 Lecture 8 的"通胀的效应"里还会再出现。
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 28–29</span><h2>9 · 加入外贸部门</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:22%">术语</th><th>定义</th></tr>
+      <tr><td><b>Exports (X)</b></td><td>goods and services <b>made at home but sold abroad</b></td></tr>
+      <tr><td><b>Imports (Z)</b></td><td>goods and services <b>made abroad but bought by domestic residents</b></td></tr>
+      <tr><td><b>Trade balance</b></td><td>the value of net exports <b>NX = X − Z</b></td></tr>
+      <tr><td><b>Trade deficit</b></td><td>when <b>imports exceed exports</b></td></tr>
+      <tr><td><b>Trade surplus</b></td><td>when <b>exports exceed imports</b></td></tr>
+    </table></div>
+    <div class="fml">AD is now: <b>AD = C + I + G + X − Z</b></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 29</span>X 与 Z 的行为假设</h3>
+    <ul>
+      <li><b>X 假设为外生（autonomous）</b>——出口由外国收入决定，不由本国收入决定，图上是<b>水平线</b>。</li>
+      <li><b>Z = zY</b>，其中 <b>z 是 marginal propensity to import (MPZ)</b>，
+        定义：<b>the fraction of additional income that domestic residents wish to spend on additional imports</b>。</li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 图形结论</span>
+      低收入时 X &gt; Z（<b>trade surplus</b>）；高收入时 X &lt; Z（<b>trade deficit</b>）；
+      在收入 Y* 处贸易平衡——但课件特别强调 <b>"not necessarily at full employment"</b>
+      （贸易平衡的收入水平与充分就业的收入水平<b>无关</b>）。这是一个常考的细节。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 520 280" role="img" aria-label="Exports imports trade balance">
+        <line class="ax" x1="60" y1="240" x2="480" y2="240"/>
+        <line class="ax" x1="60" y1="240" x2="60" y2="30"/>
+        <text class="lbl" x="380" y="263">Income</text>
+        <line x1="60" y1="150" x2="465" y2="150" class="cv c-alt2"/>
+        <text class="lbl" x="404" y="143" fill="#ffb454">Exports  X (autonomous)</text>
+        <line x1="60" y1="238" x2="450" y2="52" class="cv c-ad"/>
+        <text class="lbl" x="382" y="48" fill="#6c8bff">Imports  Z = zY</text>
+        <circle class="pt" cx="244" cy="150" r="5"/>
+        <line x1="244" y1="150" x2="244" y2="240" class="dsh"/>
+        <text class="lbl-s" x="234" y="257">Y*</text>
+        <text class="lbl-s" x="184" y="120">Trade balanced</text>
+        <text class="lbl-s" x="112" y="192" fill="#33d6a6">SURPLUS</text>
+        <text class="lbl-s" x="330" y="112" fill="#ff5c7a">DEFICIT</text>
+      </svg>
+      <figcaption>Figure 3.3 — 贸易余额与收入。收入越高进口越多，贸易余额恶化。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slides 30–32</span><h2>10 · 三部门完整均衡与乘数 ⭐⭐（必背）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">完整推导（考试写这一整套）</span>
+Y = AD = C + I + G + X − Z          …(1)
+T = tY                              …(2)
+C = A + cY<sub>d</sub> = A + c(Y − T) = A + c(1 − t)Y   …(3)
+Z = zY                              …(4)
+
+代入 (3)(4) 到 (1)：
+Y = A + c(1 − t)Y + I + G + X − zY
+Y = A + I + G + X + [c(1 − t) − z]Y
+[1 − c(1 − t) + z]Y = A + I + G + X
+
+<b>Y* = {1/[1 − c(1 − t) + z]} × [A + I + G + X]</b>
+<b>ΔY* = {1/[1 − c(1 − t) + z]} × Δ[A + I + G + X]</b>
+    </div>
+
+    <h3 style="margin-top:18px">完整乘数的三种等价写法（必背）</h3>
+    <div class="fml" style="font-size:16px">
+<b>k = 1/[1 − c(1 − t) + z] = 1/[s + ct + z] = 1/[s(1 − t) + t + z]</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 分母 = 三种"边际漏出倾向"之和</span>
+      <b>s（储蓄）+ ct（税收）+ z（进口）</b>——正好对应 Lecture 1 循环流量图里的三个 leakage！
+      漏出越多 → 每轮回流越少 → 乘数越小。这是本讲最漂亮的一处呼应，答题时值得写出来。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 32</span>MPZ 与国家规模（课件明确给了两个例子）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">经济体类型</th><th>MPZ</th><th>乘数</th><th>产出波动</th><th>例子</th></tr>
+      <tr><td><b>小型开放经济</b></td><td>大</td><td>小</td><td>自主需求冲击引起<b>较小</b>的产出波动</td><td>Belgium</td></tr>
+      <tr><td><b>大型相对封闭经济</b></td><td>小</td><td>大</td><td>自主需求冲击引起<b>较大</b>的产出波动</td><td>China</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="sec-h"><span class="kicker">Slides 33–34</span><h2>11 · 出口上升 & 进口是否"抢工作" ⭐</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 33</span>出口需求上升的完整效果</h3>
+    <ul>
+      <li>X 上升 ⇒ AD <b>平行上移</b>（X 是自主项）⇒ 均衡收入必然上升。</li>
+      <li>收入更高 ⇒ <b>意愿储蓄 S、净税收 NT、意愿进口 Z 全都上升</b>。</li>
+    </ul>
+    <div class="fml"><span class="lab">开放经济的均衡条件</span>
+<b>I + G + X = S + NT + Z</b>
+   （injections = leakages，意愿量）
+    </div>
+    <ul>
+      <li>因为 S、NT、Z <b>三者都上升</b>，而右边总增量必须等于左边的 ΔX，
+        所以 <b>ΔZ 必然小于 ΔX</b>。</li>
+      <li>⇒ <b>净出口需求增加，本国对世界其他国家的贸易余额 (X − Z) 改善</b>。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 34</span>"Do imports steal jobs?"（贸易战题的标准骨架）</h3>
+    <p>课件用 <b>leakages = injections</b> 图（纵轴 S+NT+Z 与 I+G+X，横轴产出，
+    S+NT+Z 线斜率 = <b>s(1−t) + t + z</b>）分三步论证：</p>
+    <ol>
+      <li><b>Yes（短期、单方面）</b>：降低进口倾向 z 会使 S+NT+Z 线<b>变平坦</b>，
+        均衡产出上升，经济从 <b>A 点移到 B 点</b>——<b>减少进口确实提高了均衡收入</b>。</li>
+      <li><b>But it is dangerous（报复）</b>：如果<b>其他国家以牙还牙</b>做同样的事，
+        对本国出口的需求会下降（X↓），I+G+X 线<b>下移</b>，经济<b>从 B 点掉到 D 点</b>。</li>
+      <li><b>结论</b>：<i>"In the end, <b>nobody gains employment but world trade disappears</b>."</i></li>
+    </ol>
+
+    <figure>
+      <svg viewBox="0 0 540 300" role="img" aria-label="Imports and employment leakages injections">
+        <line class="ax" x1="60" y1="255" x2="500" y2="255"/>
+        <line class="ax" x1="60" y1="255" x2="60" y2="30"/>
+        <text class="lbl" x="400" y="278">Output</text>
+        <line x1="60" y1="252" x2="400" y2="45" class="cv c-ad"/>
+        <text class="lbl-s" x="330" y="42" fill="#6c8bff">S+NT+Z  (slope s(1−t)+t+z)</text>
+        <line x1="60" y1="252" x2="480" y2="88" class="cv c-alt"/>
+        <text class="lbl-s" x="404" y="84" fill="#33d6a6">S+NT+Z′  (z↓，变平坦)</text>
+        <line x1="60" y1="150" x2="490" y2="150" class="cv c-alt2"/>
+        <text class="lbl-s" x="440" y="143" fill="#ffb454">I+G+X</text>
+        <line x1="60" y1="192" x2="490" y2="192" class="cv c-as"/>
+        <text class="lbl-s" x="436" y="208" fill="#ff5c7a">I+G+X′  (报复后 X↓)</text>
+        <circle class="pt" cx="228" cy="150" r="5"/><text class="lbl" x="206" y="142">A</text>
+        <circle class="pt" cx="320" cy="150" r="5"/><text class="lbl" x="326" y="142">B</text>
+        <circle class="pt" cx="212" cy="192" r="5"/><text class="lbl" x="188" y="206">D</text>
+        <line x1="228" y1="150" x2="228" y2="255" class="dsh"/>
+        <line x1="320" y1="150" x2="320" y2="255" class="dsh"/>
+        <text class="lbl-s" x="220" y="271">Y</text><text class="lbl-s" x="312" y="271">Y′</text>
+        <text class="lbl-s" x="120" y="80">A→B：单方面减少进口，产出上升</text>
+        <text class="lbl-s" x="120" y="228" fill="#ff5c7a">B→D：他国报复，出口下降，产出反而更低</text>
+      </svg>
+      <figcaption>Figure 3.4 — Imports and employment。降低进口倾向使产出从 A 升至 B；若遭报复则跌至 D。</figcaption>
+    </figure>
+
+    <div class="callout c-exam"><span class="t">🎯 这是"贸易战/关税"essay 题的现成结构</span>
+      考卷的 trade-war 部分常问"某国提高关税会怎样"。<br>
+      标准答法：<b>①</b> 单方面看：z↓ → 漏出减少 → 乘数上升 → 均衡产出上升（画 A→B）；<br>
+      <b>②</b> 但这是 <b>beggar-thy-neighbour（以邻为壑）</b>政策，本国的进口就是他国的出口；<br>
+      <b>③</b> 报复发生后 X↓ → 注入减少 → 产出跌至 D，可能<b>低于</b>初始水平；<br>
+      <b>④</b> 结论：nobody gains employment but world trade disappears —— 呼应 Lecture 12
+      提到的 <b>1930s 关税战摧毁世界贸易</b>的历史证据。
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">乘数演进（务必记住这四级）</span>
+① 只有银行：            k = 1/(1 − c)
+② + 定额税 T₀：          k = 1/(1 − c)  <b>（不变！）</b>
+③ + 比例税 t：           k = 1/[1 − c(1−t)] = 1/(s + ct)
+④ + 进口 z：             <b>k = 1/[1 − c(1−t) + z] = 1/(s + ct + z) = 1/[s(1−t) + t + z]</b>
+    </div>
+    <div class="fml"><span class="lab">均衡产出</span>
+定额税：Y* = [A − cT₀ + I + G]/(1 − c)
+比例税：Y* = [A + I + G]/[1 − c(1 − t)]
+四部门：<b>Y* = [A + I + G + X]/[1 − c(1 − t) + z]</b>
+    </div>
+    <div class="fml"><span class="lab">政策乘数</span>
+政府支出乘数：ΔY/ΔG = <b>k</b>
+定额税乘数：  ΔY/ΔT₀ = <b>−ck</b>（绝对值小于支出乘数）
+平衡预算乘数：ΔG = ΔT₀ 时 ΔY = <b>ΔG</b>（乘数 = 1）
+    </div>
+    <div class="fml"><span class="lab">财政与债务</span>
+BD = G − NT = G − tY
+结构性预算：BD = G − tY*（用潜在产出）
+实际借贷成本 = 名义利率 − 通胀率
+债务负担对 debt/GDP 的影响：(i − π − g)·D/(pY)
+不可持续 ⟺ <b>i &gt; π + g</b>
+    </div>
+    <div class="fml"><span class="lab">开放经济恒等式</span>
+<b>I + G + X = S + NT + Z</b>（意愿量，均衡时成立）
+NX = X − Z，Z = zY，X 外生
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>定额税改变乘数</td><td><b>定额税只移截距，乘数不变</b>；只有<b>比例税率 t</b> 改变斜率与乘数</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>定额税使 AD 下移 ΔT₀</td><td>下移的是 <b>cΔT₀</b>（只有消费那部分受影响）</td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>税收乘数 = 支出乘数</td><td>税收乘数绝对值 <b>= c × 支出乘数</b>，<b>更小</b></td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>等额增税增支出效果为零</td><td><b>平衡预算乘数 = 1</b>，仍然扩张</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>乘数分母写成 1 − c(1−t) − z</td><td>进口是<b>漏出</b>，分母应 <b>+ z</b></td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>赤字扩大 = 扩张性财政政策</td><td>赤字<b>内生于周期</b>；要看<b>结构性赤字</b>（用 Y* 计算）</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>自动稳定器靠移动 AD 起作用</td><td>自动稳定器靠<b>降低乘数</b>起作用，不需要任何政策决定</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>贸易平衡处 = 充分就业</td><td>课件明说 <b>"not necessarily at full employment"</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>减少进口一定增加就业</td><td>单方面看是；一旦<b>他国报复</b>，出口下降，可能反而更差</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>大国乘数小</td><td><b>大国相对封闭，MPZ 小，乘数大</b>，产出波动更大（China）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span> <span class="badge b-calc">含计算</span></h3>
+    <p class="lead"><i>"(a) Explain what is meant by an automatic stabiliser and show, using the Keynesian model,
+    how a proportional income tax acts as one. (b) An economy has c = 0.8, t = 0.25 and z = 0.1. Calculate the
+    multiplier and the effect on equilibrium output of a £20bn increase in government spending.
+    (c) Why might the actual increase in output be smaller than your answer to (b)?"</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng"><b>Automatic stabilisers</b> are mechanisms in the economy that <b>automatically reduce the
+        response of output to demand shocks, without any change in government policy</b>. They operate by reducing
+        the size of the multiplier. In contrast, <b>discretionary fiscal policy</b> consists of deliberate decisions
+        about tax rates and levels of government spending.</p>
+        <p class="eng">In the Keynesian income–expenditure model with a government and a foreign sector, and with
+        prices fixed and output demand-determined:</p>
+        <div class="fml">AD = C + I + G + X − Z,  C = A + c(1 − t)Y,  Z = zY,  I, G, X autonomous
+Equilibrium: Y = AD  ⇒  Y* = (A + I + G + X)/[1 − c(1 − t) + z]</div>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1: 45° line diagram. Vertical axis = aggregate demand; horizontal axis = output/income.
+        The AD schedule has vertical intercept (A + I + G + X) and slope <b>c(1 − t) − z</b>. A rise in the tax rate
+        <i>t</i> (or in the import propensity <i>z</i>) <b>pivots the AD schedule downwards, making it flatter, while
+        leaving the intercept unchanged</b>. A flatter AD schedule cuts the 45° line at a shallower angle, so any given
+        vertical shift in AD produces a <b>smaller</b> horizontal movement in equilibrium output. (See Figure 3.1(b).)</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>(a) Mechanism.</b> Step 1: with a proportional tax, disposable income is only (1 − t)Y,
+        so the marginal propensity to consume out of <i>income</i> falls from <i>c</i> to <i>c</i>(1 − t).
+        Step 2: each round of the multiplier process therefore leaks a fraction <i>ct</i> into taxation in addition to
+        the fraction <i>s</i> leaking into saving. Step 3: the multiplier falls from 1/(1 − c) to</p>
+        <div class="fml">k = 1/[1 − c(1 − t) + z] = <b>1/(s + ct + z)</b></div>
+        <p class="eng">Step 4: since shocks to autonomous demand are amplified by <i>k</i>, a smaller <i>k</i> means
+        smaller output fluctuations. Intuitively, in a recession income falls, tax payments fall automatically and
+        transfer payments rise automatically, so disposable income falls by <b>less</b> than output — cushioning
+        consumption without any policy decision being taken. All three leakages that are proportional to income —
+        the saving rate <i>s</i>, the tax rate <i>t</i>, and the marginal propensity to import <i>z</i> — are
+        automatic stabilisers.</p>
+
+        <p class="eng"><b>(b) Calculation.</b></p>
+        <div class="fml">s = 1 − c = 0.2
+Denominator = 1 − c(1 − t) + z = 1 − 0.8(0.75) + 0.1 = 1 − 0.6 + 0.1 = <b>0.5</b>
+Check: s + ct + z = 0.2 + (0.8)(0.25) + 0.1 = 0.2 + 0.2 + 0.1 = 0.5 ✓
+
+<b>Multiplier k = 1/0.5 = 2</b>
+<b>ΔY* = k × ΔG = 2 × £20bn = £40bn</b></div>
+        <p class="eng">Note that without the tax and import leakages the multiplier would have been
+        1/(1 − 0.8) = 5, giving ΔY = £100bn. The automatic stabilisers have cut the multiplier from 5 to 2.</p>
+
+        <p class="eng"><b>(c) Why the true effect is smaller.</b> First, the model assumes prices are fixed and there
+        is spare capacity; if the economy is near potential output, part of the demand expansion raises the price level
+        rather than real output. Second, the model ignores the <b>financing</b> of G: if higher G raises money demand
+        and hence the interest rate, private investment is <b>crowded out</b> (the IS-MP model, Lecture 6). Third,
+        under <b>Ricardian equivalence</b>, households anticipating higher future taxes may raise saving now, offsetting
+        the stimulus. Fourth, there are <b>time lags</b> in diagnosis, action and the multiplier process, and the true
+        size of the multiplier is <b>uncertain</b>.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">A proportional income tax is an automatic stabiliser because it raises the marginal propensity
+        to leak from <i>s</i> to <i>s</i> + <i>ct</i>, lowering the multiplier and hence damping the transmission of
+        demand shocks into output — and it does so continuously, without the recognition and implementation lags that
+        limit discretionary policy. In the numerical example the combined leakages reduce the multiplier from 5 to 2,
+        so a £20bn fiscal expansion raises equilibrium output by £40bn rather than £100bn. This figure should be treated
+        as an <b>upper bound</b>: crowding out, Ricardian effects and supply constraints all imply a smaller realised
+        increase, which is precisely why the simple Keynesian multiplier must be qualified by the IS-MP and AS-AD
+        analysis developed later in the course.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-02.html">← Lecture 2</a>
+  <a href="../tutorials/tutorial-03.html">Tutorial 3 →</a>
+  <a href="lecture-04.html">Lecture 4 · Money &amp; Banking →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

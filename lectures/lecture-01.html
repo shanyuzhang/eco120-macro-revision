@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 1 · Introduction to Macroeconomics — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · Micro vs Macro</a>
+  <a class="nav" href="#s2">2 · 宏观的起源与核心议题</a>
+  <a class="nav" href="#s3">3 · 循环流量图 4 个 Case</a>
+  <a class="nav" href="#s4">4 · 漏出 ≡ 注入 恒等式</a>
+  <a class="nav" href="#s5">5 · GDP 三种度量法</a>
+  <a class="nav" href="#s6">6 · 基本价格 vs 市场价格</a>
+  <a class="nav" href="#s7">7 · GDP / GNP / NNP</a>
+  <a class="nav" href="#s8">8 · 名义 vs 实际 GDP</a>
+  <a class="nav" href="#s9">9 · GDP deflator vs CPI</a>
+  <a class="nav" href="#s10">10 · GDP 作为福利指标的缺陷</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-01.html">→ Tutorial 1</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 1 · Introduction to Macroeconomics</h1>
+  <div class="sub">宏观经济学导论 · 国民收入核算 · GDP 的度量与局限</div>
+  <div>
+    <span class="tag">39 slides</span>
+    <span class="tag">Begg Ch.15–16</span>
+    <span class="tag">对应 Tutorial 1</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">这一讲要回答一个问题：<b>我们要研究"整个经济体"，那么"整个经济体的产出"到底该怎么量？</b>
+    整讲是一条从"研究对象"到"度量工具"再到"工具的局限"的直线。</p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+研究对象是什么（Micro vs Macro）
+   ↓ 为什么要研究（大萧条 → Keynes → 通胀/失业/产出/增长）
+   ↓ 用什么框架研究（Circular flow：收入 = 支出 = 产值）
+   ↓ 由框架推出恒等式（Leakages ≡ Injections）
+   ↓ 由三条流量得到三种度量（Output / Income / Expenditure method）
+   ↓ 三种度量的价格口径不同（basic price vs market price）
+   ↓ 剥离价格变动（Nominal → Real GDP → deflator / CPI）
+   ↓ 除以人口（Per capita real GDP）
+   ↓ 最后：GDP 根本不是福利指标（局限性）
+    </div>
+
+    <div class="callout c-link"><span class="t">与后续课程的衔接</span>
+      循环流量图里的 <b>C、I、G、NX</b> 就是 <b>Lecture 2–3</b> 凯恩斯 45° 线模型的四个组成部分；
+      <b>S、T、Z 三个 leakages</b> 就是后面乘数公式分母里的三项。恒等式 <span class="mono">(S−I)+(NT−G) ≡ (X−Z)</span>
+      在 Lecture 3 讲财政赤字、Lecture 12 讲贸易失衡时会反复用到。所以这一讲不是"背概念"，是搭骨架。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slides 3</span><h2>1 · Microeconomics vs. Macroeconomics</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 3</span>两者的分界线不是"大小"，是"均衡的范围"</h3>
+    <div class="tw"><table>
+      <tr><th style="width:20%">维度</th><th>Microeconomics</th><th>Macroeconomics</th></tr>
+      <tr><td>研究对象</td><td>individual households and firms 如何决策、如何在市场中互动</td><td>the economy <b>as a system</b>，处理 broad aggregates（总量）</td></tr>
+      <tr><td>均衡分析类型</td><td><span class="en">partial equilibrium analysis</span>（局部均衡）</td><td><span class="en">general equilibrium analysis</span>（一般均衡）</td></tr>
+      <tr><td>典型问题</td><td>某一种商品的均衡价格如何决定</td><td><b>一般价格水平</b>（general price level）如何决定，而非某一商品的价格</td></tr>
+      <tr><td>思维方式</td><td colspan="2" style="text-align:center">✅ <b>相同</b> —— 宏观"uses the same style of thinking about economic issues as in microeconomics"</td></tr>
+    </table></div>
+    <div class="callout c-trap"><span class="t">⚠️ 高频 MCQ 陷阱</span>
+      "Macroeconomics uses a completely different method of analysis from microeconomics." → <span class="cross">FALSE</span>。
+      课件明确写了两者<b>思维方式相同</b>，区别在于<b>聚合程度</b>与 <b>partial / general equilibrium</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 4–8</span><h2>2 · 宏观的起源与五大核心议题</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 4</span>Origins of Macroeconomics</h3>
+    <ul>
+      <li>1750s 起，经济学家开始研究 economic growth、inflation、international payments。</li>
+      <li><b>现代宏观</b>起点是 <span class="term">the Great Depression</span>（<b>1929–1939</b>，十年高失业与产出停滞）。</li>
+      <li>开创著作：<b>John Maynard Keynes</b>, <i>The General Theory of Employment, Interest, and Money</i>（1936）。</li>
+    </ul>
+    <div class="callout c-exam"><span class="t">🎯 送分题</span>
+      "Modern macroeconomics dates from ___" → <b>the Great Depression / Keynes's General Theory</b>。年份 <b>1929–1939</b> 要能写出来。
+    </div>
+
+    <h3 style="margin-top:24px"><span class="slide-no">Slide 5</span>Short-term vs Long-term</h3>
+    <p>同一张英国 150 年数据图上同时包含两件事：围绕趋势的 <b>business cycles（短期波动）</b> 与
+      趋势本身的上移 <b>economic growth（长期增长）</b>。这正是 <b>Lecture 10（增长）</b>与
+      <b>Lecture 11（周期）</b>分家的依据。</p>
+
+    <figure>
+      <svg viewBox="0 0 560 240" role="img" aria-label="Trend growth and business cycles">
+        <line class="ax" x1="60" y1="200" x2="530" y2="200"/>
+        <line class="ax" x1="60" y1="200" x2="60" y2="25"/>
+        <text class="lbl" x="470" y="220">Time</text>
+        <text class="lbl" x="18" y="40">Output</text>
+        <line x1="70" y1="185" x2="515" y2="55" class="cv c-alt2" stroke-dasharray="6 5"/>
+        <path class="cv c-ad" d="M70,185 C110,150 130,200 165,168 C200,138 220,180 255,145
+          C290,115 310,158 345,120 C380,92 400,132 435,95 C470,68 490,100 515,55"/>
+        <text class="lbl" x="415" y="55" fill="#ffb454">Trend output (potential)</text>
+        <text class="lbl" x="120" y="215" fill="#6c8bff">Actual output (cycles)</text>
+        <text class="lbl-s" x="255" y="132">boom</text>
+        <text class="lbl-s" x="150" y="196">slump</text>
+      </svg>
+      <figcaption>Figure 1.1 — Actual output fluctuates around a rising trend path. 短期偏离 = business cycle；趋势斜率 = growth.</figcaption>
+    </figure>
+
+    <h3 style="margin-top:24px"><span class="slide-no">Slide 6</span>Key Issues in Macroeconomics（五个）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:22%">议题</th><th>课件定义（必须能写英文）</th><th>对应 Lecture</th></tr>
+      <tr><td><b>Inflation</b></td><td>the rate of change of <b>the general price level</b></td><td>L8</td></tr>
+      <tr><td><b>Unemployment</b></td><td>a measure of the number of people <b>looking for work but without jobs</b></td><td>L9</td></tr>
+      <tr><td><b>Output</b></td><td>real GDP measures the total income of an economy; GDP is <b>the value of all final goods and services produced domestically during a given period of time</b></td><td>L1–L7</td></tr>
+      <tr><td><b>Economic growth</b></td><td>increases in real GDP，是 economy's total output 扩张的标志</td><td>L10</td></tr>
+      <tr><td><b>Macroeconomic policy</b></td><td>政府用于影响经济整体表现的各类政策措施</td><td>L3, L5, L6</td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 GDP 定义里的四个得分点</span>
+      写 GDP 定义时这四个词一个都不能漏：<b>value of all</b> · <b>final</b> goods and services · produced <b>domestically</b> · <b>during a given period</b>。
+      漏 "final" 会被判双重计算，漏 "domestically" 会和 GNP 混淆。
+    </div>
+
+    <h3 style="margin-top:24px"><span class="slide-no">Slide 8</span>Macroeconomic Modelling 的三步骨架</h3>
+    <div class="fml"><span class="lab">整门课每个模型都按这三步展开——答题时也按这三步写</span>
+1. <b>Assumptions</b>        模型假设（封闭/开放、价格固定/浮动、短期/长期）
+2. <b>How is equilibrium achieved</b>   均衡如何达成（调整机制）
+3. <b>How can equilibrium be changed</b>  均衡如何被改变 / 受冲击（Equilibrium vs Shocks）
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 这就是英式答题结构的来源</span>
+      考卷上的 essay 题几乎都是第 3 步（"某冲击发生后会怎样"）。答题时先补第 1 步（假设/定义）和第 2 步（初始均衡），
+      再答第 3 步——这正是 <b>Define → Diagram → Analyse → Conclude</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 9–17</span><h2>3 · 循环流量图（The Circular Flow）四个 Case</h2></div>
+  <div class="card">
+    <p class="lead">循环流量图说明的核心事实：<b>income ≡ expenditure ≡ value of production</b>，
+    这是衡量总经济活动的三种<b>等价</b>方式。课件按四步逐层加部门。</p>
+
+    <h3><span class="slide-no">Slide 10</span>Case 1：The Inner Circle（只有家庭与企业）</h3>
+    <ul>
+      <li>(1) <b>Production</b>：企业生产。</li>
+      <li>(2) <b>Incomes</b>：企业向家庭购买生产要素，付出的总收入流量 = <b>Y</b>。</li>
+      <li>(3) <b>Expenditure</b>：家庭购买消费品，支出流量 = <b>C</b>。</li>
+      <li>此时 <span class="mono">Y ≡ C</span>：产值 = 要素收入 = 支出。</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 520 250" role="img" aria-label="Circular flow inner circle">
+        <rect x="55" y="95" width="120" height="60" rx="10" fill="#232a55" stroke="#6c8bff"/>
+        <text class="lbl" x="80" y="130">Households</text>
+        <rect x="345" y="95" width="120" height="60" rx="10" fill="#232a55" stroke="#ff5c7a"/>
+        <text class="lbl" x="385" y="130">Firms</text>
+        <path d="M175,112 C240,55 290,55 345,112" class="cv c-alt" marker-end="url(#a1)"/>
+        <path d="M345,140 C290,197 240,197 175,140" class="cv c-ad" marker-end="url(#a1)"/>
+        <defs><marker id="a1" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+          <path d="M0,0 L7,3.2 L0,6.4 z" fill="#aeb6e6"/></marker></defs>
+        <text class="lbl" x="215" y="60" fill="#33d6a6">C — consumption expenditure</text>
+        <text class="lbl" x="222" y="212" fill="#6c8bff">Y — factor incomes</text>
+        <text class="lbl-s" x="230" y="128">Y ≡ C</text>
+      </svg>
+      <figcaption>Figure 1.2 — Case 1: the inner circle. 没有漏出也没有注入，收入全部回流。</figcaption>
+    </figure>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 11</span>Case 2：加入银行部门（Banking sector）</h3>
+    <p>家庭储蓄 <b>S</b>（漏出），企业向银行借入家庭的储蓄用于投资 <b>I</b>（注入）。支出侧变为 <b>C + I</b>。</p>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 12</span>Case 3：加入政府部门</h3>
+    <ul>
+      <li>政府支出 <b>G</b>（注入）；间接税 <b>T<sub>e</sub></b> 从企业侧漏出。</li>
+      <li>家庭得到福利转移 <b>B</b>、缴纳直接税 <b>T<sub>d</sub></b>，得到
+        <b>personal disposable income = Y + B − T<sub>d</sub></b>。</li>
+      <li>支出侧：market price 口径 <b>C + I + G</b>；basic price 口径 <b>C + I + G − T<sub>e</sub></b>。</li>
+    </ul>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 13</span>Case 4：加入国外部门</h3>
+    <ul>
+      <li>国外买我们的商品 = 出口 <b>X</b>（注入）；我们买国外商品 = 进口 <b>Z</b>（漏出）。</li>
+      <li><b>Net exports NX = X − Z</b>。</li>
+      <li>GDP at market prices = <b>C + I + G + NX</b>；GDP at basic prices = <b>C + I + G + NX − T<sub>e</sub></b>。</li>
+    </ul>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slides 14–15</span>数值例题（务必自己走一遍）</h3>
+    <div class="fml"><span class="lab">课件给的数字：C=80, I=10, G=20, X=5, Z=5, Te=10</span>
+GDP at <b>market prices</b> = 80 + 10 + 20 + 5 − 5 = <b>110</b>
+GDP at <b>basic prices</b>  = 110 − T<sub>e</sub> = 110 − 10 = <b>100</b>
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 最容易错的一步</span>
+      支出法算出来的永远是 <b>market prices</b>（含间接税）；要转成 basic prices 必须<b>减去</b>净间接税。
+      方向搞反是历年最常见的失分点。
+    </div>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slides 16–17</span>Leakages 与 Injections（必背）</h3>
+    <div class="grid2">
+      <div>
+        <h4>Withdrawals / Leakages（漏出）</h4>
+        <p class="muted" style="font-size:14px">money no longer recycled from households to firms</p>
+        <ul>
+          <li><b>Net saving (S)</b> → 流向 BANKS</li>
+          <li><b>Net taxes (NT)</b> → 流向 GOV.</li>
+          <li><b>Import expenditure (Z)</b> → 流向 ABROAD</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Injections（注入）</h4>
+        <p class="muted" style="font-size:14px">money flows to firms not circled from households</p>
+        <ul>
+          <li><b>Investment (I)</b> ← 来自 BANKS</li>
+          <li><b>Government expenditure (G)</b> ← 来自 GOV.</li>
+          <li><b>Export expenditure (X)</b> ← 来自 ABROAD</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 记忆法</span>
+      三对一一对应：<b>S↔I（银行）</b>、<b>NT↔G（政府）</b>、<b>Z↔X（国外）</b>。每一对就是一个"部门"。
+      注意课件里家庭消费的是 <b>domestically produced goods, C<sub>d</sub> = C − Z</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 18–20</span><h2>4 · 循环流量模型：恒等式的代数推导 ⭐</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 本讲最高频的 essay/计算考点</span>
+      三部门恒等式 <span class="mono">(S − I) + (NT − G) ≡ (X − Z)</span> 是历年真题反复出现的内容，必须能<b>推导</b>而不只是背。
+    </div>
+
+    <h3>三部门情形（银行 + 政府 + 国外）</h3>
+    <div class="fml"><span class="lab">(1) 支出法，市场价格 → 基本价格</span>
+Y<sub>mp</sub> ≡ C + I + G + X − Z
+Y<sub>bp</sub> ≡ Y<sub>mp</sub> − net indirect taxes ≡ C + I + G + X − Z − T<sub>e</sub>      …(1)
+    </div>
+    <div class="fml"><span class="lab">(2) 收入法：家庭的可支配收入去向</span>
+Y<sub>bp</sub> + B − T<sub>d</sub> ≡ C + S      …(2)
+   ↑ personal disposable income （可支配收入只有两个去处：消费或储蓄）
+    </div>
+    <div class="fml"><span class="lab">(3) 令 (1) = (2)，整理得</span>
+S + T<sub>d</sub> + T<sub>e</sub> − B + Z ≡ I + G + X      …(3)
+   └────── net taxes: NT ──────┘
+即：<b>(actual) withdrawals ≡ (actual) injections</b>
+    </div>
+    <div class="fml"><span class="lab">(*) 三部门余额恒等式 —— 必背</span>
+<b>(S − I) + (NT − G) ≡ (X − Z)</b>
+ private     public      foreign
+ sector      sector      sector
+一个部门的盈余，必然等于其余两个部门盈余之和（符号相反）。
+    </div>
+
+    <h3 style="margin-top:24px">两部门情形（银行 + 政府，无国外，Z = X = 0）</h3>
+    <div class="fml">
+S + T<sub>d</sub> + T<sub>e</sub> − B ≡ I + G      …(4)
+重排：T<sub>d</sub> + T<sub>e</sub> − B − G + S ≡ I
+       └── public saving S<sub>G</sub> ──┘  └S<sub>P</sub>┘
+⇒ <b>I = S<sub>G</sub> + S<sub>P</sub></b>：有政府时，投资等于公共储蓄与私人储蓄之和。
+⇒ 公共部门的赤字 (NT < G) 必然对应私人部门的盈余。
+    </div>
+
+    <h3 style="margin-top:24px">一部门情形（只有银行，无政府无税）</h3>
+    <div class="fml">
+支出：Y ≡ C + I        收入：Y ≡ C + S
+⇒ <b>I ≡ S</b>（<b>actual</b> investment 恒等于 <b>actual</b> saving）
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 全课最经典的陷阱（Tutorial 3 Q1 原题）</span>
+      课件原话：<i>"This need not mean <b>desired</b> investment equals <b>desired</b> saving."</i><br>
+      <b>实际(actual)</b> S ≡ I 是<b>会计恒等式</b>，任何时候都成立（差额由非计划存货变动 unplanned inventory changes 补上）。<br>
+      <b>意愿(desired/planned)</b> S = I 只在<b>均衡时</b>成立，是<b>均衡条件</b>。<br>
+      考试问 "In equilibrium, desired saving equals desired investment. True or false?" —— 答 <b>True</b>，
+      但必须解释清楚 actual 与 desired 的区别，否则拿不到解释分。
+    </div>
+
+    <h3 style="margin-top:24px">Case 1 情形（只有家庭与企业）</h3>
+    <p>Value of production = (factor) incomes = expenditure，且 <span class="mono">Y ≡ C</span>。</p>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 21–26</span><h2>5 · GDP 的三种度量法 ⭐</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:16%">方法</th><th style="width:14%">价格口径</th><th>内容</th><th style="width:20%">与税的关系</th></tr>
+      <tr>
+        <td><b>Output / Product method</b></td>
+        <td><b>basic price</b></td>
+        <td>经济中所产出的总和；做法是<b>加总增加值 value added</b>（net of transactions between firms），避免 double counting。得到 <b>GVA (Gross Value Added)</b></td>
+        <td>不含间接税 T<sub>e</sub>，<b>含</b>直接税 T<sub>d</sub></td>
+      </tr>
+      <tr>
+        <td><b>Income method</b></td>
+        <td><b>basic price</b></td>
+        <td>加总为要素服务支付的收入：<b>wages, interest, rents, profits</b> 等</td>
+        <td>不含间接税，<b>含</b>直接税</td>
+      </tr>
+      <tr>
+        <td><b>Expenditure method</b></td>
+        <td><b>market price</b></td>
+        <td>对最终产品与服务的支出总和：<b>Y = C + I + G + X − Z</b></td>
+        <td><b>含</b>间接税 T<sub>e</sub></td>
+      </tr>
+    </table></div>
+
+    <h3><span class="slide-no">Slide 22</span>Product method 的三个注意点</h3>
+    <ul>
+      <li><b>Double counting 问题</b> → 解决办法是只算 value added。</li>
+      <li><b>Stocks / inventories（存货）</b>要计入。</li>
+      <li><b>Taxes and subsidies on products</b>（如 <b>VAT</b>，属间接税）：这是 market price 与 basic price 的差额，
+        在 GVA at basic prices 中<b>被排除</b>；<br>
+        而 <b>taxes on production</b>（属直接税/所得税）则<b>包含</b>在 GVA at basic prices 之中。</li>
+    </ul>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 24</span>Income method 的三个注意点</h3>
+    <ul>
+      <li><b>Transfer payments 转移支付不计入</b>（它们只影响可支配收入，不对应任何生产）。</li>
+      <li><b>直接税计入</b>（如所得税，影响可支配收入但仍是要素收入的一部分）。</li>
+      <li><b>产品税与补贴排除</b>（即市场价格与基本价格之差）。</li>
+    </ul>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 26</span>课件的核心计算例题（务必吃透）</h3>
+    <div class="tw"><table>
+      <tr><th>Good</th><th>Seller</th><th>Buyer</th><th>Transaction value</th><th>Value added</th><th>Spending on final goods</th><th>Factor earnings</th></tr>
+      <tr><td>Steel</td><td>Steel maker</td><td>Machine maker</td><td>1000</td><td>1000</td><td>—</td><td>1000</td></tr>
+      <tr><td>Steel</td><td>Steel maker</td><td>Car maker</td><td>3000</td><td>3000</td><td>—</td><td>3000</td></tr>
+      <tr><td>Machine</td><td>Machine maker</td><td>Car maker</td><td>2000</td><td>1000</td><td><b>2000</b></td><td>1000</td></tr>
+      <tr><td>Tyres</td><td>Tyre maker</td><td>Car maker</td><td>500</td><td>500</td><td>—</td><td>500</td></tr>
+      <tr><td>Cars</td><td>Car maker</td><td>Household</td><td>5000</td><td>1500</td><td><b>5000</b></td><td>1500</td></tr>
+      <tr><th colspan="4">GDP</th><th>7000</th><th>7000</th><th>7000</th></tr>
+    </table></div>
+    <ul>
+      <li>三种方法算出的 GDP <b>都是 7000</b> —— 这就是循环流量图恒等性的数值验证。</li>
+      <li><b>机器（capital）虽然被企业购买，但算作企业的 investment，属于最终支出</b>，所以进 "spending on final goods" 一列 = 2000。
+        这是本例最刁钻的一点。</li>
+      <li>车厂的 value added = 5000 − 3000（钢）− 500（轮胎）= <b>1500</b>。注意<b>不减机器 2000</b>（那是资本，不是中间投入）。</li>
+    </ul>
+    <div class="fml"><span class="lab">为什么"增加值"恰好等于"要素收入"</span>
+Profit = Revenue − wage − cost of capital − material cost
+⇒ Revenue − material cost = Profit + wage + cost of capital
+  └── VA（产出法）──┘        └──── 收入法的各类收入 ────┘
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slides 27–29</span><h2>6 · 支出法细节 & 基本价格 ↔ 市场价格</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 27</span>支出法四大组成部分的内部构成</h3>
+    <div class="tw"><table>
+      <tr><th style="width:22%">组成</th><th>包含内容</th><th style="width:16%">所属部门</th></tr>
+      <tr><td><b>Consumption (C)</b></td><td>Services（理发、医疗、教育）· Durable goods（汽车、音响、洗衣机）· Non-durable goods（食品、衣着、汽油）</td><td rowspan="2">Private sector</td></tr>
+      <tr><td><b>Investment (I)</b></td><td>Business fixed capital investment · Residential construction · <b>Changes in inventories</b><br>
+        <span class="muted">（含私人投资，<b>不含</b>政府投资）</span></td></tr>
+      <tr><td><b>Government (G)</b></td><td>政府对商品与服务的支出</td><td>Public sector</td></tr>
+      <tr><td><b>Net exports (X − Z)</b></td><td>出口减进口</td><td>Foreign sector</td></tr>
+    </table></div>
+    <div class="callout c-trap"><span class="t">⚠️ 两个必考细节</span>
+      ① <b>Changes in inventories 属于 Investment</b>——这是后面凯恩斯模型中"非计划存货变动使经济回到均衡"的会计基础。<br>
+      ② 课件明确：投资项 <b>includes private investment but not government investment</b>（政府投资归在 G 中）。
+    </div>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 29</span>Basic price ↔ Market price 换算</h3>
+    <div class="fml"><span class="lab">必背换算式</span>
+<b>GDP at market price = GDP at basic price + indirect taxes − subsidies</b>
+                                            └──── net indirect taxes ────┘
+
+UK 2004 实例：
+GVA (at basic prices)          £1,033,324 m
+  + Taxes on products          £  138,639 m
+  − Subsidies on products      £    7,524 m
+= <b>GDP (at market prices)      £1,164,439 m</b>
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slides 28, 30–31</span><h2>7 · GDP / GNP / NNP / NI 的层层递推</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">从 GDP 到 National Income 的完整链条（必背）</span>
+<b>GDP</b>  = 由<b>位于本国境内</b>的生产要素所生产的产出（<b>地域</b>概念）
+        ↓ + Net income from abroad (NYA)
+<b>GNP (= GNY / GNI)</b> = <b>本国国民</b>所赚得的总收入（<b>国民</b>概念）
+        = GDP + 国民从国外获得的收入流入 − 非国民的收入流出
+        ↓ − Capital consumption (depreciation 折旧)
+<b>NNP (= NNY)</b> = Net National Product
+        ↓ − Indirect taxes（转为 basic prices）
+<b>National Income (NI)</b> = NNP at basic prices
+    </div>
+    <div class="tw"><table>
+      <tr><th>UK 2004（£ million）</th><th>金额</th></tr>
+      <tr><td>Consumption of households and NPISH (C)</td><td>760 678</td></tr>
+      <tr><td>Government final consumption (G)</td><td>246 810</td></tr>
+      <tr><td>Gross capital formation (I)</td><td>194 798</td></tr>
+      <tr><td>Exports (X)</td><td>289 959</td></tr>
+      <tr><td>less Imports (Z)</td><td>−328 384</td></tr>
+      <tr><td>Statistical discrepancy</td><td>578</td></tr>
+      <tr><td><b>GDP (at market prices)</b></td><td><b>1 164 439</b></td></tr>
+      <tr><td>plus Net income from abroad</td><td>25 184</td></tr>
+      <tr><td><b>Gross national income (GNY)</b></td><td><b>1 189 623</b></td></tr>
+      <tr><td>less Capital consumption (depreciation)</td><td>−121 577</td></tr>
+      <tr><td><b>Net national income (NNY)</b></td><td><b>1 068 046</b></td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 一句话区分</span>
+      <b>GDP 看"人在哪"（地域）</b>，<b>GNP 看"人是谁"（国籍）</b>。
+      在中国工作的外国人创造的产出计入中国 GDP，但计入其本国 GNP。
+    </div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slides 32–34</span><h2>8 · Nominal vs Real GDP ⭐（计算题高发）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:16%"></th><th>Nominal GDP</th><th>Real GDP</th></tr>
+      <tr><td>用什么价格</td><td><b>当期价格</b>（current prices）</td><td><b>基期价格</b>（base-period / constant prices）</td></tr>
+      <tr><td>为何变动</td><td>① 实物产出变了 <b>②</b> 市场价格变了（<b>两个原因</b>）</td><td><b>只因为</b>实物产出变了（<b>一个原因</b>）</td></tr>
+    </table></div>
+
+    <h3><span class="slide-no">Slide 34</span>课件例题（1980 为基期）</h3>
+    <div class="fml"><span class="lab">1980（基期）：Q₁=100, P₁=2；Q₂=100, P₂=4</span>
+Nominal GDP<sub>1980</sub> = 100×2 + 100×4 = 200 + 400 = <b>600</b>
+Real GDP<sub>1980</sub>    = 100×2 + 100×4 = <b>600</b>   ← 基期两者必然相等
+    </div>
+    <div class="fml"><span class="lab">2013：Q₁=150, P₁=4；Q₂=140, P₂=6</span>
+Nominal GDP<sub>2013</sub> = 150×<b>4</b> + 140×<b>6</b> = 600 + 840 = <b>1440</b>   ← 用当期价格
+Real GDP<sub>2013</sub>    = 150×<b>2</b> + 140×<b>4</b> = 300 + 560 = <b>860</b>    ← 用 1980 价格
+    </div>
+    <div class="fml"><span class="lab">顺手算出 deflator</span>
+GDP Deflator<sub>2013</sub> = (1440 / 860) × 100 ≈ <b>167.4</b>
+⇒ 1980–2013 间一般价格水平上涨约 67%
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 计算题唯一的坑</span>
+      Real GDP 必须用 <b>基期价格 × 当期数量</b>。写成"当期价格×基期数量"直接全错。
+      口诀：<b>real 锁价格，nominal 全用当期</b>。基期年 Nominal = Real，可用来自检。
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 35–38</span><h2>9 · GDP Deflator vs CPI ⭐（MCQ 高发）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">两个价格指数</span>
+GDP Deflator = <b>GDP measured in current prices / GDP measured in base year prices × 100</b>
+             （考虑<b>当期实际产出</b>的价格变动）
+
+CPI = <b>Value of basket in current prices / Value of same basket in base-period prices × 100</b>
+             （考虑一篮子<b>固定不变</b>的消费品）
+
+IPPI (Industrial Product Price Index) = 同样是一篮子的成本，但衡量的是<b>中间品 intermediate goods</b>
+    </div>
+
+    <h3>三条核心差异（课件 Slide 37，必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:20%">差异维度</th><th>GDP Deflator</th><th>CPI</th></tr>
+      <tr><td><b>覆盖范围</b></td><td>经济中<b>所有</b>生产的商品与服务的价格</td><td><b>仅</b>消费者购买的商品与服务的价格</td></tr>
+      <tr><td><b>进口品</b></td><td><b>只含国内生产</b>的商品（不含进口品）</td><td>国内生产的<b>与进口的都含</b></td></tr>
+      <tr><td><b>篮子是否固定</b></td><td>篮子<b>随 GDP 构成变化而变化</b></td><td>篮子<b>相对固定</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 经典 MCQ</span>
+      "油价上涨（英国大量进口石油）会更明显地推高哪一个指数？" → <b>CPI</b>（因为 CPI 含进口品，deflator 不含）。<br>
+      "某国生产但不消费的军火价格上涨，影响哪个？" → <b>GDP deflator</b>（deflator 含所有国内生产品，CPI 只含消费品）。
+    </div>
+
+    <h3 style="margin-top:22px"><span class="slide-no">Slide 38</span>Per Capita Real GDP</h3>
+    <div class="fml">
+<b>Per capita real GDP = Real GDP / Population</b>
+
+近似增长率关系：
+<b>人均实际 GDP 增长率 = 实际 GDP 增长率 − 人口增长率</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 为什么要人均</span>
+      比较生活水平必须用人均。一国 GDP 增长 3% 但人口增长 3%，人均生活水平<b>毫无改善</b>。
+      这一点在 <b>Lecture 10（增长）</b>里是 growth accounting 的起点。
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slide 39</span><h2>10 · GDP 是合适的生活水平指标吗？（essay 必考）</h2></div>
+  <div class="card">
+    <div class="grid2">
+      <div>
+        <h4>A. 被遗漏的项目（Items excluded）</h4>
+        <ul>
+          <li><b>Non-marketed items</b>：家务劳动、自愿服务、自给自足生产——有价值但无市场交易，不入账。</li>
+          <li><b>The underground economy</b>：地下经济/黑市——真实发生但未申报。</li>
+        </ul>
+      </div>
+      <div>
+        <h4>B. 产出本身是不是好的福利指标？</h4>
+        <ul>
+          <li><b>Production ≠ consumption</b>：生产的一部分是投资和出口，不构成本国当期福利。</li>
+          <li><b>Human costs of production</b>：更长工时、更差工作条件，GDP 上升但福利下降。</li>
+          <li><b>Externalities</b>：污染等负外部性不被扣除。</li>
+          <li><b>The production of 'regrettables'</b>：国防、监狱、灾后重建——计入 GDP 但并不提升福利。</li>
+          <li><b>Distribution of income</b>：GDP 是总量，掩盖分配不均。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 这是 essay 题的现成骨架</span>
+      "Discuss whether GDP is a good measure of living standards." —— 直接按 <b>A（漏算）</b> + <b>B（概念不对口）</b> 两大类展开，
+      每类举 2–3 点，最后判断：GDP 仍是<b>最可得、可国际比较</b>的指标，作为<b>经济活动</b>的度量是合适的，
+      但作为 <b>welfare</b> 的度量必须辅以人均、分配、环境等修正指标。
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查（考前 5 分钟看这块）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">恒等式</span>
+Y<sub>mp</sub> ≡ C + I + G + X − Z
+Y<sub>bp</sub> ≡ Y<sub>mp</sub> − T<sub>e</sub>（净间接税）
+Withdrawals ≡ Injections:  S + NT + Z ≡ I + G + X
+<b>(S − I) + (NT − G) ≡ (X − Z)</b>
+两部门：I = S<sub>G</sub> + S<sub>P</sub>    一部门：I ≡ S（actual）
+    </div>
+    <div class="fml"><span class="lab">价格与实际量</span>
+GDP at market price = GDP at basic price + indirect taxes − subsidies
+GDP Deflator = (Nominal GDP / Real GDP) × 100
+CPI = (当期篮子价值 / 基期篮子价值) × 100
+Per capita real GDP = Real GDP / Population
+人均实际 GDP 增长率 ≈ 实际 GDP 增长率 − 人口增长率
+    </div>
+    <div class="fml"><span class="lab">总量层级</span>
+GNP = GDP + net income from abroad (NYA)
+NNP = GNP − depreciation
+National Income = NNP at basic prices
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 本讲考点与陷阱汇总</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>actual S ≡ I 与 desired S = I 混为一谈</td><td>恒等式任何时候成立（靠非计划存货调节）；相等的<b>意愿</b>值只在均衡时成立</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>支出法结果说成 basic price</td><td>支出法 = <b>market price</b>（含间接税）；产出法与收入法 = basic price</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>Real GDP 用当期价格算</td><td>Real GDP = <b>基期价格 × 当期数量</b></td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>Transfer payments 计入 GDP</td><td>转移支付<b>不计入</b>（不对应生产），但影响可支配收入</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>把中间品算进 GDP</td><td>只算 <b>final</b> goods，或等价地加总 <b>value added</b></td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>企业买机器算中间投入</td><td>资本品购买 = <b>investment</b>，属最终支出</td><td><span class="badge b-calc">Calc</span></td></tr>
+      <tr><td>CPI 与 GDP deflator 张冠李戴</td><td>deflator：全部国内生产品、篮子可变；CPI：仅消费品、含进口、篮子固定</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>GDP 与 GNP 混用</td><td>GDP 按<b>地域</b>，GNP 按<b>国籍</b>；GNP = GDP + NYA</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>Inventories 不算投资</td><td><b>Changes in inventories 计入 I</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例（Define → Diagram → Analyse → Conclude）</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span></h3>
+    <p class="lead"><i>"Explain why, in an economy with a banking, a government and a foreign sector, total leakages
+    must always equal total injections. Show how this identity implies that a government budget deficit must be
+    matched by a private sector surplus and/or a current account deficit."</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng"><b>Leakages (withdrawals)</b> are flows of income that households receive but do not spend on
+        domestically produced output: net saving <i>S</i>, net taxes <i>NT</i>, and import expenditure <i>Z</i>.
+        <b>Injections</b> are flows of expenditure on domestic output that do not originate from household income:
+        investment <i>I</i>, government spending <i>G</i>, and exports <i>X</i>.</p>
+        <p class="eng">The circular flow of income shows that the value of production, the total of factor incomes,
+        and total expenditure are three equivalent ways of measuring economic activity, so that</p>
+        <div class="fml">Y<sub>mp</sub> ≡ C + I + G + X − Z,   Y<sub>bp</sub> ≡ Y<sub>mp</sub> − T<sub>e</sub></div>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1: the circular flow of income. Income flows anticlockwise from firms to households as
+        factor payments <i>Y</i>; expenditure flows back as <i>C<sub>d</sub> = C − Z</i>. Three leakages
+        (<i>S</i> to banks, <i>NT</i> to government, <i>Z</i> abroad) drain the lower flow; three injections
+        (<i>I</i>, <i>G</i>, <i>X</i>) re-enter the upper flow. Because the two flows are the <b>same</b> circle
+        measured at two points, whatever leaves must re-enter.</p>
+        <figure>
+          <svg viewBox="0 0 560 260" role="img" aria-label="Circular flow with leakages and injections">
+            <rect x="45" y="105" width="115" height="55" rx="10" fill="#232a55" stroke="#6c8bff"/>
+            <text class="lbl" x="63" y="137">Households</text>
+            <rect x="400" y="105" width="115" height="55" rx="10" fill="#232a55" stroke="#ff5c7a"/>
+            <text class="lbl" x="440" y="137">Firms</text>
+            <path d="M160,120 C250,72 320,72 400,120" class="cv c-alt" marker-end="url(#a2)"/>
+            <path d="M400,148 C320,205 250,205 160,148" class="cv c-ad" marker-end="url(#a2)"/>
+            <defs><marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+              <path d="M0,0 L7,3.2 L0,6.4 z" fill="#aeb6e6"/></marker></defs>
+            <text class="lbl" x="215" y="80" fill="#33d6a6">C<tspan baseline-shift="sub" font-size="9">d</tspan> = C − Z  (expenditure)</text>
+            <text class="lbl" x="240" y="220" fill="#6c8bff">Y  (factor payments)</text>
+            <line x1="215" y1="118" x2="215" y2="45" class="dsh"/>
+            <line x1="270" y1="118" x2="270" y2="45" class="dsh"/>
+            <line x1="325" y1="118" x2="325" y2="45" class="dsh"/>
+            <text class="lbl-s" x="196" y="38">I</text><text class="lbl-s" x="253" y="38">G</text><text class="lbl-s" x="310" y="38">X</text>
+            <text class="lbl-s" x="352" y="38" fill="#33d6a6">INJECTIONS</text>
+            <line x1="215" y1="152" x2="215" y2="235" class="dsh"/>
+            <line x1="270" y1="152" x2="270" y2="235" class="dsh"/>
+            <line x1="325" y1="152" x2="325" y2="235" class="dsh"/>
+            <text class="lbl-s" x="196" y="250">S</text><text class="lbl-s" x="249" y="250">NT</text><text class="lbl-s" x="310" y="250">Z</text>
+            <text class="lbl-s" x="352" y="250" fill="#ffb454">LEAKAGES</text>
+          </svg>
+          <figcaption>Figure 1 — Leakages (S, NT, Z) and injections (I, G, X) in the circular flow.</figcaption>
+        </figure>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>Step 1.</b> Measuring output by the expenditure method at basic prices:</p>
+        <div class="fml">Y<sub>bp</sub> ≡ C + I + G + X − Z − T<sub>e</sub>    …(1)</div>
+        <p class="eng"><b>Step 2.</b> Households can only do two things with personal disposable income — consume or save:</p>
+        <div class="fml">Y<sub>bp</sub> + B − T<sub>d</sub> ≡ C + S    …(2)</div>
+        <p class="eng"><b>Step 3.</b> Since (1) and (2) measure the <i>same</i> flow, equate them and cancel <i>C</i>:</p>
+        <div class="fml">S + T<sub>d</sub> + T<sub>e</sub> − B + Z ≡ I + G + X
+⇒ S + NT + Z ≡ I + G + X    (leakages ≡ injections)    …(3)</div>
+        <p class="eng"><b>Step 4.</b> Rearranging (3) into sectoral balances:</p>
+        <div class="fml"><b>(S − I) + (NT − G) ≡ (X − Z)</b></div>
+        <p class="eng">This is an <b>accounting identity</b>, not a behavioural equation: it holds by construction at
+        every instant, whether or not the economy is in equilibrium. Any discrepancy between <i>desired</i> flows is
+        absorbed by unplanned changes in inventories, which are counted as part of investment.</p>
+        <p class="eng"><b>Step 5.</b> A government budget deficit means <i>NT − G &lt; 0</i>. For the identity to hold,
+        it must be offset by a private sector surplus (<i>S &gt; I</i>) and/or by a current account deficit
+        (<i>X − Z &lt; 0</i>, i.e. borrowing from the rest of the world). If private saving does not rise, the deficit
+        must be financed externally — the "twin deficits" result.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">Total leakages must equal total injections because income, expenditure and output are three
+        measurements of one circular flow, so the identity <i>(S − I) + (NT − G) ≡ (X − Z)</i> holds at all times.
+        It follows that a public sector deficit is necessarily matched by an excess of private saving over private
+        investment, by a current account deficit, or by some combination of the two. Note, however, that the identity
+        is silent about <b>causation</b>: it tells us the balances must sum to zero, but not which sector adjusts —
+        that requires a behavioural model such as the Keynesian model of Lectures 2–3.</p>
+      </div>
+    </div>
+
+    <div class="callout c-tip"><span class="t">💡 这份范例为什么拿高分</span>
+      ① 每个术语都先定义（definition marks）；② 有标注完整的图并在正文中解释；
+      ③ 推导分 5 步且每步给机制；④ 主动区分 <b>identity vs behavioural equation</b>、主动指出<b>不能推因果</b>——
+      这类"超出题面的限定性评论"是英式评分里 first-class 与 2:1 的分水岭。
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="../index.html">← 总目录</a>
+  <a href="../tutorials/tutorial-01.html">Tutorial 1 →</a>
+  <a href="lecture-02.html">Lecture 2 · Output and Aggregate Demand →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

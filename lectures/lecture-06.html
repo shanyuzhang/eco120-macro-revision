@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 6 · The IS-MP Model — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 模型的来源：IS-LM → IS-MP</a>
+  <a class="nav" href="#s2">2 · IS 曲线的推导 ⭐</a>
+  <a class="nav" href="#s3">3 · IS 的斜率与移动 ⭐</a>
+  <a class="nav" href="#s4">4 · LM 曲线：推导、斜率、移动</a>
+  <a class="nav" href="#s5">5 · MP 曲线与 Taylor rule ⭐</a>
+  <a class="nav" href="#s6">6 · 货币需求冲击：MP 不动 ⭐</a>
+  <a class="nav" href="#s7">7 · 模型均衡</a>
+  <a class="nav" href="#s8">8 · 财政政策与挤出效应 ⭐⭐</a>
+  <a class="nav" href="#s9">9 · 货币政策与政策搭配</a>
+  <a class="nav" href="#s10">10 · MP 的两种极端情形</a>
+  <a class="nav" href="#s11">11 · 财政 vs 货币政策</a>
+  <a class="nav" href="#s12">12 · 李嘉图等价 ⭐</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-06.html">→ Tutorial 6</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 6 · The IS-MP Model</h1>
+  <div class="sub">商品市场 + 货币市场的联合均衡 · 挤出效应 · 政策搭配 · 李嘉图等价</div>
+  <div>
+    <span class="tag">41 slides</span>
+    <span class="tag">Begg Ch.21</span>
+    <span class="tag">对应 Tutorial 6 / EOC Ch21</span>
+    <span class="tag b-hot">⭐ 挤出效应必考</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">Lecture 2–3 只有商品市场（利率被当作固定），Lecture 4–5 只有货币市场（收入被当作固定）。
+    本讲把两个市场<b>合并到同一张 (r, Y) 图上</b>，于是 r 和 Y <b>同时被内生决定</b>。
+    这才第一次能回答："财政扩张究竟能让产出增加多少？"</p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+商品市场：45°线模型 + 投资对利率敏感 I = I(r)
+   ↓ 每个 r 对应一个均衡 Y ⇒ 把这些点连起来 = <b>IS 曲线</b>（向下倾斜）
+货币市场：LL 与 Mˢ
+   ↓ 每个 Y 对应一个均衡 r ⇒ 连起来 = <b>LM 曲线</b>（向上倾斜，央行控 M 时）
+   ↓ 但现代央行控<b>利率</b>不控货币量 ⇒ 换成 <b>MP 曲线</b>（由 <b>Taylor rule</b> 给出）
+   ↓ IS ∩ MP ⇒ <b>唯一的 (r*, Y*)</b>
+   ↓ 财政扩张：IS 右移 ⇒ Y↑ 但 r↑ ⇒ <b>挤出效应</b>（Y₁ &lt; Y′）
+   ↓ 货币扩张：MP 下移 ⇒ r↓、Y↑
+   ↓ 两者搭配 ⇒ <b>policy mix</b>：同样的 Y* 可以有四种 (公/私支出) 组合
+   ↓ 最后两个限定：<b>李嘉图等价</b>削弱财政政策；模型忽略了<b>价格、供给侧、开放性</b>
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：IS 曲线的每一点都是 Lecture 2–3 的 45° 线均衡；MP/LM 的每一点都是 Lecture 5 的货币市场均衡。<br>
+      <b>启下</b>：课件 Slide 3 明说本模型<b>"helps to derive the aggregate demand curve"</b>——
+      <b>Lecture 7</b> 的 AD 曲线正是从 IS-MP 推出来的。Slide 41 列出的三个"未考虑因素"
+      （价格与通胀、供给侧、开放性）恰好就是 Lecture 7、9、12 的内容。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slide 3</span><h2>1 · 模型的来源：为什么是 IS-MP 而不是 IS-LM ⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">课件原文逻辑（这一页考过定义题）</span>
+• 最初是 <b>IS-LM 模型</b>，由 <b>Sir John Hicks</b> 提出，
+  作为对 Keynes《General Theory》的<b>逻辑上自洽的澄清</b>。
+• 在货币市场上，IS-LM 假设<b>央行控制货币供给</b>，
+  因此得到 <b>LM（liquidity preference – money supply）曲线</b>。
+• <b>如今央行控制的是利率</b>，货币市场均衡由
+  <b>MP（monetary policy）曲线</b>表示，因此称为 <b>IS-MP 模型</b>。
+    </div>
+    <ul>
+      <li>该模型提供了<b>同时分析财政政策与货币政策</b>的工具。</li>
+      <li>它还<b>有助于推导总需求曲线</b>（下一讲介绍）。</li>
+    </ul>
+    <div class="callout c-exam"><span class="t">🎯 一句话记忆</span>
+      <b>LM = 央行盯货币量（旧）；MP = 央行盯利率（今）。</b>
+      本课程两者都讲，但<b>主模型是 IS-MP</b>。答题时若题目没特别指定，<b>用 IS-MP</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 5–6</span><h2>2 · IS 曲线的推导 ⭐⭐（必须会画两格图）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义（必背）</span>
+      商品市场在<b>总需求与实际收入相等</b>时处于均衡。<br>
+      <b>The IS (Investment–Savings) schedule shows the different combinations of income and interest rates
+      at which the goods market is in equilibrium.</b>
+    </div>
+
+    <h3>推导过程（Slide 6，两格上下对齐图）</h3>
+    <ol>
+      <li>在<b>相对高</b>的利率 r₀ 下，<b>消费与投资相对低</b>，因此 <b>AD 也低</b>（AD₀），均衡产出为 <b>Y₀</b>。</li>
+      <li>在<b>更低</b>的利率 r₁ 下，<b>消费、投资与 AD 都更高</b>（AD₁），均衡产出为 <b>Y₁ &gt; Y₀</b>。</li>
+      <li>把 (r₀, Y₀) 与 (r₁, Y₁) 这样的点全部描到下面那格 (r, Y) 平面上，连成的曲线就是 <b>IS</b>。</li>
+    </ol>
+
+    <figure>
+      <svg viewBox="0 0 520 500" role="img" aria-label="Deriving the IS schedule">
+        <text class="lbl" x="180" y="16">上格：45° 线模型</text>
+        <line class="ax" x1="70" y1="215" x2="470" y2="215"/>
+        <line class="ax" x1="70" y1="215" x2="70" y2="30"/>
+        <text class="lbl" x="380" y="236">Income</text>
+        <text class="lbl" x="26" y="44">AD</text>
+        <line x1="70" y1="215" x2="255" y2="30" class="cv" stroke="#8089bd"/>
+        <text class="lbl-s" x="222" y="40" fill="#8089bd">45°</text>
+        <line x1="70" y1="178" x2="440" y2="60" class="cv c-ad"/>
+        <text class="lbl-s" x="392" y="54" fill="#6c8bff">AD₀ (r₀ 高)</text>
+        <line x1="70" y1="150" x2="440" y2="32" class="cv c-alt"/>
+        <text class="lbl-s" x="392" y="26" fill="#33d6a6">AD₁ (r₁ 低)</text>
+        <circle class="pt" cx="168" cy="118" r="5"/>
+        <circle class="pt" cx="222" cy="93" r="5"/>
+        <line x1="168" y1="118" x2="168" y2="470" class="dsh"/>
+        <line x1="222" y1="93" x2="222" y2="470" class="dsh"/>
+        <text class="lbl-s" x="160" y="232">Y₀</text><text class="lbl-s" x="214" y="232">Y₁</text>
+
+        <text class="lbl" x="180" y="278">下格：IS 曲线</text>
+        <line class="ax" x1="70" y1="450" x2="470" y2="450"/>
+        <line class="ax" x1="70" y1="450" x2="70" y2="292"/>
+        <text class="lbl" x="380" y="472">Income</text>
+        <text class="lbl" x="34" y="306">r</text>
+        <line x1="100" y1="310" x2="420" y2="430" class="cv c-as"/>
+        <text class="lbl" x="372" y="428" fill="#ff5c7a">IS</text>
+        <circle class="pt" cx="168" cy="335" r="5"/>
+        <circle class="pt" cx="222" cy="356" r="5"/>
+        <line x1="70" y1="335" x2="168" y2="335" class="dsh"/><text class="lbl-s" x="50" y="339">r₀</text>
+        <line x1="70" y1="356" x2="222" y2="356" class="dsh"/><text class="lbl-s" x="50" y="360">r₁</text>
+      </svg>
+      <figcaption>Figure 6.1 — IS 曲线的推导。利率下降使 AD 上移、45° 线均衡产出上升；把 (r, Y) 组合描出即得向下倾斜的 IS。</figcaption>
+    </figure>
+    <div class="callout c-tip"><span class="t">💡 关键的一步（Lecture 2 在这里被放松）</span>
+      Lecture 2 假设 <b>I 是常数</b>；这里改为 <b>I = I(r)，向下倾斜</b>（来自 Lecture 5 的 II 曲线）。
+      正因为 <b>r↓ ⇒ I↑ ⇒ AD↑ ⇒ Y↑</b>，IS 才向下倾斜。<b>这就是 IS 向下倾斜的根本原因</b>，答题必须写出来。
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 7–10</span><h2>3 · IS 曲线的斜率与移动 ⭐</h2></div>
+  <div class="card">
+    <h3>斜率（Slides 7–8）</h3>
+    <div class="fml"><span class="lab">课件原文四句话</span>
+• IS 曲线<b>向下倾斜</b>：<b>更低的利率提振总需求与产出</b>。
+• IS 的斜率反映了<b>总需求对利率的敏感度</b>
+  （the sensitivity of aggregate demand to interest rates）。
+• 若需求<b>对利率敏感</b> ⇒ IS 曲线<b>平坦（flat）</b>。
+• 若产出需求<b>对利率不敏感</b> ⇒ IS 曲线<b>陡峭（steep）</b>。
+    </div>
+    <p>图形上（Slide 8）：同样的利率变化 r₀ → r₁，
+    <b>AD₁</b>（敏感）移动幅度大 ⇒ 产出从 Y₀ 大幅升到 <b>Y₁</b> ⇒ 对应<b>平坦的 IS₁</b>；
+    <b>AD₂</b>（不敏感）移动幅度小 ⇒ 产出只升到 <b>Y₂</b> ⇒ 对应<b>陡峭的 IS₂</b>。</p>
+
+    <h3 style="margin-top:20px">移动（Slides 9–10）</h3>
+    <p><b>总需求的变化会使 IS 曲线移动。</b>课件列举的三个原因：</p>
+    <ul>
+      <li>在<b>给定利率</b>下，对未来利润<b>更乐观</b>会<b>提高投资需求</b>；</li>
+      <li><b>更高的预期未来收入</b>会<b>提高消费需求</b>；</li>
+      <li><b>更高的政府支出</b>会<b>直接增加总需求</b>。</li>
+    </ul>
+    <p>其中任何一项，通过<b>在给定利率下提高总需求</b>，就<b>在任何利率水平上提高了均衡产出</b>，
+    从而导致 <b>IS 曲线上移 / 右移</b>。</p>
+    <div class="callout c-tip"><span class="t">💡 IS 右移的幅度 = 乘数 × 自主支出变动</span>
+      在给定利率下，ΔG 使 45° 线均衡产出增加 <b>kΔG</b>（k 是 Lecture 3 的完整乘数）。
+      所以 <b>IS 曲线水平右移的距离恰好是 kΔG</b>。这一点在下面讲挤出效应时是关键。
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 12–17</span><h2>4 · LM 曲线：推导、斜率、移动</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义</span>
+      货币市场在<b>货币需求等于货币供给</b>时均衡。<br>
+      <b>The LM schedule shows the different combinations of income and interest rates at which the money market
+      is in equilibrium.</b><br>
+      <b>适用前提</b>：<b>央行选择货币供给，并接受利率自行调整以达成均衡</b>。
+    </div>
+
+    <h3>推导（Slide 13）</h3>
+    <ol>
+      <li>在收入 Y₀ 时，货币需求曲线为 LL₀，货币市场均衡要求利率为 <b>r₀</b>。</li>
+      <li>收入升到 Y₁ 时，货币需求右移到 LL₁（回顾 Lecture 4：<b>LL 的位置取决于实际收入</b>），
+        在<b>货币供给不变</b>下，均衡利率必须升到 <b>r₁</b>。</li>
+      <li>把 (Y₀, r₀)、(Y₁, r₁) 描出，得到<b>向上倾斜</b>的 LM。</li>
+    </ol>
+
+    <h3 style="margin-top:18px">斜率（Slides 14–16）</h3>
+    <div class="fml">
+<b>LM 向上倾斜</b>：更高的产出<b>诱发更高的利率</b>，以使货币需求与货币供给保持一致。
+斜率取决于<b>货币需求对利率与对收入变化的敏感度</b>。
+    </div>
+    <div class="tw"><table>
+      <tr><th style="width:34%">情形</th><th>课件的推理</th><th style="width:16%">LM</th></tr>
+      <tr><td><b>货币需求对<b>利率</b>越不敏感</b><br><span class="muted">（LL 越陡）</span></td>
+        <td>需要<b>更大的利率变化</b>才能抵消同样的货币需求移动 (L₁−L₀)</td><td><b>更陡</b></td></tr>
+      <tr><td><b>货币需求对<b>收入</b>越敏感</b><br><span class="muted">（同样的 ΔY 使 LL 移得更远）</span></td>
+        <td>需要<b>更大的利率变化</b>来维持货币市场均衡</td><td><b>更陡</b></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:18px">移动（Slide 17）</h3>
+    <ul>
+      <li><b>目标货币供给上升</b>意味着货币需求也必须增加，才能维持货币市场均衡。</li>
+      <li><b>货币扩张 ⇒ LM 曲线右移</b>（在每个收入水平上对应更低的利率）。</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 900 300" role="img" aria-label="Deriving the LM schedule">
+        <text class="lbl" x="100" y="16">货币市场</text>
+        <line class="ax" x1="70" y1="255" x2="400" y2="255"/>
+        <line class="ax" x1="70" y1="255" x2="70" y2="32"/>
+        <text class="lbl-s" x="230" y="278">Real money balances</text>
+        <text class="lbl" x="38" y="46">r</text>
+        <line x1="250" y1="255" x2="250" y2="40" class="cv c-as"/>
+        <text class="lbl-s" x="228" y="32" fill="#ff5c7a">Mˢ</text>
+        <path d="M100,72 C165,130 215,170 340,222" class="cv c-ad"/>
+        <text class="lbl-s" x="304" y="238" fill="#6c8bff">LL₀ (Y₀)</text>
+        <path d="M150,52 C220,110 272,152 392,206" class="cv c-alt"/>
+        <text class="lbl-s" x="340" y="200" fill="#33d6a6">LL₁ (Y₁)</text>
+        <circle class="pt" cx="250" cy="180" r="5"/><circle class="pt" cx="250" cy="126" r="5"/>
+        <line x1="70" y1="180" x2="250" y2="180" class="dsh"/><text class="lbl-s" x="48" y="184">r₀</text>
+        <line x1="70" y1="126" x2="250" y2="126" class="dsh"/><text class="lbl-s" x="48" y="130">r₁</text>
+        <text class="lbl-s" x="150" y="255">L₀</text>
+
+        <text class="lbl" x="600" y="16">LM 曲线</text>
+        <line class="ax" x1="510" y1="255" x2="860" y2="255"/>
+        <line class="ax" x1="510" y1="255" x2="510" y2="32"/>
+        <text class="lbl-s" x="700" y="278">Income</text>
+        <text class="lbl" x="478" y="46">r</text>
+        <line x1="545" y1="228" x2="810" y2="70" class="cv c-alt2"/>
+        <text class="lbl" x="768" y="62" fill="#ffb454">LM</text>
+        <circle class="pt" cx="620" cy="180" r="5"/><circle class="pt" cx="710" cy="126" r="5"/>
+        <line x1="510" y1="180" x2="620" y2="180" class="dsh"/><text class="lbl-s" x="488" y="184">r₀</text>
+        <line x1="510" y1="126" x2="710" y2="126" class="dsh"/><text class="lbl-s" x="488" y="130">r₁</text>
+        <line x1="620" y1="180" x2="620" y2="255" class="dsh"/><text class="lbl-s" x="612" y="271">Y₀</text>
+        <line x1="710" y1="126" x2="710" y2="255" class="dsh"/><text class="lbl-s" x="702" y="271">Y₁</text>
+      </svg>
+      <figcaption>Figure 6.2 — LM 曲线的推导。收入上升使 LL 右移，在固定的 Mˢ 下均衡利率必须上升。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 19–23</span><h2>5 · MP 曲线与 Taylor Rule ⭐⭐</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 MP 曲线的定义（必背，两句话缺一不可）</span>
+      <b>The MP schedule shows：</b><br>
+      ① <b>how the central bank's desired interest rate rises with the level of output</b>；<br>
+      ② <b>while it also maintains money market equilibrium by passively supplying whatever money is then
+      demanded at this combination of output and interest rates.</b><br>
+      即：<b>央行定利率，货币量被动供给。</b>
+    </div>
+
+    <h3><span class="slide-no">Slide 20</span>Taylor Rule（必背公式）</h3>
+    <div class="fml" style="font-size:17px">
+<b>r − r* = a(π − π*) + b(Y − Y*)</b>,   a &gt; 0, b &gt; 0
+    </div>
+    <ul>
+      <li>长期中，实际利率为 <b>r*</b>，通胀为 <b>π*</b>，实际产出为 <b>Y*</b>（<b>潜在产出</b>）。</li>
+      <li><b>通胀高于目标，或产出高于目标，就是提高利率的信号</b>，反之亦然。</li>
+    </ul>
+    <div class="fml"><span class="lab">Slide 21：把 Taylor rule 改写成 MP 曲线的方程</span>
+r − r* = a(π − π*) + b(Y − Y*)
+⇒ <b>r = [r* + a(π − π*) − bY*] + bY</b>
+       └────── 截距（决定 MP 的位置）──────┘  └ 斜率 = b ┘
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 课件强调的一个约束（常考）</span>
+      <b>"Interest rates cannot fall below zero, so the MP schedule can never cross the horizontal axis."</b><br>
+      利率不能为负 ⇒ MP 曲线<b>永远不会与横轴相交</b>。这就是<b>零利率下限（zero lower bound）</b>，
+      也是 2008 年后必须使用 <b>QE</b> 等非常规手段的原因（呼应 Lecture 5）。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 22</span>MP 的斜率 = 央行的"进取程度"</h3>
+    <div class="tw"><table>
+      <tr><th style="width:22%">斜率</th><th>含义</th></tr>
+      <tr><td><b>陡峭</b>（b 相对大）</td>
+        <td>产出变化时<b>利率被大幅调整</b>，<b>有助于稳定产出</b></td></tr>
+      <tr><td><b>平坦</b>（b 相对小）</td>
+        <td>产出变化对央行想设定的利率<b>影响小得多</b></td></tr>
+    </table></div>
+    <p>课件明确：MP 的斜率显示<b>央行随产出与收入上升而提高利率的进取程度</b>，可由 Taylor rule 中的 <b>b</b> 表示。</p>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 23</span>沿线移动 vs 曲线移位（高频 MCQ）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:30%">现象</th><th>含义</th></tr>
+      <tr><td><b>沿 MP 曲线移动</b></td>
+        <td>表示<b>在现行（给定）货币政策下</b>，随产出变化而<b>执行</b>的利率调整——<b>政策本身没变</b></td></tr>
+      <tr><td><b>MP 曲线移位</b></td>
+        <td>反映<b>货币政策本身的改变</b></td></tr>
+      <tr><td><b>MP 下移</b></td>
+        <td><b>更宽松</b>的货币政策：在<b>任何给定收入水平上，央行想要的利率都比以前低</b></td></tr>
+      <tr><td><b>MP 上移</b></td>
+        <td><b>更紧缩</b>的货币政策：在任何给定收入水平上利率更高</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slides 24–25</span><h2>6 · 货币需求冲击：MP 曲线不动 ⭐（很反直觉，必考）</h2></div>
+  <div class="card">
+    <h3>两种货币需求冲击的例子</h3>
+    <div class="tw"><table>
+      <tr><th style="width:34%">冲击</th><th>机制</th><th style="width:20%">货币需求</th></tr>
+      <tr><td><b>银行间竞争抬高存款利率 r<sub>d</sub></b></td>
+        <td>持有 r<sub>b</sub> 不变 ⇒ <b>利差 (r<sub>b</sub> − r<sub>d</sub>) 下降</b>
+        ⇒ 持有<b>广义货币的机会成本下降</b></td><td class="tick">上升</td></tr>
+      <tr><td><b>金融崩溃（financial crash）</b></td>
+        <td>导致<b>利差 (r<sub>b</sub> − r<sub>d</sub>) 上升</b></td>
+        <td class="cross">在每个 (Y, i) 组合下都下降</td></tr>
+    </table></div>
+
+    <div class="callout c-exam"><span class="t">🎯 课件的自问自答（Slide 25，一字不改地记住）</span>
+      <b>"How does a shift in money demand affect our IS-MP diagram?"</b><br>
+      <b>"It doesn't!"</b><br><br>
+      理由：MP 曲线显示的是<b>央行在每个产出水平上想要的利率</b>。
+      如果货币需求因<b>任何其他原因</b>发生变化，<b>央行会通过等量改变货币供给来容纳（accommodate）它</b>，
+      以<b>保持利率与产出之间既定的关系</b>。
+    </div>
+    <div class="callout c-tip"><span class="t">💡 与 LM 模型的关键差别（比较题必写）</span>
+      同样的货币需求冲击：<br>
+      • 在 <b>IS-LM</b> 模型中 ⇒ <b>LM 曲线会移动</b> ⇒ 利率与产出<b>都会变</b>；<br>
+      • 在 <b>IS-MP</b> 模型中 ⇒ <b>MP 曲线不动</b> ⇒ 利率与产出<b>都不变</b>，只有货币量被动变化。<br>
+      这正是"为什么现代央行盯利率而非货币量"的模型化表达：<b>盯利率能自动隔离货币需求冲击</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slide 27</span><h2>7 · 模型均衡</h2></div>
+  <div class="card">
+    <p>把 <b>IS 曲线</b>（商品市场均衡）与 <b>MP 曲线</b>（货币市场均衡）放在一起，
+    可以确定<b>唯一的实际收入与利率组合 (r*, Y*)</b>，它保证<b>整体均衡</b>。</p>
+    <figure>
+      <svg viewBox="0 0 500 290" role="img" aria-label="IS-MP equilibrium">
+        <line class="ax" x1="70" y1="248" x2="460" y2="248"/>
+        <line class="ax" x1="70" y1="248" x2="70" y2="30"/>
+        <text class="lbl" x="360" y="272">Income</text>
+        <text class="lbl" x="36" y="44">r</text>
+        <line x1="100" y1="60" x2="410" y2="228" class="cv c-as"/>
+        <text class="lbl" x="368" y="228" fill="#ff5c7a">IS</text>
+        <line x1="110" y1="230" x2="420" y2="58" class="cv c-alt2"/>
+        <text class="lbl" x="378" y="52" fill="#ffb454">MP</text>
+        <circle class="pt" cx="256" cy="145" r="6"/>
+        <line x1="70" y1="145" x2="256" y2="145" class="dsh"/><text class="lbl" x="46" y="149">r*</text>
+        <line x1="256" y1="145" x2="256" y2="248" class="dsh"/><text class="lbl" x="248" y="266">Y*</text>
+      </svg>
+      <figcaption>Figure 6.3 — IS-MP 联合均衡。交点唯一决定 (r*, Y*)。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slide 28</span><h2>8 · 财政政策与挤出效应 ⭐⭐⭐（全课最高频 essay）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">课件原文（逐句）</span>
+Y₀, r₀ 是初始均衡。
+<b>债券融资的政府支出增加（a bond-financed increase in government spending）</b>
+   ⇒ IS 曲线右移到 IS₁
+   ⇒ 新均衡在 (r₁, Y₁)：<b>利率上升，实际 GDP 增加</b>
+   ⇒ <b>一部分私人支出（图上的 Y₁Y′）被利率上升挤出了</b>
+      (Some private spending has been <b>crowded out</b> by the increase in the rate of interest.)
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 520 310" role="img" aria-label="Fiscal policy and crowding out">
+        <line class="ax" x1="70" y1="258" x2="480" y2="258"/>
+        <line class="ax" x1="70" y1="258" x2="70" y2="28"/>
+        <text class="lbl" x="370" y="282">Income</text>
+        <text class="lbl" x="36" y="42">r</text>
+        <line x1="95" y1="55" x2="360" y2="245" class="cv c-as"/>
+        <text class="lbl-s" x="318" y="248" fill="#ff5c7a">IS₀</text>
+        <line x1="175" y1="55" x2="440" y2="245" class="cv" stroke="#ff8aa0" stroke-width="2.4" fill="none"/>
+        <text class="lbl-s" x="400" y="248" fill="#ff8aa0">IS₁</text>
+        <line x1="105" y1="238" x2="440" y2="55" class="cv c-alt2"/>
+        <text class="lbl" x="400" y="50" fill="#ffb454">MP</text>
+        <circle class="pt" cx="196" cy="160" r="5.5"/><text class="lbl-s" x="168" y="154">E₀</text>
+        <circle class="pt" cx="262" cy="124" r="5.5"/><text class="lbl-s" x="268" y="118">E₁</text>
+        <circle cx="318" cy="160" r="4.5" fill="#8089bd"/><text class="lbl-s" x="324" y="156">E′</text>
+        <line x1="70" y1="160" x2="318" y2="160" class="dsh"/><text class="lbl-s" x="48" y="164">r₀</text>
+        <line x1="70" y1="124" x2="262" y2="124" class="dsh"/><text class="lbl-s" x="48" y="128">r₁</text>
+        <line x1="196" y1="160" x2="196" y2="258" class="dsh"/><text class="lbl-s" x="188" y="274">Y₀</text>
+        <line x1="262" y1="124" x2="262" y2="258" class="dsh"/><text class="lbl-s" x="254" y="274">Y₁</text>
+        <line x1="318" y1="160" x2="318" y2="258" class="dsh"/><text class="lbl-s" x="312" y="274">Y′</text>
+        <line x1="196" y1="290" x2="262" y2="290" stroke="#33d6a6" stroke-width="3"/>
+        <text class="lbl-s" x="198" y="303" fill="#33d6a6">实际增加</text>
+        <line x1="262" y1="290" x2="318" y2="290" stroke="#ff5c7a" stroke-width="3"/>
+        <text class="lbl-s" x="264" y="303" fill="#ff5c7a">被挤出</text>
+        <text class="lbl-s" x="120" y="80">Y′ − Y₀ = kΔG（简单乘数预测）</text>
+      </svg>
+      <figcaption>Figure 6.4 — 挤出效应。IS 右移 kΔG（Y₀→Y′），但均衡只到 Y₁；<b>Y₁Y′ 就是被挤出的私人支出</b>。</figcaption>
+    </figure>
+
+    <div class="callout c-exam"><span class="t">🎯 完整推理链（essay 一定要写成分步）</span>
+      <b>Step 1.</b> ↑G ⇒ 在给定利率下 AD↑ ⇒ IS 右移 <b>kΔG</b>（这是 Lecture 3 简单乘数的预测，即 Y₀→Y′）。<br>
+      <b>Step 2.</b> 产出上升 ⇒ <b>货币的交易性需求上升</b>（Lecture 4：L 取决于 Y）。<br>
+      <b>Step 3.</b> 沿 MP 曲线，央行按 Taylor rule <b>提高利率</b>（或在 LM 版本中：货币供给固定，利率必须上升以出清货币市场）。<br>
+      <b>Step 4.</b> 更高的 r ⇒ <b>利率敏感的投资（与消费）下降</b>（Lecture 5 的 II 曲线）。<br>
+      <b>Step 5.</b> 这抵消了部分初始扩张 ⇒ 最终产出只到 <b>Y₁ &lt; Y′</b>，差额 <b>Y₁Y′ 即被挤出的私人支出</b>。
+    </div>
+
+    <div class="callout c-tip"><span class="t">💡 挤出效应的强弱取决于什么（加分点）</span>
+      • <b>MP 曲线越陡（b 越大）</b>⇒ 同样的 ΔY 引起的利率上升越多 ⇒ <b>挤出越严重</b>；<br>
+      • <b>IS 曲线越平坦</b>（投资的利率弹性越大）⇒ 同样的 Δr 挤掉的投资越多 ⇒ <b>挤出越严重</b>；<br>
+      • <b>极端情形</b>：<b>垂直的 MP / LM</b>（古典情形）⇒ <b>完全挤出</b>，ΔY = 0；
+        <b>水平的 MP</b>（央行钉住利率）⇒ <b>零挤出</b>，ΔY = kΔG（回到简单凯恩斯结果）。
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 29–32, 34–36</span><h2>9 · 货币政策与政策搭配（policy mix）⭐</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 29</span>货币政策</h3>
+    <div class="fml">
+初始均衡 (Y₀, r₀)
+<b>扩张性货币政策 ⇒ MP 曲线下移/右移到 MP₁</b>
+   ⇒ 央行降低利率
+   ⇒ <b>私人支出上升</b>
+   ⇒ 总量层面的<b>均衡产出上升</b>（Y₀ → Y₁，r₀ → r₁）
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 32</span>财政与货币政策<b>配合</b>使用</h3>
+    <p>若<b>财政扩张伴随更宽松的货币政策</b>（MP 右移到 MP₁），新均衡在 <b>(r₀, Y₂)</b>——利率<b>回到原水平</b>，
+    产出比单独财政扩张时<b>更高</b>（Y₂ &gt; Y₁）。</p>
+    <div class="callout c-exam"><span class="t">🎯 课件金句（可以直接引用）</span>
+      <b>"The more that monetary policy prevents a rise in interest rates, the more the fiscal expansion will
+      lead to higher output."</b><br>
+      —— 货币政策越是阻止利率上升，财政扩张带来的产出增加就越多（即挤出越少）。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 34–36</span>Demand management 与 the policy mix ⭐</h3>
+    <div class="fml"><span class="lab">定义（必背）</span>
+<b>Demand management</b> is the use of monetary and fiscal policy to <b>stabilize the level of income
+around a high average level</b>.
+    </div>
+    <ul>
+      <li>货币政策<b>或</b>财政政策<b>可以带来相同的产出变化</b>；</li>
+      <li>但它们<b>对总需求的构成（composition）影响不同</b>——这是 policy mix 的全部意义。</li>
+    </ul>
+    <p>同一个收入水平 Y* 可以由两种组合达成：</p>
+    <ul>
+      <li><b>"紧"财政（IS₀）+ "松"货币（MP₀）</b>；<b>或</b></li>
+      <li><b>"松"财政（IS₁）+ "紧"货币（MP₁）</b>。</li>
+      <li>这<b>影响经济中私人/公共支出的比例</b>（the private/public balance of spending）。</li>
+    </ul>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 36</span>四个象限（必背，考试常问"某组合会怎样"）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:14%">点</th><th style="width:26%">组合</th><th>后果（课件原文）</th></tr>
+      <tr><td><b>A</b></td><td><b>Easy fiscal / tight money</b></td>
+        <td>government expands <b>at the expense of the private sector</b>（政府扩张，挤压私人部门）</td></tr>
+      <tr><td><b>C</b></td><td><b>Easy money / tight fiscal</b></td>
+        <td><b>Higher private spending, smaller government</b>（私人支出更多，政府更小）</td></tr>
+      <tr><td><b>B</b></td><td><b>Easy money / easy fiscal</b></td>
+        <td><b>Dash for growth</b>（冲刺增长）· <b>Overheating of the economy</b>（经济过热）</td></tr>
+      <tr><td><b>D</b></td><td><b>Tight money / tight fiscal</b></td>
+        <td><b>Severe squeeze on economy</b>（对经济的严重挤压）· <b>1980 recession</b></td></tr>
+    </table></div>
+
+    <figure>
+      <svg viewBox="0 0 500 300" role="img" aria-label="Policy mix four points">
+        <line class="ax" x1="70" y1="255" x2="460" y2="255"/>
+        <line class="ax" x1="70" y1="255" x2="70" y2="28"/>
+        <text class="lbl" x="360" y="278">Income</text>
+        <text class="lbl" x="36" y="42">r</text>
+        <line x1="95" y1="52" x2="330" y2="245" class="cv c-as"/>
+        <text class="lbl-s" x="292" y="248" fill="#ff5c7a">IS₀</text>
+        <line x1="180" y1="52" x2="415" y2="245" class="cv" stroke="#ff8aa0" stroke-width="2.4"/>
+        <text class="lbl-s" x="378" y="248" fill="#ff8aa0">IS₁</text>
+        <line x1="105" y1="238" x2="400" y2="55" class="cv c-alt2"/>
+        <text class="lbl-s" x="362" y="50" fill="#ffb454">MP₀ (easy)</text>
+        <line x1="150" y1="245" x2="445" y2="62" class="cv c-alt"/>
+        <text class="lbl-s" x="410" y="58" fill="#33d6a6">MP₁ (tight)</text>
+        <line x1="250" y1="28" x2="250" y2="255" class="dsh"/>
+        <text class="lbl-s" x="242" y="271">Y*</text>
+        <circle class="pt" cx="250" cy="102" r="5"/><text class="lbl" x="256" y="96">A</text>
+        <circle class="pt" cx="250" cy="160" r="5"/><text class="lbl" x="212" y="156">D</text>
+        <circle class="pt" cx="300" cy="160" r="5"/><text class="lbl" x="306" y="156">B</text>
+        <circle class="pt" cx="250" cy="188" r="5"/><text class="lbl" x="256" y="204">C</text>
+        <line x1="70" y1="102" x2="250" y2="102" class="dsh"/><text class="lbl-s" x="48" y="106">r₁</text>
+        <line x1="70" y1="188" x2="250" y2="188" class="dsh"/><text class="lbl-s" x="48" y="192">r₀</text>
+      </svg>
+      <figcaption>Figure 6.5 — Policy mix。同一 Y* 可由 A（松财政+紧货币，高利率）或 C（紧财政+松货币，低利率）达成，
+      两者产出相同但<b>公私支出构成完全不同</b>。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slide 33</span><h2>10 · MP 曲线的两种极端情形</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:26%">情形</th><th>含义</th><th style="width:26%">课件的评价</th></tr>
+      <tr><td><b>① 垂直的 MP</b></td>
+        <td><b>完全的产出稳定（complete output stabilisation）</b>：央行把产出牢牢钉在 Y* 上，
+        任何 IS 移动都被利率变化<b>完全抵消</b>（<b>完全挤出</b>）</td>
+        <td>由于<b>延迟、时滞与不利的副作用</b>，<b>完全的产出稳定几乎不可能实现</b></td></tr>
+      <tr><td><b>② 水平的 MP</b></td>
+        <td>如果货币政策<b>总是被调整以保持利率不变</b>，MP 曲线可视为在<b>目标利率</b>处<b>水平</b>；
+        此时 <b>IS 右移多少，产出就增加多少（零挤出）</b></td>
+        <td>—</td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 用两个极端把中间情形夹住（essay 高分技巧）</span>
+      写挤出效应时，先给一般结论，再补一句：<i>"The extent of crowding out is bounded by two extremes: with a
+      <b>vertical</b> MP schedule (complete output stabilisation) crowding out is <b>complete</b> and ΔY = 0; with a
+      <b>horizontal</b> MP schedule (an interest-rate peg) there is <b>no</b> crowding out and ΔY = kΔG, the simple
+      Keynesian result."</i>
+    </div>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="sec-h"><span class="kicker">Slides 30–31, 37</span><h2>11 · 财政 vs 货币政策：哪个更适合短期需求管理</h2></div>
+  <div class="card">
+    <h3>货币政策的两个方面（Slide 30）</h3>
+    <ul>
+      <li><b>它指的是哪个变量</b>：利率还是货币供给？<b>当前方法：控制利率</b>。</li>
+      <li><b>一个界定利率如何被选择的特定关系</b>：这可能反映央行的<b>相机抉择</b>，
+        <b>或者对某个规则的承诺</b>（如 Taylor rule）。</li>
+    </ul>
+    <p>历史演变（Slide 31）：在<b>货币主义鼎盛期</b>，央行调整利率<b>以防止货币供给偏离既定的货币增长目标路径</b>；
+    <b>如今多数央行已放弃这一政策，转而直接盯住通胀率</b>。但<b>用货币政策管理 AD 仍可能有问题</b>。</p>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 37</span>课件的比较结论（必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:34%">结论</th><th>理由</th></tr>
+      <tr><td><b>短期需求管理中，货币政策比财政政策更容易调整</b></td>
+        <td>• <b>财政政策难以快速改变</b>，而金融市场上资产价格<b>频繁变动</b>是常态<br>
+        • <b>在政治上很难收紧财政立场</b> ⇒ 因此<b>自动稳定器格外重要</b>（呼应 Lecture 3）</td></tr>
+      <tr><td>利率的调整<b>双向进行，但通常幅度较小</b></td><td>—</td></tr>
+      <tr><td><b>2008 金融危机期间</b></td>
+        <td>• <b>财政政策被过度拉伸（overstretched）</b><br>
+        • <b>货币政策不得不做得比常规手段更多</b>（即 QE，呼应 Lecture 5）</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s12">
+  <div class="sec-h"><span class="kicker">Slides 39–41</span><h2>12 · 李嘉图等价 Ricardian Equivalence ⭐</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 核心命题（必背）</span>
+      个人对税收变动这类冲击的反应<b>取决于这些变化被视为暂时的还是永久的</b>。<br>
+      <b>如果政府今天减税：</b><br>
+      • 个人会意识到<b>这必须由未来更高的税收来平衡</b>；<br>
+      • <b>那么当前消费可能不会调整</b>（present consumption may not adjust）。<br>
+      ⇒ 减税被<b>等额的储蓄增加</b>抵消，<b>AD 不变，IS 不移动，财政政策失效</b>。
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 40</span>但减税<b>确实</b>能提振需求，因为……（三条反驳，必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:30%">理由</th><th>说明</th></tr>
+      <tr><td><b>① 没有子女的人</b></td>
+        <td>他们<b>享受减税的好处但不承担后代的税负</b>，因此<b>立即增加支出</b></td></tr>
+      <tr><td><b>② 消费对<b>当期</b>可支配收入更敏感</b></td>
+        <td>消费需求<b>比"只有永久收入才重要"的情形更敏感于当期可支配收入</b>
+        —— 收入更高就花得更多（流动性约束的现实反映）</td></tr>
+      <tr><td><b>③ 借贷利率不同</b></td>
+        <td><b>政府能够借款的利率与个人不同</b>（政府借得更便宜），
+        所以"政府替你借钱"与"你自己借钱"并不等价</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 41</span>IS-MP 模型自身的三个局限（收尾必写）</h3>
+    <p>课件原话：IS-MP 模型<b>似乎</b>给政府提供了一系列影响均衡收入的选项，<b>然而……还有其他问题需要考虑</b>：</p>
+    <ul>
+      <li><b>the price level and inflation</b>（价格水平与通胀）→ <b>Lecture 7–8</b></li>
+      <li><b>the supply-side of the economy</b>（经济的供给侧）→ <b>Lecture 7, 9</b></li>
+      <li><b>the openness of the economy</b>（经济的开放性）→ <b>Lecture 12</b></li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 这三条是任何 IS-MP essay 的完美结尾</span>
+      <i>"The IS-MP model treats the price level as fixed and the supply side as passive. Once prices adjust
+      (Lecture 7) and the economy is at potential output, a rightward shift in AD raises the price level rather than
+      real output, and the fiscal multiplier vanishes in the long run."</i>
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">两条曲线</span>
+<b>IS</b>：商品市场均衡的 (Y, r) 组合，<b>向下倾斜</b>
+   斜率由 <b>AD 对利率的敏感度</b>决定：敏感 ⇒ 平坦；不敏感 ⇒ 陡峭
+   移动：ΔG、投资乐观预期、预期未来收入上升 ⇒ 右移 <b>kΔ(自主支出)</b>
+
+<b>LM</b>（央行控 M）：<b>向上倾斜</b>
+   货币需求对 r 越不敏感 / 对 Y 越敏感 ⇒ 越陡
+   货币扩张 ⇒ 右移
+
+<b>MP</b>（央行控 r）：<b>向上倾斜</b>，由 Taylor rule 给出
+    </div>
+    <div class="fml"><span class="lab">Taylor Rule</span>
+<b>r − r* = a(π − π*) + b(Y − Y*)</b>,  a &gt; 0, b &gt; 0
+⇒ <b>r = [r* + a(π − π*) − bY*] + bY</b>
+   斜率 = <b>b</b>（央行的进取程度）；b 大 ⇒ MP 陡 ⇒ 产出更稳定
+   <b>r ≥ 0 ⇒ MP 永不与横轴相交</b>
+    </div>
+    <div class="fml"><span class="lab">政策效果</span>
+财政扩张：IS 右移 kΔG ⇒ <b>r↑, Y↑，但 ΔY &lt; kΔG（挤出）</b>
+货币扩张：MP 下移 ⇒ <b>r↓, Y↑</b>
+两者配合：MP 同时下移 ⇒ r 不变，<b>Y 增加更多</b>
+挤出极端：垂直 MP ⇒ 完全挤出 ΔY = 0；水平 MP ⇒ 零挤出 ΔY = kΔG
+<b>货币需求冲击 ⇒ MP 不动（央行被动容纳）</b>
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>用 IS-LM 回答 IS-MP 的题</td><td>本课程主模型是 <b>IS-MP</b>（央行控利率）；LM 是历史版本（央行控货币量）</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>IS 向下倾斜因为"价格下降"</td><td>因为 <b>r↓ ⇒ I↑（与 C↑）⇒ AD↑ ⇒ Y↑</b>，与价格无关（价格固定）</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>IS 越陡挤出越严重</td><td><b>IS 越平坦</b>（投资利率弹性大）挤出越严重；<b>MP 越陡</b>也越严重</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>货币需求上升使 IS-MP 均衡改变</td><td><b>MP 不动，均衡不变</b>——央行等量调整货币供给容纳它</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>挤出 = 财政政策完全无效</td><td>一般只是<b>部分挤出</b>；完全挤出只在 <b>MP/LM 垂直</b>时</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>MP 曲线可以穿过横轴</td><td><b>不能</b>——利率不能为负（零利率下限）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>沿 MP 移动 = 政策改变</td><td><b>沿线移动 = 执行既定政策</b>；<b>曲线移位 = 政策改变</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>李嘉图等价一定成立</td><td>三条现实理由削弱它：无子女者、消费对<b>当期</b>收入敏感、政府与个人<b>借贷利率不同</b></td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>不同 policy mix 效果相同</td><td>产出可以相同，但<b>公私支出构成不同</b>（A 挤压私人部门，C 政府更小）</td><td><span class="badge b-essay">Essay</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span> <span class="muted" style="font-size:13px">（Tutorial 6 Q1 的完整版）</span></h3>
+    <p class="lead"><i>"Using the IS-MP model, analyse the effects of a bond-financed increase in government spending
+    on output and the interest rate. Explain what determines the extent of crowding out, and discuss whether the
+    government could avoid it."</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng"><b>Crowding out</b> is the reduction in private expenditure — principally investment — caused
+        by the rise in the interest rate that accompanies a bond-financed fiscal expansion.</p>
+        <p class="eng">The <b>IS schedule</b> shows the combinations of income and interest rates at which the
+        <b>goods market</b> is in equilibrium (aggregate demand equals actual income). It slopes <b>downward</b>
+        because a lower interest rate raises consumption and investment demand, and hence equilibrium output.
+        The <b>MP schedule</b> shows how the central bank's desired interest rate rises with output, while money
+        market equilibrium is maintained by <b>passively supplying whatever money is demanded</b> at that combination
+        of output and interest rate. It is derived from a <b>Taylor rule</b>:</p>
+        <div class="fml">r − r* = a(π − π*) + b(Y − Y*),  a &gt; 0, b &gt; 0
+⇒ r = [r* + a(π − π*) − bY*] + bY,  slope = b</div>
+        <p class="eng">Prices are assumed fixed, so output is demand-determined (the short-run Keynesian assumption).</p>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 (see Figure 6.4). Vertical axis = real interest rate <i>r</i>; horizontal axis =
+        real income <i>Y</i>. The downward-sloping IS₀ and the upward-sloping MP intersect at <b>E₀ (r₀, Y₀)</b>.
+        The fiscal expansion shifts the IS schedule <b>rightward</b> to IS₁ by the horizontal distance
+        <b>kΔG</b>, where <i>k</i> is the Keynesian multiplier. At the unchanged interest rate <i>r</i>₀ the goods
+        market would clear at <b>Y′</b>. The new equilibrium is at <b>E₁ (r₁, Y₁)</b> with <i>r</i>₁ &gt; <i>r</i>₀ and
+        Y₀ &lt; Y₁ &lt; Y′. The horizontal distance <b>Y₁Y′</b> measures the private spending that has been
+        <b>crowded out</b>.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>Step 1.</b> Higher <i>G</i> adds directly to aggregate demand at every interest rate.
+        Through the multiplier of Lecture 3, equilibrium output at the initial interest rate rises by
+        <i>k</i>Δ<i>G</i>, so IS shifts right by that horizontal distance (Y₀ → Y′).</p>
+        <p class="eng"><b>Step 2.</b> Higher output raises the <b>transactions demand for money</b>: the LL schedule
+        shifts right.</p>
+        <p class="eng"><b>Step 3.</b> Following its policy rule, the central bank raises the interest rate as output
+        rises — a movement <b>along</b> the MP schedule, not a shift in it, since monetary policy itself is unchanged.
+        (In the older IS-LM version the mechanism is the same but automatic: with a fixed money supply, the interest
+        rate must rise to choke off the extra money demand.)</p>
+        <p class="eng"><b>Step 4.</b> The higher interest rate reduces interest-sensitive investment — fewer projects
+        have expected returns exceeding the opportunity cost — and also reduces consumption through the wealth and
+        credit-cost channels of Lecture 5.</p>
+        <p class="eng"><b>Step 5.</b> This offsets part of the initial expansion. The economy settles at
+        <b>Y₁ &lt; Y′</b>: output rises, but by <b>less</b> than the simple Keynesian multiplier predicts.</p>
+        <p class="eng"><b>What determines the extent of crowding out?</b></p>
+        <ul>
+          <li class="eng"><b>The slope of MP</b> (the coefficient <i>b</i>). A <b>steep</b> MP means the central bank
+          raises interest rates <b>aggressively</b> as output rises, so Δ<i>r</i> is large and crowding out is severe.
+          A flat MP means output changes have little effect on the rate the bank wishes to set.</li>
+          <li class="eng"><b>The slope of IS</b>, i.e. the <b>interest-elasticity of aggregate demand</b>. A
+          <b>flatter</b> IS means demand is very sensitive to interest rates, so a given Δ<i>r</i> destroys more
+          private spending. Since the II schedule is flatter for long-lived capital such as houses and factories,
+          crowding out is stronger where such investment dominates.</li>
+          <li class="eng"><b>Two limiting cases.</b> With a <b>vertical</b> MP schedule (complete output stabilisation)
+          crowding out is <b>complete</b>: Δ<i>Y</i> = 0. With a <b>horizontal</b> MP schedule (the central bank pegs
+          the interest rate) crowding out is <b>zero</b> and Δ<i>Y</i> = <i>k</i>Δ<i>G</i>, the simple Keynesian result.</li>
+        </ul>
+        <p class="eng"><b>Can the government avoid it?</b> Yes, in principle, by <b>combining</b> the fiscal expansion
+        with a <b>looser monetary policy</b>: shifting MP down to MP₁ so that the equilibrium moves to (r₀, Y₂), with
+        the interest rate unchanged and output higher than under fiscal expansion alone. The more monetary policy
+        prevents a rise in interest rates, the more a fiscal expansion raises output. But this requires policy
+        coordination, and it changes the <b>composition</b> of demand: 'easy fiscal / tight money' expands government
+        at the expense of the private sector, whereas 'easy money / tight fiscal' delivers higher private spending
+        and a smaller government, and 'easy money / easy fiscal' risks a <b>dash for growth</b> and overheating.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">A bond-financed fiscal expansion therefore raises both output and the interest rate, but the
+        increase in output is strictly <b>smaller</b> than the simple Keynesian multiplier suggests, the shortfall
+        Y₁Y′ being private spending crowded out by the higher interest rate. The degree of crowding out depends on the
+        aggressiveness of the monetary rule (the slope of MP) and the interest-elasticity of demand (the slope of IS),
+        and is bounded by complete crowding out under a vertical MP and zero crowding out under an interest-rate peg.
+        Crowding out can be neutralised by an accommodating monetary policy, at the cost of a different public/private
+        composition of demand.</p>
+        <p class="eng">Two further qualifications limit the result. Under <b>Ricardian equivalence</b>, households
+        recognising that today's bond finance implies higher future taxes may raise saving and leave consumption
+        unchanged, so IS barely shifts at all — although this is weakened in practice by the existence of households
+        without children, by the sensitivity of consumption to <b>current</b> disposable income, and by the difference
+        between the rates at which governments and individuals can borrow. More fundamentally, the IS-MP model holds
+        the <b>price level</b> fixed and treats the <b>supply side</b> as passive; once these are relaxed in
+        Lectures 7–9, a demand expansion at potential output raises prices rather than real output.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-05.html">← Lecture 5</a>
+  <a href="../tutorials/tutorial-06.html">Tutorial 6 →</a>
+  <a href="lecture-07.html">Lecture 7 · The AS-AD Model →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

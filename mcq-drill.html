@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>查缺补漏 MCQ 特训 · 细节考点 56 题 — ECO120</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.scorebar{position:sticky;top:0;z-index:30;background:rgba(10,12,28,.92);backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:14px;padding:12px 18px;margin:0 0 18px;
+  display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.scorebar .sc{font-weight:800;font-size:15px;color:#fff}
+.scorebar .sc small{color:var(--muted);font-weight:600;margin-left:6px}
+.scorebar button{background:var(--card);color:#e8ecff;border:1px solid var(--line);border-radius:9px;
+  padding:7px 14px;font-size:13px;cursor:pointer;font-weight:700}
+.scorebar button:hover{border-color:var(--accent);color:var(--accent)}
+.scorebar button.on{background:rgba(255,92,122,.15);border-color:rgba(255,92,122,.5);color:#ff8aa0}
+.blkh2{margin:30px 0 6px;font-size:17px;color:#ffd9a0;font-weight:800}
+.mcq{background:#0c0f24;border:1px solid rgba(255,255,255,.13);border-radius:14px;
+  padding:16px 20px;margin:14px 0}
+.mcq .qt{color:#e8ecff;font-size:14.8px;line-height:1.7;font-weight:600;margin-bottom:11px}
+.mcq .qt .qn{color:#a9bcff;font-weight:800;margin-right:6px}
+.opt{display:block;width:100%;text-align:left;background:rgba(255,255,255,.045);color:#dbe1ff;
+  border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:9px 14px;margin:7px 0;
+  font-size:14px;line-height:1.55;cursor:pointer;font-family:inherit}
+.opt:hover{border-color:rgba(108,139,255,.6)}
+.mcq.done .opt{cursor:default;opacity:.75}
+.mcq.done .opt:hover{border-color:rgba(255,255,255,.12)}
+.opt.right{background:rgba(51,214,166,.16);border-color:rgba(51,214,166,.65);color:#8df0d3;opacity:1 !important;font-weight:700}
+.opt.wrong{background:rgba(255,92,122,.14);border-color:rgba(255,92,122,.6);color:#ff9db0;opacity:1 !important}
+.exp{display:none;margin-top:11px;background:rgba(51,214,166,.07);border-left:4px solid var(--accent);
+  border-radius:10px;padding:11px 15px;font-size:13.8px;line-height:1.75;color:#e8ecff}
+.mcq.done .exp{display:block}
+.srcchip{display:inline-block;margin-top:9px;background:rgba(108,139,255,.13);border:1px solid rgba(108,139,255,.4);
+  border-radius:8px;padding:3px 10px;font-size:12px;color:#a9bcff;font-weight:700;text-decoration:none}
+.srcchip:hover{border-color:#a9bcff;text-decoration:none;color:#cdd8ff}
+.mcq.hidden{display:none}
+.tag-fine{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.5px;padding:2px 8px;
+  border-radius:12px;background:rgba(255,180,84,.15);color:#ffce8a;border:1px solid rgba(255,180,84,.4);margin-left:7px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="index.html">← 返回总目录</a>
+  <a class="nav" href="variable-index.html">🔎 变量反向索引</a>
+  <div class="navgroup">题组导航</div>
+  <div id="sidenav"></div>
+</aside>
+
+<main class="content">
+
+<div class="sec-h"><span class="kicker">Gap-Filling MCQ Drill</span>
+  <h2>查缺补漏 MCQ 特训 —— 56 道细节考点题</h2></div>
+
+<div class="card" style="margin-bottom:18px">
+  <p>出题依据：<b>参照 Tutorial 各卷 Section B 的题目风格，按「概念 + 特例辨析」的思路自制</b>。
+  难度不大，但每一题都卡在一个<b>容易记错方向或口径的细节</b>上。做错的题点开解析，
+  <b>每题都标了知识点出处</b>（哪个 Tutorial 哪一题 / 哪一讲），点蓝色出处标签直接跳过去补。
+  易混口径（M0 的范围、持币机会成本用名义利率等）均已回到课程定义逐条核对。</p>
+</div>
+
+<div class="scorebar">
+  <span class="sc">得分 <span id="scoreN">0</span>/<span id="doneN">0</span><small id="accN"></small></span>
+  <span class="sc" style="color:var(--muted);font-weight:600;font-size:13px">共 56 题</span>
+  <button id="btnWrong">只看错题</button>
+  <button id="btnReset">重做全部</button>
+</div>
+
+<div id="quiz"></div>
+
+<div class="pager">
+  <a href="index.html">← 总目录</a>
+  <a href="variable-index.html">变量反向索引 →</a>
+</div>
+
+</main>
+</div>
+
+<script>
+const QS=[
+// ---------- L1 ----------
+{b:"L1 · 国民收入核算",q:"Which of the following is EXCLUDED from measured GDP?",
+ o:["Wages paid to police officers","Unemployment benefit paid by the government","Unplanned additions to firms' inventories","Fees charged by estate agents"],a:1,
+ ex:"失业救济是<b>转移支付</b>——不对应任何当期产出，所以不进 GDP。政府雇员（警察）的产出按<b>投入成本</b>计入；非计划存货增加计入投资；中介服务费是服务产出。",
+ s:"Tutorial 1 · Q5 / Q3 | Lecture 1",h:"tutorials/tutorial-01.html"},
+{b:"L1 · 国民收入核算",q:"GNP at market prices is £300bn. Depreciation is £30bn and indirect taxes £20bn. National income (at factor cost) is:",
+ o:["£330bn","£280bn","£270bn","£250bn"],a:3,
+ ex:"两步扣：GNP 300 − 折旧 30 = <b>NNP 270</b>（market prices）；再 − 间接税 20 = <b>national income 250</b>（factor cost）。顺序和口径都要记：market price → factor cost 靠减间接税。",
+ s:"Tutorial 1 · Q2 | Lecture 1",h:"tutorials/tutorial-01.html"},
+{b:"L1 · 国民收入核算",q:"\"Government services are not sold in markets, so hiring more police officers cannot raise GDP.\" This statement is:",
+ o:["True — non-marketed output is excluded from GDP","False — government output is valued at its cost of provision, so GDP rises","True — only transfer payments enter government spending","False — police services enter GDP only if crime falls"],a:1,
+ ex:"政府产出没有市场价格，就按<b>提供成本</b>（主要是工资）计入 GDP。所以扩编警察会提高测得的 GDP——不管治安有没有变好（这正是 GDP 度量的局限之一）。",
+ s:"Tutorial 1 · Q3 | Lecture 1",h:"tutorials/tutorial-01.html"},
+{b:"L1 · 国民收入核算",q:"Nominal GDP rises by 5% while the GDP deflator rises by 7%. Real GDP has:",
+ o:["Risen by 2%","Fallen by about 2%","Risen by 12%","Stayed constant"],a:1,
+ ex:"实际增长 ≈ 名义增长 − 通胀 = 5% − 7% = <b>−2%</b>。名义在涨不代表实际在涨——deflator 涨得更快时实际 GDP 在缩。",
+ s:"Lecture 1（名义 vs 实际 GDP）",h:"lectures/lecture-01.html"},
+// ---------- L2 ----------
+{b:"L2 · 凯恩斯 45° 线模型",q:"Can the multiplier ever be less than 1?",
+ o:["No — the multiplier is always at least 1","Yes — if the MPC exceeds 1","Yes — when total marginal leakages (s + ct + z) exceed 1","Only in the classical model with flexible prices"],a:2,
+ ex:"可以！k = 1/(s+ct+z)，漏出边际之和超过 1 时 k&lt;1。此时 z 大到让 AD 斜率为负、乘数 &lt; 1（例如 1/1.4 ≈ 0.71）。这是 Tutorial 2 Q4 的考点。",
+ s:"Tutorial 2 · Q4 + Tutorial 3 · Q13 | Lecture 2/3",h:"tutorials/tutorial-02.html"},
+{b:"L2 · 凯恩斯 45° 线模型",q:"Demand falls but firms are initially taken by surprise. The FIRST thing that happens is:",
+ o:["Firms immediately cut output","Prices fall to clear the market","Unplanned inventories accumulate","Firms immediately fire workers"],a:2,
+ ex:"最先动的是<b>非计划存货</b>：卖不掉的产出堆成库存（存货投资被动上升），随后厂商才削减产出。凯恩斯模型价格是黏的，靠数量（存货→产出）调整。",
+ s:"Tutorial 2 · Q3 | Lecture 2",h:"tutorials/tutorial-02.html"},
+{b:"L2 · 凯恩斯 45° 线模型",q:"Households attempt to save a larger fraction of income. Investment is autonomous. In the new equilibrium, total saving has:",
+ o:["Risen","Fallen","Stayed unchanged — income falls until S again equals planned I","Become indeterminate"],a:2,
+ ex:"节俭悖论的<b>细节版</b>：均衡要求 S = I(自主)。想多储蓄 → 消费↓ → 收入↓ → 直到 S 回到等于 I。所以均衡储蓄<b>量不变</b>，变的是收入（下降）。若 I 依赖收入则储蓄反而下降。",
+ s:"Tutorial 2 · §B Q8 / Disc Q6 | Lecture 2",h:"tutorials/tutorial-02.html"},
+{b:"L2 · 凯恩斯 45° 线模型",q:"With no government and no foreign trade, and investment autonomous, the slope of the AD schedule equals:",
+ o:["The MPS","The MPC","1","c(1 − t)"],a:1,
+ ex:"最简模型 AD = A + cY，斜率就是 <b>MPC</b>。加了政府变 c(1−t)，加了外贸变 c(1−t)−z——考卷很爱考你在哪个模型里。",
+ s:"Tutorial 2 · §B Q3 | Lecture 2",h:"tutorials/tutorial-02.html"},
+{b:"L2 · 凯恩斯 45° 线模型",q:"Potential output is best defined as the level of output when:",
+ o:["Every machine is running at maximum capacity","The labour market (and other markets) are in equilibrium","Unemployment is zero","Inflation is zero"],a:1,
+ ex:"潜在产出 = 各市场（尤其劳动市场）处于均衡时的产出，对应<b>自然失业率</b>——不是技术上的最大产能，也不是零失业。",
+ s:"Tutorial 2 · §B Q1 | Lecture 2/7",h:"tutorials/tutorial-02.html"},
+// ---------- L3 ----------
+{b:"L3 · 财政政策与外贸",q:"\"The Chancellor raised taxes and spending by equal amounts, so output must be unaffected.\" This is wrong because:",
+ o:["Higher taxes always dominate, so output falls","The balanced budget multiplier is 1: output RISES by the change in G","Government spending does not enter aggregate demand","The multiplier is zero in a closed economy"],a:1,
+ ex:"ΔG 全额进入 AD，等额税收只让消费减少 cΔT——净效应 (1−c)ΔG，乘上 1/(1−c) 得 <b>ΔY = ΔG</b>。平衡预算乘数 = 1（是正数，不是零！）。",
+ s:"Tutorial 3 · Q4 / §B Q2 | Lecture 3",h:"tutorials/tutorial-03.html"},
+{b:"L3 · 财政政策与外贸",q:"The trade surplus (X − Z) must equal:",
+ o:["The government surplus only","The private sector surplus (S − I) only","The private surplus PLUS the government surplus (S − I) + (NT − G)","Zero in equilibrium"],a:2,
+ ex:"从漏出=注入恒等式移项：<b>X − Z = (S − I) + (NT − G)</b>。贸易顺差必须由私人部门盈余和政府盈余共同「融资」。这是 sectoral balances 的核心细节。",
+ s:"Tutorial 3 · Q5 / §B Q1 | Lecture 3",h:"tutorials/tutorial-03.html"},
+{b:"L3 · 财政政策与外贸",q:"When national income FALLS, the trade balance tends to:",
+ o:["Worsen, because exports fall","Improve, because imports fall","Stay constant — trade does not depend on income","Worsen, because the exchange rate depreciates"],a:1,
+ ex:"进口 Z = zY 随收入走：收入跌 → 进口跌 → 贸易余额<b>改善</b>。（衰退反而改善贸易账，繁荣恶化它——方向常被记反。）出口由外国收入决定，不随本国 Y 变。",
+ s:"Tutorial 3 · §B Q8 | Lecture 3",h:"tutorials/tutorial-03.html"},
+{b:"L3 · 财政政策与外贸",q:"\"When an open economy is in short-run equilibrium, its trade deficit must be zero.\" This is:",
+ o:["True — equilibrium requires balanced trade","False — equilibrium only requires Y = AD; a trade deficit can persist, offset by other sectors","True — otherwise leakages cannot equal injections","False — equilibrium requires a trade surplus"],a:1,
+ ex:"均衡条件是 <b>Y = AD</b>（总漏出=总注入），不是每一对漏出/注入分别相等。贸易可以逆差，只要 S+NT 相应大于 I+G。",
+ s:"Tutorial 3 · §B Q9 | Lecture 3",h:"tutorials/tutorial-03.html"},
+{b:"L3 · 财政政策与外贸",q:"A rise in the marginal propensity to import (z), other things equal:",
+ o:["Raises the multiplier and equilibrium output","Lowers the multiplier and equilibrium output","Leaves the multiplier unchanged but raises exports","Raises output because trade expands"],a:1,
+ ex:"z 是<b>漏出</b>：z↑ → 分母 (s+ct+z)↑ → 乘数↓ → 均衡产出↓。而出口需求上升才提高产出。出题人近年逐年推高 z 直到把 AD 斜率推成负——就是这个参数。",
+ s:"Tutorial 3 · §B Q10/Q11 | Lecture 3",h:"tutorials/tutorial-03.html"},
+// ---------- L4 ----------
+{b:"L4 · 货币与银行",q:"Sight deposits £30, time deposits £60, banks' cash reserves £2, currency in circulation £12, building society deposits £20. On this course's definitions, M0 =",
+ o:["£12","£14","£32","£122"],a:0,
+ ex:"本课程定义下 <b>M0 就是流通中的现金</b>，因此答案是 £12——银行库存现金 £2 <b>不算</b>进 M0（它属于货币基础 H = 流通现金 + 银行准备金）。这是最容易踩错的口径。",
+ s:"Tutorial 4 · Q4 | Lecture 4",h:"tutorials/tutorial-04.html"},
+{b:"L4 · 货币与银行",q:"Using the same data, M4 =",
+ o:["£102","£104","£122","£124"],a:2,
+ ex:"M4 = 流通现金 + sight + time + building society 存款 = 12+30+60+20 = <b>£122</b>。两个细节：① building society 存款<b>要算</b>；② 银行准备金<b>不算</b>。",
+ s:"Tutorial 4 · Q4 | Lecture 4",h:"tutorials/tutorial-04.html"},
+{b:"L4 · 货币与银行",q:"Credit cards can be used to pay in shops, yet they are NOT counted as money because:",
+ o:["Their value is too small to matter","They are a means of DEFERRED payment — they create a debt later settled with money","They are issued by banks rather than the central bank","They cannot be used for large transactions"],a:1,
+ ex:"刷卡只是<b>推迟支付</b>：产生一笔之后要用货币（银行存款）清偿的债务。额度也不是持卡人拥有的价值贮藏。所以信用卡不进任何货币口径。",
+ s:"Tutorial 4 · Q10/Q11 | Lecture 4",h:"tutorials/tutorial-04.html"},
+{b:"L4 · 货币与银行",q:"If both banks and the public decide to hold LESS cash (lower c_b and c_p), the money multiplier will:",
+ o:["Fall","Rise","Stay constant","Become negative"],a:1,
+ ex:"乘数 = (c<sub>p</sub>+1)/(c<sub>p</sub>+c<sub>b</sub>)。两个比率下降 → 分母降得比分子快 → 乘数<b>上升</b>。反过来记：危机时人人囤现金，乘数崩塌（QE 时代的背景）。",
+ s:"Tutorial 4 · §B Q7 | Lecture 4",h:"tutorials/tutorial-04.html"},
+{b:"L4 · 货币与银行",q:"Banks hold reserves equal to 1% of deposits; the public holds cash equal to 2% of deposits. The money multiplier is:",
+ o:["3.4","34","50","100"],a:1,
+ ex:"(c<sub>p</sub>+1)/(c<sub>p</sub>+c<sub>b</sub>) = 1.02/0.03 = <b>34</b>。练到看见两个百分数就能 10 秒出数——B2 的第一小问基本就是它。",
+ s:"Tutorial 4 · Q9 | Lecture 4",h:"tutorials/tutorial-04.html"},
+{b:"L4 · 货币与银行",q:"\"Since banks' liabilities equal their assets, banks cannot create anything.\" The correct rebuttal is:",
+ o:["Banks do create net wealth for society","Balance sheets never balance in practice","Banks create MONEY (deposits are a means of payment), even though they create no net wealth","Banks create only cash, not deposits"],a:2,
+ ex:"资产=负债说明银行没创造<b>净财富</b>，但放贷的同时创造了<b>存款</b>——而存款就是支付手段（货币）。「创造货币 ≠ 创造财富」这个区分是标准考点。",
+ s:"Tutorial 4 · Q2 | Lecture 4",h:"tutorials/tutorial-04.html"},
+// ---------- L5 ----------
+{b:"L5 · 利率与传导机制",q:"The best measure of the opportunity cost of holding money is:",
+ o:["The real interest rate","The nominal interest rate","The inflation rate","The interest rate spread"],a:1,
+ ex:"应该用<b>名义利率</b>：持币放弃的是债券的名义收益，通胀对持币和持债两边同样侵蚀、相互抵消。选 real 是最常见的错误。",
+ s:"Tutorial 5 · §B Q13 | Lecture 5",h:"tutorials/tutorial-05.html"},
+{b:"L5 · 利率与传导机制",q:"The central bank can control with more precision:",
+ o:["The real money supply","The nominal money supply","The price level directly","Real output"],a:1,
+ ex:"央行直接管的是<b>名义</b>量（基础货币/名义利率）；实际货币供给 M/P 还取决于价格水平，短期黏、长期内生，央行控不精确。",
+ s:"Tutorial 5 · §B Q14 | Lecture 5",h:"tutorials/tutorial-05.html"},
+{b:"L5 · 利率与传导机制",q:"Modern central banks set the interest rate rather than the money supply mainly because:",
+ o:["Interest rates are constant over time","Money demand is unstable, so a money target makes interest rates volatile","The money supply cannot be measured at all","Interest rates do not affect aggregate demand"],a:1,
+ ex:"金融创新使货币需求不稳定 → 定住 M 会让利率乱跳；传导机制走利率 → 直接宣布利率更透明，货币供给则内生调整。这也是本课用 <b>MP 曲线</b>而非 LM 的理论根基。",
+ s:"Tutorial 5 · Q5 (P456/Q13) | Lecture 5/6",h:"tutorials/tutorial-05.html"},
+{b:"L5 · 利率与传导机制",q:"When the market interest rate FALLS, the price of existing bonds:",
+ o:["Falls","Rises","Is unchanged","Moves in the same direction as the interest rate"],a:1,
+ ex:"债券价格与利率<b>反向</b>：固定票息在更低利率下折现值更高。传导机制第一环（r↓ → 债券价↑ → 财富与借贷成本渠道 → C、I↑）。",
+ s:"Tutorial 5 · Q2(a) | Lecture 5",h:"tutorials/tutorial-05.html"},
+{b:"L5 · 利率与传导机制",q:"The discount rate is the rate at which:",
+ o:["Commercial banks lend to their best customers","The central bank lends to commercial banks short of reserves","The government borrows from abroad","Banks pay interest on time deposits"],a:1,
+ ex:"贴现率 = 央行给准备金不足的商业银行的<b>惩罚性借款利率</b>。提高它 → 缺准备金的代价变大 → 银行多留准备金、少放贷 → 货币供给收缩。",
+ s:"Tutorial 5 · §B Q9/Q11 | Lecture 5",h:"tutorials/tutorial-05.html"},
+// ---------- L6 ----------
+{b:"L6 · IS-MP 模型",q:"A change in the interest rate causes:",
+ o:["A shift of the IS curve","A movement ALONG the IS curve","A shift of both IS and MP","No change in equilibrium income"],a:1,
+ ex:"利率变化是<b>沿着</b> IS 移动（IS 本身就是 r-Y 组合的轨迹）；让 IS 平移的是自主支出（G、税、信心、出口）。沿线 vs 平移是 MCQ 常年陷阱。",
+ s:"Tutorial 6 · §B Q4 | Lecture 6",h:"tutorials/tutorial-06.html"},
+{b:"L6 · IS-MP 模型",q:"A fiscal contraction, other things equal:",
+ o:["Shifts IS left; output and the interest rate both fall","Shifts IS right; output rises","Shifts MP up; interest rate rises","Moves the economy along a fixed IS curve"],a:0,
+ ex:"G↓（或税↑）→ IS 左移 → 沿 MP 下滑：<b>Y↓ 且 r↓</b>。利率下降部分刺激投资，缓冲产出下滑（反向挤出）。",
+ s:"Tutorial 6 · §B Q7 | Lecture 6",h:"tutorials/tutorial-06.html"},
+{b:"L6 · IS-MP 模型",q:"The correct crowding-out chain after a rise in G (money supply fixed) is:",
+ o:["G↑ → r↓ → I↑ → Y↑","G↑ → Y↑ → money demand↑ → r↑ → I↓","G↑ → prices↑ → Y↓ immediately","G↑ → imports↓ → NX↑"],a:1,
+ ex:"标准链条：G↑ → AD、Y↑ → <b>交易性货币需求↑</b> → 货币市场要求 r↑ → 利率敏感的 I↓，抵消部分扩张。链条顺序本身就是给分点。",
+ s:"Tutorial 6 · Q1 / §B Q6 | Lecture 6",h:"tutorials/tutorial-06.html"},
+{b:"L6 · IS-MP 模型",q:"A policy mix of TIGHT fiscal policy and EASY monetary policy tends to produce:",
+ o:["A high share of investment in GDP","A high share of government consumption in GDP","High interest rates and low investment","Lower output permanently"],a:0,
+ ex:"紧财政压低 AD、松货币压低利率 → 同样的产出下 <b>r 更低 → I 占比更高</b>。政策组合影响的是 GDP 的<b>构成</b>——长期看更有利于增长。",
+ s:"Tutorial 6 · §B Q9 | Lecture 6",h:"tutorials/tutorial-06.html"},
+// ---------- L7 ----------
+{b:"L7 · 古典模型与 AS-AD",q:"In the classical model (flexible wages and prices), expansionary fiscal policy:",
+ o:["Raises real output permanently","Cannot raise real output — it is fully crowded out, changing only composition and prices","Raises output but lowers prices","Works only if accompanied by money growth"],a:1,
+ ex:"古典模型里产出钉在潜在水平：G↑ 只推高利率与价格，<b>完全挤出</b>私人支出，实际产出不变。凯恩斯结论只在黏性价格的短期成立——两个世界别混。",
+ s:"Tutorial 7 · Q5/Q11 | Lecture 7",h:"tutorials/tutorial-07.html"},
+{b:"L7 · 古典模型与 AS-AD",q:"In the classical model, a 10% rise in the nominal money supply leads to:",
+ o:["A 10% rise in real output","A 10% rise in the price level, real variables unchanged","A 10% fall in the interest rate","A permanent boom"],a:1,
+ ex:"<b>货币中性</b>：名义货币↑10% → 价格↑10%，实际货币余额、产出、就业、实际利率全不变。这是 MV=PY 在 Y、V 固定下的直接推论。",
+ s:"Tutorial 7 · Q7 | Lecture 7",h:"tutorials/tutorial-07.html"},
+{b:"L7 · 古典模型与 AS-AD",q:"\"Temporary supply shocks alter potential output.\" This statement is:",
+ o:["True — any supply shock moves potential output","False — temporary shocks shift SAS only; LAS (potential output) is unchanged","True — but only for oil shocks","False — supply shocks shift AD"],a:1,
+ ex:"暂时冲击（如一次性油价上涨）只把 <b>SAS</b> 推上去；潜在产出由 F(L,K,A) 决定，<b>LAS 不动</b>。永久性冲击才动 LAS。供给冲击类考题常卡这一条。",
+ s:"Tutorial 7 · Q8 | Lecture 7",h:"tutorials/tutorial-07.html"},
+{b:"L7 · 古典模型与 AS-AD",q:"Monetary policy accommodates a __________ supply change by altering the __________ interest rate to induce a similar change in aggregate demand.",
+ o:["permanent, real","permanent, nominal","temporary, real","temporary, nominal"],a:0,
+ ex:"正确答案 <b>A</b>：<b>永久性</b>供给变化 → 潜在产出真的变了 → 央行必须动<b>实际利率</b>让 AD 跟着新的 AS 走（配合 Q16：油价永久压低 AS → 紧缩 → 高实际利率压 AD）。暂时冲击则不必动实际利率，等 SAS 自己回来。",
+ s:"Tutorial 7 · Q15/Q16 | Lecture 7",h:"tutorials/tutorial-07.html"},
+{b:"L7 · 古典模型与 AS-AD",q:"In the classical model, potential output cannot be increased by:",
+ o:["Monetary growth","Better technology","More capital","Higher labour supply"],a:0,
+ ex:"潜在产出 = F(L, K, A)，只认<b>实际</b>要素：技术、资本、劳动。货币增长是名义变量，长期只改价格。正确答案 A。",
+ s:"Tutorial 7 · Q17 | Lecture 7",h:"tutorials/tutorial-07.html"},
+// ---------- L8 ----------
+{b:"L8 · 通胀与菲利普斯曲线",q:"Your salary rises 10% and ALL prices also rise 10%. Your real wage has:",
+ o:["Risen 10%","Fallen 10%","Stayed constant — feeling better off is money illusion","Risen 20%"],a:2,
+ ex:"实际工资 = W/P 不变。觉得自己变富了是<b>货币幻觉 (money illusion)</b>——Tutorial 8 开卷第一题就是它，MCQ 高频。",
+ s:"Tutorial 8 · Q7 / Tutorial 7 · Q1 | Lecture 8",h:"tutorials/tutorial-08.html"},
+{b:"L8 · 通胀与菲利普斯曲线",q:"The velocity of circulation is:",
+ o:["The growth rate of the money supply","PY/M — how fast the money stock circulates to finance nominal income","The ratio of M0 to M4","The speed at which banks clear cheques"],a:1,
+ ex:"V = PY/M（由 MV=PY 定义）。它是把货币存量和名义收入连起来的桥；数量论假设 V 稳定，短期它其实会变——这正是「短期货币-价格链条断裂」的原因之一。",
+ s:"Tutorial 8 · §B Q10 | Lecture 8",h:"tutorials/tutorial-08.html"},
+{b:"L8 · 通胀与菲利普斯曲线",q:"According to the Fisher hypothesis, a 1 percentage point rise in expected inflation leads to:",
+ o:["A 1pp rise in the real interest rate","A 1pp rise in the NOMINAL interest rate, real rate roughly unchanged","A 1pp fall in the nominal interest rate","No change in any interest rate"],a:1,
+ ex:"Fisher：i = r + π<sup>e</sup>。通胀预期抬 1 个点，<b>名义利率</b>跟着抬 1 个点，实际利率长期由实际因素决定不变。（考题里「通胀升到 7%、名义利率升到 9%」这类数字正是按 Fisher 关系设定的。）",
+ s:"Tutorial 8 · §B Q6 | Lecture 8",h:"tutorials/tutorial-08.html"},
+{b:"L8 · 通胀与菲利普斯曲线",q:"The short-run Phillips curve shifts UP when:",
+ o:["Actual unemployment rises","Expected inflation rises","The natural rate falls","Demand policy is tightened"],a:1,
+ ex:"SRPC 的位置由<b>预期通胀</b>（和 u*）钉住：π<sup>e</sup>↑ → 整条 SRPC 上移。沿线移动 vs 整线平移的区分，与 SAS 完全同构（SAS↔SRPC）。",
+ s:"Tutorial 8 · §B Q12 / Q5 | Lecture 8",h:"tutorials/tutorial-08.html"},
+{b:"L8 · 通胀与菲利普斯曲线",q:"\"Sustained inflation is always and everywhere a monetary phenomenon.\" On this course, the statement is:",
+ o:["True — persistent inflation requires continuing money growth","False — inflation is always fiscal","True — but only under fixed exchange rates","False — supply shocks cause all inflation"],a:0,
+ ex:"正确答案 True：一次性冲击只能造成<b>一次性</b>价格上升；<b>持续的</b>通胀必须有持续的货币增长配合（长期 π = ΔM/M）。注意限定词 sustained——这是它成立的关键。",
+ s:"Tutorial 8 · §B Q9 | Lecture 8",h:"tutorials/tutorial-08.html"},
+{b:"L8 · 通胀与菲利普斯曲线",q:"Which group tends to LOSE from unanticipated inflation?",
+ o:["Borrowers with fixed-rate mortgages","Lenders who fixed nominal interest rates in advance","The government (a net nominal debtor)","Owners of real assets"],a:1,
+ ex:"意外通胀把实际价值从<b>名义债权人</b>转移给名义债务人：固定名义利率的贷出者、持现金者、拿固定名义收入者受损；借款人和政府（净债务人）反而受益。",
+ s:"Tutorial 8 · Q2 (P512/Q5) | Lecture 8",h:"tutorials/tutorial-08.html"},
+// ---------- L9 ----------
+{b:"L9 · 失业",q:"The participation rate is:",
+ o:["The fraction of the labour force in work","The fraction of the population of working age who are in the labour force","The fraction of the unemployed receiving benefits","Employment divided by population"],a:1,
+ ex:"分子是<b>劳动力</b>（就业+失业），分母是<b>工作年龄人口</b>。和失业率（失业/劳动力）的分母不同——两个口径混着考是常规操作。",
+ s:"Tutorial 9 · §B Q5 | Lecture 9",h:"tutorials/tutorial-09.html"},
+{b:"L9 · 失业",q:"Discouraged workers give up searching and LEAVE the labour force. The measured unemployment rate:",
+ o:["Rises","Falls, even though no one found a job","Is unchanged","Doubles"],a:1,
+ ex:"退出劳动力 → 分子（失业人数）和分母（劳动力）同时减少，失业率<b>下降</b>——但没有任何人找到工作。失业率下降 ≠ 劳动市场好转，是经典细节题。",
+ s:"Tutorial 9 · §B Q2 | Lecture 9",h:"tutorials/tutorial-09.html"},
+{b:"L9 · 失业",q:"Someone prepared to work at the going wage rate but unable to find a job is:",
+ o:["Voluntarily unemployed","Involuntarily unemployed","Not in the labour force","Frictionally employed"],a:1,
+ ex:"愿意按现行工资工作却找不到 = <b>非自愿失业</b>（凯恩斯失业）。自愿失业是在现行工资下<b>选择</b>不工作（在 LF 与 AJ 之间）。",
+ s:"Tutorial 9 · §B Q8 | Lecture 9",h:"tutorials/tutorial-09.html"},
+{b:"L9 · 失业",q:"To reduce the NATURAL rate of unemployment, the government should use:",
+ o:["Expansionary demand policy (higher G or lower interest rates)","Supply-side policies (training, benefit reform, labour-market flexibility)","Exchange rate devaluation","Price controls"],a:1,
+ ex:"政策配对铁律：<b>需求政策只能消除对 u* 的缺口，动不了 u* 本身</b>；要降自然失业率必须用供给侧（培训、福利改革、降低匹配摩擦）。长期表现只能被供给侧改变。",
+ s:"Tutorial 9 · §B Q7 | Lecture 9",h:"tutorials/tutorial-09.html"},
+// ---------- L10 ----------
+{b:"L10 · 经济增长",q:"In the Solow model, a HIGHER saving rate leads to:",
+ o:["A permanently higher growth rate of output","A higher steady-state LEVEL of output per worker, but an unchanged long-run growth rate","Lower capital per worker","A permanently lower interest rate only"],a:1,
+ ex:"Solow 的招牌结论：储蓄率↑ 只有<b>水平效应</b>（过渡期增长快一阵，稳态人均产出更高），长期增长率仍由 <b>n + 技术进步</b> 决定。「率」和「水平」的区分是必考细节。",
+ s:"Tutorial 10 · §B Q11 | Lecture 10",h:"tutorials/tutorial-10.html"},
+{b:"L10 · 经济增长",q:"Along the steady-state path (no technical progress), output, capital and labour:",
+ o:["All grow at the same rate n","Grow at different rates","Are all constant in level","Grow at the saving rate s"],a:0,
+ ex:"稳态的定义就是三者<b>同速增长</b>（都按劳动力增速 n），所以人均量不变。加上劳动增益型技术进步 t，则总量按 n+t、人均按 t 增长。",
+ s:"Tutorial 10 · §B Q8 | Lecture 10",h:"tutorials/tutorial-10.html"},
+{b:"L10 · 经济增长",q:"Capital WIDENING refers to:",
+ o:["Raising capital per worker for the existing workforce","Extending the existing level of capital per worker to NEW workers","Replacing worn-out machines","Building wider factories"],a:1,
+ ex:"widening = 给<b>新增劳动力</b>配上同样的人均资本（维持 k 不变所需投资 nk）；deepening = 提高<b>每人</b>的资本存量。一字之差，两个概念。",
+ s:"Tutorial 10 · §B Q9 | Lecture 10",h:"tutorials/tutorial-10.html"},
+{b:"L10 · 经济增长",q:"In ENDOGENOUS growth theory (e.g. AK model), a higher saving rate:",
+ o:["Has no effect on growth, as in Solow","Permanently RAISES the steady-state growth rate","Lowers growth through diminishing returns","Only changes the price level"],a:1,
+ ex:"内生增长靠<b>累积要素规模报酬不变/递增</b>（资本外部性），打破了边际报酬递减 → 储蓄率、政策能<b>永久影响增长率</b>。与 Solow 的对照是 MCQ 标准考法。",
+ s:"Tutorial 10 · §B Q13/Q14 | Lecture 10",h:"tutorials/tutorial-10.html"},
+// ---------- L11 ----------
+{b:"L11 · 经济周期",q:"Firms hold STOCKS (inventories) mainly to:",
+ o:["Speculate on price rises","Meet short-term demand fluctuations without costly changes in output","Avoid paying taxes","Increase measured GDP"],a:1,
+ ex:"存货是产出的<b>缓冲垫</b>：短期需求波动先由存货吸收，产出不必立刻跟着跳。这也是存货投资在周期数据里波动最剧烈的原因。正确答案 B (stocks)。",
+ s:"Tutorial 11 · §B Q2 | Lecture 11",h:"tutorials/tutorial-11.html"},
+{b:"L11 · 经济周期",q:"A political business cycle arises when:",
+ o:["Central banks change interest rates too often","The incumbent government engineers a pre-election boom and post-election slowdown","Voters save more before elections","Exports follow the electoral calendar"],a:1,
+ ex:"现任政府利用短期菲利普斯曲线：<b>选前</b>减税扩支制造繁荣，<b>选后</b>收紧收拾通胀。央行独立后货币这条路被堵上，政治周期证据变少（可能转成利率周期）。——你回忆的「总统选举」题就在这。",
+ s:"Tutorial 11 · Q1 (P582/Q7) | Lecture 11",h:"tutorials/tutorial-11.html"},
+{b:"L11 · 经济周期",q:"Real business cycle (RBC) theory explains fluctuations mainly by:",
+ o:["Sticky prices and demand shocks","Real supply-side shocks (e.g. technology), with money largely neutral","Animal spirits only","Central bank mistakes only"],a:1,
+ ex:"RBC：周期是<b>实际冲击</b>（技术、生产率）下经济的最优反应，货币中性、市场持续出清——与凯恩斯的需求冲击+黏性价格解释相对照。",
+ s:"Tutorial 11 · Q3 (P582/Q11) | Lecture 11",h:"tutorials/tutorial-11.html"},
+// ---------- L12 ----------
+{b:"L12 · 国际贸易",q:"The main cause of different relative costs (comparative advantage) between countries is:",
+ o:["Different currencies","Differences in technology and factor endowments","Transport costs alone","Government subsidies alone"],a:1,
+ ex:"比较优势的来源 = <b>技术差异 + 要素禀赋差异</b>（劳动/资本/土地的相对丰裕度）。这决定谁出口劳动密集品、谁出口资本密集品。",
+ s:"Tutorial 11 · §B Q6 | Lecture 12",h:"tutorials/tutorial-11.html"},
+{b:"L12 · 国际贸易",q:"Wine, cars, steel sheeting — which has a HIGH index of intra-industry trade?",
+ o:["Wine (climate-determined)","Cars — differentiated products traded in both directions","Steel sheeting (homogeneous input)","None of them"],a:1,
+ ex:"产业内贸易发生在<b>差异化产品</b>上：各国同时进口和出口不同品牌的汽车。葡萄酒由气候（禀赋）决定方向、钢板是同质品——都偏产业间贸易。",
+ s:"Tutorial 11 · Q6 (P604/Q5) | Lecture 12",h:"tutorials/tutorial-11.html"},
+{b:"L12 · 国际贸易",q:"A tariff T is levied, and Pw + T is at or above the autarky price. Then:",
+ o:["Tariff revenue is maximised","Imports fall to zero, tariff revenue is £0, and the deadweight loss is one large triangle","Imports are unchanged","The country starts exporting automatically"],a:1,
+ ex:"<b>禁止性关税</b>：内价到达自给价后进口=0 → 没有征税对象 → 收入 £0；两个小三角合并成自给点处的一整块 DWL。关税题很爱埋这颗雷——先算自给价！",
+ s:"经典陷阱 + Tutorial 11 · Q4 | Lecture 12",h:"tutorials/tutorial-11.html"},
+{b:"L12 · 国际贸易",q:"\"Export subsidies do not involve waste.\" This statement is:",
+ o:["True — they expand valuable exports","False — they push domestic production beyond the efficient level and cost taxpayers more than producers gain","True — as long as the world price is fixed","False — but only for agricultural goods"],a:1,
+ ex:"补贴让国内按 Pw+s 生产、把边际成本高于世界价的产出硬推出去卖：<b>纳税人支出 &gt; 生产者得益</b>，产生生产与消费两块 DWL。正确答案 False（确实有浪费）。",
+ s:"Tutorial 11 · §B Q9 + Ch23 EOC | Lecture 12",h:"tutorials/tutorial-11.html"},
+{b:"L12 · 国际贸易",q:"The main lesson from the history of tariffs is:",
+ o:["Tariffs reliably create jobs at home","Tariffs invite retaliation: no country gains employment and world trade shrinks","Tariffs are always prohibitive","Tariffs raise world welfare"],a:1,
+ ex:"关税战剧本：A 征税 → B 报复 → 各国就业没增加，世界贸易萎缩（1930 年代 Smoot-Hawley 的教训）。这句也是 B4 尾问「贸易战好不好」的结论句。",
+ s:"Tutorial 11 · §B Q7 + Lecture 3「Imports and Employment」图",h:"tutorials/tutorial-11.html"}
+];
+
+const quiz=document.getElementById('quiz');
+const sidenav=document.getElementById('sidenav');
+let score=0,done=0,onlyWrong=false;
+
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function build(){
+  quiz.innerHTML='';sidenav.innerHTML='';score=0;done=0;updateBar();
+  let curBlock=null,bi=0;
+  QS.forEach((it,i)=>{
+    if(it.b!==curBlock){
+      curBlock=it.b;bi++;
+      const h=document.createElement('h3');h.className='blkh2';h.id='blk'+bi;
+      h.textContent=curBlock;quiz.appendChild(h);
+      const nl=document.createElement('a');nl.className='nav';nl.href='#blk'+bi;nl.textContent=curBlock;
+      sidenav.appendChild(nl);
+    }
+    const card=document.createElement('div');card.className='mcq';card.dataset.i=i;
+    let html='<div class="qt"><span class="qn">Q'+(i+1)+'.</span>'+esc(it.q)+'</div>';
+    it.o.forEach((op,j)=>{html+='<button class="opt" data-j="'+j+'">'+String.fromCharCode(65+j)+') '+esc(op)+'</button>';});
+    html+='<div class="exp">'+it.ex+'<br><a class="srcchip" href="'+it.h+'">📌 知识点出处：'+esc(it.s)+'</a></div>';
+    card.innerHTML=html;
+    card.addEventListener('click',ev=>{
+      const btn=ev.target.closest('.opt');
+      if(!btn||card.classList.contains('done'))return;
+      const j=+btn.dataset.j;
+      card.classList.add('done');
+      card.querySelectorAll('.opt').forEach(b=>{
+        if(+b.dataset.j===it.a)b.classList.add('right');
+      });
+      done++;
+      if(j===it.a){score++;card.dataset.state='correct';}
+      else{btn.classList.add('wrong');card.dataset.state='wrong';}
+      updateBar();applyFilter();
+    });
+    quiz.appendChild(card);
+  });
+}
+function updateBar(){
+  document.getElementById('scoreN').textContent=score;
+  document.getElementById('doneN').textContent=done;
+  document.getElementById('accN').textContent=done?('正确率 '+Math.round(100*score/done)+'%'):'';
+}
+function applyFilter(){
+  document.querySelectorAll('.mcq').forEach(c=>{
+    c.classList.toggle('hidden',onlyWrong&&c.dataset.state!=='wrong');
+  });
+  document.querySelectorAll('.blkh2').forEach(h=>{
+    let n=h.nextElementSibling,any=false;
+    while(n&&!n.classList.contains('blkh2')){if(n.classList.contains('mcq')&&!n.classList.contains('hidden'))any=true;n=n.nextElementSibling;}
+    h.style.display=(onlyWrong&&!any)?'none':'';
+  });
+}
+document.getElementById('btnWrong').addEventListener('click',function(){
+  onlyWrong=!onlyWrong;this.classList.toggle('on',onlyWrong);
+  this.textContent=onlyWrong?'显示全部':'只看错题';applyFilter();
+});
+document.getElementById('btnReset').addEventListener('click',()=>{
+  onlyWrong=false;const b=document.getElementById('btnWrong');b.classList.remove('on');b.textContent='只看错题';
+  build();
+});
+build();
+</script>
+</body>
+</html>

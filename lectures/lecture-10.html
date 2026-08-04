@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 10 · Economic Growth — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 增长的两种度量</a>
+  <a class="nav" href="#s2">2 · 马尔萨斯陷阱 ⭐</a>
+  <a class="nav" href="#s3">3 · 增长核算（总量与人均）⭐⭐</a>
+  <a class="nav" href="#s4">4 · 劳动生产率的三大来源</a>
+  <a class="nav" href="#s5">5 · Solow 残差与技术知识</a>
+  <a class="nav" href="#s6">6 · Solow 模型 ⭐⭐⭐</a>
+  <a class="nav" href="#s7">7 · 储蓄率上升的效果 ⭐</a>
+  <a class="nav" href="#s8">8 · 含技术进步的 Solow 模型</a>
+  <a class="nav" href="#s9">9 · 收敛假说 ⭐</a>
+  <a class="nav" href="#s10">10 · 内生增长 AK 模型 ⭐⭐</a>
+  <a class="nav" href="#s11">11 · 增长的代价与零增长</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-10.html">→ Tutorial 10</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 10 · Economic Growth</h1>
+  <div class="sub">增长核算 · 马尔萨斯陷阱 · Solow 模型与收敛假说 · AK 内生增长 · 增长的代价</div>
+  <div>
+    <span class="tag">47 slides</span>
+    <span class="tag">Begg Ch.26</span>
+    <span class="tag">对应 Tutorial 10</span>
+    <span class="tag b-hot">⭐⭐ Solow 图必考</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">前九讲都在讲<b>产出如何围绕 Y* 波动</b>。本讲第一次问：<b>Y* 本身为什么会增长？</b>
+    这是全课程从"周期"转向"趋势"的转折点。</p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+怎么量增长（实际 GDP 增长率 vs 人均 GDP）
+   ↓ 最悲观的理论：<b>马尔萨斯陷阱</b>——固定土地 + 边际报酬递减 ⇒ 增长必然停止
+   ↓ 富国怎么逃出来的？<b>提高 A（技术）与 K（资本）</b>
+   ↓ 于是要拆解增长来源：<b>增长核算 Y = AK<sup>α</sup>L<sup>β</sup></b>
+        总量：ΔY/Y = ΔA/A + αΔK/K + βΔL/L
+        人均：<b>y = Ak<sup>α</sup></b>（除以 L）
+   ↓ 无法被资本解释的部分 = <b>Solow residual</b>（技术进步）
+   ↓ 建模：<b>Solow 模型</b> —— sy = nk 决定稳态 k*
+        ⇒ 惊人结论：<b>提高储蓄率提高水平，但不改变长期增长率</b>
+   ↓ 加入技术进步 ⇒ <b>人均产出以技术进步率 t 增长</b>
+   ↓ 推论：<b>收敛假说</b>——穷国应当追赶
+   ↓ 但如果 <b>α = 1</b>（资本无递减报酬，因为有<b>外部性</b>）⇒ <b>AK 模型</b>
+        ⇒ <b>g = sA − n</b>：<b>储蓄率与技术水平永久性地决定增长率</b> ⇒ 政策有长期作用
+   ↓ 最后：增长值得追求吗？（代价、零增长提案的错误）
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：Lecture 7 的 <b>Y = F(L, K, A)</b> 与 <b>LAS 右移的三个原因</b>正是本讲的三个自变量；
+      Lecture 9 的<b>供给侧政策</b>就是提高 Y* 的政策工具；Lecture 2 的<b>节俭悖论</b>在这里被彻底反转
+      ——<b>短期储蓄有害，长期储蓄有益</b>。<br>
+      <b>启下</b>：<b>Lecture 11</b> 讲围绕这条增长趋势的<b>周期波动</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slide 3</span><h2>1 · 增长的两种度量方式</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:30%">度量</th><th>含义与缺陷</th></tr>
+      <tr><td><b>① 实际 GDP 的变化率</b></td>
+        <td>反映<b>经济规模的增长</b>，但<b>有许多缺陷</b>：<br>
+        • <b>遗漏了未被买卖的产出</b>，例如 <b>leisure（闲暇）、pollution（污染）、congestion（拥堵）</b><br>
+        • <b>忽视了收入分配</b></td></tr>
+      <tr><td><b>② 人均 GDP（GDP per capita）</b></td>
+        <td><b>更高的人均 GDP 不必然意味着更大的幸福，但它有帮助</b>
+        （"does not necessarily mean greater happiness, but it helps"）</td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 与 Lecture 1 的呼应</span>
+      这三条缺陷（非市场产出、污染拥堵、分配）正是 Lecture 1 最后一页
+      "GDP 不是好的福利指标"的翻版。<b>写增长题时先用一句话交代度量的局限，是很稳的开头。</b>
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 5–9</span><h2>2 · 马尔萨斯陷阱（The Malthusian Trap, 1798）⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">核心推理链（必背）</span>
+<b>不断增长的人口耕作固定供给的土地 ⇒ 劳动的边际产量会下降</b>
+  （Growing population worked a <b>fixed supply of land</b>, the <b>marginal product of labour would fall</b>）
+     ↓
+<b>农业产出的增长会慢于人口的增长</b>
+     ↓
+<b>随着人口增长，人均收入下降</b>
+     ↓
+<b>当人均产出降到饥饿水平（starvation level）时，增长无法继续</b>
+    </div>
+
+    <h3><span class="slide-no">Slide 7</span>另一条同样重要的机制（储蓄的角度）</h3>
+    <div class="fml">
+设 <b>Y = A × f(K, L)</b>
+→ <b>在极低的收入水平上，储蓄可能为零</b>，因为<b>所有资源都被消费所需要</b>
+→ <b>因此资本无法通过投资被创造出来</b>
+→ <b>产出可能无法随时间增长</b>
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 8</span>图形（考试可能要求画）</h3>
+    <p>横轴是<b>人口/劳动力</b>，纵轴是<b>产出</b>，生产函数因<b>边际报酬递减</b>而凹向下：</p>
+    <ul>
+      <li>在劳动力 <b>C</b> 处，产出为 <b>AC</b>，<b>人均产出是 OA 这条射线的斜率</b>；</li>
+      <li>在劳动力 <b>D</b> 处，<b>总产出更高（DB）</b>，<b>但人均产出从 OA 的斜率下降到 OB 的斜率</b>；</li>
+      <li>当人均产出降到饥饿水平时，<b>增长无法继续</b>。</li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 520 300" role="img" aria-label="Malthusian trap">
+        <line class="ax" x1="75" y1="255" x2="480" y2="255"/>
+        <line class="ax" x1="75" y1="255" x2="75" y2="28"/>
+        <text class="lbl" x="270" y="280">Population, labour force</text>
+        <text class="lbl" x="24" y="44">Output</text>
+        <path d="M75,255 C170,105 290,68 450,52" class="cv c-ad"/>
+        <text class="lbl" x="386" y="44" fill="#6c8bff">output</text>
+        <line x1="75" y1="255" x2="196" y2="128" class="dsh" stroke="#33d6a6"/>
+        <line x1="75" y1="255" x2="330" y2="72" class="dsh" stroke="#ffb454"/>
+        <circle class="pt" cx="196" cy="128" r="5.5"/><text class="lbl" x="172" y="122">A</text>
+        <circle class="pt" cx="330" cy="72" r="5.5"/><text class="lbl" x="336" y="66">B</text>
+        <line x1="196" y1="128" x2="196" y2="255" class="dsh"/><text class="lbl-s" x="190" y="271">C</text>
+        <line x1="330" y1="72" x2="330" y2="255" class="dsh"/><text class="lbl-s" x="324" y="271">D</text>
+        <text class="lbl-s" x="112" y="196" fill="#33d6a6">slope OA = 人均产出（高）</text>
+        <text class="lbl-s" x="216" y="176" fill="#ffb454">slope OB = 人均产出（低）</text>
+      </svg>
+      <figcaption>Figure 10.1 — 马尔萨斯陷阱。总产出上升（AC→DB）但<b>射线斜率下降</b>，即人均产出下降。</figcaption>
+    </figure>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 9</span>富国如何逃出陷阱</h3>
+    <ul>
+      <li><b>通过在生产中投入更多资本来提高生产率</b>（例如抽水与排水的机械）；</li>
+      <li><b>快速的技术进步</b>；</li>
+      <li><b>A 与 K 的上升使产出增长快于劳动的增长</b>。</li>
+    </ul>
+    <div class="callout c-exam"><span class="t">🎯 马尔萨斯错在哪（essay 结论句）</span>
+      课件 Slide 45 明确：<b>马尔萨斯"低估了技术变革的潜在影响"（underestimated the potential impact of
+      technical change）</b>。他的模型里 <b>A 是固定的</b>，只有 L 增长而 K、A 不变 ⇒ 必然递减。
+      一旦 A 与 K 能够持续增长，陷阱就被打破。
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 11–13, 15–17</span><h2>3 · 增长核算 ⭐⭐（计算题高发）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 增长核算的目的（Slide 11，定义题）</span>
+      <b>The purpose of growth accounting is to calculate how much real GDP growth results from the growth of
+      labour and capital, and how much is attributable to technological change.</b><br>
+      其<b>关键工具是总量生产函数 Y = F(A, K, L)</b>。
+    </div>
+
+    <h3>A. 人均 GDP 的分解（Slides 12–13）</h3>
+    <div class="fml" style="font-size:16px">
+<b>GDP per capita = Y/population = (Y/L) × (L/population)</b>
+                     └ 平均劳动生产率 ┘  └ 实际工作的人口占比 ┘
+    </div>
+    <ul>
+      <li><b>(Y/L)</b>：<b>每个就业工人的产出</b>，衡量<b>平均劳动生产率</b>（严格说应按<b>工时</b>计算）。
+        <b>劳动生产率对生活水平与增长是根本性的。</b></li>
+      <li><b>(L/population)</b>：<b>实际工作的人口占总人口的百分比</b>。</li>
+      <li><b>在劳动生产率不变的情况下，L 必须增长得快于人口，人均 GDP 才会上升</b>：
+        <ul>
+          <li><b>更高的参与率</b>是保证这一点的方式之一（呼应 Lecture 9）；</li>
+          <li>但<b>额外的劳动受制于边际报酬递减</b>。</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 style="margin-top:20px">B. 总量增长核算（Slide 15）</h3>
+    <div class="fml">
+可持续的增长由影响<b>长期总供给</b>的<b>实际因素</b>驱动：
+  • <b>资本存量与就业劳动力的增长</b>（问题：<b>边际报酬递减</b>）
+  • <b>Total factor productivity</b>（全要素生产率）
+
+生产函数：<b>Y = A K<sup>α</sup> L<sup>β</sup></b>
+
+长期增长：<b>ΔY/Y = ΔA/A + α(ΔK/K) + β(ΔL/L)</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 规模报酬（Slide 16）</span>
+      <b>α + β &gt; 1</b> ⇒ <b>Economies of Scale</b>（规模经济）<br>
+      <b>α + β = 1</b> ⇒ <b>Constant Returns to Scale</b>（规模报酬不变）<br>
+      <b>α + β &lt; 1</b> ⇒ <b>Diseconomies of Scale</b>（规模不经济）<br><br>
+      课件说明：<b>正的规模经济是给定技术水平下的一个额外增长来源</b>；
+      本课的数学<b>假设规模报酬不变</b>——所以 <b>K 与 L 各增长 10%，GDP 也增长 10%</b>。
+    </div>
+
+    <h3 style="margin-top:20px">C. 人均形式（Slide 17，最重要的一步）</h3>
+    <div class="fml">
+假设规模报酬不变（<b>α + β = 1，即 β = 1 − α</b>）：
+        Y = A K<sup>α</sup> L<sup>1−α</sup>
+两边同除以 L：
+        Y/L = A (K/L)<sup>α</sup>
+
+<b>y = A k<sup>α</sup></b>,  <b>0 &lt; α &lt; 1</b>
+
+  其中 <b>y = 每个工人的产出</b>，<b>k = 每个就业劳动者的资本</b>
+    </div>
+    <p>图形性质：<b>增加人均资本会提高人均产出</b>，但因 <b>0 &lt; α &lt; 1</b>，曲线<b>凹向下（边际报酬递减）</b>；
+    <b>α 越大，曲线越陡（递减越慢）</b>。</p>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slide 14</span><h2>4 · 劳动生产率的三大来源</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:26%">来源</th><th>内容</th></tr>
+      <tr><td><b>① Physical capital</b><br>物质资本</td>
+        <td>机器、设备等。分为两种积累方式：<br>
+        • <b>Capital widening</b>（资本广化）<br>
+        • <b>Capital deepening</b>（资本深化）<br>
+        <span class="muted">（定义见第 6 节）</span></td></tr>
+      <tr><td><b>② Human capital</b><br>人力资本</td>
+        <td><b>the knowledge and skill that has been acquired from education and on-the-job training</b>。<br>
+        <b>Learning-by-doing</b> 是在岗教育活动，<b>可以极大地提高劳动生产率</b>。</td></tr>
+      <tr><td><b>③ Technology</b><br>技术</td>
+        <td>即生产函数中的 A</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slides 20–22</span><h2>5 · Solow 残差与技术知识</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 Solow Residual（必背定义）</span>
+      增长核算把生产率的增长分成两个组成部分：<br>
+      ① <b>人均资本的增长（growth in capital per labour）</b>；<br>
+      ② <b>技术变革（technological change, A）</b>。<br><br>
+      <b>任何无法被资本增长所解释的生产率增长，都被归入技术变革，因此这个类别是一个宽泛的"大杂烩"概念
+      （a broad catchall concept）。这被称为 Solow Residual。</b>
+    </div>
+    <div class="callout c-trap"><span class="t">⚠️ 这句"catchall"是评价题的关键</span>
+      Solow 残差是<b>"算不出来的剩余"</b>，不是直接测得的技术进步。它里面还混杂了
+      <b>测量误差、人力资本改善、资源配置效率、规模经济</b>等。
+      考试问"Solow 残差的局限"时，答这一点。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 21</span>技术知识为什么会随时间变化（三个来源）</h3>
+    <ul>
+      <li><b>Inventions</b>（发明）</li>
+      <li><b>Embodiment of knowledge in capital</b>（知识体现在资本中）</li>
+      <li><b>Learning by doing</b>（干中学）</li>
+    </ul>
+    <p><b>Research and development (R&amp;D)</b>：<b>专利制度解决的是一种市场失灵，
+    若无专利制度，R&amp;D 的数量将会太少</b>（因为知识具有外部性，创新者无法独占收益——
+    这正是第 10 节内生增长理论的起点）。</p>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 22</span>The one-third rule ⭐（可能直接考计算）</h3>
+    <div class="fml">
+<b>Robert Solow 发现，边际报酬递减可以被"三分之一法则"很好地描述：</b>
+
+<b>在技术不变的情况下，平均而言，人均资本增加 1%，
+会带来人均产出增加三分之一个 1%（即 0.33%）。</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 三分之一法则 = α ≈ 1/3</span>
+      因为 <b>y = Ak<sup>α</sup></b> ⇒ <b>Δy/y = α · Δk/k</b>。
+      令 Δk/k = 1%，Δy/y = 1/3% ⇒ <b>α = 1/3</b>。
+      考试给你 Δk/k 与 Δy/y，就用这个关系反推 <b>Solow 残差 = Δy/y − α·Δk/k</b>。
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slides 24–30</span><h2>6 · Solow（新古典）增长模型 ⭐⭐⭐（本讲核心）</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 24</span>模型假设（答题必须先列）</h3>
+    <ul>
+      <li><b>劳动以恒定速率 n 增长</b>——<b>假设它等于总人口增长率</b>；</li>
+      <li><b>恒定的储蓄率 s</b>；</li>
+      <li><b>人均资本为 k；它在稳态中是恒定的</b>；</li>
+      <li><b>增加人均资本会提高人均产出（y = Ak<sup>α</sup>）</b>；</li>
+      <li><b>资本与劳动的边际报酬递减（0 &lt; α &lt; 1）</b>。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 25–28</span>三个关键术语（必背定义）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">术语</th><th>定义</th></tr>
+      <tr><td><b>Steady-state path</b><br>稳态路径</td>
+        <td><b>产出、资本与劳动全部以相同速率增长</b>，因此<b>人均产出与人均资本保持不变</b></td></tr>
+      <tr><td><b>Capital-widening</b><br>资本广化</td>
+        <td><b>把现有的人均资本扩展给新增的额外工人</b>
+        （<b>当 L 增长时保持 K/L 不变</b>）</td></tr>
+      <tr><td><b>Capital-deepening</b><br>资本深化</td>
+        <td><b>为所有工人提高人均资本</b>
+        （<b>K/L 上升，同时 L 也在增长</b>）</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 29</span>Solow 图的三条线（必须能一一解释）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:16%">曲线</th><th>含义</th></tr>
+      <tr><td><b>y = Ak<sup>α</sup></b></td><td><b>人均产出</b>；凹向下（边际报酬递减）</td></tr>
+      <tr><td><b>sy</b></td><td><b>s 是恒定的储蓄/投资比率</b>；<b>sy 同时显示人均储蓄与人均投资</b></td></tr>
+      <tr><td><b>nk</b></td><td><b>n = 劳动增长率</b>；<b>nk 显示在劳动增长的同时"维持人均资本不变"所"必需"的人均投资</b>；
+        <b>它代表 capital-widening</b>；是一条<b>过原点的直线</b></td></tr>
+    </table></div>
+    <div class="fml"><span class="lab">稳态条件（必背）</span>
+<b>sy = nk</b>   ⟺   <b>sAk<sup>α</sup> = nk</b>
+
+在稳态 <b>E</b>：<b>投资恰好足以使人均资本保持在 k* 不变</b>。
+人均产出为 <b>y*</b>，<b>产出与资本随人口一起以速率 n 增长</b>。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 540 320" role="img" aria-label="Solow growth model">
+        <line class="ax" x1="80" y1="275" x2="500" y2="275"/>
+        <line class="ax" x1="80" y1="275" x2="80" y2="28"/>
+        <text class="lbl" x="300" y="298">Capital per person, k</text>
+        <text class="lbl" x="46" y="44">y</text>
+        <path d="M80,275 C170,110 300,72 470,52" class="cv c-ad"/>
+        <text class="lbl" x="424" y="46" fill="#6c8bff">y = Ak<tspan baseline-shift="super" font-size="9">α</tspan></text>
+        <path d="M80,275 C170,190 300,164 470,150" class="cv c-alt"/>
+        <text class="lbl" x="428" y="144" fill="#33d6a6">sy</text>
+        <line x1="80" y1="275" x2="440" y2="45" class="cv c-alt2"/>
+        <text class="lbl" x="398" y="42" fill="#ffb454">nk</text>
+        <circle class="pt" cx="252" cy="184" r="6"/><text class="lbl" x="258" y="200">E</text>
+        <line x1="252" y1="184" x2="252" y2="275" class="dsh"/>
+        <text class="lbl-s" x="244" y="291">k*</text>
+        <line x1="80" y1="94" x2="252" y2="94" class="dsh"/>
+        <text class="lbl" x="52" y="98">y*</text>
+        <line x1="252" y1="94" x2="252" y2="184" class="dsh"/>
+        <circle class="pt" cx="252" cy="94" r="4"/>
+        <text class="lbl-s" x="120" y="140">sy &gt; nk ⇒ k↑</text>
+        <text class="lbl-s" x="320" y="230">sy &lt; nk ⇒ k↓</text>
+      </svg>
+      <figcaption>Figure 10.2 — Solow 模型。<b>sy = nk 处得到稳态 k*</b>；左侧 sy &gt; nk 使 k 上升，
+      右侧 sy &lt; nk 使 k 下降 ⇒ <b>稳态是稳定的</b>。</figcaption>
+    </figure>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 30</span>为什么"必需投资"恰好是 nk（课件的数值验证）</h3>
+    <div class="fml">
+当前资本存量 K = 300，当前劳动力 L = 30
+  ⇒ 人均资本 k = K/L = 300/30 = <b>10</b>
+劳动增长率 n = 0.1
+  ⇒ <b>nk = 0.1 × 10 = 1</b>（人均投资）
+  ⇒ <b>总投资 = L × nk = 30 × 1 = 30</b>
+新的 L = 33，新的 K = 330
+  ⇒ 新的 k = 330/33 = <b>10</b>  ✓ <b>人均资本保持在 10 不变</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 为什么 Solow 图有稳态（一句话）</span>
+      <b>sy 是凹的（因为 y 凹），nk 是直线。</b>凹曲线与过原点直线必然在原点之外交于一点。
+      k 小的时候储蓄超过必需投资 ⇒ 资本深化；k 大的时候储蓄不足 ⇒ 资本变浅。
+      <b>边际报酬递减保证了 k 一定会收敛到 k*。</b>
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slide 31</span><h2>7 · 储蓄率上升的效果 ⭐（本讲最反直觉的结论）</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">课件原文（一字不改地记）</span>
+假设原来的稳态在 <b>E</b>。<b>储蓄率上升到 s′</b>，使经济到达新的稳态 <b>F</b>。
+
+<b>人均资本与人均产出都提高了……</b>
+<b>但 y** 是恒定的，因此增长率不变。</b>
+<b>产出与劳动继续以速率 n 增长。</b>
+    </div>
+    <figure>
+      <svg viewBox="0 0 540 320" role="img" aria-label="Higher savings rate in Solow model">
+        <line class="ax" x1="80" y1="275" x2="500" y2="275"/>
+        <line class="ax" x1="80" y1="275" x2="80" y2="28"/>
+        <text class="lbl" x="300" y="298">Capital per person, k</text>
+        <text class="lbl" x="46" y="44">y</text>
+        <path d="M80,275 C170,110 300,72 470,52" class="cv c-ad"/>
+        <text class="lbl-s" x="428" y="46" fill="#6c8bff">y</text>
+        <path d="M80,275 C170,196 300,172 470,158" class="cv c-alt"/>
+        <text class="lbl-s" x="428" y="154" fill="#33d6a6">sy</text>
+        <path d="M80,275 C170,168 300,138 470,122" class="cv" stroke="#6fe6c3" stroke-width="2.4" fill="none"/>
+        <text class="lbl-s" x="428" y="116" fill="#6fe6c3">s′y</text>
+        <line x1="80" y1="275" x2="440" y2="45" class="cv c-alt2"/>
+        <text class="lbl-s" x="400" y="42" fill="#ffb454">nk</text>
+        <circle class="pt" cx="234" cy="192" r="5.5"/><text class="lbl" x="212" y="208">E</text>
+        <circle class="pt" cx="318" cy="138" r="5.5"/><text class="lbl" x="324" y="154">F</text>
+        <line x1="234" y1="192" x2="234" y2="275" class="dsh"/><text class="lbl-s" x="226" y="291">k*</text>
+        <line x1="318" y1="138" x2="318" y2="275" class="dsh"/><text class="lbl-s" x="308" y="291">k**</text>
+        <line x1="80" y1="102" x2="234" y2="102" class="dsh"/><text class="lbl-s" x="54" y="106">y*</text>
+        <line x1="80" y1="78" x2="318" y2="78" class="dsh"/><text class="lbl-s" x="48" y="82">y**</text>
+        <circle class="pt" cx="234" cy="102" r="4"/><circle class="pt" cx="318" cy="78" r="4"/>
+      </svg>
+      <figcaption>Figure 10.3 — 储蓄率由 s 升至 s′。稳态从 E 移到 F：<b>k 与 y 的水平上升，但长期增长率仍是 n</b>。</figcaption>
+    </figure>
+
+    <div class="callout c-exam"><span class="t">🎯 这是 Solow 模型最重要的结论（essay 必写）</span>
+      <b>提高储蓄率产生的是"水平效应（level effect）"，不是"增长率效应（growth effect）"。</b><br>
+      • <b>过渡期</b>：k 从 k* 上升到 k**，这段时间<b>增长率暂时高于 n</b>；<br>
+      • <b>新稳态</b>：人均产出停在更高的 y**，<b>增长率回到 n</b>。<br><br>
+      这正是 <b>Tutorial 10 Q1(b) "If we save more, we'd definitely grow faster" 为什么是错的</b>：
+      储蓄更多<b>只能暂时</b>加快增长，长期增长率<b>由 n（以及技术进步率）决定，而非由 s 决定</b>。
+    </div>
+    <div class="callout c-tip"><span class="t">💡 与 Lecture 2 节俭悖论的对照（极佳的加分句）</span>
+      <i>"Note the sharp contrast with the paradox of thrift: in the short-run Keynesian model with spare capacity,
+      a higher desire to save is contractionary and leaves saving unchanged; in the long-run Solow model, where
+      output is supply-determined, a higher saving rate unambiguously raises the steady-state levels of capital and
+      output per worker. The two results are not contradictory — they refer to different time horizons and
+      different constraints on output."</i>
+    </div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slides 32–33</span><h2>8 · 含技术进步的新古典增长模型</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">变量重新定义（Slide 32）</span>
+当技术 A 以速率 <b>t</b> 增长时，定义：
+  <b>y′ = Y/(AL)</b>：<b>每"效率劳动单位"的产出</b>（output per worker-equivalent）
+  <b>k′ = K/(AL)</b>：<b>每"效率劳动单位"的资本</b>（capital per worker-equivalent）
+
+<b>(t + n)k′</b> 显示的是：在<b>有效劳动</b>增长的同时，
+维持"每效率劳动单位资本"不变所<b>必需的投资</b>
+
+稳态条件：<b>sy′ = (t + n)k′</b>
+在稳态 E，投资<b>恰好足以</b>使 k′ 保持在 k′* 不变。
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 33</span>稳态各变量的增长率（表格必背）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:44%">变量</th><th>稳态增长率</th></tr>
+      <tr><td>技术进步 <b>A</b></td><td><b>t</b></td></tr>
+      <tr><td>劳动 <b>L</b></td><td><b>n</b></td></tr>
+      <tr><td><b>有效劳动 AL</b>（technology-augmented labour）</td><td><b>t + n</b></td></tr>
+      <tr><td>产出 <b>Y</b> 与资本 <b>K</b></td><td><b>t + n</b></td></tr>
+      <tr><td><b>人均产出 y 与人均资本 k</b></td><td><b>t</b></td></tr>
+      <tr><td>每效率劳动单位的 <b>y′ 与 k′</b></td><td><b>0（保持不变）</b></td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 这张表回答了本讲最根本的问题</span>
+      <b>长期中，人均产出的增长率 = 技术进步率 t。</b><br>
+      所以：<b>提高生活水平的唯一长期来源是技术进步</b>，不是储蓄，也不是人口增长。<br>
+      而在标准 Solow 模型中 <b>t 是外生的</b>——这正是内生增长理论要解决的问题。
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 34–37</span><h2>9 · 收敛假说（The convergence hypothesis）⭐</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义（必背）</span>
+      收敛假说断言：<b>穷国将增长得快于平均水平，而富国将增长得慢于平均水平</b>——
+      即<b>穷国应当"追赶上来"（catch up）</b>。<br>
+      但课件补充：<b>社会与政治差异可能使某些经济体比其他经济体更有效地追赶</b>。
+    </div>
+    <div class="callout c-tip"><span class="t">💡 收敛为什么会发生（要能说出机制）</span>
+      因为 <b>y = Ak<sup>α</sup> 存在边际报酬递减</b>：<b>k 小的国家，资本的边际产量高</b>，
+      同样的储蓄率带来<b>更快的资本深化</b>；随着 k 上升，边际产量下降，增长放缓。
+      <b>所有国家最终收敛到同一个 k*（若 s、n、A 相同）。</b>
+    </div>
+
+    <h3 style="margin-top:18px">经验证据（Slides 35–37）</h3>
+    <ul>
+      <li>曾经的低收入国家/地区——<b>Hong Kong、South Korea、Singapore、Taiwan</b>——
+        <b>增长非常迅速，已经或正在追赶美国</b>；许多其他亚洲国家的增长也快于美国。</li>
+      <li><b>东亚经济体如中国与韩国在过去 30 年增长非常快。</b></li>
+      <li><b>但是</b>：<b>收敛在世界范围内不可能是一股强大的力量，否则最贫穷的国家都应当增长得非常快</b>
+        （而事实并非如此）。</li>
+      <li>课件给出的经验结论：<b>增长似乎由两个条件所促进——
+        ① absence of internal strife（没有内部动乱）；② openness to the world economy（对世界经济开放）</b>。</li>
+    </ul>
+    <div class="callout c-trap"><span class="t">⚠️ 评价收敛假说时的标准结构</span>
+      <b>①支持</b>：东亚四小龙、中国、韩国的追赶；机制上有 Solow 模型的边际报酬递减作支撑。<br>
+      <b>②反对</b>：最穷的国家<b>并没有</b>普遍快速增长 ⇒ 无条件收敛不成立。<br>
+      <b>③调和</b>：收敛是<b>有条件的（conditional）</b>——只有在 s、n、A 与制度相似时才收敛；
+      课件点出的两个条件（无内乱、对外开放）正是这类"条件"。<br>
+      <b>④理论层面</b>：如果 α = 1（内生增长/AK 模型），<b>根本不存在收敛</b>——见下一节。
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slides 39–43</span><h2>10 · 内生增长理论：AK 模型 ⭐⭐</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">出发点：资本的外部性（Slide 39）</span>
+内生增长理论认识到<b>资本可能存在显著的外部性（externalities）</b>：
+• <b>一家企业更高的资本会提高其他企业的生产率。</b>
+• <b>在单个企业层面资本积累受制于边际报酬递减，
+  但在总量层面表现为对资本的规模报酬不变（constant return to capital）：</b>
+
+        y = Ak<sup>α</sup>，  <b>α = 1</b>  ⇒  <b>y = Ak</b>
+    </div>
+
+    <h3 style="margin-top:18px">AK 模型的推导（Slides 40–42，考试写这一整套）</h3>
+    <div class="fml">
+生产函数：<b>y = Ak</b>
+
+由于 A 是常数，<b>人均产出增长率 g<sub>y</sub> = 人均资本增长率 g<sub>k</sub></b>
+
+投资函数 = 储蓄函数：
+        <b>I (per person) = S (per person) = sy = sAk</b>
+
+用于资本深化的人均资本积累：
+        <b>Δk = sy − nk = sAk − nk</b>
+
+两边除以 k 得增长率：
+        <b>Δk/k = g<sub>k</sub> = g<sub>y</sub> = sA − n</b>
+    </div>
+
+    <div class="callout c-exam"><span class="t">🎯 核心结论（Slide 42，必背）</span>
+      <b>g<sub>k</sub> = g<sub>y</sub> = sA − n</b><br><br>
+      它之所以被称为 <b>'endogenous' growth theory</b>，是因为它意味着
+      <b>增长可能取决于参数 A（技术水平）与 s（储蓄率）</b>：<br>
+      • <b>这些参数可以被私人行为或公共政策所影响</b>；<br>
+      • <b>政府应当补贴人力资本与物质资本的形成</b>
+        （governments should subsidise human and physical capital formation）。
+    </div>
+
+    <h3 style="margin-top:18px"><span class="slide-no">Slide 43</span>图形：为什么"没有稳态"</h3>
+    <p>在 AK 技术下，<b>产出线 y = Ak 是一条直线</b>（不再凹向下），
+    <b>投资线 sAk 也是直线</b>，<b>折旧/必需投资线 nk 同样是直线</b>。
+    只要 <b>sA &gt; n</b>，投资线<b>永远在必需投资线之上</b>，两者<b>永不相交</b>
+    ⇒ <b>k 无限增长，没有稳态（No steady state for K）</b>。</p>
+
+    <figure>
+      <svg viewBox="0 0 900 300" role="img" aria-label="Solow vs AK model">
+        <text class="lbl" x="110" y="16">Solow：凹的 y ⇒ 有稳态</text>
+        <line class="ax" x1="70" y1="250" x2="410" y2="250"/>
+        <line class="ax" x1="70" y1="250" x2="70" y2="32"/>
+        <text class="lbl-s" x="240" y="274">k</text>
+        <path d="M70,250 C150,110 260,74 395,58" class="cv c-ad"/>
+        <text class="lbl-s" x="356" y="52" fill="#6c8bff">y = Ak<tspan baseline-shift="super" font-size="8">α</tspan></text>
+        <path d="M70,250 C150,186 260,164 395,152" class="cv c-alt"/>
+        <text class="lbl-s" x="356" y="146" fill="#33d6a6">sy</text>
+        <line x1="70" y1="250" x2="380" y2="48" class="cv c-alt2"/>
+        <text class="lbl-s" x="342" y="44" fill="#ffb454">nk</text>
+        <circle class="pt" cx="222" cy="181" r="5.5"/><text class="lbl-s" x="228" y="198">E</text>
+        <line x1="222" y1="181" x2="222" y2="250" class="dsh"/><text class="lbl-s" x="214" y="266">k*</text>
+
+        <text class="lbl" x="580" y="16">AK：直线 y ⇒ 无稳态</text>
+        <line class="ax" x1="510" y1="250" x2="860" y2="250"/>
+        <line class="ax" x1="510" y1="250" x2="510" y2="32"/>
+        <text class="lbl-s" x="690" y="274">k</text>
+        <line x1="510" y1="250" x2="800" y2="40" class="cv c-ad"/>
+        <text class="lbl-s" x="762" y="36" fill="#6c8bff">y = Ak</text>
+        <line x1="510" y1="250" x2="845" y2="90" class="cv c-alt"/>
+        <text class="lbl-s" x="806" y="84" fill="#33d6a6">sAk</text>
+        <line x1="510" y1="250" x2="845" y2="150" class="cv c-alt2"/>
+        <text class="lbl-s" x="806" y="144" fill="#ffb454">nk</text>
+        <text class="lbl-s" x="600" y="200" fill="#33d6a6">sA &gt; n ⇒ 永远 sAk &gt; nk</text>
+        <text class="lbl-s" x="600" y="218">⇒ k 无限增长，g = sA − n</text>
+      </svg>
+      <figcaption>Figure 10.4 — Solow 与 AK 模型的对比。<b>α &lt; 1 时曲线凹 ⇒ 有稳态；α = 1 时全是直线 ⇒ 无稳态、永久增长。</b></figcaption>
+    </figure>
+
+    <div class="callout c-tip"><span class="t">💡 两个模型的政策含义天差地别（比较题必写）</span>
+      <div class="tw"><table style="margin-top:8px">
+        <tr><th style="width:26%"></th><th>Solow 模型</th><th>AK / 内生增长</th></tr>
+        <tr><td>资本的报酬</td><td><b>递减（α &lt; 1）</b></td><td><b>不变（α = 1，靠外部性）</b></td></tr>
+        <tr><td>稳态</td><td><b>存在唯一稳态 k*</b></td><td><b>不存在稳态</b></td></tr>
+        <tr><td>提高 s 的效果</td><td><b>只提高水平，长期增长率仍是 n（或 t）</b></td><td><b>永久提高增长率 g = sA − n</b></td></tr>
+        <tr><td>长期增长率来源</td><td><b>外生的技术进步 t</b></td><td><b>内生的 A 与 s</b></td></tr>
+        <tr><td>收敛</td><td><b>预测收敛</b></td><td><b>不预测收敛</b>（穷国不会自动追上）</td></tr>
+        <tr><td>政策作用</td><td><b>无法影响长期增长率</b></td><td><b>政府应补贴人力与物质资本形成</b></td></tr>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="sec-h"><span class="kicker">Slides 45–46</span><h2>11 · 增长的代价与"零增长"提案 ⭐</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 45</span>增长的代价（五点）</h3>
+    <ul>
+      <li><b>马尔萨斯</b>在 18 世纪就警告增长有极限，<b>但他低估了技术变革的潜在影响</b>。</li>
+      <li><b>价格系统有助于确保有限资源的恰当使用</b>（稀缺资源涨价 ⇒ 自动激励节约与寻找替代品）。</li>
+      <li><b>增长可能带来代价</b>：<b>pollution（污染）、congestion（拥堵）、hectic lifestyle（忙碌而有压力的生活方式）</b>等。</li>
+      <li><b>但缺乏增长同样会带来代价。</b></li>
+      <li><b>对"合意增长率"的评估仍然是一个规范性（normative）问题。</b></li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 46</span>零增长提案错在哪 ⭐（Tutorial 10 原题）</h3>
+    <div class="fml"><span class="lab">课件的三段论证（背下来直接用）</span>
+<b>零增长提案主张</b>：因为更高的可测量 GNP 带来<b>环境成本</b>，
+所以最好把目标定为<b>可测量 GNP 的零增长</b>。
+
+<b>这个提案的错误</b>：它<b>没有区分"伴随社会成本的可测量产出"与
+"不带额外社会成本的可测量产出"</b>。<b>它没有提供正确的激励。</b>
+
+<b>正确的解决办法</b>：当<b>污染、拥堵、环境破坏或压力过多时</b>，
+最好的办法是<b>提供直接减少这些现象的激励</b>。
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 Tutorial 10 Q1(a) 的标准答案就在这里</span>
+      <b>"Since the earth's resources are limited, growth cannot continue forever."</b> → <b>错</b>，理由三条：<br>
+      ① <b>增长的主要来源是技术进步 A，而不是资源投入</b>——技术进步没有物理上限；<br>
+      ② <b>价格系统会自动配置有限资源</b>：稀缺资源涨价 ⇒ 节约使用 + 寻找替代品；<br>
+      ③ 这正是<b>马尔萨斯犯的错</b>——他低估了技术变革的影响。
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">增长核算</span>
+<b>Y = A K<sup>α</sup> L<sup>β</sup></b>
+<b>ΔY/Y = ΔA/A + α(ΔK/K) + β(ΔL/L)</b>
+规模报酬：α+β &gt; 1 规模经济；= 1 不变；&lt; 1 不经济
+人均形式（α+β=1）：<b>y = Ak<sup>α</sup></b>，<b>Δy/y = ΔA/A + α(Δk/k)</b>
+<b>Solow residual = Δy/y − α(Δk/k)</b>
+<b>One-third rule：α ≈ 1/3</b>（Δk/k = 1% ⇒ Δy/y = 1/3%）
+GDP per capita = <b>(Y/L) × (L/population)</b>
+    </div>
+    <div class="fml"><span class="lab">Solow 模型</span>
+假设：L 以 n 增长、s 恒定、0 &lt; α &lt; 1（递减报酬）
+<b>稳态条件：sy = nk</b>  ⟺  <b>sAk<sup>α</sup> = nk</b>
+稳态：k 与 y <b>不变</b>；Y、K、L 都以 <b>n</b> 增长
+<b>s↑ ⇒ k* 与 y* 的水平上升，但长期增长率仍是 n</b>（<b>level effect ≠ growth effect</b>）
+Capital-widening：K/L 不变（= nk）；Capital-deepening：K/L 上升
+    </div>
+    <div class="fml"><span class="lab">含技术进步（A 以 t 增长）</span>
+y′ = Y/(AL)，k′ = K/(AL)；<b>稳态：sy′ = (t+n)k′</b>
+增长率：<b>AL、Y、K 以 (t+n) 增长；y、k 以 t 增长；y′、k′ 不变</b>
+⇒ <b>人均产出的长期增长率 = 技术进步率 t</b>
+    </div>
+    <div class="fml"><span class="lab">AK 内生增长</span>
+资本有<b>外部性</b> ⇒ 总量层面 <b>α = 1</b> ⇒ <b>y = Ak</b>
+Δk = sy − nk = sAk − nk
+<b>g<sub>y</sub> = g<sub>k</sub> = sA − n</b>
+⇒ <b>无稳态；s 与 A 永久影响增长率；政府应补贴人力与物质资本形成</b>
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>储蓄更多 ⇒ 长期增长更快</td><td><b>Solow 模型中只是水平效应</b>；长期增长率由 n 与 t 决定。只有 <b>AK 模型</b>中 s 才影响增长率</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>资源有限 ⇒ 增长必然终结</td><td><b>技术进步 A 无物理上限</b>；<b>价格系统</b>会引导替代与节约</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>把 nk 说成折旧</td><td>课件的 <b>nk 是"资本广化"所需的投资</b>（让新增工人也有同样的人均资本）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>capital widening = deepening</td><td><b>widening：K/L 不变</b>；<b>deepening：K/L 上升</b></td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>稳态 = 什么都不增长</td><td>稳态是 <b>Y、K、L 以同一速率 n 增长</b>，只有<b>人均量</b>不变</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>Solow 残差 = 纯技术进步</td><td>它是 <b>catchall</b>：还含测量误差、人力资本、配置效率等</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>收敛假说被数据完全证实</td><td><b>最穷的国家并未普遍快速增长</b>；收敛是<b>有条件的</b>（无内乱 + 对外开放）</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>AK 模型也有稳态</td><td><b>没有</b>——所有线都是直线，sAk 永在 nk 之上（若 sA &gt; n）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>零增长能解决环境问题</td><td>它<b>不区分</b>有无社会成本的产出，<b>激励是错的</b>；应<b>直接对污染/拥堵提供激励</b></td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>用节俭悖论否定高储蓄</td><td>两者<b>时间跨度不同</b>：短期需求约束 vs 长期供给约束，<b>不矛盾</b></td><td><span class="badge b-essay">Essay</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span> <span class="muted" style="font-size:13px">（Tutorial 10 Q1(b) 的完整版）</span></h3>
+    <p class="lead"><i>"'If we save more, we'd definitely grow faster.' Assess this claim using the Solow growth model.
+    How does endogenous growth theory change the answer, and what are the policy implications?"</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng">The <b>Solow (neoclassical) growth model</b> assumes: labour grows at a constant rate <i>n</i>,
+        equal to the rate of population growth; a <b>constant savings ratio s</b>; and a per-capita production function
+        <b>y = Ak<sup>α</sup></b> with <b>0 &lt; α &lt; 1</b>, i.e. <b>diminishing returns to capital</b>, where
+        <i>y</i> is output per worker and <i>k</i> is capital per employed worker.</p>
+        <p class="eng">Along a <b>steady-state path</b>, output, capital and labour all grow at the <b>same</b> rate,
+        so output per worker and capital per worker are <b>constant</b>. <b>Capital-widening</b> extends existing
+        capital per worker to new extra workers, keeping <i>K/L</i> constant as <i>L</i> grows;
+        <b>capital-deepening</b> raises capital per worker for all workers.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 (see Figures 10.2 and 10.3). Horizontal axis = capital per person <i>k</i>;
+        vertical axis = output per person. Three schedules are drawn: the concave production function
+        <b>y = Ak<sup>α</sup></b>; the saving/investment schedule <b>sy</b>, a constant fraction of it; and the
+        straight line <b>nk</b>, showing the investment per person <b>required</b> to keep capital per person constant
+        while labour grows — i.e. pure capital-widening.</p>
+        <p class="eng">The steady state is at <b>E</b>, where <b>sy = nk</b>, giving <i>k</i>* and <i>y</i>*.
+        To the left of E, sy &gt; nk, so <i>k</i> rises; to the right, sy &lt; nk, so <i>k</i> falls — the steady state
+        is <b>stable</b>. A rise in the savings ratio to <i>s</i>′ shifts the saving schedule up, moving the steady
+        state to <b>F</b> with higher <i>k</i>** and <i>y</i>**.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>Part 1: the claim is true only temporarily.</b></p>
+        <p class="eng"><b>Step 1.</b> At the original steady state E, saving per person exactly covers the required
+        capital-widening investment <i>nk</i>*, so capital per worker is constant and the economy grows at rate
+        <i>n</i>.</p>
+        <p class="eng"><b>Step 2.</b> A rise in <i>s</i> to <i>s</i>′ means that at <i>k</i>*, <b>s′y &gt; nk</b>:
+        investment now exceeds what is needed merely to equip new workers, so there is <b>capital-deepening</b> and
+        <i>k</i> begins to rise.</p>
+        <p class="eng"><b>Step 3.</b> During this <b>transition</b>, output per worker grows, so total output grows
+        <b>faster than n</b>. To this extent the claim is correct.</p>
+        <p class="eng"><b>Step 4.</b> But because <b>0 &lt; α &lt; 1</b>, each extra unit of capital per worker adds
+        <b>less</b> output than the last — Solow's <b>one-third rule</b> says that with no change in technology a 1%
+        increase in capital per worker raises output per worker by only about one-third of 1%. As <i>k</i> rises,
+        <i>s′y</i> grows more slowly than the straight line <i>nk</i>.</p>
+        <p class="eng"><b>Step 5.</b> Eventually <b>s′y = nk</b> again at F. Capital per person and output per person
+        are permanently <b>higher</b>, but they are once again <b>constant</b>: "y** is constant, and thus the growth
+        rate is unchanged. Output and labour continue to grow at the rate <i>n</i>." Higher saving therefore produces a
+        <b>level effect</b>, not a <b>growth effect</b>.</p>
+        <p class="eng"><b>Step 6.</b> Once technical progress is added, with <i>A</i> growing at rate <i>t</i>, output
+        and capital grow at <b>(t + n)</b> and output per worker grows at <b>t</b>. So in the neoclassical model the
+        long-run growth of living standards is determined entirely by the <b>exogenous</b> rate of technical progress —
+        not by the savings rate at all.</p>
+
+        <p class="eng"><b>Part 2: endogenous growth changes the answer.</b> Endogenous growth theory recognises that
+        there may be significant <b>externalities to capital</b>: higher capital in one firm raises productivity in
+        other firms. Capital accumulation is subject to diminishing returns at the <b>individual firm</b> level, but at
+        the <b>aggregate</b> level there are constant returns to capital, so <b>α = 1</b> and the production function
+        becomes <b>y = Ak</b>. Then, since <i>A</i> is constant, <i>g<sub>y</sub></i> = <i>g<sub>k</sub></i>, and</p>
+        <div class="fml">Δk = sy − nk = sAk − nk
+⇒ <b>g<sub>k</sub> = g<sub>y</sub> = sA − n</b></div>
+        <p class="eng">Now the growth <b>rate</b> itself depends on <i>s</i> and <i>A</i>. Graphically, all three
+        schedules are straight lines, so if <i>sA</i> &gt; <i>n</i> the investment line lies permanently above the
+        required-investment line: there is <b>no steady state</b>, and capital per person grows without limit. A
+        permanently higher savings ratio therefore delivers a <b>permanently higher growth rate</b> — the claim in the
+        question becomes correct.</p>
+
+        <p class="eng"><b>Part 3: policy implications and evidence.</b> Under Solow, government cannot change the
+        long-run growth rate; it can only raise the level of income per head. Under endogenous growth, because
+        <i>A</i> and <i>s</i> "can be influenced by private behaviour or public policy", <b>governments should subsidise
+        human and physical capital formation</b> — and this is reinforced by the fact that <b>patent systems address a
+        market failure which otherwise would lead to there being too little R&amp;D</b>.</p>
+        <p class="eng">The two theories also make different predictions about <b>convergence</b>. Solow's diminishing
+        returns imply the <b>convergence hypothesis</b>: poor countries should grow faster than average and catch up.
+        The evidence is mixed: Hong Kong, South Korea, Singapore and Taiwan have caught up or are catching up with the
+        United States, and China and South Korea grew very quickly over the last thirty years. <b>But</b> convergence
+        "cannot be a powerful force in the world, or the very poorest countries would all be growing very rapidly".
+        Growth appears instead to be fostered by two conditions — <b>absence of internal strife</b> and <b>openness to
+        the world economy</b> — which suggests convergence is <b>conditional</b> on institutions rather than automatic,
+        consistent with the endogenous-growth view that <i>A</i> itself differs across countries.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">The claim is therefore <b>false as stated in the neoclassical model and true in the endogenous
+        growth model</b>. In the Solow framework, diminishing returns to capital ensure that a higher savings ratio
+        raises the <b>steady-state levels</b> of capital and output per worker but leaves the long-run growth rate at
+        <i>n</i> (or at <i>t</i> for output per head): saving faster buys a richer economy, not a permanently
+        faster-growing one. Only if capital generates sufficient externalities for aggregate returns to capital to be
+        constant — the AK case, where <i>g</i> = <i>sA</i> − <i>n</i> — does saving raise growth permanently.</p>
+        <p class="eng">Two qualifications are worth adding. First, the transition in the Solow model can be very long,
+        so a "level effect" may look like a growth effect for decades — which matters for policy even if it is not a
+        permanent growth effect. Second, this long-run conclusion sits in deliberate contrast to the short-run
+        <b>paradox of thrift</b> of Lecture 2, where higher desired saving is contractionary and leaves saving
+        unchanged. The two results are not contradictory: the paradox applies when output is <b>demand-constrained</b>
+        with spare capacity, whereas growth theory applies when output is <b>supply-constrained</b>. Saving is
+        contractionary in a recession and productive in the long run — which is precisely why the timing of any policy
+        to raise national saving matters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-09.html">← Lecture 9</a>
+  <a href="../tutorials/tutorial-10.html">Tutorial 10 →</a>
+  <a href="lecture-11.html">Lecture 11 · Business Cycles →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>

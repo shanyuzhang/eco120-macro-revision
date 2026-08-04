@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECO120 复习中心 · 总目录</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.hub{max-width:1220px;margin:0 auto;padding:28px 32px 120px}
+@media(max-width:900px){.hub{padding:18px}}
+.topnav{position:sticky;top:0;z-index:20;background:rgba(10,12,28,.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);padding:12px 32px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+@media(max-width:900px){.topnav{padding:10px 16px}}
+.topnav a{font-size:13.5px;padding:6px 13px;border-radius:9px;border:1px solid transparent;color:var(--ink2)}
+.topnav a:hover{background:var(--card);color:#fff;text-decoration:none;border-color:var(--line)}
+.topnav .brand{margin-right:auto}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+@media(max-width:820px){.pair{grid-template-columns:1fr}}
+a.tile.lec{border-left:3px solid var(--brand)}
+a.tile.tut{border-left:3px solid var(--accent)}
+a.tile.old{border-left:3px solid var(--warn)}
+.mini{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.mini span{font-size:10.5px;padding:2px 7px;border-radius:6px;background:rgba(255,255,255,.05);
+  border:1px solid var(--line);color:var(--muted)}
+.searchbox{width:100%;padding:11px 15px;border-radius:12px;border:1px solid var(--line);
+  background:var(--card);color:var(--ink);font-size:15px;font-family:inherit;margin-top:14px}
+.searchbox:focus{outline:none;border-color:var(--brand)}
+.hide{display:none !important}
+.row{display:grid;grid-template-columns:64px 1fr 1fr;gap:12px;align-items:stretch;margin-bottom:12px}
+@media(max-width:820px){.row{grid-template-columns:1fr}}
+.rownum{display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:850;
+  color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px}
+@media(max-width:820px){.rownum{padding:8px;font-size:15px}}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a href="variable-index.html" style="color:#6fe6c3;font-weight:700">🔎 变量反向索引</a>
+  <a href="mcq-drill.html" style="color:#a9bcff;font-weight:700">🎯 查缺补漏 MCQ</a>
+  <a href="#lectures">Lectures &amp; Tutorials</a>
+  <a href="#exam">应试策略</a>
+  <a href="#other">其他资料</a>
+</nav>
+
+<div class="hub">
+
+<div class="hero" style="margin-top:22px">
+  <h1>ECO120 Principles of Macroeconomics</h1>
+  <div class="sub">Principles of Macroeconomics —— 12 讲逐页讲解 + 11 次 tutorial 全解 + 英式答题范例（个人学习笔记）</div>
+  <div>
+    <span class="tag">12 Lectures</span>
+    <span class="tag">11 Tutorials</span>
+    <span class="tag">每讲含答题范例</span>
+    <span class="tag">离线可用</span>
+  </div>
+  <input class="searchbox" id="q" placeholder="🔍 输入关键词筛选（如：乘数、菲利普斯、关税、Solow、挤出…）" autocomplete="off">
+</div>
+
+
+<a class="tile" href="variable-index.html" style="margin-top:14px;border-left:3px solid var(--accent);display:block">
+  <div class="n" style="color:#6fe6c3">REVERSE INDEX · 按变量查，不按讲次查</div>
+  <div class="t">🔎 核心变量反向索引 · I / C / M / π / U / 汇率</div>
+  <div class="d">考场上题目问的是<b>「利率上升，投资会怎样？」</b>——需要<b>反向</b>查。
+    每个变量四块：<b>依赖什么（函数形式+决定因素）· 什么政策能动它（方向+机制）·
+    对应哪张图（在图上是什么）· 陷阱</b>，全部链接到对应 Lecture 小节。</div>
+  <div class="k">⭐ 附五条联动链（货币 / 财政挤出 / 供给冲击 / 贸易报复 / 长期增长）</div>
+</a>
+<a class="tile" href="mcq-drill.html" style="margin-top:14px;border-left:3px solid var(--brand);display:block">
+  <div class="t">🎯 查缺补漏 MCQ 特训（56 题细节考点）</div>
+  <div class="d">参照 Tutorial Section B 的题目风格自制的交互式选择题：即点即判、错题过滤、每题附知识点出处直达链接。专攻容易记错方向或口径的细节。</div>
+</a>
+
+<div class="callout c-tip" style="margin-top:20px"><span class="t">💡 怎么用这套材料</span>
+  <b>① 学一讲</b>：先看 Lecture 页的<b>「本讲逻辑主线」</b>建立框架 → 逐节精读 → 看<b>「考点与陷阱」</b> →
+  背<b>「公式速查」</b>。<br>
+  <b>② 练一次</b>：做对应 Tutorial 页的题（<b>先自己写，再展开答案</b>）→ 读<b>「答题结构点评」</b>。<br>
+  <b>③ 考前</b>：只看每讲的<b>公式速查 + 考点与陷阱 + 答题范例</b>三块。<br>
+  <b>所有答题范例都按英式评分标准的 <span class="term">Define → Diagram → Analyse → Conclude</span> 四段结构撰写。</b>
+</div>
+
+<section id="lectures">
+  <div class="sec-h"><span class="kicker">Part 1</span><h2>📚 Lectures &amp; Tutorials 配对导航</h2>
+    <span class="muted" style="margin-left:auto;font-size:13px">Tutorial N 对应 Lecture N</span></div>
+
+  <div class="card" style="padding:20px">
+
+    <div class="row" data-k="lecture 1 tutorial 1 introduction 导论 gdp 循环流量 circular flow 国民收入核算 national income accounting deflator cpi 名义 实际 增加值 value added">
+      <div class="rownum">01</div>
+      <a class="tile lec" href="lectures/lecture-01.html">
+        <div class="n">Lecture 1</div>
+        <div class="t">Introduction to Macroeconomics</div>
+        <div class="d">宏观导论 · 循环流量图 · GDP 三种度量 · 名义 vs 实际 GDP · deflator vs CPI</div>
+        <div class="mini"><span>漏出≡注入</span><span>三种度量法</span><span>GDP 的局限</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-01.html">
+        <div class="n">Tutorial 1</div>
+        <div class="t">National Income Accounting</div>
+        <div class="d">增加值计算 · deflator 换算 · UK 2007 真实数据 · 五企业增加值表</div>
+        <div class="mini"><span>A1 A4 A7 A8</span><span>B1 B2 B7</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 2 tutorial 2 output aggregate demand 45度线 keynesian 凯恩斯 消费函数 储蓄函数 乘数 multiplier 节俭悖论 paradox of thrift mpc mps planned actual">
+      <div class="rownum">02</div>
+      <a class="tile lec" href="lectures/lecture-02.html">
+        <div class="n">Lecture 2</div>
+        <div class="t">Output and Aggregate Demand</div>
+        <div class="d">凯恩斯 45° 线模型 · 消费/储蓄函数 · 乘数 · 节俭悖论</div>
+        <div class="mini"><span>planned vs actual</span><span>k = 1/(1−c)</span><span>⭐ 核心模型</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-02.html">
+        <div class="n">Tutorial 2</div>
+        <div class="t">45° Line Model &amp; Multiplier</div>
+        <div class="d">均衡产出 · 乘数计算 · 节俭悖论数值验证 · Hypothetica 完整数表</div>
+        <div class="mini"><span>A1 A6 A7 A13</span><span>B5 B11</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 3 tutorial 3 fiscal policy foreign trade 财政政策 外贸 政府 税收 定额税 比例税 自动稳定器 automatic stabilizer 预算赤字 budget deficit 结构性预算 structural 平衡预算乘数 balanced budget">
+      <div class="rownum">03</div>
+      <a class="tile lec" href="lectures/lecture-03.html">
+        <div class="n">Lecture 3</div>
+        <div class="t">Fiscal Policy and Foreign Trade</div>
+        <div class="d">加入政府与外贸 · 完整乘数 · 自动稳定器 · 财政立场与结构性预算</div>
+        <div class="mini"><span>k = 1/(s+ct+z)</span><span>定额税 vs 比例税</span><span>⭐ 计算高发</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-03.html">
+        <div class="n">Tutorial 3</div>
+        <div class="t">Fiscal Policy &amp; Trade</div>
+        <div class="d">三部门恒等式 · 财政扩张与赤字 · 平衡预算乘数数值证明 · 负斜率 AD</div>
+        <div class="mini"><span>A5 A6 A7 A14</span><span>B3 B7</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 4 tutorial 4 money banking financial markets 货币 银行 金融市场 m0 m4 货币乘数 money multiplier 存款创造 deposit creation 部分准备金 fractional reserve 货币需求 money demand ll 曲线 动机">
+      <div class="rownum">04</div>
+      <a class="tile lec" href="lectures/lecture-04.html">
+        <div class="n">Lecture 4</div>
+        <div class="t">Money, Banking and Financial Markets</div>
+        <div class="d">货币的定义与四大职能 · M0–M4 · 存款创造 · 货币乘数 · 货币需求与 LL 曲线</div>
+        <div class="mini"><span>(c<sub>p</sub>+1)/(c<sub>p</sub>+c<sub>b</sub>)</span><span>四大持币动机</span><span>⭐ 真题 B2</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-04.html">
+        <div class="n">Tutorial 4</div>
+        <div class="t">Money &amp; Banking</div>
+        <div class="d">M0/M4 计算 · 货币乘数比较静态 · 九项货币需求判断 · 银行的两个关键特征</div>
+        <div class="mini"><span>A4 A9</span><span>B4 B5 B9 B10</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 5 tutorial 5 interest rates transmission mechanism 利率 传导机制 中央银行 central bank 货币市场均衡 债券价格 bond price 公开市场操作 omo repo 量化宽松 qe 财富效应 wealth effect 投资需求 ii">
+      <div class="rownum">05</div>
+      <a class="tile lec" href="lectures/lecture-05.html">
+        <div class="n">Lecture 5</div>
+        <div class="t">Interest Rates &amp; Transmission Mechanism</div>
+        <div class="d">中央银行 · 货币市场均衡 · 债券价格与利率 · 货币政策工具 · 传导机制</div>
+        <div class="mini"><span>LL / MS 图</span><span>不能同时设定两者</span><span>QE 案例</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-05.html">
+        <div class="n">Tutorial 5</div>
+        <div class="t">Money Market &amp; Transmission</div>
+        <div class="d">货币市场七问 · 传导机制完整链条 · 领先指标 · 为何盯利率不盯货币量</div>
+        <div class="mini"><span>A 全部 5 题</span><span>B1–B17</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 6 tutorial 6 is-mp model is lm mp 曲线 挤出效应 crowding out taylor rule 泰勒规则 政策搭配 policy mix 李嘉图等价 ricardian equivalence">
+      <div class="rownum">06</div>
+      <a class="tile lec" href="lectures/lecture-06.html">
+        <div class="n">Lecture 6</div>
+        <div class="t">The IS-MP Model</div>
+        <div class="d">IS 曲线推导 · LM 与 MP 曲线 · <b>挤出效应</b> · 政策搭配 · 李嘉图等价</div>
+        <div class="mini"><span>Taylor rule</span><span>货币需求冲击 ⇒ MP 不动</span><span>⭐⭐ 最高频 essay</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-06.html">
+        <div class="n">Tutorial 6</div>
+        <div class="t">IS-MP Applications</div>
+        <div class="d">挤出效应六步 · IS/MP 移动判断 · 希腊危机 · 李嘉图等价数值题</div>
+        <div class="mini"><span>A 全部 5 题</span><span>B1–B9</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 7 tutorial 7 as-ad model 总供给 总需求 古典模型 classical las sas 长期总供给 短期总供给 供给冲击 supply shock 石油 oil 滞胀 stagflation 通胀目标 inflation targeting">
+      <div class="rownum">07</div>
+      <a class="tile lec" href="lectures/lecture-07.html">
+        <div class="n">Lecture 7</div>
+        <div class="t">The AS-AD Model</div>
+        <div class="d">古典 vs 凯恩斯 · AD 曲线的推导 · LAS 与 SAS · 需求与供给冲击 · 货币目标权衡</div>
+        <div class="mini"><span>石油冲击 = 滞胀</span><span>永久 vs 暂时</span><span>⭐⭐ 真题 B3</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-07.html">
+        <div class="n">Tutorial 7</div>
+        <div class="t">AS-AD Applications</div>
+        <div class="d">需求侧 vs 供给侧判定 · 苏格兰入欧元区 · 银行贷款崩溃 · Taylor rule 三问</div>
+        <div class="mini"><span>A 全部 7 题</span><span>B1–B17</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 8 tutorial 8 inflation phillips curve 通胀 菲利普斯曲线 货币数量论 quantity theory mv=py fisher 铸币税 seigniorage 通胀税 inflation tax 恶性通胀 hyperinflation srpc lrpc 通胀成本">
+      <div class="rownum">08</div>
+      <a class="tile lec" href="lectures/lecture-08.html">
+        <div class="n">Lecture 8</div>
+        <div class="t">Inflation and the Phillips Curve</div>
+        <div class="d">货币数量论 MV=PY · Fisher 假说 · 铸币税与通胀税 · SRPC/LRPC · 通胀的成本</div>
+        <div class="mini"><span>π = ΔM/M</span><span>通胀税拉弗曲线</span><span>成本三分法</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-08.html">
+        <div class="n">Tutorial 8</div>
+        <div class="t">Inflation &amp; Phillips Curve</div>
+        <div class="d">通胀的受损群体 · 税收扭曲算例 · 菲利普斯曲线七问 · 津巴布韦案例</div>
+        <div class="mini"><span>A 全部 6 题</span><span>B1–B12</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 9 tutorial 9 unemployment 失业 摩擦性 结构性 frictional structural 周期性 cyclical 自然失业率 natural rate ld aj lf 劳动力市场 供给侧政策 supply side 效率工资 efficiency wage 奥肯定律 okun 滞后效应 hysteresis">
+      <div class="rownum">09</div>
+      <a class="tile lec" href="lectures/lecture-09.html">
+        <div class="n">Lecture 9</div>
+        <div class="t">Unemployment</div>
+        <div class="d">失业类型 · LD/AJ/LF 模型 · 古典与凯恩斯失业 · 供给侧政策 · 滞后效应</div>
+        <div class="mini"><span>U* = 摩擦 + 结构</span><span>税楔与替代率</span><span>hysteresis 四渠道</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-09.html">
+        <div class="n">Tutorial 9</div>
+        <div class="t">Unemployment</div>
+        <div class="d">失业类型判定 · LD/AJ/LF 图九问 · 劳动力流量计算 · 技术进步与失业</div>
+        <div class="mini"><span>A 全部 4 题</span><span>B1–B8</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 10 tutorial 10 economic growth 经济增长 增长核算 growth accounting solow 索洛 稳态 steady state 收敛假说 convergence ak 内生增长 endogenous 马尔萨斯 malthusian 资本深化 广化 deepening widening">
+      <div class="rownum">10</div>
+      <a class="tile lec" href="lectures/lecture-10.html">
+        <div class="n">Lecture 10</div>
+        <div class="t">Economic Growth</div>
+        <div class="d">增长核算 · 马尔萨斯陷阱 · Solow 模型与收敛假说 · AK 内生增长 · 增长的代价</div>
+        <div class="mini"><span>sy = nk</span><span>g = sA − n</span><span>水平效应 ≠ 增长效应</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-10.html">
+        <div class="n">Tutorial 10</div>
+        <div class="t">Economic Growth</div>
+        <div class="d">Solow 模型七问 · 公共部门储蓄 · AK 模型计算 · 独生子女政策图解</div>
+        <div class="mini"><span>A 全部 5 题</span><span>B1–B15</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 11 tutorial 11 business cycles 商业周期 政治性周期 political 乘数加速数 multiplier accelerator 存货 stock building 真实商业周期 rbc dsge 学派 schools">
+      <div class="rownum">11</div>
+      <a class="tile lec" href="lectures/lecture-11.html">
+        <div class="n">Lecture 11</div>
+        <div class="t">Business Cycles</div>
+        <div class="d">趋势与周期 · 政治周期 · 乘数—加速数 · 存货波动 · RBC · 宏观各学派</div>
+        <div class="mini"><span>I = a[Y₋₁ − Y₋₂]</span><span>RBC vs 凯恩斯</span><span>五大学派</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-11.html">
+        <div class="n">Tutorial 11</div>
+        <div class="t">Cycles &amp; International Trade</div>
+        <div class="d"><b>横跨 L11 与 L12</b>：政治周期 · RBC · <b>关税福利计算</b> · 比较优势数值题</div>
+        <div class="mini"><span>A1–A3 周期</span><span>A4–A8 贸易</span><span>⭐⭐ 真题 B4 原型</span></div>
+      </a>
+    </div>
+
+    <div class="row" data-k="lecture 12 international trade 国际贸易 比较优势 comparative advantage 绝对优势 absolute 机会成本 opportunity cost 产业内贸易 intra-industry 关税 tariff 福利 deadweight loss 出口补贴 export subsidy 幼稚产业 infant industry">
+      <div class="rownum">12</div>
+      <a class="tile lec" href="lectures/lecture-12.html">
+        <div class="n">Lecture 12</div>
+        <div class="t">International Trade</div>
+        <div class="d">比较优势 · 贸易利得 · 产业内贸易 · <b>关税的福利分析</b> · 出口补贴</div>
+        <div class="mini"><span>相对成本决定贸易</span><span>A + B 净损失</span><span>⭐⭐ 真题 B4</span></div>
+      </a>
+      <a class="tile tut" href="tutorials/tutorial-11.html#a2">
+        <div class="n">Tutorial 11 · Q4–Q8</div>
+        <div class="t">Trade Exercises</div>
+        <div class="d">Lecture 12 的练习在 Tutorial 11 的后半部分（另见 tutorial 文件夹的 Ch23 EOC Solutions）</div>
+        <div class="mini"><span>关税计算</span><span>比较优势</span><span>产业内贸易</span></div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="exam">
+  <div class="sec-h"><span class="kicker">Part 2</span><h2>🎯 应试策略速查</h2></div>
+
+  <div class="card">
+    <h3>英式答题四段结构 <span class="badge b-hot">全课程通用</span></h3>
+    <div class="model">
+      <div class="step"><span class="h">① Define</span>
+        <p>用<b>一句精确的英文</b>定义题目中的每个术语；写出关键公式/恒等式；
+        <b>明确说明模型假设</b>（closed/open、fixed/flexible prices、short/long run）。<br>
+        <span class="muted">考官在这里给 definition marks —— 不写定义直接分析必失分。</span></p>
+      </div>
+      <div class="step"><span class="h">② Diagram</span>
+        <p><b>几乎每道 essay 题都应该画图</b>。必须标注：<b>坐标轴名称、每条曲线名称、
+        初始均衡 E₀、新均衡 E₁、移动方向箭头</b>。<br>
+        <b>并在正文中用文字交代图上发生了什么</b>（"the AD curve shifts rightward from AD₀ to AD₁"），
+        不能只放图让考官自己看。</p>
+      </div>
+      <div class="step"><span class="h">③ Analyse</span>
+        <p>用 <b>step-by-step 的因果链</b>推导，<b>每一步都给出机制、不能跳步</b>：<br>
+        <span class="mono">↑G → ↑AD → ↑Y → ↑Md → ↑r → ↓I (crowding out) → 部分抵消</span><br>
+        区分 <b>short run vs long run</b>、<b>impact vs final effect</b>、<b>nominal vs real</b>；
+        主动指出模型的假设与局限。</p>
+      </div>
+      <div class="step"><span class="h">④ Conclude</span>
+        <p><b>用题目本身的措辞</b>直接回答；说明<b>净效应的方向与大小</b>及其<b>依赖的条件</b>；
+        若是 Discuss/Evaluate，<b>必须给出双方论点后再下判断</b>。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:26px">指令动词 → 答题深度</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">题干动词</th><th>要求</th></tr>
+      <tr><td><b>Define / State</b></td><td>一句精确定义 + 一个例子，<b>不需要图</b></td></tr>
+      <tr><td><b>Explain</b></td><td>定义 + 机制推理，<b>通常需要图</b></td></tr>
+      <tr><td><b>Show / Illustrate / Using a diagram</b></td><td><b>必须有图</b>，图是主要得分点</td></tr>
+      <tr><td><b>Analyse</b></td><td>完整四段结构，含推理链</td></tr>
+      <tr><td><b>Discuss / Evaluate / To what extent</b></td><td>四段结构 + <b>正反两面</b> + 有依据的判断</td></tr>
+      <tr><td><b>Compare</b></td><td>建立对比维度表，逐维度对照，最后总结差异根源</td></tr>
+      <tr><td><b>Calculate</b></td><td>写出公式 → 代入数字 → <b>带单位</b>的答案 → 一句话解释含义</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>📐 全课程公式总表 <span class="badge b-core">考前 10 分钟</span></h3>
+    <div class="pair">
+      <div class="fml"><span class="lab">L1 国民收入核算</span>
+Y<sub>mp</sub> ≡ C + I + G + X − Z
+<b>(S − I) + (NT − G) ≡ (X − Z)</b>
+GDP<sub>mp</sub> = GDP<sub>bp</sub> + 间接税 − 补贴
+Deflator = (Nominal/Real) × 100
+GNP = GDP + NYA；NNP = GNP − 折旧
+      </div>
+      <div class="fml"><span class="lab">L2–L3 凯恩斯模型</span>
+C = A + cY<sub>d</sub>，S = −A + (1−c)Y<sub>d</sub>
+MPC + MPS ≡ 1
+仅银行：k = 1/(1−c)
++比例税：k = 1/[1−c(1−t)]
+<b>+进口：k = 1/[1−c(1−t)+z] = 1/(s+ct+z)</b>
+平衡预算乘数 = 1
+BD = G − tY；结构性：G − tY*
+不可持续 ⟺ <b>i &gt; π + g</b>
+      </div>
+      <div class="fml"><span class="lab">L4–L5 货币</span>
+H = Cash + Reserves；M = Cash + Deposits
+存款乘数 = 1/rr
+<b>货币乘数 = (c<sub>p</sub>+1)/(c<sub>p</sub>+c<sub>b</sub>)</b>
+M = 乘数 × H
+利率 = (票息/债券价格) × 100
+<b>债券价格↑ ⟺ 利率↓</b>
+L = L(Y⁺, r⁻)，需求的是 <b>M/P</b>
+      </div>
+      <div class="fml"><span class="lab">L6–L7 IS-MP 与 AS-AD</span>
+IS 向下（r↓ ⇒ I↑ ⇒ Y↑）
+MP 向上（Taylor rule）
+<b>r − r* = a(π−π*) + b(Y−Y*)</b>
+<b>i − i* = (1+a)(π−π*) + b(Y−Y*)</b>
+挤出：垂直 MP ⇒ 完全；水平 MP ⇒ 零
+<b>Y = F(L, K, A)</b>
+LAS 垂直于 Y*；SAS 向上（名义工资锁定）
+      </div>
+      <div class="fml"><span class="lab">L8–L9 通胀与失业</span>
+<b>MV = PY</b> ⇒ <b>ΔP/P = ΔM/M</b>（长期）
+<b>r = i − π</b>（Fisher）
+通胀税 = <b>π × (M/P)</b>
+SRPC 位置由<b>预期通胀</b>决定；<b>LRPC 垂直于 U*</b>
+U* = 摩擦性 + 结构性（<b>全部自愿</b>）
+均衡失业 = 在 w* 处 <b>LF − AJ</b>
+Okun：ΔY 1% ⇒ Δ就业 &lt; 1% ⇒ Δ失业更小
+      </div>
+      <div class="fml"><span class="lab">L10–L12 增长·周期·贸易</span>
+<b>ΔY/Y = ΔA/A + α(ΔK/K) + β(ΔL/L)</b>
+y = Ak<sup>α</sup>；<b>稳态 sy = nk</b>
+含技术进步：y、k 以 <b>t</b> 增长
+<b>AK：g = sA − n</b>
+加速数：<b>I = a[Y₋₁ − Y₋₂]</b>
+关税：收入 = T × 新进口量（<b>转移</b>）
+<b>净损失 = ½T·ΔQ<sub>s</sub> + ½T·ΔQ<sub>d</sub></b>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>⚠️ 十个最常犯的错误</h3>
+    <div class="tw"><table>
+      <tr><th style="width:36%">错误</th><th>正确</th><th style="width:12%">出处</th></tr>
+      <tr><td>actual S ≡ I 当成均衡条件</td><td>恒等式永远成立；均衡是 <b>planned</b> S = <b>planned</b> I</td><td>L1 L2</td></tr>
+      <tr><td>Real GDP 用当期价格算</td><td><b>基期价格 × 当期数量</b></td><td>L1</td></tr>
+      <tr><td>定额税改变乘数</td><td><b>定额税动截距，比例税才动斜率与乘数</b></td><td>L3</td></tr>
+      <tr><td>货币基础 = 货币供给</td><td>H = Cash + <b>Reserves</b>；M = Cash + <b>Deposits</b></td><td>L4</td></tr>
+      <tr><td>价格上升使实际货币需求上升</td><td>实际需求 <b>M/P 不受价格水平影响</b></td><td>L4</td></tr>
+      <tr><td>货币需求冲击改变 IS-MP 均衡</td><td><b>MP 不动</b>——央行等量调整货币供给容纳它</td><td>L6</td></tr>
+      <tr><td>用"实际余额效应"解释 AD 向下倾斜</td><td>本课程用<b>央行政策反应</b>：π↑ ⇒ r↑ ⇒ C,I↓</td><td>L7</td></tr>
+      <tr><td>油价冲击移动 LAS</td><td>暂时性冲击<b>只移 SAS</b>；LAS 只被 L、K、A 移动</td><td>L7</td></tr>
+      <tr><td>储蓄更多 ⇒ 长期增长更快</td><td>Solow 中只是<b>水平效应</b>；只有 AK 模型中 s 才影响增长率</td><td>L10</td></tr>
+      <tr><td>关税收入算作社会收益</td><td>是<b>转移</b>；净损失只有<b>两个三角形</b></td><td>L12</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="other">
+  <div class="sec-h"><span class="kicker">Part 3</span><h2>🛠️ 关于本项目 / About</h2></div>
+
+  <div class="card" style="padding:20px">
+    <h3>这套站点是怎么造出来的</h3>
+    <p>一份<b>零依赖、零构建步骤</b>的宏观经济学学习站点：没有任何 CDN、外部字体或框架，
+    27 个 HTML 文件加一份共用样式表，<b>双击任何一页即可离线打开</b>，在 GitHub Pages 上同样直接可用。</p>
+    <div class="tw"><table>
+      <tr><th style="width:30%">设计决策</th><th>原因</th></tr>
+      <tr><td><b>全站内联 SVG 画图</b>（53 张）</td>
+        <td>经济学图必须标注坐标轴、曲线名、均衡点 E₀/E₁ 与移动箭头。用手写 SVG 而非图片，
+          可保证任意缩放清晰、可被文本搜索、且不引入二进制资源</td></tr>
+      <tr><td><b>原生 JS，无框架</b></td>
+        <td>MCQ 引擎（即时判分 / 错题过滤 / 重做）与总目录关键词搜索都只需几十行；
+          引入框架会带来构建步骤，破坏"双击即用"</td></tr>
+      <tr><td><b>CSS 自定义属性 + 单一样式表</b></td>
+        <td>深色主题的色板集中定义，27 个页面共享同一套组件类（卡片 / 公式框 / 提示条 / 折叠答案）</td></tr>
+      <tr><td><b>答案默认折叠</b>（<code>&lt;details&gt;</code>）</td>
+        <td>学习设计：强制先自测再对答案，避免"看一眼答案就以为自己会了"</td></tr>
+      <tr><td><b>讲解中文、术语与范例英文</b></td>
+        <td>课程为英式教学、考试用英文作答；解释用母语理解更快，但所有术语、公式与答题范例保持英文</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:26px">内容与版权说明 · Attribution</h3>
+    <div class="callout c-tip"><span class="t">📌 请注意</span>
+      本站是<b>个人学习笔记</b>，内容为作者对课程主题的整理、讲解与自制练习。
+      课程本身的课件、讲义与教材（Begg, Vernasca, Fischer &amp; Dornbusch,
+      <i>Economics</i>）版权归各自权利人所有；本仓库<b>不包含</b>任何课件 PDF、
+      历年试卷或考试材料。站内练习题为自制，用于说明知识点。<br>
+      <span class="muted">This site contains personal study notes. Course slides, textbooks and any
+      examination materials remain the copyright of their respective owners and are
+      <b>not included</b> in this repository.</span>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+<script>
+(function () {
+  var q = document.getElementById('q');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.row'));
+  q.addEventListener('input', function () {
+    var v = q.value.trim().toLowerCase();
+    rows.forEach(function (r) {
+      if (!v) { r.classList.remove('hide'); return; }
+      var hay = (r.getAttribute('data-k') || '') + ' ' + r.textContent.toLowerCase();
+      r.classList.toggle('hide', hay.indexOf(v) === -1);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

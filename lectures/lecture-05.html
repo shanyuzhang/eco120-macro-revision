@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lecture 5 · Interest Rates and the Transmission Mechanism — ECO120</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<aside class="sidebar">
+  <div class="brand"><span class="dot"></span><span>ECO120 复习中心<small>PRINCIPLES OF MACROECONOMICS</small></span></div>
+  <a class="nav" href="../index.html">← 返回总目录</a>
+  <div class="navgroup">本讲导航</div>
+  <a class="nav" href="#thread">🧭 本讲逻辑主线</a>
+  <a class="nav active" href="#s1">1 · 中央银行的职能</a>
+  <a class="nav" href="#s2">2 · 审慎监管与金融危机</a>
+  <a class="nav" href="#s3">3 · 债券价格与利率 ⭐</a>
+  <a class="nav" href="#s4">4 · 货币市场均衡与调整 ⭐</a>
+  <a class="nav" href="#s5">5 · 货币扩张的效果</a>
+  <a class="nav" href="#s6">6 · 货币控制：不能两者兼设 ⭐</a>
+  <a class="nav" href="#s7">7 · 央行影响货币供给的三种手段</a>
+  <a class="nav" href="#s8">8 · 量化宽松案例</a>
+  <a class="nav" href="#s9">9 · 工具、中介目标、最终目标</a>
+  <a class="nav" href="#s10">10 · 传导机制：消费渠道 ⭐</a>
+  <a class="nav" href="#s11">11 · 传导机制：投资渠道 ⭐</a>
+  <div class="navgroup">应试</div>
+  <a class="nav" href="#formulas">📐 公式速查</a>
+  <a class="nav" href="#traps">⚠️ 考点与陷阱</a>
+  <a class="nav" href="#model">✍️ 答题范例</a>
+  <a class="nav" href="../tutorials/tutorial-05.html">→ Tutorial 5</a>
+</aside>
+
+<main class="content">
+
+<div class="hero">
+  <h1>Lecture 5 · Interest Rates and the Transmission Mechanism</h1>
+  <div class="sub">中央银行 · 货币市场均衡 · 货币政策工具与目标 · 货币政策传导机制</div>
+  <div>
+    <span class="tag">43 slides</span>
+    <span class="tag">Begg Ch.20</span>
+    <span class="tag">对应 Tutorial 5 / EOC Ch20</span>
+    <span class="tag b-hot">⭐ LL/MS 图必考</span>
+  </div>
+</div>
+
+<section id="thread">
+  <div class="sec-h"><span class="kicker">Logic Thread</span><h2>🧭 本讲逻辑主线</h2></div>
+  <div class="card">
+    <p class="lead">Lecture 4 分别给了<b>货币供给</b>与<b>货币需求</b>，本讲把两者放进<b>同一张图</b>，
+    得到<b>均衡利率</b>；然后回答：<b>央行怎么改变这个利率？改变之后又怎么传导到实体经济？</b></p>
+
+    <div class="fml"><span class="lab">本讲主线</span>
+央行是谁、做什么（发行货币 + 银行的银行 + 最后贷款人 + 设定利率）
+   ↓ 只有两种资产：货币与债券 ⇒ <b>债券价格↑ ⟺ 利率↓</b>
+   ↓ 把 M<sup>s</sup>（垂直）与 LL（向下倾斜）放在一起 ⇒ <b>均衡利率 r₀</b>
+   ↓ 失衡如何自动修正：<b>超额货币需求 = 超额债券供给 → 债券价格↓ → 利率↑</b>
+   ↓ 货币扩张：M<sup>s</sup> 右移 ⇒ <b>利率下降</b>
+   ↓ <b>关键结论：央行只能设定利率或货币量之一，不能同时独立设定两者</b>
+   ↓ 三种控制手段（准备金要求 / 贴现率 / 公开市场操作）
+   ↓ 但控制不精确 ⇒ 英格兰银行选择<b>通过利率工作</b> + QE
+   ↓ 工具 → 中介目标 → 最终目标（通胀目标制）
+   ↓ <b>传导机制</b>：利率如何影响 <b>C</b>（财富效应 + 消费信贷）与 <b>I</b>（投资需求曲线 II）
+    </div>
+
+    <div class="callout c-link"><span class="t">承上启下</span>
+      <b>承上</b>：LL 曲线来自 Lecture 4；M<sup>s</sup> = 货币乘数 × H 也来自 Lecture 4。<br>
+      <b>启下</b>：本讲的"利率 → I"关系就是 <b>Lecture 6 IS 曲线向下倾斜</b>的原因；
+      "央行设定利率"就是 <b>MP 曲线</b>的由来；II 曲线的<b>斜率（利率弹性）</b>决定了
+      Lecture 6 中<b>挤出效应的强弱</b>与本讲说的"传导机制的威力"。
+    </div>
+  </div>
+</section>
+
+<section id="s1">
+  <div class="sec-h"><span class="kicker">Slides 5, 9–10</span><h2>1 · 中央银行的职能</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">Slide 5：核心角色</span>
+• Acts as <b>banker to the commercial banks</b> in a country
+• Responsible for <b>setting interest rates</b>
+• UK: <b>the Bank of England</b>；China: <b>People's Bank of China</b>
+
+<b>Two key tasks:</b>
+  ① to <b>issue coins and bank-notes</b>
+  ② to act as <b>banker to the banking system and the government</b>
+    </div>
+    <div class="tw"><table>
+      <tr><th style="width:26%">其他职能</th><th>说明</th></tr>
+      <tr><td><b>Lender of last resort</b><br>最后贷款人</td>
+        <td>当<b>金融恐慌威胁出现时</b>，央行随时准备向银行及其他金融机构<b>提供贷款</b></td></tr>
+      <tr><td><b>Banker to the government</b></td>
+        <td>确保政府在<b>出现预算赤字</b>时仍能履行支付义务</td></tr>
+      <tr><td><b>Setting monetary policy</b></td><td>制定货币政策</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 10</span>央行资产负债表（会考"哪项是资产/负债"）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:50%">Liabilities（负债）</th><th>Assets（资产）</th></tr>
+      <tr><td>• Banknotes 钞票<br>• Coins 硬币<br>• <b>Commercial banks' reserves</b> 商业银行准备金</td>
+        <td>• Government bonds 政府债券<br>• Commercial firms' securities 企业证券<br>• Reverse repos 逆回购</td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 为什么钞票是央行的"负债"</span>
+      钞票本质是央行的 IOU（欠条）。这也解释了 Lecture 4 里"<b>货币基础 = 央行的负债</b>"这一说法：
+      Cash + Reserves 正好是上表左列的三项。
+    </div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="sec-h"><span class="kicker">Slides 11–13</span><h2>2 · 审慎监管与金融危机</h2></div>
+  <div class="card">
+    <h3>Prudential regulation（审慎监管）</h3>
+    <ul>
+      <li>"police the financial system"（监管金融体系）可能是央行的职责；若不是，也<b>应由其他金融机构承担</b>。</li>
+      <li><b>Capital adequacy ratio（资本充足率）</b>：a <b>required minimum value of bank capital relative to
+        its outstanding loans and investments</b>（银行资本相对于其未偿贷款与投资的最低比例要求）。</li>
+      <li>还应有<b>自我监管（self-regulation）</b>的成分。</li>
+    </ul>
+    <div class="callout c-tip"><span class="t">💡 存款人 vs 股东：一个漂亮的激励设计（Slide 12）</span>
+      银行巨亏破产时，政府通常<b>补偿存款人但不补偿股东</b>。<br>
+      • 存款人知道自己不会受损 ⇒ <b>有助于防止无端的金融恐慌</b>；<br>
+      • 股东知道自己会受损 ⇒ <b>有助于让管理层保持警觉</b>（keep management on its toes）。<br>
+      这一对照是 essay 里论述"道德风险 vs 金融稳定"的现成素材。
+    </div>
+
+    <h3 style="margin-top:20px">金融危机的三个概念（Slide 13，必背区分）</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">概念</th><th>定义</th></tr>
+      <tr><td><b>Financial panic</b><br>金融恐慌</td>
+        <td>a <b>self-fulfilling prophecy</b>（自我实现的预言）：因为相信银行无力偿付，人们<b>争相取款</b>，
+        <b>而这恰恰使银行破产</b></td></tr>
+      <tr><td><b>Solvency crisis</b><br>清偿力危机</td>
+        <td>机构的<b>资产已经小于负债</b>（assets have become less than liabilities）</td></tr>
+      <tr><td><b>Liquidity crisis</b><br>流动性危机</td>
+        <td>机构<b>暂时</b>无法满足<b>即时的付款要求</b>（temporarily unable to meet immediate requests for payment）</td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 高频 MCQ</span>
+      <b>流动性危机中机构本质上是有偿付能力的</b>（资产 &gt; 负债，只是资产不够流动），
+      所以<b>最后贷款人</b>可以救；<b>清偿力危机</b>中机构实质上已经资不抵债，注入流动性救不了。
+      这正是"央行为何该救流动性危机而非清偿力危机"的标准答案。
+    </div>
+  </div>
+</section>
+
+<section id="s3">
+  <div class="sec-h"><span class="kicker">Slides 15–16</span><h2>3 · 债券价格与利率 ⭐（理解这一条其他都通了）</h2></div>
+  <div class="card">
+    <h3>模型假设（Slide 15）</h3>
+    <ul>
+      <li>为方便起见，假设只有<b>两种金融工具：债券与货币</b>；</li>
+      <li><b>债券供给固定</b>；<b>经济主体把财富持有为货币或债券</b>；</li>
+      <li>现实中有<b>许多种利率</b>，但它们<b>倾向于同步变动</b>（move closely together）；</li>
+      <li>要用<b>实际变量</b>思考：人们要的是<b>购买力</b>，即名义货币存量除以价格水平 <b>M/P</b>。</li>
+    </ul>
+
+    <h3 style="margin-top:20px">债券的构造与利率</h3>
+    <ul>
+      <li>债券有 <b>face value（面值）</b>；</li>
+      <li>债券带有固定的 <b>coupon（票息）</b>——债券持有人有权获得的支付，通常由面值决定；</li>
+      <li>债券价格（PV）<b>根据债券市场的供求逐日波动</b>。</li>
+    </ul>
+    <div class="fml" style="font-size:17px">
+<b>Interest rate = (Money payment / Price of bond) × 100</b>
+    </div>
+    <div class="callout c-exam"><span class="t">🎯 必背结论</span>
+      <b>The higher the price of a bond (e.g. due to higher demand for bonds), the LOWER is the interest rate.</b><br>
+      因为票息是固定的，价格越高，同样的票息占价格的比例就越低。<b>债券价格与利率成反比</b>。
+    </div>
+    <div class="fml"><span class="lab">数值示例（自己算一遍就记住了）</span>
+一张永续债，每年固定支付 £5：
+  价格 £100  ⇒  利率 = 5/100 × 100 = <b>5%</b>
+  价格 £125  ⇒  利率 = 5/125 × 100 = <b>4%</b>   ← 价格↑，利率↓
+  价格 £50   ⇒  利率 = 5/50 × 100 = <b>10%</b>   ← 价格↓，利率↑
+    </div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="sec-h"><span class="kicker">Slides 17–19</span><h2>4 · 货币市场均衡与调整机制 ⭐⭐（Tutorial 5 主题）</h2></div>
+  <div class="card">
+    <h3>两条曲线</h3>
+    <div class="tw"><table>
+      <tr><th style="width:20%">曲线</th><th style="width:20%">形状</th><th>原因 / 位置由什么决定</th></tr>
+      <tr><td><b>M<sup>s</sup></b><br>实际货币供给</td><td><b>垂直</b></td>
+        <td>由央行决定（M/P），<b>不随利率变化</b></td></tr>
+      <tr><td><b>LL</b><br>实际货币需求</td><td><b>向下倾斜</b></td>
+        <td>其他条件不变时，<b>机会成本（利率）越高，对实际货币余额的需求越低</b>。<br>
+        <b>LL 的位置取决于实际收入</b>（收入↑ ⇒ LL 右移）</td></tr>
+    </table></div>
+    <p>当实际货币供给为 L₀ 时，<b>货币市场均衡出现在利率 r₀</b>。</p>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 18–19</span>均衡如何达成（这段推理链必须能完整复述）</h3>
+    <div class="fml"><span class="lab">利率低于均衡（如 r₁ &lt; r₀）时</span>
+利率低 ⇒ 持币的机会成本低 ⇒ 人们<b>想持有更多货币</b>
+   ⇒ 存在<b>超额货币需求</b>（图上的距离 AB）
+   ⇒ 因为财富只能是货币或债券，这等价于<b>超额债券供给</b>（人们要<b>卖出债券</b>换货币）
+   ⇒ <b>债券价格下跌</b>
+   ⇒ 由 r = (coupon/price)×100，<b>利率上升</b>
+   ⇒ 持币机会成本上升，货币需求下降，直至回到 r₀ 达成均衡
+    </div>
+    <div class="callout c-tip"><span class="t">💡 对称的另一半（考试可能问反方向）</span>
+      利率<b>高于</b>均衡 ⇒ 超额货币<b>供给</b> ⇒ 超额债券<b>需求</b>（人们用多余的钱<b>买债券</b>）
+      ⇒ 债券价格<b>上升</b> ⇒ 利率<b>下降</b> ⇒ 回到均衡。
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 520 310" role="img" aria-label="Money market equilibrium">
+        <line class="ax" x1="75" y1="265" x2="480" y2="265"/>
+        <line class="ax" x1="75" y1="265" x2="75" y2="28"/>
+        <text class="lbl" x="280" y="290">Real money holdings (M/P)</text>
+        <text class="lbl" x="18" y="42">r<tspan baseline-shift="sub" font-size="9">b</tspan></text>
+        <line x1="250" y1="265" x2="250" y2="35" class="cv c-as"/>
+        <text class="lbl" x="228" y="26" fill="#ff5c7a">Mˢ</text>
+        <path d="M105,50 C185,120 260,175 445,240" class="cv c-ad"/>
+        <text class="lbl" x="392" y="256" fill="#6c8bff">LL</text>
+        <circle class="pt" cx="250" cy="168" r="5.5"/>
+        <line x1="75" y1="168" x2="250" y2="168" class="dsh"/>
+        <text class="lbl" x="52" y="172">r₀</text>
+        <line x1="250" y1="265" x2="250" y2="275" class="dsh"/>
+        <text class="lbl-s" x="242" y="288">L₀</text>
+        <line x1="75" y1="215" x2="345" y2="215" class="dsh"/>
+        <text class="lbl" x="52" y="219">r₁</text>
+        <circle cx="250" cy="215" r="4" fill="#ffb454"/><text class="lbl-s" x="234" y="232">A</text>
+        <circle cx="345" cy="215" r="4" fill="#ffb454"/><text class="lbl-s" x="350" y="232">B</text>
+        <line x1="250" y1="215" x2="345" y2="215" stroke="#ffb454" stroke-width="3"/>
+        <text class="lbl-s" x="256" y="204" fill="#ffb454">超额货币需求 AB</text>
+        <text class="lbl-s" x="256" y="248" fill="#ffb454">= 超额债券供给 ⇒ 债券价格↓ ⇒ r↑</text>
+      </svg>
+      <figcaption>Figure 5.1 — 货币市场均衡。r₁ 处存在超额货币需求 AB，通过债券市场推动利率回升至 r₀。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="sec-h"><span class="kicker">Slide 20</span><h2>5 · 货币扩张的效果</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">A monetary expansion will（课件原文的"二选一"表述）</span>
+• <b>Either</b> increase the real balances supplied（增加供给的实际余额）
+• <b>Or</b> lower the interest rate(s)（降低利率）
+
+图形结果：Mˢ 右移到 Mˢ′
+  ⇒ 均衡利率<b>由 r₀ 降至 r₁</b>
+  ⇒ 均衡实际余额<b>由 L₀ 升至 L₁</b>
+    </div>
+    <figure>
+      <svg viewBox="0 0 520 300" role="img" aria-label="Monetary expansion">
+        <line class="ax" x1="75" y1="258" x2="480" y2="258"/>
+        <line class="ax" x1="75" y1="258" x2="75" y2="28"/>
+        <text class="lbl" x="280" y="283">Real money holdings</text>
+        <text class="lbl" x="30" y="42">r</text>
+        <line x1="230" y1="258" x2="230" y2="35" class="cv c-as"/>
+        <text class="lbl" x="208" y="26" fill="#ff5c7a">Mˢ</text>
+        <line x1="330" y1="258" x2="330" y2="35" class="cv c-alt"/>
+        <text class="lbl" x="312" y="26" fill="#33d6a6">Mˢ′</text>
+        <path d="M105,48 C190,118 270,170 450,232" class="cv c-ad"/>
+        <text class="lbl" x="398" y="248" fill="#6c8bff">LL</text>
+        <circle class="pt" cx="230" cy="146" r="5.5"/>
+        <circle class="pt" cx="330" cy="188" r="5.5"/>
+        <line x1="75" y1="146" x2="230" y2="146" class="dsh"/><text class="lbl" x="52" y="150">r₀</text>
+        <line x1="75" y1="188" x2="330" y2="188" class="dsh"/><text class="lbl" x="52" y="192">r₁</text>
+        <text class="lbl-s" x="222" y="274">L₀</text><text class="lbl-s" x="322" y="274">L₁</text>
+        <path d="M240,110 L318,110" class="dsh" stroke="#33d6a6" marker-end="url(#a5)"/>
+        <defs><marker id="a5" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+          <path d="M0,0 L7,3.2 L0,6.4 z" fill="#33d6a6"/></marker></defs>
+      </svg>
+      <figcaption>Figure 5.2 — 货币扩张：Mˢ 右移，利率下降，实际余额上升。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="sec-h"><span class="kicker">Slide 22</span><h2>6 · 货币控制：不能同时设定两者 ⭐⭐（essay 核心）</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 本讲最重要的一页</span>
+      给定货币需求曲线，央行可以：<br>
+      • <b>EITHER</b> 把<b>利率</b>设在 r₀，让<b>货币供给自行调整</b>到 L₀；<br>
+      • <b>OR</b> 把<b>货币供给</b>设在 L₀，让<b>市场利率自行调整</b>到 r₀；<br>
+      • <b>BUT cannot set both money supply and interest rate independently.</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 为什么（一句话解释）</span>
+      因为 (r₀, L₀) 是<b>同一条 LL 曲线上的同一个点</b>。选定横坐标就唯一决定了纵坐标，反之亦然。
+      央行能选<b>点在哪里</b>，但不能同时独立指定这个点的两个坐标。<br>
+      <b>这是所有"央行能否同时控制利率和货币量"类题目的标准答案。</b>
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="sec-h"><span class="kicker">Slides 23–24, 26</span><h2>7 · 央行影响货币供给的三种手段</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:24%">手段</th><th>做法</th><th style="width:22%">备注</th></tr>
+      <tr><td><b>① Reserve requirements</b><br>准备金要求</td>
+        <td>央行规定商业银行必须达到的<b>现金准备/存款最低比率</b></td>
+        <td><b>现在使用较少</b>（now used less）</td></tr>
+      <tr><td><b>② Discount rate</b><br>贴现率</td>
+        <td>商业银行想向央行借款时，<b>央行收取的利率</b></td>
+        <td>把它设在<b>惩罚性利率</b>水平，可以促使商业银行<b>持有更多超额准备金</b></td></tr>
+      <tr><td><b>③ Open market operations (OMO)</b><br>公开市场操作</td>
+        <td>在公开市场上<b>买卖金融证券</b>以改变<b>货币基础</b></td>
+        <td>央行<b>买入</b>债券 = <b>宽松</b>货币政策（货币基础↑）；<br>
+        <b>卖出</b>债券 = <b>紧缩</b>（货币基础↓）</td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 24</span>Repo（回购协议）</h3>
+    <p><b>Repo 7-day（英国称 gilt repo）是 a sale and repurchase agreement</b>：
+    例如银行把一张债券（英国是 gilt）卖给你，同时<b>约定在未来某个特定日期以特定价格买回</b>。
+    央行<b>用它来执行公开市场操作，以改变流通中的现金</b>。</p>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 26</span>货币控制的三个限制（provisos）</h3>
+    <ul>
+      <li><b>货币控制无法精确</b>，除非当局<b>知道货币需求曲线的形状与位置</b>，
+        并且<b>能够轻易操纵货币乘数</b>——而这两条现实中都做不到（回顾 Lecture 4：c<sub>p</sub>、c<sub>b</sub> 由私人行为决定）。</li>
+      <li>控制货币供给尤其困难：<b>货币基础控制有问题</b>、<b>控制广义流动性有问题</b>。</li>
+      <li>因此<b>英格兰银行倾向于通过利率来运作</b>：<b>固定利率，并接受（即供给）均衡水平的货币量</b>；
+        以及<b>量化宽松（Quantitative easing）</b>。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="sec-h"><span class="kicker">Slides 27–28</span><h2>8 · 案例：量化宽松（Quantitative Easing）</h2></div>
+  <div class="card">
+    <h3>危机背景（2008）</h3>
+    <ul>
+      <li>金融危机导致<b>广义货币与银行准备金之比崩塌</b>。</li>
+      <li>课件的关键反事实："<b>如果准备金保持不变，广义货币会跌到原来的六分之一！</b>"</li>
+      <li><b>银行借贷完全枯竭</b>，向实体经济传导了巨大冲击：房价下跌、工业生产下降、破产数量增加。</li>
+    </ul>
+
+    <h3 style="margin-top:18px">QE 的做法与效果</h3>
+    <ul>
+      <li>英格兰银行宣布将<b>大规模买入</b>来自私人企业或政府的<b>"安全"债券</b>。</li>
+      <li>这向体系注入了<b>窄币</b>；在体系中周转几轮后，最终<b>被银行作为在英格兰银行的准备金持有</b>。</li>
+      <li>2008 年 5 月至 2009 年 7 月，<b>英国银行准备金上升了六倍</b>。</li>
+    </ul>
+    <div class="fml"><span class="lab">关键数据（考试可以直接引用）</span>
+2008年5月 → 2009年7月：
+  银行准备金：£27bn → £152bn        （<b>+£125bn</b>）
+  广义货币：  £1737bn → £2001bn     （<b>+£264bn</b>）
+
+⇒ £264bn 的广义货币增加，<b>并非仅仅由 £125bn 的准备金增加造成</b>
+⇒ 随着银行感到<b>稍微安全一些，它们就多贷了一点，从而提高了银行存款</b>
+    </div>
+    <div class="callout c-tip"><span class="t">💡 这个案例证明了什么</span>
+      ① <b>货币乘数不是常数</b>——危机中它会崩塌（Lecture 4 的 c<sub>b</sub> 暴涨）；<br>
+      ② 央行<b>只能控制货币基础，不能控制货币供给</b>；<br>
+      ③ QE 的作用是<b>阻止广义货币暴跌</b>，而不只是"印钱"。<br>
+      这是 essay 里论证"为什么现代央行以利率而非货币量为工具"的最佳实证素材。
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="sec-h"><span class="kicker">Slides 30–32</span><h2>9 · 工具 / 中介目标 / 最终目标 ⭐（定义题）</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:24%">层级</th><th>定义</th><th style="width:26%">例子</th></tr>
+      <tr><td><b>Monetary instrument</b><br>货币政策工具</td>
+        <td>the variable over which the central bank exercises <b>day-to-day control</b></td>
+        <td><b>interest rate</b>、<b>open market operations</b></td></tr>
+      <tr><td><b>Intermediate target</b><br>中介目标</td>
+        <td>the <b>key indicator</b> used as an input to frequent decisions about when to set interest rates</td>
+        <td><b>中国：M2</b>；<br>越来越多央行使用 <b>inflation forecasts</b>（<b>inflation targeting 通胀目标制</b>）</td></tr>
+      <tr><td><b>Ultimate objective</b><br>最终目标</td>
+        <td>货币政策最终要达成的目标</td>
+        <td><b>Price stability</b>（价格稳定）、<b>Output stabilization</b>（产出稳定）等</td></tr>
+    </table></div>
+    <div class="callout c-exam"><span class="t">🎯 为什么从货币量目标转向通胀目标（必考理由）</span>
+      课件原文：<b>"The financial revolution has reduced the reliability of money supply as an indicator."</b><br>
+      金融创新（新型存款、货币市场基金、信用卡等）使货币总量与名义 GDP 之间的关系变得<b>不稳定</b>，
+      因此货币量不再是可靠的中介目标 ⇒ 转向<b>通胀预测</b>作为中介目标。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 32</span>英格兰银行的实际操作链条（背下这条链）</h3>
+    <div class="fml">
+<b>MPC (Monetary Policy Committee)</b> 决定参考解答利率（通过 OMO 的 <b>repo rate</b>）
+        ↓
+反映在 <b>SOFR</b>（Secured Overnight Financing Rate，<b>自 2023 年 6 月 30 日起取代 LIBOR</b>）
+或各国的替代基准利率上
+        ↓
+<b>市场利率</b>（银行存款利率、金融资产利率等）
+        ↓
+<b>实体经济活动</b>：consumption、investment、savings 等
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="sec-h"><span class="kicker">Slides 34–39</span><h2>10 · 传导机制（一）：消费渠道 ⭐</h2></div>
+  <div class="card">
+    <div class="callout c-exam"><span class="t">🎯 定义（必背）</span>
+      <b>The transmission mechanism is the channel through which monetary policy affects output and employment.</b><br>
+      在<b>封闭经济</b>中，货币政策通过<b>利率对消费与投资需求的影响</b>发挥作用。
+    </div>
+
+    <h3>渠道 A：财富效应（the wealth effect）</h3>
+    <p>课件明确说财富效应有<b>两条路径</b>：</p>
+    <div class="tw"><table>
+      <tr><th style="width:20%">路径</th><th>机制</th></tr>
+      <tr><td><b>① 直接</b></td>
+        <td>通过<b>实际货币供给的增加</b>（<b>部分财富是以货币形式持有的</b>）</td></tr>
+      <tr><td><b>② 间接</b></td>
+        <td>通过<b>利率对股票价格的影响</b>：<b>利率下降 ⇒ 债券与股票价格上升 ⇒ 持股者感觉更富有</b></td></tr>
+    </table></div>
+
+    <h3 style="margin-top:20px">渠道 B：消费信贷与耐用品</h3>
+    <div class="tw"><table>
+      <tr><th style="width:24%">信贷的两个方面</th><th>效果</th></tr>
+      <tr><td><b>The quantity of credit</b><br>信贷数量</td>
+        <td>信贷数量增加 ⇒ <b>自主消费上升</b> ⇒ <b>消费函数上移</b>（反之亦然）</td></tr>
+      <tr><td><b>The cost of credit</b><br>信贷成本</td>
+        <td><b>利率越高，家庭借得越少</b> ⇒ <b>消费下降</b>（反之亦然）</td></tr>
+    </table></div>
+    <div class="callout c-tip"><span class="t">💡 联系 Lecture 2</span>
+      信贷<b>数量</b>影响的是消费函数的<b>截距 A</b>（自主消费）；信贷<b>成本</b>（利率）也主要影响 A。
+      这就是为什么 Lecture 2 说"消费还取决于 real interest rate、wealth——留待后面讨论"——就是这里。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 38–39</span>生命周期假说与永久收入假说</h3>
+    <ul>
+      <li><b>Permanent income hypothesis</b> 与 <b>Life-cycle hypothesis</b>：
+        个人一生中<b>收入是波动的</b>，但个人会<b>试图平滑消费</b>，
+        依据的是<b>预期的一生（或永久）收入</b>。</li>
+      <li>图形结论：<b>中年时储蓄（B）</b>，<b>青年与老年时负储蓄（A）</b>。</li>
+      <li>财富的作用（Slide 39）：给定家庭对自身财富的初始估计，永久收入为 OD。
+        若<b>财富更高</b>，永久收入被<b>向上修正</b>到 OD′，使得 2(A+A′) 超过 B′，
+        <b>这个缺口可以由额外的财富来填补</b>。</li>
+      <li>课件结论句：<b>"Thus wealth and interest rates may influence consumption."</b></li>
+    </ul>
+
+    <figure>
+      <svg viewBox="0 0 520 280" role="img" aria-label="Life cycle consumption">
+        <line class="ax" x1="70" y1="235" x2="480" y2="235"/>
+        <line class="ax" x1="70" y1="235" x2="70" y2="30"/>
+        <text class="lbl" x="240" y="260">Age</text>
+        <text class="lbl" x="430" y="260">Death</text>
+        <path d="M75,205 C160,80 300,70 460,190" class="cv c-ad"/>
+        <text class="lbl" x="212" y="66" fill="#6c8bff">Actual income</text>
+        <line x1="70" y1="150" x2="465" y2="150" class="cv c-alt2"/>
+        <text class="lbl" x="352" y="143" fill="#ffb454">Permanent income</text>
+        <text class="lbl" x="40" y="154">D</text>
+        <text class="lbl" x="120" y="182" fill="#ff5c7a">A</text>
+        <text class="lbl" x="250" y="118" fill="#33d6a6">B</text>
+        <text class="lbl" x="410" y="182" fill="#ff5c7a">A</text>
+        <text class="lbl-s" x="96" y="200">dissaving</text>
+        <text class="lbl-s" x="228" y="102">saving</text>
+        <text class="lbl-s" x="386" y="200">dissaving</text>
+      </svg>
+      <figcaption>Figure 5.3 — 生命周期假说。青年与老年负储蓄（A），中年储蓄（B）；消费被平滑至永久收入水平。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="sec-h"><span class="kicker">Slides 40–43</span><h2>11 · 传导机制（二）：投资渠道 ⭐（II 曲线必考）</h2></div>
+  <div class="card">
+    <h3><span class="slide-no">Slide 40</span>投资支出的构成</h3>
+    <div class="tw"><table>
+      <tr><th style="width:26%">类别</th><th>内容</th></tr>
+      <tr><td><b>Fixed capital</b><br>固定资本</td>
+        <td>Transport equipment · Machinery &amp; other equipment · Dwellings · Other buildings</td></tr>
+      <tr><td><b>Working capital</b><br>营运资本</td>
+        <td><b>Stocks (inventories)</b> · Work in progress</td></tr>
+    </table></div>
+    <div class="callout c-trap"><span class="t">⚠️ 呼应 Lecture 1</span>
+      课件强调这里指的是<b>私人部门的 I</b>：投资由私人与公共部门共同进行，但
+      <b>公共部门投资算作 G 的一部分</b>。这正是 Lecture 1 支出法里
+      "includes private investment but not government investment" 的同一条规则。
+    </div>
+
+    <h3 style="margin-top:20px"><span class="slide-no">Slide 41</span>固定投资需求的逻辑</h3>
+    <ul>
+      <li>投资意味着<b>当前的牺牲换取未来的收益</b>：企业在<b>短期承担成本</b>，在<b>长期收获回报</b>。</li>
+      <li>项目要被采纳，<b>预期回报必须超过机会成本</b>（expected returns must outweigh the opportunity cost）。</li>
+      <li>因此，<b>在相对高的利率下，可行的投资项目更少</b>。</li>
+    </ul>
+
+    <h3 style="margin-top:20px"><span class="slides">Slides 42–43</span>投资需求曲线 II</h3>
+    <div class="tw"><table>
+      <tr><th style="width:22%"></th><th>内容</th></tr>
+      <tr><td><b>形状</b></td>
+        <td>向下倾斜：ceteris paribus，<b>更高的利率减少投资项目的数量</b>，反之亦然</td></tr>
+      <tr><td><b>斜率（考点⭐）</b></td>
+        <td><b>对于长寿命的房屋与工厂，II 曲线更平坦（more interest-elastic）</b>，
+        <b>因而货币传导机制更有力（more powerful）</b></td></tr>
+      <tr><td><b>移动（两个原因）</b></td>
+        <td>① <b>资本品价格下降</b> ⇒ 在给定利率下 II 曲线<b>上移</b><br>
+        ② <b>对未来产出需求的乐观预期</b>、因而<b>更高的预期未来利润流</b> ⇒ II 曲线<b>上移</b></td></tr>
+    </table></div>
+
+    <figure>
+      <svg viewBox="0 0 900 280" role="img" aria-label="Investment demand schedule">
+        <text class="lbl" x="110" y="18">(a) 斜率：越平坦，传导越有力</text>
+        <line class="ax" x1="70" y1="240" x2="410" y2="240"/>
+        <line class="ax" x1="70" y1="240" x2="70" y2="32"/>
+        <text class="lbl" x="200" y="264">investment demand</text>
+        <text class="lbl" x="36" y="46">r</text>
+        <line x1="100" y1="45" x2="290" y2="230" class="cv c-ad"/>
+        <text class="lbl-s" x="260" y="226" fill="#6c8bff">II (陡：短寿命资本)</text>
+        <line x1="95" y1="60" x2="395" y2="200" class="cv c-alt"/>
+        <text class="lbl-s" x="316" y="196" fill="#33d6a6">II (平：长寿命资本)</text>
+        <line x1="70" y1="120" x2="330" y2="120" class="dsh"/>
+        <text class="lbl-s" x="48" y="124">r₀</text>
+        <circle class="pt" cx="177" cy="120" r="4"/><circle class="pt" cx="223" cy="120" r="4"/>
+        <line x1="70" y1="160" x2="330" y2="160" class="dsh"/>
+        <text class="lbl-s" x="48" y="164">r₁</text>
+        <circle class="pt" cx="218" cy="160" r="4"/><circle class="pt" cx="308" cy="160" r="4"/>
+        <text class="lbl-s" x="120" y="200">同样降息，平坦曲线上 ΔI 更大</text>
+
+        <text class="lbl" x="560" y="18">(b) 移动：资本品降价 / 预期利润上升</text>
+        <line class="ax" x1="510" y1="240" x2="855" y2="240"/>
+        <line class="ax" x1="510" y1="240" x2="510" y2="32"/>
+        <text class="lbl" x="640" y="264">investment demand</text>
+        <text class="lbl" x="476" y="46">r</text>
+        <line x1="535" y1="50" x2="740" y2="225" class="cv c-ad"/>
+        <text class="lbl-s" x="700" y="222" fill="#6c8bff">II</text>
+        <line x1="605" y1="50" x2="815" y2="225" class="cv c-alt"/>
+        <text class="lbl-s" x="778" y="222" fill="#33d6a6">II′</text>
+        <line x1="510" y1="130" x2="760" y2="130" class="dsh"/>
+        <text class="lbl-s" x="488" y="134">r₀</text>
+        <circle class="pt" cx="629" cy="130" r="4.5"/><text class="lbl-s" x="618" y="150">I₀</text>
+        <circle class="pt" cx="700" cy="130" r="4.5"/><text class="lbl-s" x="690" y="150">I₁</text>
+        <path d="M640,86 L706,86" class="dsh" stroke="#33d6a6" marker-end="url(#a5b)"/>
+        <defs><marker id="a5b" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+          <path d="M0,0 L7,3.2 L0,6.4 z" fill="#33d6a6"/></marker></defs>
+      </svg>
+      <figcaption>Figure 5.4 — 投资需求曲线 II。(a) 利率弹性决定传导机制的威力；(b) 资本品价格下降或预期利润上升使 II 上移。</figcaption>
+    </figure>
+
+    <div class="callout c-exam"><span class="t">🎯 完整传导链（essay 直接写这条）</span>
+      <b>M<sup>s</sup>↑ → r↓ → </b>
+      ① <b>C↑</b>（财富效应：实际余额↑ + 股价债券价↑；信贷成本↓ 借贷↑）<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      ② <b>I↑</b>（更多项目的预期回报超过机会成本）<br>
+      <b>→ AD↑ → 通过乘数 → Y↑、就业↑</b><br>
+      并加一句限定：<i>"The strength of the mechanism depends on the interest-elasticity of investment: the flatter
+      the II schedule, the more powerful monetary policy is."</i>
+    </div>
+  </div>
+</section>
+
+<section id="formulas">
+  <div class="sec-h"><span class="kicker">Cheat Sheet</span><h2>📐 公式速查</h2></div>
+  <div class="card">
+    <div class="fml"><span class="lab">债券与利率</span>
+<b>Interest rate = (Money payment / Price of bond) × 100</b>
+<b>债券价格 ↑ ⟺ 利率 ↓</b>（票息固定）
+    </div>
+    <div class="fml"><span class="lab">货币市场</span>
+Mˢ（垂直，央行决定 M/P） 与 LL（向下倾斜，位置由实际收入决定）相交 ⇒ 均衡 r₀
+失衡修正：超额货币需求 = 超额债券供给 ⇒ 债券价格↓ ⇒ r↑
+货币扩张：Mˢ 右移 ⇒ r↓，L↑
+<b>央行只能设 r 或设 M 之一，不能同时独立设定</b>
+    </div>
+    <div class="fml"><span class="lab">政策手段</span>
+① Reserve requirements（现在少用）
+② Discount rate（惩罚性利率 ⇒ 银行持更多超额准备金）
+③ OMO：买债券 = 宽松（H↑）；卖债券 = 紧缩（H↓）；工具是 <b>repo</b>
+    </div>
+    <div class="fml"><span class="lab">传导机制</span>
+Mˢ↑ → r↓ → { C↑（财富效应：直接 M/P↑ + 间接股债价↑；信贷成本↓）
+              I↑（II 曲线：更多项目回报 &gt; 机会成本） }
+          → AD↑ → ×乘数 → Y↑、就业↑
+<b>II 越平坦（利率弹性越大）⇒ 传导越有力</b>
+    </div>
+  </div>
+</section>
+
+<section id="traps">
+  <div class="sec-h"><span class="kicker">Exam Focus</span><h2>⚠️ 考点与陷阱</h2></div>
+  <div class="card">
+    <div class="tw"><table>
+      <tr><th style="width:34%">陷阱</th><th>正确表述</th><th style="width:12%">题型</th></tr>
+      <tr><td>债券价格与利率同向</td><td><b>反向</b>：价格↑ ⇒ 利率↓（票息固定）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>央行可同时设定利率与货币量</td><td><b>不能</b>——两者是同一条 LL 上同一点的两个坐标</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>超额货币需求靠"印钱"消除</td><td>靠<b>卖债券 → 债券价格↓ → 利率↑</b> 自动消除</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>solvency crisis = liquidity crisis</td><td>前者<b>资产 &lt; 负债</b>；后者只是<b>暂时</b>无法支付</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>央行卖债券是宽松</td><td>央行<b>买</b>债券才是宽松（H↑）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>II 越陡货币政策越有效</td><td><b>越平坦</b>（利率弹性越大）越有效</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>财富效应只有一条路径</td><td><b>两条</b>：直接（实际货币余额）+ 间接（利率→股债价）</td><td><span class="badge b-essay">Essay</span></td></tr>
+      <tr><td>把中介目标当成最终目标</td><td>工具（利率/OMO）→ 中介目标（M2 或通胀预测）→ 最终目标（价格稳定/产出稳定）</td><td><span class="badge b-mcq">MCQ</span></td></tr>
+      <tr><td>QE 只是"印钱"</td><td>QE 是<b>大规模买入安全债券</b>，作用是<b>阻止广义货币崩塌</b>（乘数暴跌）</td><td><span class="badge b-essay">Essay</span></td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="model">
+  <div class="sec-h"><span class="kicker">Model Answer</span><h2>✍️ 英式答题范例</h2></div>
+  <div class="card">
+    <h3>题目 <span class="badge b-essay">Essay</span> <span class="muted" style="font-size:13px">（Tutorial 5 Q1 的完整版）</span></h3>
+    <p class="lead"><i>"Using a diagram of the money market, explain how equilibrium is restored if the interest rate
+    is initially below its equilibrium level. Then explain the effect of a monetary expansion, and outline the
+    transmission mechanism by which it affects output."</i></p>
+
+    <div class="model">
+      <div class="step">
+        <span class="h">① Define</span>
+        <p class="eng">Assume for convenience that there are only two financial assets, <b>money and bonds</b>, with
+        bonds in fixed supply, and that agents hold their wealth in one form or the other. Because people want
+        purchasing power, the demand for money is a demand for <b>real balances</b> <i>M/P</i>.</p>
+        <p class="eng">The <b>LL schedule</b> shows the demand for real money balances at each interest rate. It slopes
+        <b>downward</b> because the interest rate is the <b>opportunity cost</b> of holding money: other things equal,
+        the demand for real balances is lower when the interest rate is high. Its <b>position</b> depends on real income.
+        The real money supply <i>M<sup>s</sup></i> is set by the central bank and is drawn <b>vertical</b>. Bonds carry
+        a fixed coupon, so</p>
+        <div class="fml">Interest rate = (Money payment / Price of bond) × 100
+⇒ the higher the bond price, the lower the interest rate.</div>
+      </div>
+
+      <div class="step">
+        <span class="h">② Diagram</span>
+        <p class="eng">Figure 1 (see Figure 5.1). Vertical axis = the interest rate on bonds <i>r<sub>b</sub></i>;
+        horizontal axis = real money holdings <i>M/P</i>. The vertical <i>M<sup>s</sup></i> line at <i>L</i>₀ cuts the
+        downward-sloping <i>LL</i> schedule at the equilibrium rate <i>r</i>₀. At the lower rate <i>r</i>₁ the quantity
+        of money demanded (point B) exceeds the fixed supply (point A): the horizontal distance <b>AB</b> measures the
+        <b>excess demand for money</b>.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">③ Analyse</span>
+        <p class="eng"><b>Part 1: restoring equilibrium.</b></p>
+        <p class="eng"><b>Step 1.</b> At <i>r</i>₁ &lt; <i>r</i>₀ the opportunity cost of holding money is low, so
+        agents wish to hold more money than is available — an excess demand for money equal to AB.</p>
+        <p class="eng"><b>Step 2.</b> Since wealth is held only as money or bonds, an excess demand for money is
+        <b>identically an excess supply of bonds</b>: to obtain more money, agents must <b>sell bonds</b>.</p>
+        <p class="eng"><b>Step 3.</b> The attempt to sell bonds drives the <b>price of bonds down</b>.</p>
+        <p class="eng"><b>Step 4.</b> Since the coupon is fixed, a lower bond price means a <b>higher</b> interest rate.</p>
+        <p class="eng"><b>Step 5.</b> As <i>r</i> rises, the opportunity cost of holding money rises and the quantity of
+        money demanded falls, moving up along <i>LL</i> until it equals the fixed supply at <i>r</i>₀. Note that the
+        <b>bond market</b> — not the money market directly — is where the adjustment occurs; the interest rate is the
+        adjusting variable.</p>
+
+        <p class="eng"><b>Part 2: monetary expansion.</b> The central bank buys bonds through open market operations,
+        raising the monetary base and hence the money supply. <i>M<sup>s</sup></i> shifts <b>right</b> to
+        <i>M<sup>s</sup></i>′ (Figure 5.2). At the old rate <i>r</i>₀ there is now an excess <b>supply</b> of money,
+        which is an excess <b>demand</b> for bonds; bond prices rise and the interest rate falls to <i>r</i>₁, at which
+        the larger real balances <i>L</i>₁ are willingly held. Note the central bank could equivalently have announced
+        the rate <i>r</i>₁ and supplied whatever quantity of money the market demanded: it can set <b>either</b> the
+        interest rate <b>or</b> the money supply, <b>but not both independently</b>, since (r, L) is a single point on
+        a single LL schedule.</p>
+
+        <p class="eng"><b>Part 3: the transmission mechanism</b> — the channel through which monetary policy affects
+        output and employment. In a closed economy it works through the impact of interest rates on <b>consumption</b>
+        and <b>investment</b> demand.</p>
+        <p class="eng"><b>(i) Consumption.</b> The <b>wealth effect</b> operates in two ways: <b>directly</b>, since
+        part of wealth is held as money and real balances have risen; and <b>indirectly</b>, since lower interest rates
+        raise bond and share prices, making shareholders feel wealthier. In addition, a lower <b>cost of credit</b>
+        induces households to borrow more, raising expenditure on consumer durables, while a greater <b>quantity of
+        credit</b> raises autonomous consumption and shifts the consumption function up. Under the life-cycle and
+        permanent-income hypotheses, higher perceived wealth raises permanent income and therefore consumption at
+        every age.</p>
+        <p class="eng"><b>(ii) Investment.</b> Investment involves present sacrifice for future gains, and a project is
+        undertaken only if expected returns outweigh the opportunity cost. A lower interest rate makes <b>more projects
+        viable</b>, so desired investment rises — a movement down along the <b>II schedule</b>. The <b>strength</b> of
+        this channel depends on the interest-elasticity of investment: the II schedule is <b>flatter for long-lived
+        houses and factories</b>, and where it is flatter, monetary transmission is <b>more powerful</b>.</p>
+        <p class="eng"><b>(iii)</b> Higher <i>C</i> and <i>I</i> raise aggregate demand, and through the multiplier of
+        Lectures 2–3, equilibrium output and employment rise.</p>
+      </div>
+
+      <div class="step">
+        <span class="h">④ Conclude</span>
+        <p class="eng">Equilibrium in the money market is restored not by any change in the quantity of money but by
+        movements in <b>bond prices</b>, which move the interest rate until the fixed real money supply is willingly
+        held. A monetary expansion therefore lowers the equilibrium interest rate, and this lower rate raises both
+        consumption (through wealth and credit effects) and investment (by making more projects viable), so aggregate
+        demand and output rise.</p>
+        <p class="eng">Two qualifications matter. <b>First</b>, monetary control cannot be precise unless the
+        authorities know the shape and position of money demand and can manipulate the money multiplier — which, as
+        the 2008 crisis showed, they cannot: UK bank reserves rose sixfold between May 2008 and July 2009, yet the
+        £264bn rise in broad money was not simply the mechanical product of the £125bn rise in reserves. This is why
+        the Bank of England prefers to work through <b>interest rates</b>, fixing the rate and supplying the equilibrium
+        quantity of money. <b>Second</b>, the potency of the mechanism depends on the interest-elasticity of investment
+        and consumption; if the II schedule is steep, even a large fall in interest rates will do little for output —
+        a point that becomes central to the IS-MP analysis of Lecture 6.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="lecture-04.html">← Lecture 4</a>
+  <a href="../tutorials/tutorial-05.html">Tutorial 5 →</a>
+  <a href="lecture-06.html">Lecture 6 · The IS-MP Model →</a>
+</div>
+
+</main>
+</div>
+</body>
+</html>
